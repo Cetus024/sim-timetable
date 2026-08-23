@@ -4,18 +4,37 @@
 // Run this on the SIM scheduling page (it needs your logged-in session, which
 // is why it runs in your browser rather than on a server).
 //
-//   1. Open the scheduling page and log in.
-//   2. Open DevTools -> Console (F12).
-//   3. Paste this whole file, press Enter.
-//   4. It scrapes every page, then downloads sim-timetable.json AND copies the
-//      same JSON to your clipboard.
-//   5. Open the viewer, paste or drop the JSON in.
+// Easiest way: use the bookmarklet from https://sim-timetable.vercel.app —
+// click it while on the scheduling page and it opens the viewer, scrapes, and
+// hands the data straight over. No files, no pasting.
 //
-// It does not send anything anywhere — everything stays in your browser.
+// Otherwise: open DevTools -> Console (F12), paste this whole file, Enter.
+// If the viewer tab can't be opened (popup blocked), it falls back to
+// downloading sim-timetable.json and copying it to your clipboard.
+//
+// It uploads nothing. The only cross-origin contact is a postMessage handing
+// your own data to your own viewer tab.
 // ============================================================================
 
 (async function scrapeSIMTimetable() {
   const sleep = ms => new Promise(res => setTimeout(res, ms));
+
+  // The landing page rewrites this placeholder to its own origin when you copy
+  // the script or build the bookmarklet, so local dev hands off to localhost.
+  let VIEWER_ORIGIN = '__VIEWER_ORIGIN__';
+  if (VIEWER_ORIGIN.slice(0, 2) === '__') VIEWER_ORIGIN = 'https://sim-timetable.vercel.app';
+
+  // Open the viewer NOW, while the click that started us still counts as a user
+  // gesture — waiting until the scrape finishes would get the popup blocked.
+  let viewerWin = null;
+  try {
+    viewerWin = window.open(VIEWER_ORIGIN + '/viewer?awaiting=1', 'simTimetableViewer');
+  } catch (err) {
+    viewerWin = null;
+  }
+  if (!viewerWin) {
+    console.log('Could not open the viewer tab (popup blocked?) — will download the JSON instead.');
+  }
 
   // ---- helpers to defend against the site's own auto-advancing pagination ----
 
@@ -181,25 +200,75 @@
     rows,
   };
 
-  const json = JSON.stringify(payload, null, 2);
+  // ---- hand off to the viewer tab ----
 
-  // ---- hand it over: download + clipboard ----
+  /* Pushes the payload to the viewer until it acknowledges. We retry on a timer
+   * rather than wait for a "ready" ping, so neither tab has to win a race. */
+  function handOff(win) {
+    return new Promise(resolve => {
+      let settled = false;
+      let tries = 0;
 
-  const blob = new Blob([json], { type: 'application/json' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'sim-timetable.json';
-  a.click();
-  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+      function finish(ok) {
+        if (settled) return;
+        settled = true;
+        window.removeEventListener('message', onAck);
+        resolve(ok);
+      }
 
-  try {
-    await navigator.clipboard.writeText(json);
-    console.log('Copied the JSON to your clipboard as well.');
-  } catch (err) {
-    console.log('Clipboard copy was blocked (that is fine) — use the downloaded file instead.');
+      function onAck(e) {
+        if (e.source !== win) return;
+        if (!e.data || e.data.type !== 'sim-timetable:received') return;
+        finish(true);
+      }
+
+      window.addEventListener('message', onAck);
+
+      (function pump() {
+        if (settled) return;
+        if (win.closed || tries++ > 40) return finish(false);
+        try {
+          win.postMessage({ type: 'sim-timetable:payload', payload }, VIEWER_ORIGIN);
+        } catch (err) {
+          return finish(false);
+        }
+        setTimeout(pump, 300);
+      })();
+    });
   }
 
-  console.log(`Done — ${rows.length} events. Open the viewer and drop in sim-timetable.json.`);
+  let delivered = false;
+  if (viewerWin && !viewerWin.closed) {
+    delivered = await handOff(viewerWin);
+    if (delivered) {
+      console.log(`Done — ${rows.length} events handed to the viewer tab.`);
+      try { viewerWin.focus(); } catch (err) { /* focus is best-effort */ }
+    } else {
+      console.warn('The viewer tab never acknowledged — falling back to a download.');
+    }
+  }
+
+  // ---- fallback: download + clipboard ----
+
+  if (!delivered) {
+    const json = JSON.stringify(payload, null, 2);
+
+    const blob = new Blob([json], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'sim-timetable.json';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+
+    try {
+      await navigator.clipboard.writeText(json);
+      console.log('Copied the JSON to your clipboard as well.');
+    } catch (err) {
+      console.log('Clipboard copy was blocked (that is fine) — use the downloaded file instead.');
+    }
+
+    console.log(`Done — ${rows.length} events. Open the viewer and drop in sim-timetable.json.`);
+  }
 
   // Also leave it on window so you can poke at it in the console.
   window.simTimetable = payload;

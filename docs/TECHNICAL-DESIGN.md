@@ -198,6 +198,41 @@ the current filter state and mode.
 - Because it reuses the live renderer's source rather than reimplementing it, the export cannot
   drift from the app — the property that motivated the whole split (see ARCHITECTURE.md).
 
+## 5b. Cross-tab handoff
+
+The bookmarklet flow removes the file step entirely: the scraper opens the viewer itself and
+delivers the payload by `postMessage`.
+
+**Ordering.** The viewer tab is opened at the *very top* of the script, before any scraping,
+because `window.open` is only allowed while the click that started the script still counts as
+a user gesture. Opening it 30 seconds later, after the scrape, gets it popup-blocked.
+
+**Delivery.** The scraper re-posts the payload every 300ms (up to ~12s) until the viewer replies
+`sim-timetable:received`. Retrying beats a ready-handshake here: neither tab has to win a race,
+and a viewer that is slow to load simply gets the payload on a later pump. In practice delivery
+lands on the first or second pump.
+
+**Acceptance rules on the viewer side.** A message is only acted on when all of these hold:
+
+1. the viewer was opened as `/viewer?awaiting=1` **and** has a `window.opener`;
+2. `e.source === window.opener` — the sender is the tab that opened it;
+3. `e.data.type === 'sim-timetable:payload'`;
+4. the payload survives `coerce()`, the same validation every other import goes through.
+
+The scraper posts with an explicit `targetOrigin`, so the data is only ever released to the
+expected origin. Rule 2 is what stops an unrelated page from injecting a fabricated timetable;
+note that posting via `postMessage.call(viewerWin, …)` from the opener is *not* a spoof, since
+`e.source` is set by the calling context — a real third party has to be a different window,
+which is what `scripts/test-handoff.mjs` exercises.
+
+**Fallbacks.** Popup blocked, viewer closed, or no acknowledgement within ~12s → the scraper
+downloads `sim-timetable.json` and copies it to the clipboard exactly as before. The manual
+import path is never removed, only bypassed.
+
+**Origin wiring.** `scrape.js` ships with a `__VIEWER_ORIGIN__` placeholder that the landing
+page rewrites to its own origin when building the copy text and the bookmarklet, so a local dev
+copy hands off to localhost. The raw file falls back to the production origin if never rewritten.
+
 ## 6. Persistence
 
 `localStorage['sim-timetable-payload']` holds the last imported payload. On load, the viewer
@@ -207,6 +242,10 @@ is a convenience and must never break the app.
 
 Filter state is intentionally **not** persisted: reopening with a stale filter silently hiding
 rooms is a worse failure than retyping one field.
+
+Because a restored payload can be old, the header states the age in words ("3 hours ago") and
+warns outright when the scrape is from a previous calendar day — schedules are per-day, so a
+stale one is not merely dated, it is wrong.
 
 ## 7. Hosting
 
@@ -258,6 +297,8 @@ Against both `localhost:4173` and the live deployment:
 - Export loaded into an isolated iframe renders identically (21,264 bytes) with filter state intact.
 - Reload restores from `localStorage`; no console errors on any page.
 
-There is no automated test suite — a deliberate call at this size, given the app's only real
+`scripts/test-handoff.mjs` covers the cross-tab handoff end to end in headless Edge (real popup,
+real user gesture via CDP `userGesture: true`), including the negative case. Everything else is
+verified manually as above — a deliberate call at this size, given the app's only real
 integration point is a DOM this project doesn't control. The parsers and `buildTimeline` are pure
 and are the obvious first candidates if tests are added.

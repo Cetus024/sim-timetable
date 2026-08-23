@@ -17,12 +17,12 @@
   <div class="card">
     <h2 style="margin-top:0">How it works</h2>
     <ol class="steps">
-      <li>Open the SIM scheduling page and log in as usual.</li>
-      <li>Run the scraper there — paste it into the DevTools console (<code class="inline">F12</code>), or use the bookmarklet below.</li>
-      <li>It walks every page of the table and gives you <code class="inline">sim-timetable.json</code> (downloaded, and copied to your clipboard).</li>
-      <li>Open the <a href="/viewer">viewer</a> and drop that JSON in.</li>
+      <li>Drag the bookmarklet below to your bookmarks bar — once, ever.</li>
+      <li>Open the SIM scheduling page, log in as usual, and click the bookmarklet.</li>
+      <li>It opens the viewer, walks every page of the table, and hands the data straight over. No files, no pasting.</li>
     </ol>
-    <p class="note">The scraper has to run in your browser because the schedule sits behind your login. Nothing is uploaded anywhere — this site is static, and the viewer parses the JSON locally in your browser.</p>
+    <p class="note">Prefer the console? Copy the script and paste it into DevTools (<code class="inline">F12</code>) on the scheduling page instead — same result. If the viewer tab gets popup-blocked, the scraper falls back to downloading <code class="inline">sim-timetable.json</code> for you to drop into the <a href="/viewer">viewer</a>.</p>
+    <p class="note">The scraper has to run in your browser because the schedule sits behind your login. Nothing is uploaded anywhere — this site is static, and the data goes straight from the scheduling tab to your viewer tab.</p>
   </div>
 
   <div class="card">
@@ -70,8 +70,10 @@
       return r.text();
     })
     .then(function (text) {
-      source = text;
-      snippetEl.textContent = text;
+      // Point the scraper's handoff at whatever origin is serving this page, so
+      // a local dev copy hands off to localhost rather than to production.
+      source = text.replace('__VIEWER_ORIGIN__', window.location.origin);
+      snippetEl.textContent = source;
       // Bookmarklets are exempt from the page's CSP in current browsers, and inlining
       // the whole thing means it needs no network access at click time.
       bookmarkletEl.href = 'javascript:' + encodeURIComponent(source);

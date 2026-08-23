@@ -27,14 +27,15 @@ keeps it in `localStorage` only.
 
 ## Using it
 
-1. Open the SIM scheduling page and log in.
-2. Get the scraper from the site's home page — **Copy scraper to clipboard**, or drag the
-   bookmarklet to your bookmarks bar.
-3. On the scheduling page, paste it into the DevTools console (`F12`) and press Enter, or
-   click the bookmarklet.
-4. It pages through the whole table and gives you `sim-timetable.json` (downloaded, and
-   copied to your clipboard).
-5. Open `/viewer`, drop the JSON in.
+1. Drag the bookmarklet from the [home page](https://sim-timetable.vercel.app) to your
+   bookmarks bar. Once, ever.
+2. Open the SIM scheduling page, log in, and click the bookmarklet.
+3. It opens the viewer, pages through the whole table, and hands the data straight over
+   by `postMessage`. No files, no pasting.
+
+Prefer the console? Copy the script from the home page and paste it into DevTools (`F12`)
+on the scheduling page instead — same result. If the viewer tab gets popup-blocked, the
+scraper falls back to downloading `sim-timetable.json` for you to drop into `/viewer`.
 
 Optionally hit **Export standalone HTML** in the viewer for a single self-contained file
 that works offline with no dependency on this site.
@@ -94,6 +95,7 @@ assets/styles.css           shared styles (light + dark)
 scraper/scrape.js           the console script, served as text so the page can copy it
 sample/                     sample data, so the site demos without a real scrape
 scripts/serve.mjs           local static server mirroring vercel.json's clean URLs
+scripts/test-handoff.mjs    end-to-end test of the bookmarklet handoff (headless Edge)
 vercel.json                 static hosting config (clean URLs)
 ARCHITECTURE.md             system diagram, components, trust boundary
 docs/PRD.md                 problem, goals, non-goals, user stories
@@ -110,6 +112,16 @@ node scripts/serve.mjs
 
 Then open http://localhost:4173. The server mirrors Vercel's clean-URL resolution, so
 `/viewer` behaves the same locally as in production.
+
+The one path worth testing automatically is the cross-tab handoff, since it needs a real
+popup and a real user gesture:
+
+```bash
+node scripts/test-handoff.mjs
+```
+
+It drives headless Edge over CDP and checks both that the viewer accepts a payload from the
+tab that opened it, and that it ignores one from anything else.
 
 ## Deploying
 

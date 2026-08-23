@@ -13,6 +13,22 @@
   <h1>Campus Timetable</h1>
   <p class="meta" id="source">Load a <code class="inline">sim-timetable.json</code> file produced by the scraper.</p>
 
+  <!-- ---------- waiting for a bookmarklet handoff ---------- -->
+  <section id="waitingPanel" hidden>
+    <div class="card">
+      <div class="drop">
+        <strong>Waiting for the scrape to finish…</strong><br />
+        <span class="note">Keep this tab open. The scraper will hand the data over on its own —
+        usually 20–40 seconds, depending on how many pages the schedule has.</span>
+      </div>
+      <p class="note" style="margin:12px 0 0">
+        Nothing arriving? The scraper falls back to downloading
+        <code class="inline">sim-timetable.json</code> —
+        <button class="btn" id="waitingCancel" type="button" style="margin-left:4px">import it manually</button>
+      </p>
+    </div>
+  </section>
+
   <!-- ---------- import ---------- -->
   <section id="importPanel">
     <div class="card">
@@ -55,6 +71,7 @@
   var STORAGE_KEY = 'sim-timetable-payload';
 
   var importPanel = document.getElementById('importPanel');
+  var waitingPanel = document.getElementById('waitingPanel');
   var app = document.getElementById('app');
   var sourceEl = document.getElementById('source');
   var errEl = document.getElementById('importError');
@@ -65,6 +82,7 @@
 
   var controller = null;
   var payload = null;
+  var awaiting = false;
 
   // ---------- parsing an incoming payload ----------
 
@@ -79,11 +97,30 @@
     return parsed;
   }
 
+  /* A timetable is only as good as it is fresh, so say the age out loud rather
+   * than making the user read a timestamp and do the subtraction. */
+  function ageOf(iso) {
+    var then = new Date(iso);
+    if (isNaN(then)) return null;
+    var mins = Math.floor((Date.now() - then.getTime()) / 60000);
+    if (mins < 1) return 'just now';
+    if (mins < 60) return mins + ' min ago';
+    var hrs = Math.round(mins / 60);
+    if (hrs < 24) return hrs + (hrs === 1 ? ' hour ago' : ' hours ago');
+    var days = Math.round(hrs / 24);
+    return days + (days === 1 ? ' day ago' : ' days ago');
+  }
+
   function describe(p) {
     var bits = [p.rows.length + ' events'];
     if (p.scraped_at) {
       var d = new Date(p.scraped_at);
-      bits.push('scraped ' + (isNaN(d) ? p.scraped_at : d.toLocaleString()));
+      var age = ageOf(p.scraped_at);
+      bits.push('scraped ' + (isNaN(d) ? p.scraped_at : d.toLocaleString()) + (age ? ' (' + age + ')' : ''));
+      // Schedules are per-day, so anything scraped before today is probably wrong.
+      if (!isNaN(d) && d.toDateString() !== new Date().toDateString()) {
+        bits.push('⚠ this is from a previous day — re-run the scraper for today');
+      }
     }
     if (p.incomplete) bits.push('⚠ the scrape may have missed some pages — re-run it if numbers look low');
     return bits.join(' · ');
@@ -95,6 +132,8 @@
       try { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); } catch (e) { /* quota / private mode */ }
     }
     sourceEl.textContent = describe(p);
+    awaiting = false;
+    waitingPanel.hidden = true;
     importPanel.hidden = true;
     app.hidden = false;
     errEl.textContent = '';
@@ -206,13 +245,55 @@
     });
   });
 
-  // ---------- restore last session ----------
+  // ---------- bookmarklet handoff ----------
 
-  try {
-    var saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) show(coerce(saved), false);
-  } catch (e) {
-    try { localStorage.removeItem(STORAGE_KEY); } catch (e2) { /* ignore */ }
+  /* Opened by the scraper as `/viewer?awaiting=1`. The scraper keeps posting the
+   * payload until we acknowledge, so there is no ready-handshake to get wrong. */
+  function startAwaiting() {
+    awaiting = true;
+    waitingPanel.hidden = false;
+    importPanel.hidden = true;
+    app.hidden = true;
+    sourceEl.textContent = 'Waiting for the scraper…';
+  }
+
+  function stopAwaiting() {
+    awaiting = false;
+    waitingPanel.hidden = true;
+    if (app.hidden) importPanel.hidden = false;
+  }
+
+  document.getElementById('waitingCancel').addEventListener('click', stopAwaiting);
+
+  window.addEventListener('message', function (e) {
+    // Only while we were opened to wait, and only from the tab that opened us.
+    // The payload is still validated by coerce() like any other import.
+    if (!awaiting) return;
+    if (!window.opener || e.source !== window.opener) return;
+    if (!e.data || e.data.type !== 'sim-timetable:payload') return;
+
+    try {
+      var p = coerce(e.data.payload);
+      show(p, true);
+      try { e.source.postMessage({ type: 'sim-timetable:received' }, e.origin); } catch (err) { /* best effort */ }
+      history.replaceState(null, '', location.pathname);
+    } catch (err) {
+      stopAwaiting();
+      errEl.textContent = 'The scraper sent something unreadable: ' + err.message;
+    }
+  });
+
+  // ---------- boot: waiting mode, or restore last session ----------
+
+  if (new URLSearchParams(location.search).get('awaiting') === '1' && window.opener) {
+    startAwaiting();
+  } else {
+    try {
+      var saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) show(coerce(saved), false);
+    } catch (e) {
+      try { localStorage.removeItem(STORAGE_KEY); } catch (e2) { /* ignore */ }
+    }
   }
 })();
 </script>
