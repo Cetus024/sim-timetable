@@ -50,10 +50,37 @@ account system and no shared server-side data, by design (§5).
 
 - **Booking rooms.** Read-only. This never writes to any SIM system.
 - **Accounts, sync, or sharing.** No server means no shared state. Sharing is a file you send.
-- **Live/auto-refreshing data.** The JSON is a snapshot; re-scrape to update. Automating that
-  would mean storing credentials, which is squarely a non-goal.
-- **Scraping on the user's behalf.** See §5 — a server cannot reach the page at all.
+- **Server-side scraping.** See §5 — a server has no SIM session, and giving it one would mean
+  storing the user's credentials somewhere they cannot supervise. Still firmly out.
+- **Live data.** Even with the nightly job (§4a) the JSON is a snapshot, not a live feed. The
+  viewer states its age rather than pretending otherwise.
 - **Mobile-first scraping.** DevTools is desktop; the *viewer* is responsive, the scraper is not.
+
+## 4a. Automatic nightly refresh
+
+Added after v1, once the manual flow was down to a single click and the remaining friction was
+having to click at all.
+
+**What it does.** A scheduled task on the user's own machine scrapes at 00:05 local time and
+publishes `data/latest.json` to the public repo; the viewer reads that on load. Visiting the site
+then shows last night's schedule with no interaction.
+
+**Why it lives on the user's machine, not a server.** It needs an authenticated SIM session.
+Running it locally means reusing a browser profile the user signed into once — no password is
+stored anywhere, and §5 stays intact. The alternative, credentials in a server env var, is
+rejected: it puts the user's login somewhere they cannot watch, and automating a logged-in session
+from a server is a good way to breach an acceptable-use policy.
+
+**What it accepts as the price:**
+
+- the machine must be awake — mitigated by running at next logon if 00:05 was missed;
+- the saved session expires eventually, and then the job fails until the user signs in again;
+- the published data is world-readable, since the repo is public. That was an explicit choice:
+  room bookings and course codes, not personal data.
+
+**The rule it must never break:** a failed scrape must never replace good data with nothing. The
+job distinguishes "the schedule is empty" from "I am looking at a login page", and on any doubt it
+exits non-zero and leaves the previous file untouched.
 
 ## 5. The constraint that shapes everything
 

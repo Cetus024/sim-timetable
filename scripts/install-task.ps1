@@ -4,7 +4,7 @@
 #   powershell -ExecutionPolicy Bypass -File scripts\install-task.ps1 -Remove
 #
 # Runs at 00:05 local time. This machine is on Singapore Standard Time, so that
-# is 00:05 SGT — check with Get-TimeZone if you ever travel with the laptop.
+# is 00:05 SGT - check with Get-TimeZone if you ever travel with the laptop.
 #
 # The task is deliberately forgiving about the laptop being asleep or off:
 #   - StartWhenAvailable  : if 00:05 was missed, run as soon as possible after
@@ -37,7 +37,7 @@ if ($Remove) {
 
 $config = Join-Path $repo 'scripts\scrape.config.json'
 if (-not (Test-Path $config)) {
-    throw "Missing $config — copy scripts\scrape.config.example.json to it and set scheduleUrl first."
+    throw "Missing $config - copy scripts\scrape.config.example.json to it and set scheduleUrl first."
 }
 
 $profileDir = Join-Path $repo '.scrape-profile'
@@ -68,7 +68,7 @@ Register-ScheduledTask -TaskName $TaskName -Action $action -Trigger $trigger `
     -Settings $settings -Principal $principal -Force `
     -Description 'Scrapes the SIM campus schedule and publishes data/latest.json to GitHub.' | Out-Null
 
-Write-Host "Registered '$TaskName' — runs daily at $At local time ($((Get-TimeZone).Id))."
+Write-Host "Registered '$TaskName' - runs daily at $At local time ($((Get-TimeZone).Id))."
 Write-Host ""
 Write-Host "Try it now without waiting for midnight:"
 Write-Host "  Start-ScheduledTask -TaskName '$TaskName'"

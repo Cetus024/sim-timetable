@@ -40,6 +40,44 @@ scraper falls back to downloading `sim-timetable.json` for you to drop into `/vi
 Optionally hit **Export standalone HTML** in the viewer for a single self-contained file
 that works offline with no dependency on this site.
 
+## Nightly automatic scrape (optional)
+
+A scheduled task on your own machine can scrape at 00:05 local time and publish the result, so
+visiting the site just shows last night's schedule with nothing to click.
+
+It runs locally because the schedule needs your SIM session. No password is stored anywhere: it
+reuses a browser profile you sign into once.
+
+```bash
+cp scripts/scrape.config.example.json scripts/scrape.config.json
+```
+
+Set `scheduleUrl` in that file to the scheduling page you normally open, then sign in once:
+
+```bash
+node scripts/auto-scrape.mjs --login
+```
+
+Then register the task — 00:05 daily, catching up if the laptop was asleep:
+
+```bash
+powershell -ExecutionPolicy Bypass -File scripts/install-task.ps1
+```
+
+The job writes `data/latest.json` and pushes it. The viewer fetches that from the repo on load
+and uses it whenever it is fresher than what you already have.
+
+**When it breaks:** the saved session expires after a while. The scrape then fails loudly,
+*leaves the last good data alone*, and the viewer keeps showing the data's age so you can tell.
+Run `--login` again to sign back in. To check on it:
+
+```bash
+powershell -Command "Get-ScheduledTaskInfo -TaskName 'SIM Timetable nightly scrape' | Select LastRunTime, LastTaskResult"
+```
+
+`LastTaskResult`: 0 = success, 1 = scrape failed and old data kept, 2 = not configured yet.
+Remove the task with `install-task.ps1 -Remove`.
+
 ## Views
 
 - **Table** — every event, sorted by end time, with the block/floor/room parsed out.
@@ -96,6 +134,10 @@ scraper/scrape.js           the console script, served as text so the page can c
 sample/                     sample data, so the site demos without a real scrape
 scripts/serve.mjs           local static server mirroring vercel.json's clean URLs
 scripts/test-handoff.mjs    end-to-end test of the bookmarklet handoff (headless Edge)
+scripts/auto-scrape.mjs     unattended nightly scrape (headless Edge + saved profile)
+scripts/install-task.ps1    registers/removes the 00:05 scheduled task
+scripts/fixtures/           a stand-in schedule page, for testing without SIM
+data/latest.json            published by the nightly job; read by the viewer
 vercel.json                 static hosting config (clean URLs)
 ARCHITECTURE.md             system diagram, components, trust boundary
 docs/PRD.md                 problem, goals, non-goals, user stories

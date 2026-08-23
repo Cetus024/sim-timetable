@@ -247,6 +247,48 @@ Because a restored payload can be old, the header states the age in words ("3 ho
 warns outright when the scrape is from a previous calendar day — schedules are per-day, so a
 stale one is not merely dated, it is wrong.
 
+## 6b. The nightly job
+
+`scripts/auto-scrape.mjs` drives a headless Chromium-based browser over CDP against a persistent
+profile (`.scrape-profile/`, gitignored) that the user signed into once.
+
+**One scraper, not two.** The job reads `scraper/scrape.js` off disk and evaluates it in the
+page, having first set `window.__SIM_SCRAPE_HEADLESS__ = true`. That flag suppresses only the
+viewer popup and the download; the pagination, coverage checks and parsing are the same code the
+bookmarklet runs. A second implementation would drift, and the drift would be invisible.
+
+**Distinguishing "empty" from "logged out".** The most dangerous outcome is a scrape returning
+zero rows because the session expired, then being published over good data. So the job polls for
+`tbody.MuiTableBody-root tr` to actually appear, up to `tableTimeoutMs`, and treats its absence
+as an *error naming the landing URL and title* — never as an empty schedule. Belt and braces: a
+payload with zero rows is rejected before writing, too.
+
+**Failure is non-destructive.** Any error exits non-zero without touching `data/latest.json`, so
+the viewer keeps serving the last good scrape — with its age shown, which is what tells the user
+something has gone stale.
+
+**Publishing.** `--publish` commits `data/latest.json` as `sim-timetable-bot` and pushes to
+`main`. It commits unconditionally: `scraped_at` changes every run, and a fresh timestamp is
+precisely the signal the viewer needs, so an "unchanged" short-circuit would be dead code.
+One commit a night is the accepted cost.
+
+**Consumption.** The viewer fetches the file from `raw.githubusercontent.com` (which sends
+`Access-Control-Allow-Origin: *`), so a new scrape appears without redeploying the site and the
+scheduled task needs no Vercel credentials. Local data renders first so the page is never blank,
+and is replaced only if the feed's `scraped_at` is newer. A missing or unreachable feed is
+silent by design — it must never take away data the user already has.
+
+**Scheduling.** `install-task.ps1` registers a non-admin task for 00:05 local with
+`StartWhenAvailable` (runs after a missed start, e.g. the laptop was off) and `WakeToRun`. The
+machine is on Singapore Standard Time, so 00:05 local is 00:05 SGT. Exit codes surface as
+`LastTaskResult`: 0 success, 1 scrape failed, 2 not configured. The script is kept ASCII-only —
+Windows PowerShell 5.1 reads a BOM-less `.ps1` as ANSI, and an em-dash in a string was enough to
+make it fail to parse.
+
+**Testing without SIM.** `scripts/fixtures/schedule.html` reproduces the page's DOM contract and
+its auto-advance timer, so the whole job — pagination, non-breaking-space parsing, publish — is
+exercised locally. The expired-session path is tested by pointing the job at a page with no table.
+
 ## 7. Hosting
 
 `vercel.json` sets `cleanUrls: true` (so `/viewer` serves `viewer.html`), `trailingSlash: false`,

@@ -79,6 +79,7 @@ what keeps this project free of any credential surface at all.
 | `assets/timetable.js` | browser | **All** parsing + rendering logic | Nothing — pure, no I/O |
 | `assets/styles.css` | browser | Shared styling, light + dark | — |
 | `scripts/serve.mjs` | local dev only | Static server mirroring Vercel's clean URLs | — |
+| `scripts/auto-scrape.mjs` | your machine, nightly | Headless scrape via a saved profile; publishes `data/latest.json` | The schedule page; git |
 | `vercel.json` | Vercel edge | Clean URLs, content types, no-cache on the scraper | — |
 
 ## Two structural decisions
