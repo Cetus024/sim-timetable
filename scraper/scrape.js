@@ -137,7 +137,7 @@
   }
 
   function parseTimeRange(timeStr) {
-    const clean = (timeStr || '').replace(/ /g, ' ').trim();
+    const clean = (timeStr || '').replace(/\u00a0/g, ' ').trim();
     const parts = clean.split(/\s*-\s*/);
     if (parts.length !== 2) return { start: null, end: null, start_min: null, end_min: null };
     const start = parts[0].trim(), end = parts[1].trim();

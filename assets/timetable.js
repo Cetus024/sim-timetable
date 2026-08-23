@@ -20,7 +20,7 @@
   }
 
   function parseTimeRange(timeStr) {
-    var clean = (timeStr || '').replace(/ /g, ' ').trim();
+    var clean = (timeStr || '').replace(/\u00a0/g, ' ').trim();
     var parts = clean.split(/\s*-\s*/);
     if (parts.length !== 2) return { start: null, end: null, start_min: null, end_min: null };
     var start = parts[0].trim(), end = parts[1].trim();

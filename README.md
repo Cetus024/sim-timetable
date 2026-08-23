@@ -4,6 +4,17 @@ Scrape the SIM campus scheduling page into JSON, then browse it as a real timeta
 filter by block / floor / room, or flip to **availability** mode to find rooms that are
 actually free between bookings.
 
+| | |
+| --- | --- |
+| **Live site** | https://sim-timetable.vercel.app |
+| **Viewer** | https://sim-timetable.vercel.app/viewer |
+| **Repo** | https://github.com/Cetus024/sim-timetable |
+| **Vercel project** | https://vercel.com/cetus024s-projects/sim-timetable |
+
+**Docs:** [PRD](docs/PRD.md) (problem, scope, user stories) ·
+[Architecture](ARCHITECTURE.md) (diagram, components, boundaries) ·
+[Technical design](docs/TECHNICAL-DESIGN.md) (contracts, algorithms, failure modes)
+
 Two pieces:
 
 | Piece | Where it runs | Why |
@@ -76,18 +87,37 @@ only has the raw scraped fields (`time`, `event`, `building`, `room`, `status`).
 ## Layout
 
 ```
-index.html            landing page — get the scraper (copy / download / bookmarklet)
-viewer.html           import JSON, render the timetable, export standalone HTML
-assets/timetable.js   parsing + rendering, shared by the viewer and the export
-assets/styles.css     shared styles (light + dark)
-scraper/scrape.js     the console script, served as text so the page can copy it
-vercel.json           static hosting config (clean URLs)
+index.html                  landing page — get the scraper (copy / download / bookmarklet)
+viewer.html                 import JSON, render the timetable, export standalone HTML
+assets/timetable.js         parsing + rendering, shared by the viewer and the export
+assets/styles.css           shared styles (light + dark)
+scraper/scrape.js           the console script, served as text so the page can copy it
+sample/                     sample data, so the site demos without a real scrape
+scripts/serve.mjs           local static server mirroring vercel.json's clean URLs
+vercel.json                 static hosting config (clean URLs)
+ARCHITECTURE.md             system diagram, components, trust boundary
+docs/PRD.md                 problem, goals, non-goals, user stories
+docs/TECHNICAL-DESIGN.md    data contracts, algorithms, failure modes
 ```
+
+## Developing
+
+No dependencies and no build step. To run it locally:
+
+```bash
+node scripts/serve.mjs
+```
+
+Then open http://localhost:4173. The server mirrors Vercel's clean-URL resolution, so
+`/viewer` behaves the same locally as in production.
 
 ## Deploying
 
 Static — no build step.
 
 ```bash
-vercel --prod
+vercel deploy --prod --yes
 ```
+
+> The Vercel project is **not** connected to GitHub, so `git push` does not deploy.
+> Pushing and deploying are separate steps; run the command above after pushing.
