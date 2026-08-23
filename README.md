@@ -1,8 +1,7 @@
 # SIM Campus Timetable
 
-Scrape the SIM campus scheduling page into JSON, then browse it as a real timetable —
-filter by block / floor / room, or flip to **availability** mode to find rooms that are
-actually free between bookings.
+The SIM campus schedule, made useful — filter by block, floor and room, or flip to
+**availability** mode to see each room as a busy/free timeline and find somewhere to sit.
 
 | | |
 | --- | --- |
@@ -12,158 +11,141 @@ actually free between bookings.
 | **Vercel project** | https://vercel.com/cetus024s-projects/sim-timetable |
 
 **Docs:** [PRD](docs/PRD.md) (problem, scope, user stories) ·
-[Architecture](ARCHITECTURE.md) (diagram, components, boundaries) ·
+[Architecture](ARCHITECTURE.md) (diagram, components, constraints) ·
 [Technical design](docs/TECHNICAL-DESIGN.md) (contracts, algorithms, failure modes)
-
-Two pieces:
-
-| Piece | Where it runs | Why |
-| --- | --- | --- |
-| `scraper/scrape.js` | your browser, on the scheduling page | the schedule is behind your login, so a server can't fetch it |
-| the static site (`index.html`, `viewer.html`) | Vercel | just serves the scraper and renders the JSON locally |
-
-Nothing is uploaded. The site is static; the viewer parses your JSON in the browser and
-keeps it in `localStorage` only.
 
 ## Using it
 
-1. Drag the bookmarklet from the [home page](https://sim-timetable.vercel.app) to your
-   bookmarks bar. Once, ever.
-2. Open the SIM scheduling page, log in, and click the bookmarklet.
-3. It opens the viewer, pages through the whole table, and hands the data straight over
-   by `postMessage`. No files, no pasting.
+Open [the viewer](https://sim-timetable.vercel.app/viewer). That's it — it refreshes itself
+daily and already has today's schedule.
 
-Prefer the console? Copy the script from the home page and paste it into DevTools (`F12`)
-on the scheduling page instead — same result. If the viewer tab gets popup-blocked, the
-scraper falls back to downloading `sim-timetable.json` for you to drop into `/viewer`.
+Want the very latest state mid-day rather than last night's snapshot? Drag the bookmarklet from
+the [home page](https://sim-timetable.vercel.app) to your bookmarks bar, then click it while on
+[the scheduling page](https://scheduling.sim.edu.sg/rad/campus.htm?id=SIM). It opens the viewer
+and hands today's schedule over in about a second.
 
-Optionally hit **Export standalone HTML** in the viewer for a single self-contained file
-that works offline with no dependency on this site.
-
-## Nightly automatic scrape (optional)
-
-A scheduled task on your own machine can scrape at 00:05 local time and publish the result, so
-visiting the site just shows last night's schedule with nothing to click.
-
-It runs locally because the schedule needs your SIM session. No password is stored anywhere: it
-reuses a browser profile you sign into once.
-
-```bash
-cp scripts/scrape.config.example.json scripts/scrape.config.json
-```
-
-Set `scheduleUrl` in that file to the scheduling page you normally open, then sign in once:
-
-```bash
-node scripts/auto-scrape.mjs --login
-```
-
-Then register the task — 00:05 daily, catching up if the laptop was asleep:
-
-```bash
-powershell -ExecutionPolicy Bypass -File scripts/install-task.ps1
-```
-
-The job writes `data/latest.json` and pushes it. The viewer fetches that from the repo on load
-and uses it whenever it is fresher than what you already have.
-
-**When it breaks:** the saved session expires after a while. The scrape then fails loudly,
-*leaves the last good data alone*, and the viewer keeps showing the data's age so you can tell.
-Run `--login` again to sign back in. To check on it:
-
-```bash
-powershell -Command "Get-ScheduledTaskInfo -TaskName 'SIM Timetable nightly scrape' | Select LastRunTime, LastTaskResult"
-```
-
-`LastTaskResult`: 0 = success, 1 = scrape failed and old data kept, 2 = not configured yet.
-Remove the task with `install-task.ps1 -Remove`.
+**Export standalone HTML** in the viewer gives you a single self-contained file that works
+offline and outlives this site.
 
 ## Views
 
-- **Table** — every event, sorted by end time, with the block/floor/room parsed out.
-- **Availability** — grouped per room as an alternating BUSY / FREE timeline. Gaps between
-  bookings become FREE; anything after the last booking is FREE and open-ended (the schedule
-  only shows so far ahead). "Free after" / "Free before" filter to rooms with a free slot
-  starting in that window.
+- **Table** — every booking, sorted by end time, with block/floor/room broken out. Status is
+  computed from your clock, so it says what is busy *now*.
+- **Availability** — each room as an alternating BUSY / FREE timeline. Gaps between bookings are
+  FREE; anything after the last booking is FREE and open-ended, since the schedule only covers
+  the day. "Free after" / "Free before" narrow to rooms with a free slot starting in that window.
+- **Free all day** — the rooms with nothing booked in them at all, in one compact card grouped by
+  block. Typically over half the campus, and something the official page cannot show you.
 
-## Scraper notes
+## Where the data comes from
 
-The scheduling page auto-advances its own pagination on a timer, which used to make a naive
-scrape skip pages. The scraper defends against that:
+SIM's scheduling page is a front end over its own API:
 
-- resets to page 1 before starting (in case the page already drifted);
-- reads MUI's `"8-14 of 112"` label to learn the real total;
-- after each of its own clicks, checks the visible range advanced by about one page — a
-  bigger jump means the site's timer fired in between, and it flags the result;
-- dedupes rows, and compares the unique count against the site's reported total.
+```
+GET https://scheduling.sim.edu.sg/rad/rest/campus?id=SIM
+    → buildings[] → rooms[] → activities[]
+```
 
-If the run was suspect, the payload carries `"incomplete": true` and the viewer shows a
-warning. Just re-run it.
+Reading that directly beats scraping the rendered table on every axis — one request instead of
+54 pages, exact timestamps instead of parsed strings, room capacities, and crucially the rooms
+with **no** bookings, which the table never lists.
+
+No login is involved; the schedule is public. Two quirks shape everything else:
+
+- **The site's WAF answers `464` to non-browser clients.** `curl` is refused even for the HTML
+  page, with or without browser-like headers — it fingerprints the client. So every read runs
+  through a real Chromium engine.
+- **The API sends no CORS header**, so it is same-origin only. The viewer can't call it directly;
+  that is why the data arrives as a published file, and why the bookmarklet runs *on* the
+  scheduling page.
+
+### Daily refresh
+
+[`.github/workflows/daily-schedule.yml`](.github/workflows/daily-schedule.yml) runs at 00:05 SGT
+(`05 16 * * *` UTC), reads the API in headless Chrome, and commits `data/latest.json`. The viewer
+fetches that from `raw.githubusercontent.com` on load and uses it when it is fresher than what
+you already have.
+
+GitHub's cron is best-effort, so treat 00:05 as "shortly after midnight". Run it by hand any time
+from the repo's Actions tab, or:
+
+```bash
+gh workflow run daily-schedule.yml
+```
+
+A failed run never publishes: the fetch refuses a payload with zero rooms or zero bookings and
+exits non-zero, leaving the previous day's file in place. The viewer always shows the data's age,
+so staleness is visible rather than silent.
 
 ### JSON shape
 
 ```json
 {
-  "version": 1,
-  "source": "https://…",
-  "scraped_at": "2026-08-23T10:00:00.000Z",
-  "site_total": 112,
-  "incomplete": false,
+  "version": 2,
+  "source": "https://scheduling.sim.edu.sg/rad/rest/campus?id=SIM",
+  "campus": "SIM Campus",
+  "scraped_at": "2026-08-24T00:05:00.000Z",
+  "schedule_dates": ["2026-08-24"],
+  "auto": true,
+  "rooms": [
+    { "room": "TR.3", "description": "Tutor Room 3", "building": "SIM Campus Block A",
+      "block": "A", "floor": null, "activities": 0 }
+  ],
   "rows": [
-    {
-      "start": "9:00 AM", "end": "12:00 PM",
-      "start_min": 540, "end_min": 720,
-      "block": "B", "floor": 5, "room": "LT.B.5.01",
-      "event": "Free Access", "status": "UPCOMING"
-    }
+    { "start": "8:30 AM", "end": "11:30 AM", "start_min": 510, "end_min": 690,
+      "block": "A", "floor": 1, "room": "LT.A.1.08",
+      "event": "COMM3001 - LF01 : Digi Audiences and Analytics - RMIT",
+      "status": "UPCOMING", "description": "…", "room_description": "A.1.08 (112pax)" }
   ]
 }
 ```
 
-The viewer also accepts a bare array of rows, and re-derives `block`/`floor`/times if a row
-only has the raw scraped fields (`time`, `event`, `building`, `room`, `status`).
+`activities: 0` in `rooms` is what marks a room free all day. The viewer also accepts a bare
+array of rows, or older payloads without `rooms`.
 
 ## Layout
 
 ```
-index.html                  landing page — get the scraper (copy / download / bookmarklet)
-viewer.html                 import JSON, render the timetable, export standalone HTML
+index.html                  landing page — the bookmarklet, and what this is
+viewer.html                 loads the feed, imports, persists, exports
 assets/timetable.js         parsing + rendering, shared by the viewer and the export
 assets/styles.css           shared styles (light + dark)
-scraper/scrape.js           the console script, served as text so the page can copy it
-sample/                     sample data, so the site demos without a real scrape
+scraper/scrape.js           the ONLY read-and-transform: bookmarklet and CI both run this
+scripts/fetch-schedule.mjs  evaluates scrape.js headless; writes data/latest.json
+scripts/lib/cdp.mjs         dependency-free Chrome DevTools Protocol client
 scripts/serve.mjs           local static server mirroring vercel.json's clean URLs
-scripts/test-handoff.mjs    end-to-end test of the bookmarklet handoff (headless Edge)
-scripts/auto-scrape.mjs     unattended nightly scrape (headless Edge + saved profile)
-scripts/install-task.ps1    registers/removes the 00:05 scheduled task
-scripts/fixtures/           a stand-in schedule page, for testing without SIM
-data/latest.json            published by the nightly job; read by the viewer
-vercel.json                 static hosting config (clean URLs)
-ARCHITECTURE.md             system diagram, components, trust boundary
-docs/PRD.md                 problem, goals, non-goals, user stories
-docs/TECHNICAL-DESIGN.md    data contracts, algorithms, failure modes
+scripts/test-handoff.mjs    end-to-end test of the bookmarklet handoff
+sample/                     sample data, so the site demos without a live fetch
+data/latest.json            published daily; read by the viewer
+.github/workflows/          the daily job
 ```
 
 ## Developing
 
-No dependencies and no build step. To run it locally:
+No dependencies and no build step.
 
 ```bash
 node scripts/serve.mjs
 ```
 
-Then open http://localhost:4173. The server mirrors Vercel's clean-URL resolution, so
-`/viewer` behaves the same locally as in production.
+Then open http://localhost:4173 — the server mirrors Vercel's clean-URL resolution, so `/viewer`
+behaves as it does in production.
 
-The one path worth testing automatically is the cross-tab handoff, since it needs a real
-popup and a real user gesture:
+Fetch the schedule locally (needs Chrome or Edge; override with `BROWSER_PATH`):
+
+```bash
+node scripts/fetch-schedule.mjs
+```
+
+The one path worth an automated test is the cross-tab handoff, since it needs a real popup and a
+real user gesture:
 
 ```bash
 node scripts/test-handoff.mjs
 ```
 
-It drives headless Edge over CDP and checks both that the viewer accepts a payload from the
-tab that opened it, and that it ignores one from anything else.
+It drives headless Edge over CDP and checks both that the viewer accepts a payload from the tab
+that opened it, and that it ignores one from anything else.
 
 ## Deploying
 
@@ -173,5 +155,6 @@ Static — no build step.
 vercel deploy --prod --yes
 ```
 
-> The Vercel project is **not** connected to GitHub, so `git push` does not deploy.
-> Pushing and deploying are separate steps; run the command above after pushing.
+> The Vercel project is **not** connected to GitHub, so `git push` does not deploy the site.
+> Data is separate: the daily job publishes `data/latest.json` to the repo, and the viewer reads
+> it from there, so a schedule refresh needs no deploy at all.

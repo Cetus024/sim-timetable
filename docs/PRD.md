@@ -12,8 +12,10 @@ question students actually have is the inverse: **"where can I sit for the next 
 
 Getting from one to the other on the official page is tedious:
 
-- Bookings are spread over ~15 pages of a paginated table, seven rows at a time.
+- Bookings are spread over 54 pages of a paginated table, seven rows at a time.
 - The page **auto-advances its own pagination on a timer**, so you lose your place while reading.
+- Only *busy* rooms appear at all. A room with nothing booked in it is simply absent, so the
+  page cannot answer "what is free today?" even in principle.
 - Block and floor are buried inside room codes (`TR.B.5.14`) and a separate building column;
   there is no way to filter by them.
 - Free time is never shown. It only exists implicitly, as the *gaps between* bookings — which
@@ -24,16 +26,15 @@ repeated every time.
 
 ## 2. Who it's for
 
-**Primary:** a SIM student with a gap between classes who needs somewhere to work — and who
-already has a login to the scheduling page. Comfortable enough to paste a line into a browser,
-or click a bookmarklet.
+**Primary:** a SIM student with a gap between classes who needs somewhere to work. They open a
+URL; nothing else is required of them.
 
 **Secondary:** the same student's friends, who want the *result* rather than the tool — hence the
 standalone HTML export, which is a single file that can be sent to someone who will never run
 the scraper.
 
-**Explicitly not for:** the general public, or anyone without SIM credentials. There is no
-account system and no shared server-side data, by design (§5).
+There is no account system and no login — the underlying schedule is public — so there is
+nothing to sign up for and nothing personal involved.
 
 ## 3. Goals
 
@@ -41,8 +42,8 @@ account system and no shared server-side data, by design (§5).
 | --- | --- | --- |
 | G1 | Turn "what's booked" into "what's free" | Availability view — each room as a BUSY/FREE timeline |
 | G2 | Make block / floor / room filterable | Parsed out of room codes at scrape time into real fields |
-| G3 | Survive the page's auto-advancing pagination | Reset-to-page-1, range checks, dedupe, coverage warning (§6.1) |
-| G4 | Keep the whole thing trustworthy with credentials | Nothing leaves the browser; static host, no backend (§5) |
+| G3 | Complete coverage, including rooms with nothing booked | Read the campus API rather than the paginated table |
+| G4 | Require nothing of the reader | Daily CI refresh; the site is already current when opened |
 | G5 | Cost nothing to run and not rot | Zero dependencies, zero build step, static hosting |
 | G6 | Outlive the site itself | Standalone HTML export works offline, forever |
 
@@ -50,52 +51,50 @@ account system and no shared server-side data, by design (§5).
 
 - **Booking rooms.** Read-only. This never writes to any SIM system.
 - **Accounts, sync, or sharing.** No server means no shared state. Sharing is a file you send.
-- **Server-side scraping.** See §5 — a server has no SIM session, and giving it one would mean
-  storing the user's credentials somewhere they cannot supervise. Still firmly out.
+- **Credentialed access of any kind.** Nothing here logs in, stores a password, or touches a
+  personal timetable. It reads only what SIM publishes openly.
 - **Live data.** Even with the nightly job (§4a) the JSON is a snapshot, not a live feed. The
   viewer states its age rather than pretending otherwise.
 - **Mobile-first scraping.** DevTools is desktop; the *viewer* is responsive, the scraper is not.
 
-## 4a. Automatic nightly refresh
+## 4a. Automatic daily refresh
 
-Added after v1, once the manual flow was down to a single click and the remaining friction was
-having to click at all.
+**What it does.** A GitHub Actions cron reads the campus API at 00:05 SGT and commits
+`data/latest.json` to this repo. The viewer fetches that on load, so opening the site shows
+today's schedule with no interaction at all.
 
-**What it does.** A scheduled task on the user's own machine scrapes at 00:05 local time and
-publishes `data/latest.json` to the public repo; the viewer reads that on load. Visiting the site
-then shows last night's schedule with no interaction.
+**Where it runs, and why that changed.** Originally this was a scheduled task on the author's own
+machine, because the schedule was assumed to sit behind a SIM login. It does not — the scheduling
+site is public. That discovery removed the constraint, so the job moved to CI, and the laptop is
+no longer involved. The local task has been unregistered and its scripts deleted.
 
-**Why it lives on the user's machine, not a server.** It needs an authenticated SIM session.
-Running it locally means reusing a browser profile the user signed into once — no password is
-stored anywhere, and §5 stays intact. The alternative, credentials in a server env var, is
-rejected: it puts the user's login somewhere they cannot watch, and automating a logged-in session
-from a server is a good way to breach an acceptable-use policy.
+**What it still costs:**
 
-**What it accepts as the price:**
-
-- the machine must be awake — mitigated by running at next logon if 00:05 was missed;
-- the saved session expires eventually, and then the job fails until the user signs in again;
-- the published data is world-readable, since the repo is public. That was an explicit choice:
-  room bookings and course codes, not personal data.
-
-**The rule it must never break:** a failed scrape must never replace good data with nothing. The
-job distinguishes "the schedule is empty" from "I am looking at a login page", and on any doubt it
-exits non-zero and leaves the previous file untouched.
+- GitHub's scheduled runs are best-effort and can be delayed under load, so 00:05 means "shortly
+  after midnight", not exactly 00:05;
+- the published data is world-readable, since the repo is public. Explicitly chosen: it is room
+  bookings and course codes, which SIM already publishes without a login;
+- a failed run must never replace good data with nothing. The job refuses to write a payload with
+  zero rooms or zero bookings, and a non-zero exit leaves the previous file in place.
 
 ## 5. The constraint that shapes everything
 
-The scheduling page sits **behind the user's login**. A server has no session and cannot fetch it.
+**The API only answers browsers.** `scheduling.sim.edu.sg` sits behind a WAF that returns **464**
+to plain HTTP clients. `curl` is refused even for the HTML page, with or without a browser
+User-Agent, Accept header or Referer — so it is fingerprinting the client, not checking headers.
 
-This is not an implementation detail — it dictates the whole architecture:
+Every read therefore runs through a real Chromium engine, in CI or locally. This is the single
+reason the project launches a browser to perform what is otherwise one HTTP GET.
 
-- The scraper **must** run in the user's own browser, as a console paste or bookmarklet.
-- The hosted site can therefore only be a **static** delivery mechanism: it hands you the scraper,
-  and renders JSON you bring back to it.
-- Consequently there is no backend, no database, and no credential handling anywhere in this
-  project — the data never crosses a trust boundary. That is a feature, and it should stay true.
+A second, softer constraint follows from the same server: the API sends no
+`Access-Control-Allow-Origin`, so it is same-origin only. The viewer cannot call it from
+`sim-timetable.vercel.app`. That is why the data arrives as a published file, and why the
+bookmarklet has to run *on* the scheduling page.
 
-A corollary worth stating: **anything that would require a server is out of scope by default.**
-If a future feature seems to need one, re-read this section first.
+> **Superseded:** earlier versions of this document said the schedule sat behind the user's login
+> and that a server "cannot reach the page at all". That was wrong — no login is required. The
+> browser-side scraper, the credential concerns and the laptop-scheduled job all existed to solve
+> a problem that turned out not to exist.
 
 ## 6. User stories
 
@@ -110,13 +109,18 @@ If a future feature seems to need one, re-read this section first.
 > **US3** — As a student already near Block B, I want to only see Block B, floor 5.
 > *Block and floor dropdowns, populated from the data.*
 
-> **US4** — As someone who scraped once this morning, I want my data still there when I reopen
-> the tab, so I don't re-scrape for no reason.
-> *`localStorage` persistence, with the scrape timestamp shown so I can judge staleness.*
+> **US4** — As someone opening the site cold, I want today's schedule already there.
+> *Daily CI refresh published to the repo; the viewer loads it automatically, and `localStorage`
+> keeps it between visits.*
 
-> **US5** — As someone whose scrape may have silently missed pages, I want to be told, rather
-> than quietly trusting a timetable with holes in it.
-> *Coverage check against the site's own row count → `incomplete: true` → warning in the viewer.*
+> **US5** — As someone looking for a quiet room, I want to see the rooms with nothing booked at
+> all, not just the gaps in busy ones.
+> *The API's full room inventory; rooms with zero activities render as one compact "free all day"
+> card — 170 of 326 on a typical day.*
+
+> **US8** — As someone reading at 3pm, I want to know what is busy *now*, not what was upcoming
+> when the data was fetched at midnight.
+> *Status recomputed from the reader's clock at render time.*
 
 > **US6** — As someone who wants to send this to a friend, I want one file that just works.
 > *Export standalone HTML — CSS, renderer and data inlined, no network needed.*
@@ -126,16 +130,19 @@ If a future feature seems to need one, re-read this section first.
 
 ## 7. Functional requirements
 
-### Scraper (`scraper/scrape.js`)
+### Reader (`scraper/scrape.js`)
 
-- **FR1** Runs from a DevTools console paste **or** a bookmarklet, with no install step.
-- **FR2** Walks every page of the table from page 1 to the end, unattended.
-- **FR3** Detects when the page's own timer advanced pagination underneath it (§6.1 / G3).
-- **FR4** Parses `time`, `event`, `building`, `room`, `status` into start/end minutes, block, floor.
-- **FR5** Deduplicates rows, and compares the unique count against the site's reported total.
-- **FR6** Outputs `sim-timetable.json` **both** as a download and to the clipboard — clipboard
-  writes can be blocked, so the download is the reliable path and the clipboard is convenience.
-- **FR7** Sends no network requests of its own.
+- **FR1** Runs from a DevTools console paste **or** a bookmarklet, with no install step, and is
+  also what the CI job evaluates — one implementation, never two.
+- **FR2** Reads the campus API in a single request and transforms it locally.
+- **FR3** Emits the full room inventory alongside the bookings, so rooms with nothing booked are
+  represented rather than absent.
+- **FR4** Derives block, floor and minutes-since-midnight; reports an unknown floor as unknown
+  rather than guessing from trailing digits.
+- **FR5** Refuses to produce a payload with zero rooms.
+- **FR6** Hands the payload to the viewer by `postMessage`, falling back to a download plus
+  clipboard copy if the viewer tab cannot be opened or never acknowledges.
+- **FR7** Sends the data nowhere except the reader's own viewer tab.
 
 ### Viewer (`viewer.html`)
 

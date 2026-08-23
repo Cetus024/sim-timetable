@@ -54,74 +54,60 @@ Rejections throw with a specific message (`Expected an object with a "rows" arra
 `That file has no rows in it.`) which the viewer shows verbatim. Silent failure is the thing to
 avoid here — a blank screen after a 30-second scrape is a terrible outcome.
 
-## 2. Parsing
+## 2. Reading the schedule
 
-All four parsers are pure and live in `assets/timetable.js`, duplicated in `scrape.js` only
-because the scraper must be a **single self-contained paste** with no imports.
+The scheduling page is a front end over `GET /rad/rest/campus?id=SIM`, which returns the whole
+campus in one response:
 
 ```
-toMinutes("4:00 PM")      → 960          12-hour → minutes since midnight;
-                                          handles the 12AM/12PM wrap explicitly
-parseTimeRange("9:00 AM - 12:00 PM")     splits on "-", strips U+00A0 first (§2.1)
-parseBlock("Block B", "TR.B.5.14") → "B" building column wins; falls back to the room code
-parseFloor("TR.B.5.14")   → 5            first ".<digits>." group, else a trailing ".<digits>"
+data.buildings[] → .rooms[] → .activities[]
+                    code, description        name, description
+                    (capacity lives here)    startDateTime, endDateTime
 ```
 
-### 2.1 The non-breaking space
+`scraper/scrape.js` is the only implementation of the read and the transform. The bookmarklet
+runs it directly; `scripts/fetch-schedule.mjs` evaluates *that same file* in a headless page with
+`window.__SIM_SCRAPE_HEADLESS__ = true`, which makes it return the payload instead of opening a
+viewer tab. There is deliberately no second copy of the parsing to drift out of sync.
 
-The source table renders times with `&nbsp;` around the hyphen. A naive `split('-')` on the raw
-`innerText` yields tokens with U+00A0 attached, `toMinutes` returns `null`, and the row silently
-becomes untimed — dropped from availability view entirely. `parseTimeRange` normalises U+00A0 to a
-plain space **before** splitting. It is written as the escape `\u00a0` in the source rather
-than as a literal character, so it survives any encoding round-trip.
+### 2.1 Derived fields
 
-### 2.2 Why parse at scrape time
-
-Parsing runs once, in the scraper, and the results are stored in the JSON. The viewer re-derives
-only when fields are missing. This keeps the render path free of string parsing, makes the JSON
-self-describing when read by a human, and means a parser fix can be applied to old data by
-re-running `normalize()` on it.
-
-## 3. Scraping
-
-### 3.1 The race
-
-The scheduling page advances its own pagination on a timer. A naive `while (next) { read; click; }`
-loses rows whenever the site's timer fires between the read and the click — and the output is
-indistinguishable from a good scrape, just shorter. Since the product claims rooms are *free*, an
-undetected gap means asserting "free" where the truth is "unknown". **Silent under-collection is
-the worst failure this system can have.**
-
-### 3.2 Mitigations, in order
-
-1. **Reset to page 1 first.** The page may have drifted before the user pasted anything.
-   Prefers a "first page" control; otherwise clicks "previous" until disabled, capped at 30
-   iterations so a mis-selected button can't spin forever.
-2. **Read the site's own total.** MUI's `labelDisplayedRows` renders `"8-14 of 112"`. Scanning for
-   that pattern yields both the page size and the authoritative row count.
-3. **Range-advance check.** After each of *our* clicks, the visible range should move forward by
-   about one page. If `infoAfter.from > infoBefore.to + pageSize`, something else advanced it too —
-   flag `skippedPageWarning`.
-4. **Dedupe.** Rows are deduped by `JSON.stringify` identity, so re-reading a page (which the
-   reset step can cause) is harmless rather than duplicating.
-5. **Reconcile.** Compare unique rows against `site_total`.
-
-### 3.3 The honesty rule
-
-```js
-incomplete: skippedPageWarning || (expectedTotal !== null && uniqueRaw.length < expectedTotal)
+```
+blockOf("SIM Campus Block A", code)  → "A"    building name first, room code as fallback
+floorOf("LT.A.1.08")                 → 1      the ".<letter>.<digits>." group
+parseStamp("2026-08-24 15:30:00")    → {min: 930, label: "3:30 PM", date: "2026-08-24"}
 ```
 
-The scraper never claims coverage it cannot demonstrate. When `incomplete` is true the viewer
-shows a warning in the header. **Do not "simplify" any of §3.2 away** — each step exists because
-the naive version produced quietly wrong timetables.
+`floorOf` deliberately has **no** trailing-digit fallback. `TR.1` is Tutor Room 1, not floor 1;
+55 of 326 rooms have no parseable floor and are reported as unknown rather than guessed.
 
-### 3.4 Timing
+Times arrive as exact timestamps, so none of the old string parsing — 12-hour wraps, non-breaking
+spaces around the hyphen — is needed any more.
 
-Fixed 1200ms waits after pagination clicks (900ms when rewinding). Crude but adequate: the table
-is small and re-renders fast. A `MutationObserver` on the tbody would be more precise and is the
-obvious upgrade if the site gets slower; the coverage checks in §3.2 are what make the crude
-version *safe*, since a too-short wait shows up as a count mismatch rather than as bad data.
+### 2.2 Coverage
+
+The response lists every room, including rooms whose `activities` array is empty. Those are the
+rooms free all day: 170 of 326 on the day this was written, and structurally invisible to anyone
+reading the rendered table, which only ever lists rooms that are busy.
+
+## 3. The daily job
+
+`.github/workflows/daily-schedule.yml` runs `05 16 * * *` UTC — 00:05 SGT — plus
+`workflow_dispatch` for manual runs. It locates Chrome on the runner, runs
+`scripts/fetch-schedule.mjs`, and commits `data/latest.json` with `contents: write`.
+
+**Non-destructive failure.** The fetch refuses to write a payload with zero rooms or zero
+bookings, and any error exits non-zero before touching the file, so a bad day leaves yesterday's
+good data in place — with its age on screen, which is what tells a reader something is stale.
+
+**Consumption.** The viewer reads the committed file from `raw.githubusercontent.com`, which
+sends `Access-Control-Allow-Origin: *`. The campus API itself does not, which is precisely why
+the feed exists rather than the page calling the API directly. Local data renders first so the
+page is never blank, and is replaced only when the feed's `scraped_at` is newer. A missing or
+unreachable feed is silent — it must never take away data the reader already has.
+
+**Why a browser in CI.** See §9 and PRD §5: the WAF answers 464 to non-browser clients. Verified
+working from a GitHub-hosted runner, so its datacenter IPs are not blocked.
 
 ## 4. Rendering
 
@@ -247,47 +233,11 @@ Because a restored payload can be old, the header states the age in words ("3 ho
 warns outright when the scrape is from a previous calendar day — schedules are per-day, so a
 stale one is not merely dated, it is wrong.
 
-## 6b. The nightly job
+## 6b. The daily job
 
-`scripts/auto-scrape.mjs` drives a headless Chromium-based browser over CDP against a persistent
-profile (`.scrape-profile/`, gitignored) that the user signed into once.
-
-**One scraper, not two.** The job reads `scraper/scrape.js` off disk and evaluates it in the
-page, having first set `window.__SIM_SCRAPE_HEADLESS__ = true`. That flag suppresses only the
-viewer popup and the download; the pagination, coverage checks and parsing are the same code the
-bookmarklet runs. A second implementation would drift, and the drift would be invisible.
-
-**Distinguishing "empty" from "logged out".** The most dangerous outcome is a scrape returning
-zero rows because the session expired, then being published over good data. So the job polls for
-`tbody.MuiTableBody-root tr` to actually appear, up to `tableTimeoutMs`, and treats its absence
-as an *error naming the landing URL and title* — never as an empty schedule. Belt and braces: a
-payload with zero rows is rejected before writing, too.
-
-**Failure is non-destructive.** Any error exits non-zero without touching `data/latest.json`, so
-the viewer keeps serving the last good scrape — with its age shown, which is what tells the user
-something has gone stale.
-
-**Publishing.** `--publish` commits `data/latest.json` as `sim-timetable-bot` and pushes to
-`main`. It commits unconditionally: `scraped_at` changes every run, and a fresh timestamp is
-precisely the signal the viewer needs, so an "unchanged" short-circuit would be dead code.
-One commit a night is the accepted cost.
-
-**Consumption.** The viewer fetches the file from `raw.githubusercontent.com` (which sends
-`Access-Control-Allow-Origin: *`), so a new scrape appears without redeploying the site and the
-scheduled task needs no Vercel credentials. Local data renders first so the page is never blank,
-and is replaced only if the feed's `scraped_at` is newer. A missing or unreachable feed is
-silent by design — it must never take away data the user already has.
-
-**Scheduling.** `install-task.ps1` registers a non-admin task for 00:05 local with
-`StartWhenAvailable` (runs after a missed start, e.g. the laptop was off) and `WakeToRun`. The
-machine is on Singapore Standard Time, so 00:05 local is 00:05 SGT. Exit codes surface as
-`LastTaskResult`: 0 success, 1 scrape failed, 2 not configured. The script is kept ASCII-only —
-Windows PowerShell 5.1 reads a BOM-less `.ps1` as ANSI, and an em-dash in a string was enough to
-make it fail to parse.
-
-**Testing without SIM.** `scripts/fixtures/schedule.html` reproduces the page's DOM contract and
-its auto-advance timer, so the whole job — pagination, non-breaking-space parsing, publish — is
-exercised locally. The expired-session path is tested by pointing the job at a page with no table.
+Superseded by §3 — the local scheduled task, its saved browser profile and `auto-scrape.mjs`
+were all built for a login that turned out not to exist, and have been removed. The refresh now
+runs in GitHub Actions; see §3.
 
 ## 7. Hosting
 
