@@ -4,3 +4,5 @@ node_modules/
 *.log
 sim-timetable.json
 timetable.html
+
+.vercel
