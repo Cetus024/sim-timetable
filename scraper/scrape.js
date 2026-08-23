@@ -29,6 +29,28 @@
   let VIEWER_ORIGIN = '__VIEWER_ORIGIN__';
   if (VIEWER_ORIGIN.slice(0, 2) === '__') VIEWER_ORIGIN = 'https://sim-timetable.vercel.app';
 
+  /* Progress reporting. The reader is looking at the viewer tab, so that is
+   * where the running commentary goes; headless runs just log. */
+  let progressTarget = null;
+  function report(step, detail, progress) {
+    console.log('[sim-timetable] ' + step + (detail ? ' - ' + detail : ''));
+    if (!progressTarget || progressTarget.closed) return;
+    try {
+      progressTarget.postMessage({
+        type: 'sim-timetable:progress',
+        step: step,
+        detail: detail || '',
+        progress: typeof progress === 'number' ? progress : null
+      }, VIEWER_ORIGIN);
+    } catch (err) { /* the viewer may have gone away; not fatal */ }
+  }
+
+  function fmtBytes(n) {
+    if (n < 1024) return n + ' B';
+    if (n < 1024 * 1024) return Math.round(n / 1024) + ' KB';
+    return (n / 1024 / 1024).toFixed(1) + ' MB';
+  }
+
   const CAMPUS = new URLSearchParams(location.search).get('id') || 'SIM';
   const API_PATH = '/rad/rest/campus?id=' + encodeURIComponent(CAMPUS);
 
@@ -46,6 +68,9 @@
     }
   }
 
+  progressTarget = viewerWin;
+  if (!HEADLESS) report('Connecting to the campus schedule', '', 0.05);
+
   // ---- read the campus API ----
 
   if (!/scheduling\.sim\.edu\.sg$/i.test(location.hostname)) {
@@ -55,9 +80,33 @@
     throw new Error(msg);
   }
 
+  report('Requesting the campus schedule', API_PATH, 0.1);
+
   const res = await fetch(API_PATH, { headers: { Accept: 'application/json' } });
   if (!res.ok) throw new Error('campus API returned HTTP ' + res.status);
-  const api = await res.json();
+  /* Read the body in chunks so bytes visibly arrive. The response is gzipped,
+   * so Content-Length is the compressed size while these chunks are already
+   * decompressed - we report bytes received, deliberately not a fake percent. */
+  let bodyText;
+  if (res.body && res.body.getReader) {
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let received = 0;
+    bodyText = '';
+    for (;;) {
+      const chunk = await reader.read();
+      if (chunk.done) break;
+      received += chunk.value.length;
+      bodyText += decoder.decode(chunk.value, { stream: true });
+      report('Downloading schedule', fmtBytes(received) + ' received',
+        0.1 + Math.min(0.4, received / 400000));
+    }
+    bodyText += decoder.decode();
+  } else {
+    bodyText = await res.text();
+  }
+
+  const api = JSON.parse(bodyText);
   if (!api || !api.success || !api.data) {
     throw new Error('campus API reported failure: ' + ((api && api.message) || 'no message'));
   }
@@ -96,7 +145,11 @@
   const rows = [];
   const dates = new Set();
 
-  for (const building of api.data.buildings || []) {
+  const buildings = api.data.buildings || [];
+  report('Reading buildings', buildings.length + ' buildings found', 0.55);
+
+  let buildingsDone = 0;
+  for (const building of buildings) {
     for (const room of building.rooms || []) {
       const code = room.code || room.name || '';
       const block = blockOf(building.name, code);
@@ -131,6 +184,14 @@
         });
       }
     }
+
+    buildingsDone++;
+    report(
+      'Reading ' + (building.name || 'building'),
+      buildingsDone + ' of ' + buildings.length + ' buildings, ' +
+        rooms.length + ' rooms, ' + rows.length + ' bookings so far',
+      0.55 + (buildingsDone / Math.max(1, buildings.length)) * 0.35
+    );
   }
 
   if (rooms.length === 0) throw new Error('campus API returned no rooms');
@@ -156,7 +217,13 @@
     rows,
   };
 
+
   const freeAllDay = rooms.filter(r => r.activities === 0).length;
+  report(
+    'Sending to the viewer',
+    rows.length + ' bookings, ' + rooms.length + ' rooms, ' + freeAllDay + ' with Free Access',
+    0.95
+  );
   console.log(
     `Read ${rows.length} bookings across ${rooms.length} rooms ` +
     `(${freeAllDay} free all day) for ${payload.schedule_dates.join(', ') || 'no dated activities'}.`

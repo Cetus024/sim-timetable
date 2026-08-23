@@ -77,8 +77,12 @@
     return cmp ? out.sort(cmp) : out.sort();
   }
 
+  /* SIM marks rooms students may actually use with an explicit booking named
+   * "Free Access" (or "SST Free Access"). This is the ONLY positive signal that
+   * a room is open — an unbooked room is not known to be open, it is just not
+   * booked, and is very often locked. */
   function isFreeAccess(b) {
-    return (b.event || '').trim().toLowerCase() === 'free access';
+    return /free access/i.test((b.event || '').trim());
   }
 
   /* The feed is fetched once a day, so a status stored at 00:05 would read
@@ -96,16 +100,19 @@
     return 'UPCOMING';
   }
 
-  /* Turns one room's bookings into an alternating busy/free timeline.
-   * Gaps between bookings become FREE; everything after the last booking is
-   * FREE and open-ended (we only know what the visible schedule showed). */
+  /* Turns one room's bookings into a timeline of three kinds of segment:
+   *   open  - an explicit "Free Access" booking; students may use the room
+   *   busy  - any other booking
+   *   gap   - nothing booked. NOT the same as open: an unbooked room is simply
+   *           unallocated and is very often locked, so it is never presented as
+   *           somewhere to go. */
   function buildTimeline(bookings) {
     bookings = bookings.slice().sort(function (a, b) { return a.start_min - b.start_min; });
     var timeline = [];
     bookings.forEach(function (b, i) {
       var free = isFreeAccess(b);
       timeline.push({
-        type: free ? 'free' : 'busy',
+        type: free ? 'open' : 'busy',
         start_min: b.start_min, end_min: b.end_min,
         start: b.start, end: b.end,
         event: b.event,
@@ -114,14 +121,15 @@
       var nxt = bookings[i + 1];
       if (nxt) {
         if (nxt.start_min > b.end_min) {
+          // Unbooked, which is NOT the same as open to students.
           timeline.push({
-            type: 'free', start_min: b.end_min, end_min: nxt.start_min,
+            type: 'gap', start_min: b.end_min, end_min: nxt.start_min,
             start: b.end, end: nxt.start, open_ended: false, event: ''
           });
         }
       } else {
         timeline.push({
-          type: 'free', start_min: b.end_min, end_min: null,
+          type: 'gap', start_min: b.end_min, end_min: null,
           start: b.end, end: null, open_ended: true, event: ''
         });
       }
@@ -139,8 +147,8 @@
     '  <label>Exclude contains<input data-f="exclude" type="text" placeholder="e.g. LAB, MPSH" /></label>',
     '  <label>Ends at<select data-f="endtime"><option value="">Any</option></select></label>',
     '  <div class="time-filters" data-el="timeFilters">',
-    '    <label>Free after<input data-f="after" type="text" placeholder="e.g. 4:00 PM" /></label>',
-    '    <label>Free before<input data-f="before" type="text" placeholder="e.g. 10:00 PM" /></label>',
+    '    <label title="Finds rooms whose Free Access window starts at or after this time">Open after<input data-f="after" type="text" placeholder="e.g. 4:00 PM" /></label>',
+    '    <label title="Finds rooms whose Free Access window starts before this time">Open before<input data-f="before" type="text" placeholder="e.g. 10:00 PM" /></label>',
     '  </div>',
     '  <div class="spacer"></div>',
     '  <button class="btn" data-el="resetBtn" type="button">Reset filters</button>',
@@ -156,9 +164,10 @@
   function mount(root, rows, opts) {
     opts = opts || {};
     var data = normalize(rows);
-    /* Full room inventory, when the source provides one. The rendered table can
-     * only ever list rooms that have a booking; the API also tells us about the
-     * rooms with none, which are the most useful answer to "where is free?". */
+    /* Full room inventory, when the source provides one. Used to report how
+     * many rooms are simply unbooked, and to populate the block/floor filters.
+     * Unbooked rooms are deliberately NOT offered as available - see
+     * buildTimeline on why a gap is not an invitation. */
     var inventory = opts.rooms || [];
     root.innerHTML = TOOLBAR_HTML;
 
@@ -248,8 +257,10 @@
       });
     }
 
-    /* Rooms the inventory says have no bookings at all today. Excluded when an
-     * "ends at" filter is set, since a room with no bookings has no end time. */
+    /* Rooms the inventory says have no bookings at all today. Reported as a
+     * count only: nothing marks them open, and most are labs, tutor rooms and
+     * foyers. Excluded when an "ends at" filter is set, since a room with no
+     * bookings has no end time to match. */
     function freeAllDayRooms() {
       if (f.endtime.value) return [];
       return inventory.filter(function (r) {
@@ -297,7 +308,7 @@
         var timeline = buildTimeline(bookings);
 
         var hasMatchingFree = timeline.some(function (seg) {
-          if (seg.type !== 'free') return false;
+          if (seg.type !== 'open') return false;
           if (afterMin !== null && seg.start_min < afterMin) return false;
           if (beforeMin !== null && seg.start_min >= beforeMin) return false;
           return true;
@@ -310,10 +321,15 @@
               '<span class="seg-time">' + esc(seg.start) + ' - ' + esc(seg.end) + '</span>' +
               '<span class="seg-label">' + esc(seg.event) + '</span></div>';
           }
-          var until = seg.open_ended ? 'end of visible schedule' : esc(seg.end);
-          return '<div class="segment"><span class="tag free">FREE</span>' +
+          if (seg.type === 'open') {
+            return '<div class="segment"><span class="tag free">OPEN</span>' +
+              '<span class="seg-time">' + esc(seg.start) + ' - ' + esc(seg.end) + '</span>' +
+              '<span class="seg-label">' + esc(seg.event) + '</span></div>';
+          }
+          var until = seg.open_ended ? 'end of day' : esc(seg.end);
+          return '<div class="segment"><span class="tag gap">GAP</span>' +
             '<span class="seg-time">' + esc(seg.start) + ' &rarr; ' + until + '</span>' +
-            '<span class="seg-label">' + esc(seg.event || '') + '</span></div>';
+            '<span class="seg-label muted">nothing booked - may still be locked</span></div>';
         }).join('');
 
         var floorText = (info.floor === null || typeof info.floor === 'undefined') ? '?' : info.floor;
@@ -325,36 +341,57 @@
         );
       });
 
-      // Rooms with nothing booked at all get one compact card rather than a
-      // wall of near-identical ones — there can be well over a hundred.
-      var free = freeAllDayRooms();
-      var freeHtml = '';
-      if (free.length) {
-        var byBlock = {};
-        free.forEach(function (r) {
-          var k = r.block || '?';
-          (byBlock[k] = byBlock[k] || []).push(r);
-        });
-        freeHtml =
-          '<div class="room-card"><div class="room-title">Free all day ' +
-          '<span class="room-sub">' + free.length +
-          ' room(s) with nothing booked today</span></div>' +
-          Object.keys(byBlock).sort().map(function (k) {
-            var chips = byBlock[k]
-              .sort(function (a, b) { return a.room < b.room ? -1 : 1; })
-              .map(function (r) {
-                return '<span class="chip" title="' + esc(r.description || '') + '">' +
-                  esc(r.room) + '</span>';
-              }).join('');
-            return '<div class="segment"><span class="tag free">BLK ' + esc(k) + '</span>' +
-              '<span class="chips">' + chips + '</span></div>';
+      // Lead with the rooms SIM has explicitly opened to students today. An
+      // unbooked room is NOT an open room — most of the ones with nothing
+      // booked are labs, tutor rooms and foyers that are simply locked — so
+      // they are reported as a count, not offered as somewhere to go.
+      var openRooms = [];
+      Object.keys(groups).sort().forEach(function (room) {
+        var windows = buildTimeline(groups[room]).filter(function (sg) { return sg.type === 'open'; });
+        if (!windows.length) return;
+        if (afterMin !== null || beforeMin !== null) {
+          var ok = windows.some(function (sg) {
+            if (afterMin !== null && sg.start_min < afterMin) return false;
+            if (beforeMin !== null && sg.start_min >= beforeMin) return false;
+            return true;
+          });
+          if (!ok) return;
+        }
+        openRooms.push({ room: room, info: groups[room][0], windows: windows });
+      });
+
+      var openHtml = '';
+      if (openRooms.length) {
+        openHtml =
+          '<div class="room-card summary-card"><div class="room-title">Open to students ' +
+          '<span class="room-sub">' + openRooms.length +
+          ' room(s) with a Free Access window today</span></div>' +
+          openRooms.map(function (o) {
+            var times = o.windows.map(function (sg) {
+              return esc(sg.start) + ' - ' + esc(sg.end);
+            }).join(', ');
+            return '<div class="segment"><span class="tag free">OPEN</span>' +
+              '<span class="seg-time">' + esc(o.room) + '</span>' +
+              '<span class="seg-label">' + times +
+              (o.info.room_description ? ' &middot; ' + esc(o.info.room_description) : '') +
+              '</span></div>';
           }).join('') +
           '</div>';
       }
 
-      el.meta.textContent = cards.length + ' room(s) with bookings' +
-        (free.length ? ' · ' + free.length + ' free all day' : '');
-      el.results.innerHTML = (freeHtml + cards.join('')) ||
+      var unbooked = freeAllDayRooms();
+      var unbookedNote = unbooked.length
+        ? '<p class="empty">' + unbooked.length + ' more room(s) have nothing booked today, but ' +
+          'nothing marks them as open - mostly labs, tutor rooms and foyers, which are usually ' +
+          'locked. They are not listed as available.</p>'
+        : '';
+
+      el.meta.textContent =
+        openRooms.length + ' room(s) open to students · ' +
+        cards.length + ' with bookings' +
+        (unbooked.length ? ' · ' + unbooked.length + ' unbooked (status unknown)' : '');
+
+      el.results.innerHTML = (openHtml + cards.join('') + unbookedNote) ||
         '<p class="empty">No matching rooms found.</p>';
     }
 

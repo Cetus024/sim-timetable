@@ -17,9 +17,12 @@
   <section id="waitingPanel" hidden>
     <div class="card">
       <div class="drop">
-        <strong>Waiting for the schedule…</strong><br />
-        <span class="note">Keep this tab open. The scheduling page will hand the data over on
-        its own, usually within a couple of seconds.</span>
+        <strong data-el="waitStep">Waiting for the schedule</strong><br />
+        <span class="note" data-el="waitDetail">Keep this tab open. The scheduling page will hand
+        the data over on its own, usually within a couple of seconds.</span>
+        <div class="toast-bar" data-el="waitBar" style="max-width:280px;margin:12px auto 0;display:none">
+          <i data-el="waitFill"></i>
+        </div>
       </div>
       <p class="note" style="margin:12px 0 0">
         Nothing arriving? The scraper falls back to downloading
@@ -63,6 +66,7 @@
 
 </div>
 
+<script src="/assets/toast.js"></script>
 <script src="/assets/timetable.js"></script>
 <script>
 (function () {
@@ -125,8 +129,13 @@
   function describe(p) {
     var bits = [p.rows.length + ' events'];
     if (p.rooms && p.rooms.length) {
-      var freeAll = p.rooms.filter(function (r) { return r.activities === 0; }).length;
-      bits.push(p.rooms.length + ' rooms, ' + freeAll + ' free all day');
+      // Count rooms SIM has actually opened, not merely unbooked ones: an
+      // unbooked room is usually locked, so calling it free would mislead.
+      var openSet = {};
+      p.rows.forEach(function (r) {
+        if (/free access/i.test(r.event || '')) openSet[r.room] = 1;
+      });
+      bits.push(p.rooms.length + ' rooms, ' + Object.keys(openSet).length + ' open to students');
     }
     if (p.schedule_dates && p.schedule_dates.length) {
       bits.push('for ' + p.schedule_dates.join(', '));
@@ -294,15 +303,44 @@
     // The payload is still validated by coerce() like any other import.
     if (!awaiting) return;
     if (!window.opener || e.source !== window.opener) return;
-    if (!e.data || e.data.type !== 'sim-timetable:payload') return;
+    if (!e.data) return;
+
+    // Running commentary, so the reader can see it is still working.
+    if (e.data.type === 'sim-timetable:progress') {
+      var step = String(e.data.step || '').slice(0, 120);
+      var pdetail = String(e.data.detail || '').slice(0, 160);
+      var pct = typeof e.data.progress === 'number' ? e.data.progress : null;
+
+      var stepEl = waitingPanel.querySelector('[data-el=waitStep]');
+      var detailEl = waitingPanel.querySelector('[data-el=waitDetail]');
+      var barEl = waitingPanel.querySelector('[data-el=waitBar]');
+      var fillEl = waitingPanel.querySelector('[data-el=waitFill]');
+      if (stepEl) stepEl.textContent = step;
+      if (detailEl) detailEl.textContent = pdetail;
+      if (barEl) barEl.style.display = pct === null ? 'none' : '';
+      if (fillEl && pct !== null) fillEl.style.width = Math.round(pct * 100) + '%';
+
+      Toast.show({ id: 'scrape', title: step, detail: pdetail, progress: pct });
+      return;
+    }
+
+    if (e.data.type !== 'sim-timetable:payload') return;
 
     try {
       var p = coerce(e.data.payload);
       show(p, true);
+      Toast.show({
+        id: 'scrape',
+        title: 'Schedule loaded',
+        detail: p.rows.length + ' bookings across ' + (p.rooms ? p.rooms.length : '?') + ' rooms',
+        tone: 'success',
+        ttl: 5000
+      });
       try { e.source.postMessage({ type: 'sim-timetable:received' }, e.origin); } catch (err) { /* best effort */ }
       history.replaceState(null, '', location.pathname);
     } catch (err) {
       stopAwaiting();
+      Toast.show({ id: 'scrape', title: 'Could not read that', detail: err.message, tone: 'error', ttl: 8000 });
       errEl.textContent = 'The scraper sent something unreadable: ' + err.message;
     }
   });
@@ -324,16 +362,57 @@
     // Then quietly check the nightly feed and upgrade if it is fresher.
     // Failure here is normal (offline, nothing published yet) and stays silent —
     // it must never take away data the user already has.
+    Toast.show({ id: 'feed', title: 'Fetching the latest schedule', detail: 'from the daily update' });
+
     fetch(FEED_URL, { cache: 'no-store' })
       .then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
-        return r.json();
+        // Stream it so a slow connection shows movement rather than nothing.
+        if (!r.body || !r.body.getReader) return r.text();
+        var reader = r.body.getReader();
+        var decoder = new TextDecoder();
+        var received = 0;
+        var text = '';
+        return (function pump() {
+          return reader.read().then(function (chunk) {
+            if (chunk.done) return text + decoder.decode();
+            received += chunk.value.length;
+            text += decoder.decode(chunk.value, { stream: true });
+            Toast.show({
+              id: 'feed',
+              title: 'Fetching the latest schedule',
+              detail: Toast.formatBytes(received) + ' received'
+            });
+            return pump();
+          });
+        })();
       })
-      .then(function (raw) {
-        var remote = coerce(raw);
-        if (!payload || scrapedTime(remote) > scrapedTime(payload)) show(remote, true);
+      .then(function (text) {
+        var remote = coerce(JSON.parse(text));
+        var fresher = !payload || scrapedTime(remote) > scrapedTime(payload);
+        if (fresher) show(remote, true);
+        var freeAccess = remote.rows.filter(function (r) {
+          return /free access/i.test(r.event || '');
+        }).length;
+        Toast.show({
+          id: 'feed',
+          title: fresher ? 'Schedule loaded' : 'Already up to date',
+          detail: remote.rows.length + ' bookings, ' + freeAccess + ' Free Access windows',
+          tone: 'success',
+          ttl: 4500
+        });
       })
-      .catch(function () { /* no feed available — manual import still works */ });
+      .catch(function (err) {
+        // Normal when offline or nothing published yet. Never remove data the
+        // reader already has; just say the refresh did not happen.
+        Toast.show({
+          id: 'feed',
+          title: payload ? 'Could not check for a newer schedule' : 'No schedule available yet',
+          detail: payload ? 'Showing what you already had.' : String(err.message || err),
+          tone: 'error',
+          ttl: 7000
+        });
+      });
   }
 })();
 </script>

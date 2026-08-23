@@ -104,7 +104,8 @@ const OPENER_SCRIPT = `(async () => {
     importPanelHidden: d.getElementById('importPanel').hidden,
     appHidden: d.getElementById('app').hidden,
     header: d.getElementById('source').textContent,
-    rooms: d.querySelectorAll('.room-card').length,
+    rooms: d.querySelectorAll('.room-card:not(.summary-card)').length,
+    summaryCards: d.querySelectorAll('.summary-card').length,
     persisted: !!win.localStorage.getItem('sim-timetable-payload'),
   };
   win.close();
