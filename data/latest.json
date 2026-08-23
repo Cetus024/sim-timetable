@@ -2,7 +2,7 @@
   "version": 2,
   "source": "https://scheduling.sim.edu.sg/rad/rest/campus?id=SIM",
   "campus": "SIM Campus",
-  "scraped_at": "2026-08-23T17:46:24.293Z",
+  "scraped_at": "2026-08-23T17:52:02.058Z",
   "schedule_dates": [
     "2026-08-24"
   ],
@@ -2629,7 +2629,7 @@
       "floor": null,
       "room": "TR.1",
       "event": "Online room for back to back classes UBC399",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "Tutor Room 1"
     },
@@ -2642,7 +2642,7 @@
       "floor": null,
       "room": "TR.2",
       "event": "Consultation room for Prof Marc De Rosnay",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "Tutor Room 2"
     },
@@ -2655,7 +2655,7 @@
       "floor": 1,
       "room": "LT.A.1.08",
       "event": "COMM2891 - LF02 : Asian Media and Communication - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Asian Media and Communication - RMIT",
       "room_description": "A.1.08 (112pax)"
     },
@@ -2668,7 +2668,7 @@
       "floor": 1,
       "room": "LT.A.1.08",
       "event": "COMM2891 - LF01 : Asian Media and Communication - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Asian Media and Communication - RMIT",
       "room_description": "A.1.08 (112pax)"
     },
@@ -2681,7 +2681,7 @@
       "floor": 1,
       "room": "LT.A.1.08",
       "event": "COMM3001 - LF01 : Digi Audiences and Analytics - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Digi Audiences and Analytics - RMIT",
       "room_description": "A.1.08 (112pax)"
     },
@@ -2694,7 +2694,7 @@
       "floor": 1,
       "room": "LT.A.1.09A",
       "event": "BCM111 - T1A : Global Media and Culture - UoW",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Global Media and Culture - UoW",
       "room_description": "A.1.09A (376pax)"
     },
@@ -2707,7 +2707,7 @@
       "floor": 1,
       "room": "LT.A.1.09B",
       "event": "MT105A - L02A : Mathematics 1 - UoL",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Mathematics 1 - UoL",
       "room_description": "A.1.09B (299pax)"
     },
@@ -2720,7 +2720,7 @@
       "floor": 1,
       "room": "LT.A.1.10",
       "event": "SMM- - L02 : Marketing Fundamentals - SIM",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Marketing Fundamentals - SIM",
       "room_description": "A.1.10 (106pax)"
     },
@@ -2733,7 +2733,7 @@
       "floor": 1,
       "room": "LT.A.1.16",
       "event": "PSYC361 - L5 : Child Development - UoW",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Child Development - UoW",
       "room_description": "A.1.16 (112pax)"
     },
@@ -2746,7 +2746,7 @@
       "floor": 1,
       "room": "LT.A.1.17",
       "event": "0741346 - L01 : Critical Perspect on Leadershp - UoB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Critical Perspect on Leadershp - UoB",
       "room_description": "A.1.17 (498pax) Auditorium"
     },
@@ -2759,7 +2759,7 @@
       "floor": 1,
       "room": "LT.A.1.17",
       "event": "0741346 - L02 : Critical Perspect on Leadershp - UoB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Critical Perspect on Leadershp - UoB",
       "room_description": "A.1.17 (498pax) Auditorium"
     },
@@ -2772,7 +2772,7 @@
       "floor": 1,
       "room": "LT.A.1.20",
       "event": "SIM UB Student Council - Meeting (August)",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "A.1.20 (112pax)"
     },
@@ -2785,7 +2785,7 @@
       "floor": 5,
       "room": "LAB.A.5.08A/A.5.08B",
       "event": "GEO481 - L01 : Geographic Information Systems - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Geographic Information Systems - UB",
       "room_description": "A.5.08A/A.5.08B (Combined Lab-48pax)"
     },
@@ -2798,7 +2798,7 @@
       "floor": 5,
       "room": "LAB.A.5.08A/A.5.08B",
       "event": "GEO481 - C01 : Geographic Information Systems - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Geographic Information Systems - UB",
       "room_description": "A.5.08A/A.5.08B (Combined Lab-48pax)"
     },
@@ -2811,7 +2811,7 @@
       "floor": 5,
       "room": "LAB.A.5.08A/A.5.08B",
       "event": "TR5011 - R01 : INTRODUCTION TO PYTHON EXPRESS - PART 2",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "INTRODUCTION TO PYTHON EXPRESS - PART 2",
       "room_description": "A.5.08A/A.5.08B (Combined Lab-48pax)"
     },
@@ -2824,7 +2824,7 @@
       "floor": 5,
       "room": "LAB.A.5.14/A.5.15",
       "event": "PSYC327 - T5A : Advanced Topics in Cognition - UoW",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Advanced Topics in Cognition - UoW",
       "room_description": "A.5.14/A.5.15 (Combined Lab-60pax)"
     },
@@ -2850,7 +2850,7 @@
       "floor": 5,
       "room": "LAB.A.5.14/A.5.15",
       "event": "PSYC234 - T3B : Biological Psy & Learning-UoW",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Biological Psy & Learning-UoW",
       "room_description": "A.5.14/A.5.15 (Combined Lab-60pax)"
     },
@@ -2863,7 +2863,7 @@
       "floor": 5,
       "room": "LAB.A.5.14/A.5.15",
       "event": "PSYC327 - T5B : Advanced Topics in Cognition - UoW",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Advanced Topics in Cognition - UoW",
       "room_description": "A.5.14/A.5.15 (Combined Lab-60pax)"
     },
@@ -2889,7 +2889,7 @@
       "floor": 5,
       "room": "LAB.A.5.17C/A.5.17D",
       "event": "BUIL1257 Hands-On Session",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "A.5.17C/A.5.17D (Combined Lab-60pax)"
     },
@@ -2915,7 +2915,7 @@
       "floor": 5,
       "room": "LAB.A.5.20A/A.5.20B",
       "event": "CSCI251 - T03 : Advanced Programming-UoW",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Advanced Programming-UoW",
       "room_description": "A.5.20A/A.5.20B (Combined Lab-60pax-CRS)"
     },
@@ -2928,7 +2928,7 @@
       "floor": 5,
       "room": "LAB.A.5.20A/A.5.20B",
       "event": "CSCI251 - T02 : Advanced Programming-UoW",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Advanced Programming-UoW",
       "room_description": "A.5.20A/A.5.20B (Combined Lab-60pax-CRS)"
     },
@@ -2941,7 +2941,7 @@
       "floor": 5,
       "room": "LAB.A.5.20A/A.5.20B",
       "event": "CSCI251 - T01 : Advanced Programming-UoW",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Advanced Programming-UoW",
       "room_description": "A.5.20A/A.5.20B (Combined Lab-60pax-CRS)"
     },
@@ -2954,7 +2954,7 @@
       "floor": 3,
       "room": "SR.A.3.01A/A.3.01B",
       "event": "SG001_CERT_2628_CT - ITSC001 : Exam Session",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "A.3.01A/A.3.01B (Combined-102pax)"
     },
@@ -2980,7 +2980,7 @@
       "floor": 5,
       "room": "SR.A.5.09C/A.5.09D",
       "event": "HE10 Special Arrangement ITSC001 Common Test",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "A.5.09C/A.5.09D (Combined-104pax)"
     },
@@ -2993,7 +2993,7 @@
       "floor": 2,
       "room": "LT.A.2.08",
       "event": "BUSM2568 - LF04 : Business Decision Making - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Business Decision Making - RMIT",
       "room_description": "A.2.08 (192pax)"
     },
@@ -3006,7 +3006,7 @@
       "floor": 2,
       "room": "LT.A.2.08",
       "event": "BUSM2573 - LF01 : Business in Society - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Business in Society - RMIT",
       "room_description": "A.2.08 (192pax)"
     },
@@ -3032,7 +3032,7 @@
       "floor": 2,
       "room": "LT.A.2.09B",
       "event": "LIN207 - L01 : Language, Society and the Indv - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Language, Society and the Indv - UB",
       "room_description": "A.2.09B (80pax)"
     },
@@ -3045,7 +3045,7 @@
       "floor": 2,
       "room": "LT.A.2.09B",
       "event": "LIN207 - C01 : Language, Society and the Indv - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Language, Society and the Indv - UB",
       "room_description": "A.2.09B (80pax)"
     },
@@ -3058,7 +3058,7 @@
       "floor": 2,
       "room": "LT.A.2.09C",
       "event": "ECO- - L01 : Elements of Economics - SIM",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Elements of Economics - SIM",
       "room_description": "A.2.09C (80pax)"
     },
@@ -3084,7 +3084,7 @@
       "floor": 2,
       "room": "LT.A.2.17A",
       "event": "MGO403 - C01 : Fundm of Strategic Mgt - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Fundm of Strategic Mgt - UB",
       "room_description": "A.2.17A (80pax)"
     },
@@ -3097,7 +3097,7 @@
       "floor": 2,
       "room": "LT.A.2.17A",
       "event": "SOC293 - L01 : Social Research Methods - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Social Research Methods - UB",
       "room_description": "A.2.17A (80pax)"
     },
@@ -3110,7 +3110,7 @@
       "floor": 2,
       "room": "LT.A.2.17A",
       "event": "SOC293 - C01 : Social Research Methods - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Social Research Methods - UB",
       "room_description": "A.2.17A (80pax)"
     },
@@ -3123,7 +3123,7 @@
       "floor": 2,
       "room": "LT.A.2.17A",
       "event": "SOC322 - L02 : Medical Sociology - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Medical Sociology - UB",
       "room_description": "A.2.17A (80pax)"
     },
@@ -3136,7 +3136,7 @@
       "floor": 2,
       "room": "LT.A.2.17A",
       "event": "SOC322 - C02 : Medical Sociology - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Medical Sociology - UB",
       "room_description": "A.2.17A (80pax)"
     },
@@ -3149,7 +3149,7 @@
       "floor": 2,
       "room": "LT.A.2.17A",
       "event": "MGO403 - L01 : Fundm of Strategic Mgt - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Fundm of Strategic Mgt - UB",
       "room_description": "A.2.17A (80pax)"
     },
@@ -3162,7 +3162,7 @@
       "floor": 2,
       "room": "LT.A.2.17B",
       "event": "PSYC120 - L2 : Critical Thinking & Commn Psy - UoW",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Critical Thinking & Commn Psy - UoW",
       "room_description": "A.2.17B (80pax)"
     },
@@ -3175,7 +3175,7 @@
       "floor": 2,
       "room": "LT.A.2.17B",
       "event": "ECO181 - C01 : Intro to Macroeconomics - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Intro to Macroeconomics - UB",
       "room_description": "A.2.17B (80pax)"
     },
@@ -3188,7 +3188,7 @@
       "floor": 2,
       "room": "LT.A.2.17B",
       "event": "ECO181 - L01 : Intro to Macroeconomics - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Intro to Macroeconomics - UB",
       "room_description": "A.2.17B (80pax)"
     },
@@ -3201,7 +3201,7 @@
       "floor": 2,
       "room": "LT.A.2.17B",
       "event": "PSY427 - C01 : Adult Devlm & Aging - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Adult Devlm & Aging - UB",
       "room_description": "A.2.17B (80pax)"
     },
@@ -3214,7 +3214,7 @@
       "floor": 2,
       "room": "LT.A.2.17B",
       "event": "PSY427 - L01 : Adult Devlm & Aging - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Adult Devlm & Aging - UB",
       "room_description": "A.2.17B (80pax)"
     },
@@ -3240,7 +3240,7 @@
       "floor": 2,
       "room": "LT.A.2.20",
       "event": "BUSM2573 - LF02 : Business in Society - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Business in Society - RMIT",
       "room_description": "A.2.20 (192pax)"
     },
@@ -3253,7 +3253,7 @@
       "floor": 2,
       "room": "LT.A.2.20",
       "event": "BUSM2578 - LF01 : Integrated Perspec on Bus Prob - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Integrated Perspec on Bus Prob - RMIT",
       "room_description": "A.2.20 (192pax)"
     },
@@ -3266,7 +3266,7 @@
       "floor": 2,
       "room": "LT.A.2.20",
       "event": "BUSM2578 - LF02 : Integrated Perspec on Bus Prob - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Integrated Perspec on Bus Prob - RMIT",
       "room_description": "A.2.20 (192pax)"
     },
@@ -3279,7 +3279,7 @@
       "floor": 3,
       "room": "LT.A.3.02A",
       "event": "ACCT2346 - LF02 : Acct Data Analytics and Visual - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Acct Data Analytics and Visual - RMIT",
       "room_description": "A.3.02A (192pax)"
     },
@@ -3292,7 +3292,7 @@
       "floor": 3,
       "room": "LT.A.3.02A",
       "event": "BUSM4690 - LF03 : Global Corp Responsibility - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Global Corp Responsibility - RMIT",
       "room_description": "A.3.02A (192pax)"
     },
@@ -3305,7 +3305,7 @@
       "floor": 3,
       "room": "LT.A.3.02A",
       "event": "EC1002 - L01 : Introduction to Economics - UoL",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Introduction to Economics - UoL",
       "room_description": "A.3.02A (192pax)"
     },
@@ -3318,7 +3318,7 @@
       "floor": 3,
       "room": "LT.A.3.05C",
       "event": "IS - 240826 : IS",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Independent Study",
       "room_description": "A.3.05C (192pax)"
     },
@@ -3331,7 +3331,7 @@
       "floor": 3,
       "room": "LT.A.3.08",
       "event": "BUSM2578 - LF11 : Integrated Perspec on Bus Prob - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Integrated Perspec on Bus Prob - RMIT",
       "room_description": "A.3.08 (192pax)"
     },
@@ -3344,7 +3344,7 @@
       "floor": 3,
       "room": "LT.A.3.08",
       "event": "BUSM2578 - LF06 : Integrated Perspec on Bus Prob - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Integrated Perspec on Bus Prob - RMIT",
       "room_description": "A.3.08 (192pax)"
     },
@@ -3357,7 +3357,7 @@
       "floor": 3,
       "room": "LT.A.3.09B",
       "event": "COM337 - L01 : Communication Theory - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Communication Theory - UB",
       "room_description": "A.3.09B (80pax)"
     },
@@ -3370,7 +3370,7 @@
       "floor": 3,
       "room": "LT.A.3.09B",
       "event": "COM337 - C01 : Communication Theory - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Communication Theory - UB",
       "room_description": "A.3.09B (80pax)"
     },
@@ -3383,7 +3383,7 @@
       "floor": 3,
       "room": "LT.A.3.09C",
       "event": "IOM- - L01 : Introduction to Management - SIM",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Introduction to Management - SIM",
       "room_description": "A.3.09C (80pax)"
     },
@@ -3396,7 +3396,7 @@
       "floor": 3,
       "room": "LT.A.3.09C",
       "event": "COM441 - C01 : Public Relations - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Public Relations - UB",
       "room_description": "A.3.09C (80pax)"
     },
@@ -3409,7 +3409,7 @@
       "floor": 3,
       "room": "LT.A.3.09C",
       "event": "COM441 - L01 : Public Relations - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Public Relations - UB",
       "room_description": "A.3.09C (80pax)"
     },
@@ -3422,7 +3422,7 @@
       "floor": 3,
       "room": "LT.A.3.09C",
       "event": "PSY450 - C01 : Research Method Psychology - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Research Method Psychology - UB",
       "room_description": "A.3.09C (80pax)"
     },
@@ -3435,7 +3435,7 @@
       "floor": 3,
       "room": "LT.A.3.09C",
       "event": "PSY450 - L01 : Research Method Psychology - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Research Method Psychology - UB",
       "room_description": "A.3.09C (80pax)"
     },
@@ -3448,7 +3448,7 @@
       "floor": 3,
       "room": "LT.A.3.10",
       "event": "LIN315 - L01 : Language in Its Social Setting - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Language in Its Social Setting - UB",
       "room_description": "A.3.10 (106pax)"
     },
@@ -3461,7 +3461,7 @@
       "floor": 3,
       "room": "LT.A.3.10",
       "event": "LIN315 - C01 : Language in Its Social Setting - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Language in Its Social Setting - UB",
       "room_description": "A.3.10 (106pax)"
     },
@@ -3487,7 +3487,7 @@
       "floor": 3,
       "room": "LT.A.3.17B",
       "event": "BUIL1314 - LF01 : Mgt & Leadership in Constructn - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Mgt & Leadership in Constructn - RMIT",
       "room_description": "A.3.17B (80pax)"
     },
@@ -3513,7 +3513,7 @@
       "floor": 3,
       "room": "LT.A.3.17B",
       "event": "ECO- - L02 : Elements of Economics - SIM",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Elements of Economics - SIM",
       "room_description": "A.3.17B (80pax)"
     },
@@ -3526,7 +3526,7 @@
       "floor": 3,
       "room": "LT.A.3.20",
       "event": "MKTG1199 - LF02 : Marketing Principles - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Marketing Principles - RMIT",
       "room_description": "A.3.20 (192pax)"
     },
@@ -3539,7 +3539,7 @@
       "floor": 4,
       "room": "LT.A.4.02A",
       "event": "PSY101 - L01 : Introductory Psychology - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Introductory Psychology - UB",
       "room_description": "A.4.02A (192pax)"
     },
@@ -3552,7 +3552,7 @@
       "floor": 4,
       "room": "LT.A.4.02A",
       "event": "PSY101 - C01 : Introductory Psychology - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Introductory Psychology - UB",
       "room_description": "A.4.02A (192pax)"
     },
@@ -3565,7 +3565,7 @@
       "floor": 4,
       "room": "LT.A.4.08",
       "event": "BAFI1029 - LF02 : Derivatives & Risk Management - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Derivatives & Risk Management - RMIT",
       "room_description": "A.4.08 (192pax)"
     },
@@ -3578,7 +3578,7 @@
       "floor": 4,
       "room": "LT.A.4.08",
       "event": "ECON1045 - LF02 : Macroeconomics for Dec Making - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Macroeconomics for Dec Making - RMIT",
       "room_description": "A.4.08 (192pax)"
     },
@@ -3591,7 +3591,7 @@
       "floor": 4,
       "room": "LT.A.4.08",
       "event": "ECON1587 - LF01 : Div Perspect on the World Econ - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Div Perspect on the World Econ - RMIT",
       "room_description": "A.4.08 (192pax)"
     },
@@ -3604,7 +3604,7 @@
       "floor": 4,
       "room": "LT.A.4.09B",
       "event": "ENG353 - L01 : Technical Communication - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Technical Communication - UB",
       "room_description": "A.4.09B (80pax)"
     },
@@ -3617,7 +3617,7 @@
       "floor": 4,
       "room": "LT.A.4.09B",
       "event": "ENG353 - C01 : Technical Communication - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Technical Communication - UB",
       "room_description": "A.4.09B (80pax)"
     },
@@ -3643,7 +3643,7 @@
       "floor": 4,
       "room": "LT.A.4.09C",
       "event": "SOC294 - L01 : Basic Stats for Soc Sciences - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Basic Stats for Soc Sciences - UB",
       "room_description": "A.4.09C (80pax)"
     },
@@ -3656,7 +3656,7 @@
       "floor": 4,
       "room": "LT.A.4.09C",
       "event": "MGO364 - L01 : Fundamentals of Project Mgmt - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Fundamentals of Project Mgmt - UB",
       "room_description": "A.4.09C (80pax)"
     },
@@ -3669,7 +3669,7 @@
       "floor": 4,
       "room": "LT.A.4.09C",
       "event": "SOC294 - C01 : Basic Stats for Soc Sciences - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Basic Stats for Soc Sciences - UB",
       "room_description": "A.4.09C (80pax)"
     },
@@ -3682,7 +3682,7 @@
       "floor": 4,
       "room": "LT.A.4.09C",
       "event": "MGO364 - C01 : Fundamentals of Project Mgmt - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Fundamentals of Project Mgmt - UB",
       "room_description": "A.4.09C (80pax)"
     },
@@ -3695,7 +3695,7 @@
       "floor": 4,
       "room": "LT.A.4.16",
       "event": "MGG150 - L01 : Business & Society - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Business & Society - UB",
       "room_description": "A.4.16 (112pax)"
     },
@@ -3708,7 +3708,7 @@
       "floor": 4,
       "room": "LT.A.4.16",
       "event": "MGG150 - C01 : Business & Society - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Business & Society - UB",
       "room_description": "A.4.16 (112pax)"
     },
@@ -3721,7 +3721,7 @@
       "floor": 4,
       "room": "LT.A.4.17A",
       "event": "SOC334 - C01 : Sociology of Popular Culture - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Sociology of Popular Culture - UB",
       "room_description": "A.4.17A (60pax) Havard Room"
     },
@@ -3734,7 +3734,7 @@
       "floor": 4,
       "room": "LT.A.4.17A",
       "event": "SOC334 - L01 : Sociology of Popular Culture - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Sociology of Popular Culture - UB",
       "room_description": "A.4.17A (60pax) Havard Room"
     },
@@ -3760,7 +3760,7 @@
       "floor": 4,
       "room": "LT.A.4.17B",
       "event": "Student Revision Room",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "A.4.17B (60pax) Havard Room"
     },
@@ -3773,7 +3773,7 @@
       "floor": 2,
       "room": "SR.A.2.11",
       "event": "CSIT997 - T21A : Professional Capstone Project - UoW",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Professional Capstone Project - UoW",
       "room_description": "A.2.11 (48pax)"
     },
@@ -3786,7 +3786,7 @@
       "floor": 2,
       "room": "SR.A.2.11",
       "event": "CSIT997 - T21B : Professional Capstone Project - UoW",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Professional Capstone Project - UoW",
       "room_description": "A.2.11 (48pax)"
     },
@@ -3799,7 +3799,7 @@
       "floor": 2,
       "room": "SR.A.2.11",
       "event": "ENG353 - C02 : Technical Communication - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Technical Communication - UB",
       "room_description": "A.2.11 (48pax)"
     },
@@ -3812,7 +3812,7 @@
       "floor": 2,
       "room": "SR.A.2.11",
       "event": "ENG353 - L02 : Technical Communication - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Technical Communication - UB",
       "room_description": "A.2.11 (48pax)"
     },
@@ -3825,7 +3825,7 @@
       "floor": 2,
       "room": "SR.A.2.12",
       "event": "PSYC251 - T4A : Psychopathology - UoW",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Psychopathology - UoW",
       "room_description": "A.2.12 (48pax)"
     },
@@ -3838,7 +3838,7 @@
       "floor": 2,
       "room": "SR.A.2.12",
       "event": "PSY199 - C02 : UB Seminar - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "UB Seminar - UB",
       "room_description": "A.2.12 (48pax)"
     },
@@ -3851,7 +3851,7 @@
       "floor": 2,
       "room": "SR.A.2.12",
       "event": "MGG303 - C01 : Comm Literacy for Business - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Comm Literacy for Business - UB",
       "room_description": "A.2.12 (48pax)"
     },
@@ -3864,7 +3864,7 @@
       "floor": 2,
       "room": "SR.A.2.12",
       "event": "PSY199 - L02 : UB Seminar - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "UB Seminar - UB",
       "room_description": "A.2.12 (48pax)"
     },
@@ -3877,7 +3877,7 @@
       "floor": 2,
       "room": "SR.A.2.12",
       "event": "MGG303 - L01 : Comm Literacy for Business - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Comm Literacy for Business - UB",
       "room_description": "A.2.12 (48pax)"
     },
@@ -3890,7 +3890,7 @@
       "floor": 2,
       "room": "SR.A.2.15",
       "event": "PSYC241 - T4A : Developmental & Social Psy - UoW",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Developmental & Social Psy - UoW",
       "room_description": "A.2.15 (48pax)"
     },
@@ -3903,7 +3903,7 @@
       "floor": 2,
       "room": "SR.A.2.15",
       "event": "KOR112 - C01 : First-Year Korean Second Semes - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "First-Year Korean Second Semes - UB",
       "room_description": "A.2.15 (48pax)"
     },
@@ -3916,7 +3916,7 @@
       "floor": 2,
       "room": "SR.A.2.15",
       "event": "KOR112 - L01 : First-Year Korean Second Semes - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "First-Year Korean Second Semes - UB",
       "room_description": "A.2.15 (48pax)"
     },
@@ -3929,7 +3929,7 @@
       "floor": 3,
       "room": "SR.A.3.09A",
       "event": "JPN101 - C01 : First-Year 1st Sem Japanese - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "First-Year 1st Sem Japanese - UB",
       "room_description": "A.3.09A (48pax)"
     },
@@ -3942,7 +3942,7 @@
       "floor": 3,
       "room": "SR.A.3.09A",
       "event": "JPN101 - L01 : First-Year 1st Sem Japanese - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "First-Year 1st Sem Japanese - UB",
       "room_description": "A.3.09A (48pax)"
     },
@@ -3955,7 +3955,7 @@
       "floor": 2,
       "room": "SR.A.2.17C",
       "event": "FP0005 - L05 : Social Psychology-UoL",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Social Psychology-UoL",
       "room_description": "A.2.17C (48pax)"
     },
@@ -3981,7 +3981,7 @@
       "floor": 2,
       "room": "SR.A.2.14",
       "event": "MUF0011 - LF01 : English Unit 1 - MCol",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "English Unit 1 - MCol",
       "room_description": "A.2.14 (48pax-CRS)"
     },
@@ -3994,7 +3994,7 @@
       "floor": 2,
       "room": "SR.A.2.14",
       "event": "MUF0052 - LF01 : ICT Unit 2 - MCol",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "ICT Unit 2 - MCol",
       "room_description": "A.2.14 (48pax-CRS)"
     },
@@ -4020,7 +4020,7 @@
       "floor": 3,
       "room": "SR.A.3.11",
       "event": "SG001_PREP_2632_ES - CELFTL5 : Exam Session",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "A.3.11 (48pax)"
     },
@@ -4046,7 +4046,7 @@
       "floor": 3,
       "room": "SR.A.3.14",
       "event": "KOR101 - C01 : First-Year 1st Semester Korean - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "First-Year 1st Semester Korean - UB",
       "room_description": "A.3.14 (48pax)"
     },
@@ -4059,7 +4059,7 @@
       "floor": 3,
       "room": "SR.A.3.14",
       "event": "KOR101 - L01 : First-Year 1st Semester Korean - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "First-Year 1st Semester Korean - UB",
       "room_description": "A.3.14 (48pax)"
     },
@@ -4072,7 +4072,7 @@
       "floor": 3,
       "room": "SR.A.3.17C",
       "event": "PSYC123 - T2A : Research Method and Statistics - UoW",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Research Method and Statistics - UoW",
       "room_description": "A.3.17C (48pax-CRS)"
     },
@@ -4098,7 +4098,7 @@
       "floor": 3,
       "room": "SR.A.3.17C",
       "event": "SA Interview",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "A.3.17C (48pax-CRS)"
     },
@@ -4124,7 +4124,7 @@
       "floor": 3,
       "room": "SR.A.3.15",
       "event": "SA Interview",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "A.3.15 (48pax)"
     },
@@ -4163,7 +4163,7 @@
       "floor": 4,
       "room": "SR.A.4.06",
       "event": "Esprimere August Auditions",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "A.4.06 (48pax)"
     },
@@ -4176,7 +4176,7 @@
       "floor": 4,
       "room": "SR.A.4.09A",
       "event": "FP0002 - T05 : Econs-UoL",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Econs-UoL",
       "room_description": "A.4.09A (48pax-CRS)"
     },
@@ -4202,7 +4202,7 @@
       "floor": 4,
       "room": "SR.A.4.18",
       "event": "ENG105 - C06 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "A.4.18 (48pax)"
     },
@@ -4215,7 +4215,7 @@
       "floor": 4,
       "room": "SR.A.4.18",
       "event": "ENG105 - L06 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "A.4.18 (48pax)"
     },
@@ -4228,7 +4228,7 @@
       "floor": 4,
       "room": "SR.A.4.18",
       "event": "JPN112 - L01 : First-Year Japanese 2nd Semest - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "First-Year Japanese 2nd Semest - UB",
       "room_description": "A.4.18 (48pax)"
     },
@@ -4241,7 +4241,7 @@
       "floor": 4,
       "room": "SR.A.4.18",
       "event": "JPN112 - C01 : First-Year Japanese 2nd Semest - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "First-Year Japanese 2nd Semest - UB",
       "room_description": "A.4.18 (48pax)"
     },
@@ -4267,7 +4267,7 @@
       "floor": 4,
       "room": "SR.A.4.07B",
       "event": "Esprimere August Auditions",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "A.4.07B (48pax)"
     },
@@ -4280,7 +4280,7 @@
       "floor": null,
       "room": "ThePlazaArea",
       "event": "SIM Boxing Training - August",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "The Plaza Area"
     },
@@ -4293,7 +4293,7 @@
       "floor": 2,
       "room": "SR.B.2.07/B.2.08",
       "event": "FP0005 - L09 : Social Psychology-UoL",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Social Psychology-UoL",
       "room_description": "B.2.07/B.2.08 (Combined-60pax)"
     },
@@ -4319,7 +4319,7 @@
       "floor": 2,
       "room": "SR.B.2.09/B.2.10",
       "event": "COM217 - C01 : Communication in Orgns - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Communication in Orgns - UB",
       "room_description": "B.2.09/B.2.10 (Combined-60pax)"
     },
@@ -4332,7 +4332,7 @@
       "floor": 2,
       "room": "SR.B.2.09/B.2.10",
       "event": "SOC322 - C01 : Medical Sociology - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Medical Sociology - UB",
       "room_description": "B.2.09/B.2.10 (Combined-60pax)"
     },
@@ -4345,7 +4345,7 @@
       "floor": 2,
       "room": "SR.B.2.09/B.2.10",
       "event": "SOC322 - L01 : Medical Sociology - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Medical Sociology - UB",
       "room_description": "B.2.09/B.2.10 (Combined-60pax)"
     },
@@ -4371,7 +4371,7 @@
       "floor": 2,
       "room": "LT.B.2.04",
       "event": "BUSM2583 - LF08 : Business Graduate Folio - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Business Graduate Folio - RMIT",
       "room_description": "B.2.04 (130pax)"
     },
@@ -4384,7 +4384,7 @@
       "floor": 2,
       "room": "LT.B.2.04",
       "event": "MKTG1275 - LF02 : Strategic Marketing - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Strategic Marketing - RMIT",
       "room_description": "B.2.04 (130pax)"
     },
@@ -4410,7 +4410,7 @@
       "floor": 2,
       "room": "LT.B.2.05",
       "event": "PSY331 - C01 : Social Psychology - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Social Psychology - UB",
       "room_description": "B.2.05 (130pax)"
     },
@@ -4423,7 +4423,7 @@
       "floor": 2,
       "room": "LT.B.2.05",
       "event": "PSY350 - L01 : Scientific Inquiry in Psy - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Scientific Inquiry in Psy - UB",
       "room_description": "B.2.05 (130pax)"
     },
@@ -4436,7 +4436,7 @@
       "floor": 2,
       "room": "LT.B.2.05",
       "event": "PSY350 - C01 : Scientific Inquiry in Psy - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Scientific Inquiry in Psy - UB",
       "room_description": "B.2.05 (130pax)"
     },
@@ -4449,7 +4449,7 @@
       "floor": 2,
       "room": "LT.B.2.05",
       "event": "PSY331 - L01 : Social Psychology - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Social Psychology - UB",
       "room_description": "B.2.05 (130pax)"
     },
@@ -4462,7 +4462,7 @@
       "floor": 2,
       "room": "LT.B.2.06",
       "event": "BAFI1005 - LF01 : Fin Markets & Institutions - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Fin Markets & Institutions - RMIT",
       "room_description": "B.2.06 (188pax)"
     },
@@ -4475,7 +4475,7 @@
       "floor": 2,
       "room": "LT.B.2.06",
       "event": "BAFI1012 - LF01 : Corporate Finance - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Corporate Finance - RMIT",
       "room_description": "B.2.06 (188pax)"
     },
@@ -4488,7 +4488,7 @@
       "floor": 2,
       "room": "LT.B.2.06",
       "event": "BAFI1005 - LF02 : Fin Markets & Institutions - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Fin Markets & Institutions - RMIT",
       "room_description": "B.2.06 (188pax)"
     },
@@ -4514,7 +4514,7 @@
       "floor": 2,
       "room": "LT.B.2.17",
       "event": "0736172 - L101 : Managing Opts & Proj (Part 1) - UoB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Managing Opts & Proj (Part 1) - UoB",
       "room_description": "B.2.17 (296pax-VC)"
     },
@@ -4540,7 +4540,7 @@
       "floor": 3,
       "room": "LT.B.3.03",
       "event": "BUSM4451 - LF01 : Entrep and Global Challenges - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Entrep and Global Challenges - RMIT",
       "room_description": "B.3.03 (188pax)"
     },
@@ -4566,7 +4566,7 @@
       "floor": 3,
       "room": "LT.B.3.17",
       "event": "MKTG1427 - LF03 : Digital Marketing - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Digital Marketing - RMIT",
       "room_description": "B.3.17 (296pax-CRS)"
     },
@@ -4579,7 +4579,7 @@
       "floor": 4,
       "room": "LT.B.4.03",
       "event": "ACCT1054 - LF01 : Financial Acct & Reporting - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Financial Acct & Reporting - RMIT",
       "room_description": "B.4.03 (188pax)"
     },
@@ -4592,7 +4592,7 @@
       "floor": 4,
       "room": "LT.B.4.03",
       "event": "ACCT2119 - LF01 : Accounting, Behaviour & Orgs - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Accounting, Behaviour & Orgs - RMIT",
       "room_description": "B.4.03 (188pax)"
     },
@@ -4605,7 +4605,7 @@
       "floor": 4,
       "room": "LT.B.4.04",
       "event": "BUSM2583 - LF06 : Business Graduate Folio - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Business Graduate Folio - RMIT",
       "room_description": "B.4.04 (130pax)"
     },
@@ -4618,7 +4618,7 @@
       "floor": 4,
       "room": "LT.B.4.05",
       "event": "OMGT2229 - LF01 : Strategic Supply Chain - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Strategic Supply Chain - RMIT",
       "room_description": "B.4.05 (130pax-CRS)"
     },
@@ -4631,7 +4631,7 @@
       "floor": 4,
       "room": "LT.B.4.05",
       "event": "OMGT2230 - LF01 : Supply Chain Technologies - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Supply Chain Technologies - RMIT",
       "room_description": "B.4.05 (130pax-CRS)"
     },
@@ -4657,7 +4657,7 @@
       "floor": 4,
       "room": "LT.B.4.06",
       "event": "MN1178 - L02 : Bsn & Mgt in a Global Context - UoL",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Bsn & Mgt in a Global Context - UoL",
       "room_description": "B.4.06 (188pax)"
     },
@@ -4683,7 +4683,7 @@
       "floor": 4,
       "room": "LAB.B.4.15",
       "event": "MGS351 - L01 : Intro to Mgt Information - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Intro to Mgt Information - UB",
       "room_description": "B.4.15 (Lab-60pax-CRS)"
     },
@@ -4696,7 +4696,7 @@
       "floor": 4,
       "room": "LAB.B.4.15",
       "event": "GEO381 - C01 : Cartography - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Cartography - UB",
       "room_description": "B.4.15 (Lab-60pax-CRS)"
     },
@@ -4709,7 +4709,7 @@
       "floor": 4,
       "room": "LAB.B.4.15",
       "event": "GEO381 - L01 : Cartography - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Cartography - UB",
       "room_description": "B.4.15 (Lab-60pax-CRS)"
     },
@@ -4722,7 +4722,7 @@
       "floor": 4,
       "room": "LAB.B.4.15",
       "event": "MGS351 - C01 : Intro to Mgt Information - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Intro to Mgt Information - UB",
       "room_description": "B.4.15 (Lab-60pax-CRS)"
     },
@@ -4735,7 +4735,7 @@
       "floor": 5,
       "room": "LAB.B.5.15",
       "event": "CSCI203 - T05 : Algorithms & Data Structures - UoW",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Algorithms & Data Structures - UoW",
       "room_description": "B.5.15 (Lab-60pax)"
     },
@@ -4748,7 +4748,7 @@
       "floor": 5,
       "room": "LAB.B.5.15",
       "event": "CSCI203 - T03 : Algorithms & Data Structures - UoW",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Algorithms & Data Structures - UoW",
       "room_description": "B.5.15 (Lab-60pax)"
     },
@@ -4761,7 +4761,7 @@
       "floor": 5,
       "room": "LAB.B.5.15",
       "event": "CSCI203 - T04 : Algorithms & Data Structures - UoW",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Algorithms & Data Structures - UoW",
       "room_description": "B.5.15 (Lab-60pax)"
     },
@@ -4774,7 +4774,7 @@
       "floor": 5,
       "room": "SR.B.5.09/B.5.10",
       "event": "0737929 - L01 : Multi-media Campg Plan & Prod - UoB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Multi-media Campg Plan & Prod - UoB",
       "room_description": "B.5.09/B.5.10 (Combined-116pax)"
     },
@@ -4787,7 +4787,7 @@
       "floor": 5,
       "room": "SR.B.5.09/B.5.10",
       "event": "0737929 - L02 : Multi-media Campg Plan & Prod - UoB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Multi-media Campg Plan & Prod - UoB",
       "room_description": "B.5.09/B.5.10 (Combined-116pax)"
     },
@@ -4813,7 +4813,7 @@
       "floor": 5,
       "room": "LT.B.5.03",
       "event": "PABF- - L03 : Principles of Accounting & Biz - SIM",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Principles of Accounting & Biz - SIM",
       "room_description": "B.5.03 (188pax-CRS)"
     },
@@ -4839,7 +4839,7 @@
       "floor": 5,
       "room": "LT.B.5.04",
       "event": "BAFI1019 - LF01 : International Finance - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "International Finance - RMIT",
       "room_description": "B.5.04 (130pax-CRS)"
     },
@@ -4852,7 +4852,7 @@
       "floor": 5,
       "room": "LT.B.5.04",
       "event": "BUSM2583 - LF05 : Business Graduate Folio - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Business Graduate Folio - RMIT",
       "room_description": "B.5.04 (130pax-CRS)"
     },
@@ -4865,7 +4865,7 @@
       "floor": 5,
       "room": "LT.B.5.04",
       "event": "MN1178 - L04 : Bsn & Mgt in a Global Context - UoL",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Bsn & Mgt in a Global Context - UoL",
       "room_description": "B.5.04 (130pax-CRS)"
     },
@@ -4891,7 +4891,7 @@
       "floor": 5,
       "room": "LT.B.5.06",
       "event": "BAFI1045 - LF03 : Equity Invt & Portfolio Mgmt - RMIT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Equity Invt & Portfolio Mgmt - RMIT",
       "room_description": "B.5.06 (188pax)"
     },
@@ -4904,7 +4904,7 @@
       "floor": 5,
       "room": "LT.B.5.06",
       "event": "BUSM1139 - LF01 : Human Resource Development - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Human Resource Development - RMIT",
       "room_description": "B.5.06 (188pax)"
     },
@@ -4917,7 +4917,7 @@
       "floor": 5,
       "room": "LT.B.5.06",
       "event": "BUSM2583 - LF04 : Business Graduate Folio - RMIT",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Business Graduate Folio - RMIT",
       "room_description": "B.5.06 (188pax)"
     },
@@ -4969,7 +4969,7 @@
       "floor": 4,
       "room": "SR.B.4.09",
       "event": "PSY199 - L03 : UB Seminar - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "UB Seminar - UB",
       "room_description": "B.4.09 (60pax-CRS)"
     },
@@ -4982,7 +4982,7 @@
       "floor": 4,
       "room": "SR.B.4.09",
       "event": "MGG303 - L02 : Comm Literacy for Business - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Comm Literacy for Business - UB",
       "room_description": "B.4.09 (60pax-CRS)"
     },
@@ -4995,7 +4995,7 @@
       "floor": 4,
       "room": "SR.B.4.09",
       "event": "ENG105 - C08 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.09 (60pax-CRS)"
     },
@@ -5008,7 +5008,7 @@
       "floor": 4,
       "room": "SR.B.4.09",
       "event": "PSY199 - C03 : UB Seminar - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "UB Seminar - UB",
       "room_description": "B.4.09 (60pax-CRS)"
     },
@@ -5021,7 +5021,7 @@
       "floor": 4,
       "room": "SR.B.4.09",
       "event": "ENG105 - L08 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.09 (60pax-CRS)"
     },
@@ -5034,7 +5034,7 @@
       "floor": 4,
       "room": "SR.B.4.09",
       "event": "MGG303 - C02 : Comm Literacy for Business - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Comm Literacy for Business - UB",
       "room_description": "B.4.09 (60pax-CRS)"
     },
@@ -5047,7 +5047,7 @@
       "floor": 4,
       "room": "SR.B.4.07",
       "event": "ENG105 - C03 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.07 (60pax)"
     },
@@ -5060,7 +5060,7 @@
       "floor": 4,
       "room": "SR.B.4.07",
       "event": "ENG105 - L12 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.07 (60pax)"
     },
@@ -5073,7 +5073,7 @@
       "floor": 4,
       "room": "SR.B.4.07",
       "event": "ENG105 - C12 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.07 (60pax)"
     },
@@ -5086,7 +5086,7 @@
       "floor": 4,
       "room": "SR.B.4.07",
       "event": "SSC198 - L04 : UB Seminar - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "UB Seminar - UB",
       "room_description": "B.4.07 (60pax)"
     },
@@ -5099,7 +5099,7 @@
       "floor": 4,
       "room": "SR.B.4.07",
       "event": "ENG105 - L03 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.07 (60pax)"
     },
@@ -5112,7 +5112,7 @@
       "floor": 4,
       "room": "SR.B.4.07",
       "event": "SSC198 - C04 : UB Seminar - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "UB Seminar - UB",
       "room_description": "B.4.07 (60pax)"
     },
@@ -5125,7 +5125,7 @@
       "floor": 4,
       "room": "SR.B.4.08",
       "event": "ENG105 - L02 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.08 (60pax)"
     },
@@ -5138,7 +5138,7 @@
       "floor": 4,
       "room": "SR.B.4.08",
       "event": "MGG303 - C03 : Comm Literacy for Business - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Comm Literacy for Business - UB",
       "room_description": "B.4.08 (60pax)"
     },
@@ -5151,7 +5151,7 @@
       "floor": 4,
       "room": "SR.B.4.08",
       "event": "SSC198 - L03 : UB Seminar - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "UB Seminar - UB",
       "room_description": "B.4.08 (60pax)"
     },
@@ -5164,7 +5164,7 @@
       "floor": 4,
       "room": "SR.B.4.08",
       "event": "SSC198 - C03 : UB Seminar - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "UB Seminar - UB",
       "room_description": "B.4.08 (60pax)"
     },
@@ -5177,7 +5177,7 @@
       "floor": 4,
       "room": "SR.B.4.08",
       "event": "ENG105 - C02 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.08 (60pax)"
     },
@@ -5190,7 +5190,7 @@
       "floor": 4,
       "room": "SR.B.4.08",
       "event": "MGG303 - L03 : Comm Literacy for Business - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Comm Literacy for Business - UB",
       "room_description": "B.4.08 (60pax)"
     },
@@ -5216,7 +5216,7 @@
       "floor": 4,
       "room": "SR.B.4.10",
       "event": "ENG105 - L04 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.10 (60pax-CRS)"
     },
@@ -5229,7 +5229,7 @@
       "floor": 4,
       "room": "SR.B.4.10",
       "event": "ENG105 - C04 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.10 (60pax-CRS)"
     },
@@ -5242,7 +5242,7 @@
       "floor": 4,
       "room": "SR.B.4.10",
       "event": "ENG105 - L07 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.10 (60pax-CRS)"
     },
@@ -5255,7 +5255,7 @@
       "floor": 4,
       "room": "SR.B.4.10",
       "event": "ENG105 - C11 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.10 (60pax-CRS)"
     },
@@ -5268,7 +5268,7 @@
       "floor": 4,
       "room": "SR.B.4.10",
       "event": "ENG105 - L11 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.10 (60pax-CRS)"
     },
@@ -5281,7 +5281,7 @@
       "floor": 4,
       "room": "SR.B.4.10",
       "event": "ENG105 - C07 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.10 (60pax-CRS)"
     },
@@ -5294,7 +5294,7 @@
       "floor": 5,
       "room": "SR.B.5.07",
       "event": "HIS141 - L01 : World History to 1500 - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "World History to 1500 - UB",
       "room_description": "B.5.07 (60pax)"
     },
@@ -5307,7 +5307,7 @@
       "floor": 5,
       "room": "SR.B.5.07",
       "event": "HIS141 - C01 : World History to 1500 - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "World History to 1500 - UB",
       "room_description": "B.5.07 (60pax)"
     },
@@ -5320,7 +5320,7 @@
       "floor": 4,
       "room": "SR.B.4.13",
       "event": "MGA202 - C01 : Intro to Management Accounting - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Intro to Management Accounting - UB",
       "room_description": "B.4.13 (60pax)"
     },
@@ -5333,7 +5333,7 @@
       "floor": 4,
       "room": "SR.B.4.13",
       "event": "ENG105 - L05 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.13 (60pax)"
     },
@@ -5346,7 +5346,7 @@
       "floor": 4,
       "room": "SR.B.4.13",
       "event": "ENG105 - C05 : Writing and Rhetoric - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Writing and Rhetoric - UB",
       "room_description": "B.4.13 (60pax)"
     },
@@ -5359,7 +5359,7 @@
       "floor": 4,
       "room": "SR.B.4.13",
       "event": "MGA202 - L01 : Intro to Management Accounting - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Intro to Management Accounting - UB",
       "room_description": "B.4.13 (60pax)"
     },
@@ -5385,7 +5385,7 @@
       "floor": 5,
       "room": "SR.B.5.13",
       "event": "GEO100 - C01 : World Regions and Issues - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "World Regions and Issues - UB",
       "room_description": "B.5.13 (60pax)"
     },
@@ -5398,7 +5398,7 @@
       "floor": 5,
       "room": "SR.B.5.13",
       "event": "GEO100 - L01 : World Regions and Issues - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "World Regions and Issues - UB",
       "room_description": "B.5.13 (60pax)"
     },
@@ -5411,7 +5411,7 @@
       "floor": 5,
       "room": "SR.B.5.08",
       "event": "GEO106 - C01 : Global Climate Change - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Global Climate Change - UB",
       "room_description": "B.5.08 (60pax)"
     },
@@ -5424,7 +5424,7 @@
       "floor": 5,
       "room": "SR.B.5.08",
       "event": "GEO106 - L01 : Global Climate Change - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Global Climate Change - UB",
       "room_description": "B.5.08 (60pax)"
     },
@@ -5437,7 +5437,7 @@
       "floor": 5,
       "room": "SR.B.5.08",
       "event": "MGG215 - L02 : Career Connections 1 - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Career Connections 1 - UB",
       "room_description": "B.5.08 (60pax)"
     },
@@ -5450,7 +5450,7 @@
       "floor": 5,
       "room": "SR.B.5.08",
       "event": "MGG215 - C02 : Career Connections 1 - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Career Connections 1 - UB",
       "room_description": "B.5.08 (60pax)"
     },
@@ -5463,7 +5463,7 @@
       "floor": 5,
       "room": "SR.B.5.08",
       "event": "SIM Mindsports training",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "B.5.08 (60pax)"
     },
@@ -5476,7 +5476,7 @@
       "floor": 5,
       "room": "SR.B.5.12",
       "event": "MGG199 - C03 : UB Seminar - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "UB Seminar - UB",
       "room_description": "B.5.12 (60pax)"
     },
@@ -5489,7 +5489,7 @@
       "floor": 5,
       "room": "SR.B.5.12",
       "event": "MGG199 - L03 : UB Seminar - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "UB Seminar - UB",
       "room_description": "B.5.12 (60pax)"
     },
@@ -5502,7 +5502,7 @@
       "floor": 5,
       "room": "SR.B.5.12",
       "event": "COM451 - C01 : Communication And Marketing - UB",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "Communication And Marketing - UB",
       "room_description": "B.5.12 (60pax)"
     },
@@ -5515,7 +5515,7 @@
       "floor": 5,
       "room": "SR.B.5.12",
       "event": "COM451 - L01 : Communication And Marketing - UB",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "Communication And Marketing - UB",
       "room_description": "B.5.12 (60pax)"
     },
@@ -5541,7 +5541,7 @@
       "floor": null,
       "room": "B.Others.1",
       "event": "IT-Onsite Student Clinic",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "Blk B Other Venues 1"
     },
@@ -5554,7 +5554,7 @@
       "floor": null,
       "room": "SHub.B",
       "event": "AIESEC in SIM - OGX Booth (August)",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "Student Hub Area B"
     },
@@ -5593,7 +5593,7 @@
       "floor": 3,
       "room": "SR.C.3.08",
       "event": "HRM333 - TG01 : Performance Management",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.3.08 (60pax-CRS)"
     },
@@ -5606,7 +5606,7 @@
       "floor": 3,
       "room": "SR.C.3.08",
       "event": "HRM203 - TG01 : Human Behaviour in Organisations",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.3.08 (60pax-CRS)"
     },
@@ -5619,7 +5619,7 @@
       "floor": 3,
       "room": "SR.C.3.08",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.08 (60pax-CRS)"
     },
@@ -5645,7 +5645,7 @@
       "floor": 3,
       "room": "SR.C.3.09",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.09 (60pax-CRS)"
     },
@@ -5658,7 +5658,7 @@
       "floor": 3,
       "room": "SR.C.3.10",
       "event": "HRM331 - TG01 : Talent Management",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.3.10 (60pax-CRS)"
     },
@@ -5671,7 +5671,7 @@
       "floor": 3,
       "room": "SR.C.3.10",
       "event": "HRM499 - TG01 : Human Resource Management Applied Project",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.3.10 (60pax-CRS)"
     },
@@ -5697,7 +5697,7 @@
       "floor": 3,
       "room": "SR.C.3.10",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.10 (60pax-CRS)"
     },
@@ -5710,7 +5710,7 @@
       "floor": 3,
       "room": "SR.C.3.11",
       "event": "SWK370 - 01 : Social Policy and Social Welfare Administration",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.3.11 (60pax-CRS)"
     },
@@ -5723,7 +5723,7 @@
       "floor": 3,
       "room": "SR.C.3.11",
       "event": "SWK370 - 02 : Social Policy and Social Welfare Administration",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.11 (60pax-CRS)"
     },
@@ -5749,7 +5749,7 @@
       "floor": 3,
       "room": "SR.C.3.11",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.3.11 (60pax-CRS)"
     },
@@ -5762,7 +5762,7 @@
       "floor": 3,
       "room": "SR.C.3.12",
       "event": "SWK100 - TG01 : Development of Social Work and Social Services in Singapore",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.3.12 (60pax-CRS)"
     },
@@ -5775,7 +5775,7 @@
       "floor": 3,
       "room": "SR.C.3.12",
       "event": "HRM487 - 02 : Strategic Human Resource Management",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.3.12 (60pax-CRS)"
     },
@@ -5801,7 +5801,7 @@
       "floor": 3,
       "room": "SR.C.3.12",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.12 (60pax-CRS)"
     },
@@ -5827,7 +5827,7 @@
       "floor": 3,
       "room": "SR.C.3.13",
       "event": "SWK100 - TG03 : Development of Social Work and Social Services in Singapore",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.3.13 (60pax-CRS)"
     },
@@ -5840,7 +5840,7 @@
       "floor": 3,
       "room": "SR.C.3.13",
       "event": "SAF-BSE: BSE315 Recreational Sport Programme Management",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.3.13 (60pax-CRS)"
     },
@@ -5853,7 +5853,7 @@
       "floor": 3,
       "room": "SR.C.3.13",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.13 (60pax-CRS)"
     },
@@ -5879,7 +5879,7 @@
       "floor": 3,
       "room": "SR.C.3.14",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.14 (60pax-CRS)"
     },
@@ -5892,7 +5892,7 @@
       "floor": 4,
       "room": "LAB.C.4.01",
       "event": "SST Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.01 (23pax) Human Factors & Safety Lab"
     },
@@ -5905,7 +5905,7 @@
       "floor": 3,
       "room": "LAB.C.3.04",
       "event": "SST Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.04 (60pax) Multimedia Lab 2"
     },
@@ -5931,7 +5931,7 @@
       "floor": 3,
       "room": "LAB.C.3.05",
       "event": "MTD362 Lab",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.05 (60pax) Multimedia Lab 1"
     },
@@ -5944,7 +5944,7 @@
       "floor": 3,
       "room": "LAB.C.3.07",
       "event": "SST Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.07 (SAP Lab-30pax)"
     },
@@ -5957,7 +5957,7 @@
       "floor": 6,
       "room": "SR.C.6.05/C.6.06",
       "event": "ICT239 - TG01 : Web Application Development",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.05/C.6.06 (Combined-116pax-CRS)"
     },
@@ -5970,7 +5970,7 @@
       "floor": 6,
       "room": "SR.C.6.05/C.6.06",
       "event": "ICT239 - TG02 : Web Application Development",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.05/C.6.06 (Combined-116pax-CRS)"
     },
@@ -5983,7 +5983,7 @@
       "floor": 3,
       "room": "SR.C.3.15",
       "event": "SAF-BSE: PSY107 Introduction to Psychology 1",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.3.15 (60pax-CRS)"
     },
@@ -5996,7 +5996,7 @@
       "floor": 3,
       "room": "SR.C.3.15",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.15 (60pax-CRS)"
     },
@@ -6009,7 +6009,7 @@
       "floor": 3,
       "room": "SR.C.3.16",
       "event": "ECE308 - TG01 : Art, Imagination and Meaning Making",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.3.16 (60pax-CRS)"
     },
@@ -6022,7 +6022,7 @@
       "floor": 4,
       "room": "SR.C.4.02",
       "event": "Research experiments",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.02 (32pax) HDSS Training Lab"
     },
@@ -6048,7 +6048,7 @@
       "floor": 4,
       "room": "SR.C.4.08",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.08 (60pax-CRS)"
     },
@@ -6061,7 +6061,7 @@
       "floor": 4,
       "room": "SR.C.4.09",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.09 (60pax-CRS)"
     },
@@ -6074,7 +6074,7 @@
       "floor": 4,
       "room": "SR.C.4.10",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.10 (60pax-CRS)"
     },
@@ -6100,7 +6100,7 @@
       "floor": 4,
       "room": "SR.C.4.11",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.11 (60pax-CRS)"
     },
@@ -6126,7 +6126,7 @@
       "floor": 4,
       "room": "SR.C.4.12",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.12 (60pax-CRS)"
     },
@@ -6152,7 +6152,7 @@
       "floor": 4,
       "room": "SR.C.4.13",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.13 (60pax-CRS)"
     },
@@ -6178,7 +6178,7 @@
       "floor": 4,
       "room": "SR.C.4.15",
       "event": "Study Visit Programme_23-28 Aug",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.15 (60pax-CRS)"
     },
@@ -6204,7 +6204,7 @@
       "floor": 4,
       "room": "SR.C.4.16",
       "event": "CET266 FACILITATION PRACTICE AND COMMUNITY ENGAGEMENT",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.16 (60pax-CRS)"
     },
@@ -6230,7 +6230,7 @@
       "floor": 5,
       "room": "SR.C.5.07",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.5.07 (60pax-CRS)"
     },
@@ -6256,7 +6256,7 @@
       "floor": 5,
       "room": "SR.C.5.08",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.5.08 (60pax-CRS)"
     },
@@ -6282,7 +6282,7 @@
       "floor": 5,
       "room": "SR.C.5.09",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.5.09 (60pax-CRS)"
     },
@@ -6308,7 +6308,7 @@
       "floor": 5,
       "room": "SR.C.5.10",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.5.10 (60pax-CRS)"
     },
@@ -6334,7 +6334,7 @@
       "floor": 5,
       "room": "SR.C.5.11",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.5.11 (60pax-CRS)"
     },
@@ -6360,7 +6360,7 @@
       "floor": 5,
       "room": "SR.C.5.12",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.5.12 (60pax-CRS)"
     },
@@ -6386,7 +6386,7 @@
       "floor": 5,
       "room": "SR.C.5.14",
       "event": "Visit by Students and Faculty from Feng Chia University",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.5.14 (60pax-CRS)"
     },
@@ -6399,7 +6399,7 @@
       "floor": 5,
       "room": "SR.C.5.14",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.5.14 (60pax-CRS)"
     },
@@ -6425,7 +6425,7 @@
       "floor": 5,
       "room": "SR.C.5.15",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.5.15 (60pax-CRS)"
     },
@@ -6451,7 +6451,7 @@
       "floor": 6,
       "room": "SR.C.6.05",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.05 (60pax-CRS)"
     },
@@ -6464,7 +6464,7 @@
       "floor": 6,
       "room": "SR.C.6.05",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.6.05 (60pax-CRS)"
     },
@@ -6490,7 +6490,7 @@
       "floor": 6,
       "room": "SR.C.6.06",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.06 (60pax-CRS)"
     },
@@ -6503,7 +6503,7 @@
       "floor": 6,
       "room": "SR.C.6.06",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.6.06 (60pax-CRS)"
     },
@@ -6529,7 +6529,7 @@
       "floor": 6,
       "room": "SR.C.6.07",
       "event": "ICT101 - TG01 : Computational Thinking",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.07 (60pax-CRS)"
     },
@@ -6542,7 +6542,7 @@
       "floor": 6,
       "room": "SR.C.6.07",
       "event": "ICT101 - TG02 : Computational Thinking",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.07 (60pax-CRS)"
     },
@@ -6555,7 +6555,7 @@
       "floor": 6,
       "room": "SR.C.6.07",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.6.07 (60pax-CRS)"
     },
@@ -6581,7 +6581,7 @@
       "floor": 6,
       "room": "SR.C.6.08",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.6.08 (60pax-CRS)"
     },
@@ -6594,7 +6594,7 @@
       "floor": 6,
       "room": "SR.C.6.09",
       "event": "NIE352 - TG01 : Interdisciplinary Problem-Solving",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.09 (60pax-CRS)"
     },
@@ -6620,7 +6620,7 @@
       "floor": 6,
       "room": "SR.C.6.09",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.09 (60pax-CRS)"
     },
@@ -6633,7 +6633,7 @@
       "floor": 6,
       "room": "SR.C.6.09",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.6.09 (60pax-CRS)"
     },
@@ -6646,7 +6646,7 @@
       "floor": 6,
       "room": "SR.C.6.10",
       "event": "NCO111 - TG02 : Work and Learning in a Changing World",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.10 (60pax-CRS)"
     },
@@ -6659,7 +6659,7 @@
       "floor": 6,
       "room": "SR.C.6.10",
       "event": "NCO111 - TG01 : Work and Learning in a Changing World",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.10 (60pax-CRS)"
     },
@@ -6685,7 +6685,7 @@
       "floor": 6,
       "room": "SR.C.6.10",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.6.10 (60pax-CRS)"
     },
@@ -6698,7 +6698,7 @@
       "floor": 6,
       "room": "SR.C.6.11",
       "event": "AIB521 - T01 : Sustainability and Ethics in AI AI ??????????",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.6.11 (60pax-CRS)"
     },
@@ -6711,7 +6711,7 @@
       "floor": 6,
       "room": "SR.C.6.11",
       "event": "NCO111 - TG03 : Work and Learning in a Changing World",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.11 (60pax-CRS)"
     },
@@ -6737,7 +6737,7 @@
       "floor": 6,
       "room": "SR.C.6.11",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.11 (60pax-CRS)"
     },
@@ -6750,7 +6750,7 @@
       "floor": 6,
       "room": "SR.C.6.12",
       "event": "2026 Brand Campaign Wave 2 Photoshoot",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.6.12 (60pax-CRS)"
     },
@@ -6763,7 +6763,7 @@
       "floor": 7,
       "room": "SR.C.7.07",
       "event": "NIE351 - TG02 : Interdisciplinary Global Learning",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.07 (60pax-CRS)"
     },
@@ -6776,7 +6776,7 @@
       "floor": 7,
       "room": "SR.C.7.07",
       "event": "NIE351 - TG01 : Interdisciplinary Global Learning",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.07 (60pax-CRS)"
     },
@@ -6789,7 +6789,7 @@
       "floor": 7,
       "room": "SR.C.7.08",
       "event": "NCO102 - TG01 : Effective Writing",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.7.08 (60pax-CRS)"
     },
@@ -6802,7 +6802,7 @@
       "floor": 7,
       "room": "SR.C.7.08",
       "event": "NIE201 - TG01 : Interdisciplinary Processes for a Better World",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.08 (60pax-CRS)"
     },
@@ -6828,7 +6828,7 @@
       "floor": 7,
       "room": "SR.C.7.09",
       "event": "NCO102 - TG02 : Effective Writing",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.7.09 (60pax-CRS)"
     },
@@ -6841,7 +6841,7 @@
       "floor": 7,
       "room": "SR.C.7.09",
       "event": "NCO103 - TG04 : Listen and Be Heard: Effective Communication through Storytelling",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.09 (60pax-CRS)"
     },
@@ -6867,7 +6867,7 @@
       "floor": 7,
       "room": "SR.C.7.14",
       "event": "BUS100 - TG01 : Business Skills and Management",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.14 (60pax-CRS)"
     },
@@ -6880,7 +6880,7 @@
       "floor": 7,
       "room": "SR.C.7.14",
       "event": "BUS100 - TG07 : Business Skills and Management",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.7.14 (60pax-CRS)"
     },
@@ -6893,7 +6893,7 @@
       "floor": 7,
       "room": "SR.C.7.14",
       "event": "NCO103 - TG01 : Listen and Be Heard: Effective Communication through Storytelling",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.14 (60pax-CRS)"
     },
@@ -6919,7 +6919,7 @@
       "floor": 7,
       "room": "SR.C.7.15",
       "event": "BUS100 - TG02 : Business Skills and Management",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.15 (60pax-CRS)"
     },
@@ -6932,7 +6932,7 @@
       "floor": 7,
       "room": "SR.C.7.15",
       "event": "NCO103 - TG02 : Listen and Be Heard: Effective Communication through Storytelling",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.15 (60pax-CRS)"
     },
@@ -6945,7 +6945,7 @@
       "floor": 7,
       "room": "SR.C.7.15",
       "event": "NCO205 - TG01 : User-Centred Design: Human Factors and Design Thinking",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.7.15 (60pax-CRS)"
     },
@@ -6984,7 +6984,7 @@
       "floor": 8,
       "room": "SR.C.8.10",
       "event": "MIP505 - T01 : IP Business Strategy ????????",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.8.10 (60pax-CRS)"
     },
@@ -6997,7 +6997,7 @@
       "floor": 8,
       "room": "SR.C.8.10",
       "event": "Mentorship Session 1 (Dr Carol)",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.8.10 (60pax-CRS)"
     },
@@ -7023,7 +7023,7 @@
       "floor": 8,
       "room": "SR.C.8.11",
       "event": "NCO103 - TG06 : Listen and Be Heard: Effective Communication through Storytelling",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.8.11 (60pax-CRS)"
     },
@@ -7036,7 +7036,7 @@
       "floor": 8,
       "room": "SR.C.8.11",
       "event": "NCO205 - TG02 : User-Centred Design: Human Factors and Design Thinking",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.8.11 (60pax-CRS)"
     },
@@ -7049,7 +7049,7 @@
       "floor": 3,
       "room": "LAB.C.3.06",
       "event": "SST Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.06 (60pax) Multimedia Electronics Lab"
     },
@@ -7062,7 +7062,7 @@
       "floor": 4,
       "room": "LAB.C.4.04",
       "event": "SST Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.04 (60pax-CRS) General Purpose ICT Lab"
     },
@@ -7075,7 +7075,7 @@
       "floor": 4,
       "room": "LAB.C.4.05",
       "event": "SST Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.05 (57pax) General Electronics Lab 2"
     },
@@ -7088,7 +7088,7 @@
       "floor": 4,
       "room": "LAB.C.4.06",
       "event": "SST Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.06 (60pax) General Electronics Lab 1"
     },
@@ -7101,7 +7101,7 @@
       "floor": 5,
       "room": "SR.C.5.01",
       "event": "BRAIN Lab Data Collection",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.5.01 (60pax-CRS) Interpretation Lab 1"
     },
@@ -7127,7 +7127,7 @@
       "floor": 7,
       "room": "SR.C.7.11",
       "event": "ACC309 - TG01 : International Taxation and Tax Planning",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.11 (60pax-CRS)"
     },
@@ -7153,7 +7153,7 @@
       "floor": 7,
       "room": "SR.C.7.11",
       "event": "ACC311 - TG01 : Strategic Management Accounting",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.11 (60pax-CRS)"
     },
@@ -7166,7 +7166,7 @@
       "floor": 7,
       "room": "SR.C.7.11",
       "event": "ACC305 - TG01 : Assurance and Attestation",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.7.11 (60pax-CRS)"
     },
@@ -7179,7 +7179,7 @@
       "floor": 7,
       "room": "SR.C.7.12",
       "event": "NCO102 - TG03 : Effective Writing",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.7.12 (60pax-CRS)"
     },
@@ -7192,7 +7192,7 @@
       "floor": 7,
       "room": "SR.C.7.12",
       "event": "NCO212 - TG01 : The �Smart City� and Society",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.12 (60pax-CRS)"
     },
@@ -7231,7 +7231,7 @@
       "floor": 8,
       "room": "SR.C.8.07",
       "event": "NCO103 - TG03 : Listen and Be Heard: Effective Communication through Storytelling",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.8.07 (60pax)"
     },
@@ -7244,7 +7244,7 @@
       "floor": 8,
       "room": "SR.C.8.07",
       "event": "NCO103 - TG05 : Listen and Be Heard: Effective Communication through Storytelling",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.8.07 (60pax)"
     },
@@ -7270,7 +7270,7 @@
       "floor": 8,
       "room": "SR.C.8.08",
       "event": "SST Team Communication & Synergy Excellence Programme",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.8.08 (60pax)"
     },
@@ -7309,7 +7309,7 @@
       "floor": 5,
       "room": "SR.C.5.13",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.5.13 (60pax-CRS)"
     },
@@ -7335,7 +7335,7 @@
       "floor": 4,
       "room": "SR.C.4.14",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.14 (60pax-CRS)"
     },
@@ -7348,7 +7348,7 @@
       "floor": 7,
       "room": "SR.C.7.13",
       "event": "SCM201 - TG01 : Demand Planning and Inventory Management",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.7.13 (60pax)"
     },
@@ -7361,7 +7361,7 @@
       "floor": 7,
       "room": "SR.C.7.13",
       "event": "MTM356 - TG01 : Port Management and Technology",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.13 (60pax)"
     },
@@ -7387,7 +7387,7 @@
       "floor": null,
       "room": "ArtsTheatre",
       "event": "Site Recce",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "D.1.01 (Performing Arts Theatre)"
     },
@@ -7439,7 +7439,7 @@
       "floor": null,
       "room": "DanceStudio",
       "event": "SIM CNN Dance Interest Group Session",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "D.1.06 (Dance Studio)"
     },
