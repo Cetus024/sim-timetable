@@ -1,0 +1,72 @@
+name: Daily schedule
+
+# 16:05 UTC == 00:05 Singapore time (UTC+8), which is the point of the schedule
+# refreshing: the campus API starts serving the new day.
+#
+# GitHub's scheduled runs are best-effort and can be delayed under load, so
+# treat 00:05 as "shortly after midnight SGT" rather than a guarantee.
+on:
+  schedule:
+    - cron: '5 16 * * *'
+  workflow_dispatch:            # so it can be run by hand from the Actions tab
+
+# The job commits data/latest.json back to the repo.
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-schedule
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Locate a browser
+        id: browser
+        run: |
+          # The site's WAF refuses plain HTTP clients, so the fetch needs a real
+          # browser engine. GitHub's Ubuntu images ship Google Chrome.
+          for candidate in /usr/bin/google-chrome /usr/bin/google-chrome-stable /usr/bin/chromium-browser /usr/bin/chromium; do
+            if [ -x "$candidate" ]; then
+              echo "Using $candidate"
+              echo "path=$candidate" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "::error::No Chromium-based browser found on the runner."
+          exit 1
+
+      - name: Fetch the schedule
+        env:
+          BROWSER_PATH: ${{ steps.browser.outputs.path }}
+        run: node scripts/fetch-schedule.mjs
+
+      - name: Show what changed
+        run: |
+          node -e "
+            const p = require('./data/latest.json');
+            const free = p.rooms.filter(r => r.activities === 0).length;
+            console.log(\`\${p.rows.length} bookings, \${p.rooms.length} rooms, \${free} free all day, for \${p.schedule_dates.join(', ')}\`);
+          "
+          git diff --stat -- data/latest.json || true
+
+      - name: Commit and push
+        run: |
+          if [ -z "$(git status --porcelain data/latest.json)" ]; then
+            echo "No change to publish."
+            exit 0
+          fi
+          git config user.name  'sim-timetable-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/latest.json
+          git commit -m "Daily schedule: $(node -p "require('./data/latest.json').rows.length") bookings"
+          git push

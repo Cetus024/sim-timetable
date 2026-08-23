@@ -123,6 +123,13 @@
 
   function describe(p) {
     var bits = [p.rows.length + ' events'];
+    if (p.rooms && p.rooms.length) {
+      var freeAll = p.rooms.filter(function (r) { return r.activities === 0; }).length;
+      bits.push(p.rooms.length + ' rooms, ' + freeAll + ' free all day');
+    }
+    if (p.schedule_dates && p.schedule_dates.length) {
+      bits.push('for ' + p.schedule_dates.join(', '));
+    }
     if (p.auto) bits.push('updated automatically');
     if (p.scraped_at) {
       var d = new Date(p.scraped_at);
@@ -148,7 +155,10 @@
     importPanel.hidden = true;
     app.hidden = false;
     errEl.textContent = '';
-    controller = SIMTimetable.mount(document.getElementById('timetable'), p.rows, { mode: 'available' });
+    controller = SIMTimetable.mount(document.getElementById('timetable'), p.rows, {
+      mode: 'available',
+      rooms: p.rooms || []
+    });
   }
 
   function load(raw) {
@@ -229,6 +239,7 @@
       var state = controller ? controller.getState() : {};
       var mode = controller ? controller.getMode() : 'available';
       var data = JSON.stringify(payload.rows).replace(/</g, '\\u003c');
+      var inv = JSON.stringify(payload.rooms || []).replace(/</g, '\\u003c');
       var meta = SIMTimetable.escapeHtml(describe(payload));
 
       var html = '<!DOCTYPE html>\n<html lang="en">\n<head>\n' +
@@ -241,7 +252,8 @@
         '<div id="timetable"></div>\n</div>\n' +
         '<script>\n' + js + '\n<\/script>\n' +
         '<script>\nSIMTimetable.mount(document.getElementById("timetable"), ' + data + ', ' +
-        JSON.stringify({ mode: mode, initial: state }) + ');\n<\/script>\n' +
+        JSON.stringify({ mode: mode, initial: state, rooms: '__INV__' }).replace('"__INV__"', inv) +
+        ');\n<\/script>\n' +
         '</body>\n</html>\n';
 
       var blob = new Blob([html], { type: 'text/html' });

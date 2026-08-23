@@ -81,6 +81,21 @@
     return (b.event || '').trim().toLowerCase() === 'free access';
   }
 
+  /* The feed is fetched once a day, so a status stored at 00:05 would read
+   * UPCOMING for everything forever. What a reader wants at 2pm is whether the
+   * room is busy *now*, so derive it from the clock whenever we have times. */
+  function liveStatus(r) {
+    if (r.start_min === null || typeof r.start_min === 'undefined' ||
+        r.end_min === null || typeof r.end_min === 'undefined') {
+      return r.status || '';
+    }
+    var now = new Date();
+    var nowMin = now.getHours() * 60 + now.getMinutes();
+    if (r.end_min <= nowMin) return 'PAST';
+    if (r.start_min <= nowMin) return 'CURRENT';
+    return 'UPCOMING';
+  }
+
   /* Turns one room's bookings into an alternating busy/free timeline.
    * Gaps between bookings become FREE; everything after the last booking is
    * FREE and open-ended (we only know what the visible schedule showed). */
@@ -141,6 +156,10 @@
   function mount(root, rows, opts) {
     opts = opts || {};
     var data = normalize(rows);
+    /* Full room inventory, when the source provides one. The rendered table can
+     * only ever list rooms that have a booking; the API also tells us about the
+     * rooms with none, which are the most useful answer to "where is free?". */
+    var inventory = opts.rooms || [];
     root.innerHTML = TOOLBAR_HTML;
 
     var f = {};
@@ -152,11 +171,15 @@
       el[node.getAttribute('data-el')] = node;
     });
 
-    uniqueSorted(data.map(function (d) { return d.block; }).filter(Boolean))
+    // Dropdowns come from bookings *and* inventory, so a block or floor whose
+    // rooms are all free today still appears as a choice.
+    var placeSource = data.concat(inventory);
+
+    uniqueSorted(placeSource.map(function (d) { return d.block; }).filter(Boolean))
       .forEach(function (b) { f.block.add(new Option(b, b)); });
 
     uniqueSorted(
-      data.map(function (d) { return d.floor; })
+      placeSource.map(function (d) { return d.floor; })
         .filter(function (x) { return x !== null && typeof x !== 'undefined'; }),
       function (a, b) { return a - b; }
     ).forEach(function (fl) { f.floor.add(new Option('Floor ' + fl, String(fl))); });
@@ -196,7 +219,9 @@
       input.addEventListener('change', render);
     });
 
-    function getFiltered() {
+    /* Filters that describe a *place* rather than a booking. Shared so that a
+     * room with no bookings is filtered exactly like one with them. */
+    function matchesPlace(d) {
       var block = f.block.value;
       var floor = f.floor.value;
       var room = f.room.value.trim().toUpperCase();
@@ -204,17 +229,31 @@
       var excludeTerms = excludeRaw
         ? excludeRaw.split(',').map(function (s) { return s.trim(); }).filter(Boolean)
         : [];
-      var endtime = f.endtime.value;
 
+      if (block && d.block !== block) return false;
+      if (floor && String(d.floor) !== floor) return false;
+      if (room && (d.room || '').toUpperCase().indexOf(room) === -1) return false;
+      if (excludeTerms.length && excludeTerms.some(function (t) {
+        return (d.room || '').toUpperCase().indexOf(t) !== -1;
+      })) return false;
+      return true;
+    }
+
+    function getFiltered() {
+      var endtime = f.endtime.value;
       return data.filter(function (d) {
-        if (block && d.block !== block) return false;
-        if (floor && String(d.floor) !== floor) return false;
-        if (room && (d.room || '').toUpperCase().indexOf(room) === -1) return false;
-        if (excludeTerms.length && excludeTerms.some(function (t) {
-          return (d.room || '').toUpperCase().indexOf(t) !== -1;
-        })) return false;
+        if (!matchesPlace(d)) return false;
         if (endtime && d.end !== endtime) return false;
         return true;
+      });
+    }
+
+    /* Rooms the inventory says have no bookings at all today. Excluded when an
+     * "ends at" filter is set, since a room with no bookings has no end time. */
+    function freeAllDayRooms() {
+      if (f.endtime.value) return [];
+      return inventory.filter(function (r) {
+        return r.activities === 0 && matchesPlace(r);
       });
     }
 
@@ -230,7 +269,7 @@
           '<td>' + esc(floorText) + '</td>' +
           '<td>' + esc(r.room || '?') + '</td>' +
           '<td>' + esc(r.event) + '</td>' +
-          '<td class="status-' + esc(r.status) + '">' + esc(r.status) + '</td>' +
+          '<td class="status-' + esc(liveStatus(r)) + '">' + esc(liveStatus(r)) + '</td>' +
           '</tr>';
       }).join('');
       el.results.innerHTML =
@@ -278,15 +317,45 @@
         }).join('');
 
         var floorText = (info.floor === null || typeof info.floor === 'undefined') ? '?' : info.floor;
+        var desc = info.room_description ? ', ' + info.room_description : '';
         cards.push(
           '<div class="room-card"><div class="room-title">' + esc(room) +
           ' <span class="room-sub">Block ' + esc(info.block || '?') +
-          ', Floor ' + esc(floorText) + '</span></div>' + segHtml + '</div>'
+          ', Floor ' + esc(floorText) + esc(desc) + '</span></div>' + segHtml + '</div>'
         );
       });
 
-      el.meta.textContent = cards.length + ' room(s)';
-      el.results.innerHTML = cards.join('') || '<p class="empty">No matching rooms found.</p>';
+      // Rooms with nothing booked at all get one compact card rather than a
+      // wall of near-identical ones — there can be well over a hundred.
+      var free = freeAllDayRooms();
+      var freeHtml = '';
+      if (free.length) {
+        var byBlock = {};
+        free.forEach(function (r) {
+          var k = r.block || '?';
+          (byBlock[k] = byBlock[k] || []).push(r);
+        });
+        freeHtml =
+          '<div class="room-card"><div class="room-title">Free all day ' +
+          '<span class="room-sub">' + free.length +
+          ' room(s) with nothing booked today</span></div>' +
+          Object.keys(byBlock).sort().map(function (k) {
+            var chips = byBlock[k]
+              .sort(function (a, b) { return a.room < b.room ? -1 : 1; })
+              .map(function (r) {
+                return '<span class="chip" title="' + esc(r.description || '') + '">' +
+                  esc(r.room) + '</span>';
+              }).join('');
+            return '<div class="segment"><span class="tag free">BLK ' + esc(k) + '</span>' +
+              '<span class="chips">' + chips + '</span></div>';
+          }).join('') +
+          '</div>';
+      }
+
+      el.meta.textContent = cards.length + ' room(s) with bookings' +
+        (free.length ? ' · ' + free.length + ' free all day' : '');
+      el.results.innerHTML = (freeHtml + cards.join('')) ||
+        '<p class="empty">No matching rooms found.</p>';
     }
 
     function render() {

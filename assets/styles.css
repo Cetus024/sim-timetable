@@ -228,6 +228,20 @@ tbody tr:hover td { background: var(--line-soft); }
 
 .empty { color: var(--ink-soft); font-size: 14px; padding: 8px 2px; }
 
+.chips { display: flex; flex-wrap: wrap; gap: 5px; }
+
+.chip {
+  font-size: 12px;
+  background: var(--line-soft);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1px 7px;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.status-PAST { color: var(--ink-faint); }
+
 /* ---------- landing / import ---------- */
 
 code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
