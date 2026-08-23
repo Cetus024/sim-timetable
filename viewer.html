@@ -11,15 +11,15 @@
 <div class="wrap">
 
   <h1>Campus Timetable</h1>
-  <p class="meta" id="source">Load a <code class="inline">sim-timetable.json</code> file produced by the scraper.</p>
+  <p class="meta" id="source">Loading today's schedule…</p>
 
   <!-- ---------- waiting for a bookmarklet handoff ---------- -->
   <section id="waitingPanel" hidden>
     <div class="card">
       <div class="drop">
-        <strong>Waiting for the scrape to finish…</strong><br />
-        <span class="note">Keep this tab open. The scraper will hand the data over on its own —
-        usually 20–40 seconds, depending on how many pages the schedule has.</span>
+        <strong>Waiting for the schedule…</strong><br />
+        <span class="note">Keep this tab open. The scheduling page will hand the data over on
+        its own, usually within a couple of seconds.</span>
       </div>
       <p class="note" style="margin:12px 0 0">
         Nothing arriving? The scraper falls back to downloading
@@ -70,9 +70,10 @@
 
   var STORAGE_KEY = 'sim-timetable-payload';
 
-  // Published nightly by scripts/auto-scrape.mjs. Read straight from the repo
-  // (raw.githubusercontent.com allows cross-origin reads) so a new scrape shows
-  // up without redeploying the site.
+  // Published every day at ~00:05 SGT by .github/workflows/daily-schedule.yml.
+  // Read straight from the repo (raw.githubusercontent.com allows cross-origin
+  // reads) so a new schedule appears without redeploying the site. The campus
+  // API itself is same-origin only, which is why this page cannot just call it.
   var FEED_URL = 'https://raw.githubusercontent.com/Cetus024/sim-timetable/main/data/latest.json';
 
   var importPanel = document.getElementById('importPanel');
@@ -220,7 +221,7 @@
     importPanel.hidden = false;
     pasteArea.value = '';
     exportStatus.textContent = '';
-    sourceEl.textContent = 'Load a sim-timetable.json file produced by the scraper.';
+    sourceEl.textContent = 'Load a sim-timetable.json file, or use the bookmarklet.';
   });
 
   // ---------- standalone export ----------

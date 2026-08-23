@@ -1,6 +1,0 @@
-{
-  "_comment": "Copy to scrape.config.json and fill in scheduleUrl. That file is gitignored.",
-  "scheduleUrl": "REPLACE_ME — the SIM scheduling page URL you normally open",
-  "browserPath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-  "tableTimeoutMs": 45000
-}

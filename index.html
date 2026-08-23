@@ -12,21 +12,26 @@
 <div class="wrap">
 
   <h1>SIM Campus Timetable</h1>
-  <p class="meta">Scrape the campus scheduling page, then browse it properly — filter by block, floor and room, or flip to availability mode to find rooms that are actually free.</p>
+  <p class="meta">The campus schedule, but useful — filter by block, floor and room, or flip to availability mode to find rooms that are actually free. Updated automatically every day just after midnight.</p>
 
   <div class="card">
-    <h2 style="margin-top:0">How it works</h2>
+    <h2 style="margin-top:0">You probably don't need to do anything</h2>
+    <p>The <a href="/viewer">viewer</a> refreshes itself every day at about 00:05, so it already has today's schedule — including every room with nothing booked in it at all.</p>
+    <p class="note">Read it straight from SIM's own campus API, so it covers all 326 rooms rather than only the ones that happen to be busy.</p>
+
+    <h2>Want it right now instead?</h2>
+    <p>Use the bookmarklet below if you need the very latest state mid-day rather than last night's snapshot.</p>
     <ol class="steps">
-      <li>Drag the bookmarklet below to your bookmarks bar — once, ever.</li>
-      <li>Open the SIM scheduling page, log in as usual, and click the bookmarklet.</li>
-      <li>It opens the viewer, walks every page of the table, and hands the data straight over. No files, no pasting.</li>
+      <li>Drag the bookmarklet to your bookmarks bar — once, ever.</li>
+      <li>Open <a href="https://scheduling.sim.edu.sg/rad/campus.htm?id=SIM">the scheduling page</a> and click it.</li>
+      <li>It opens the viewer and hands today's schedule over in about a second.</li>
     </ol>
-    <p class="note">Prefer the console? Copy the script and paste it into DevTools (<code class="inline">F12</code>) on the scheduling page instead — same result. If the viewer tab gets popup-blocked, the scraper falls back to downloading <code class="inline">sim-timetable.json</code> for you to drop into the <a href="/viewer">viewer</a>.</p>
-    <p class="note">The scraper has to run in your browser because the schedule sits behind your login. Nothing is uploaded anywhere — this site is static, and the data goes straight from the scheduling tab to your viewer tab.</p>
+    <p class="note">Prefer the console? Copy the script and paste it into DevTools (<code class="inline">F12</code>) on the scheduling page instead — same result. If the viewer tab gets popup-blocked, it falls back to downloading <code class="inline">sim-timetable.json</code> for you to drop into the <a href="/viewer">viewer</a>.</p>
+    <p class="note">It runs in your browser because SIM's API only answers requests from its own page. Nothing is uploaded anywhere — this site is static, and the data goes straight from the scheduling tab to your viewer tab.</p>
   </div>
 
   <div class="card">
-    <h2 style="margin-top:0">Get the scraper</h2>
+    <h2 style="margin-top:0">The bookmarklet</h2>
     <div class="row" style="margin-bottom:12px">
       <button class="btn primary" id="copyBtn" type="button">Copy scraper to clipboard</button>
       <a class="btn" href="/scraper/scrape.js" download="scrape.js">Download scrape.js</a>
@@ -34,12 +39,12 @@
       <span class="note" id="copyStatus"></span>
     </div>
     <pre class="snippet" id="snippet">Loading scraper source…</pre>
-    <p class="note">The bookmarklet is the same code, inlined — drag it to your bookmarks bar, then click it while you are on the scheduling page.</p>
+    <p class="note">The bookmarklet is the same code, inlined — drag it to your bookmarks bar, then click it while you are on the scheduling page. It must run there: the campus API only answers same-origin requests.</p>
   </div>
 
   <div class="card">
-    <h2 style="margin-top:0">Already have the JSON?</h2>
-    <p style="margin-bottom:12px">Go straight to the timetable.</p>
+    <h2 style="margin-top:0">Just show me the timetable</h2>
+    <p style="margin-bottom:12px">Today's schedule is already loaded.</p>
     <a class="btn primary" href="/viewer">Open the viewer →</a>
   </div>
 
