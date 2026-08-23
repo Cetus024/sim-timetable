@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Fixture — paginated schedule table</title>
+</head>
+<body>
+<!--
+  A stand-in for the SIM scheduling page: same DOM shapes the scraper keys off
+  (tbody.MuiTableBody-root, the "1-7 of 14" label, aria-labelled pager buttons),
+  so the nightly job can be tested without touching the real site.
+
+  It also mimics the behaviour that made naive scraping unsafe: an auto-advance
+  timer that moves the pager on its own. Set ?auto=0 to disable it.
+-->
+<h1>Fixture schedule</h1>
+<table>
+  <thead><tr><th>Time</th><th>Event</th><th>Building</th><th>Room</th><th>Status</th></tr></thead>
+  <tbody class="MuiTableBody-root" id="body"></tbody>
+</table>
+<p id="label"></p>
+<button aria-label="Go to previous page" id="prev">Prev</button>
+<button aria-label="Go to next page" id="next">Next</button>
+
+<script>
+var ROWS = [
+  ['8:00 AM - 10:00 AM', 'ACC1002 Lecture',      'Block B', 'LT.B.5.01',   'CURRENT'],
+  ['10:00 AM - 1:00 PM', 'Free Access',          'Block B', 'LT.B.5.01',   'UPCOMING'],
+  ['2:00 PM - 5:00 PM',  'MKT2001 Seminar',      'Block B', 'LT.B.5.01',   'UPCOMING'],
+  ['9:00 AM - 12:00 PM', 'CSC2103 Tutorial',     'Block B', 'TR.B.5.14',   'CURRENT'],
+  ['3:00 PM - 6:00 PM',  'CSC2103 Tutorial',     'Block B', 'TR.B.5.14',   'UPCOMING'],
+  ['8:30 AM - 11:30 AM', 'Networking Lab',       'Block B', 'LAB.B.3.02',  'CURRENT'],
+  ['1:00 PM - 4:00 PM',  'Networking Lab',       'Block B', 'LAB.B.3.02',  'UPCOMING'],
+  ['9:00 AM - 11:00 AM', 'ECN1001 Lecture',      'Block A', 'TR.A.2.07',   'CURRENT'],
+  ['11:00 AM - 4:00 PM', 'Free Access',          'Block A', 'TR.A.2.07',   'UPCOMING'],
+  ['4:00 PM - 7:00 PM',  'Student Club Booking', 'Block A', 'TR.A.2.07',   'UPCOMING'],
+  ['10:00 AM - 12:00 PM','PSY2004 Workshop',     'Block A', 'TR.A.4.11',   'CURRENT'],
+  ['2:30 PM - 5:30 PM',  'PSY2004 Workshop',     'Block A', 'TR.A.4.11',   'UPCOMING'],
+  ['8:00 AM - 9:00 AM',  'Sports Booking',       'Block C', 'MPSH.C.1.01', 'CURRENT'],
+  ['6:00 PM - 10:00 PM', 'Inter-School Match',   'Block C', 'MPSH.C.1.01', 'UPCOMING']
+];
+
+// The real page separates the times with non-breaking spaces around the hyphen.
+ROWS = ROWS.map(function (r) { return [r[0].replace(/ - /g, ' - ')].concat(r.slice(1)); });
+
+var PAGE = 7;
+var page = 0;
+var pages = Math.ceil(ROWS.length / PAGE);
+
+function render() {
+  var start = page * PAGE;
+  var slice = ROWS.slice(start, start + PAGE);
+  document.getElementById('body').innerHTML = slice.map(function (r) {
+    return '<tr>' + r.map(function (c) { return '<td>' + c + '</td>'; }).join('') + '</tr>';
+  }).join('');
+  document.getElementById('label').textContent =
+    (start + 1) + '-' + (start + slice.length) + ' of ' + ROWS.length;
+  document.getElementById('prev').classList.toggle('Mui-disabled', page === 0);
+  document.getElementById('prev').disabled = page === 0;
+  document.getElementById('next').classList.toggle('Mui-disabled', page >= pages - 1);
+  document.getElementById('next').disabled = page >= pages - 1;
+}
+
+document.getElementById('prev').addEventListener('click', function () {
+  if (page > 0) { page--; render(); }
+});
+document.getElementById('next').addEventListener('click', function () {
+  if (page < pages - 1) { page++; render(); }
+});
+
+render();
+
+// Mimic the site's own auto-advance, which is what the scraper defends against.
+if (new URLSearchParams(location.search).get('auto') !== '0') {
+  setInterval(function () {
+    page = (page + 1) % pages;
+    render();
+  }, 9000);
+}
+</script>
+</body>
+</html>

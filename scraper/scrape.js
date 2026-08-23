@@ -24,16 +24,23 @@
   let VIEWER_ORIGIN = '__VIEWER_ORIGIN__';
   if (VIEWER_ORIGIN.slice(0, 2) === '__') VIEWER_ORIGIN = 'https://sim-timetable.vercel.app';
 
+  // scripts/auto-scrape.mjs sets this before evaluating us: it wants the payload
+  // returned, not a viewer tab or a download. Everything else is identical, so
+  // the scheduled scrape and the manual one can never drift apart.
+  const HEADLESS = !!window.__SIM_SCRAPE_HEADLESS__;
+
   // Open the viewer NOW, while the click that started us still counts as a user
   // gesture — waiting until the scrape finishes would get the popup blocked.
   let viewerWin = null;
-  try {
-    viewerWin = window.open(VIEWER_ORIGIN + '/viewer?awaiting=1', 'simTimetableViewer');
-  } catch (err) {
-    viewerWin = null;
-  }
-  if (!viewerWin) {
-    console.log('Could not open the viewer tab (popup blocked?) — will download the JSON instead.');
+  if (!HEADLESS) {
+    try {
+      viewerWin = window.open(VIEWER_ORIGIN + '/viewer?awaiting=1', 'simTimetableViewer');
+    } catch (err) {
+      viewerWin = null;
+    }
+    if (!viewerWin) {
+      console.log('Could not open the viewer tab (popup blocked?) — will download the JSON instead.');
+    }
   }
 
   // ---- helpers to defend against the site's own auto-advancing pagination ----
@@ -250,7 +257,7 @@
 
   // ---- fallback: download + clipboard ----
 
-  if (!delivered) {
+  if (!delivered && !HEADLESS) {
     const json = JSON.stringify(payload, null, 2);
 
     const blob = new Blob([json], { type: 'application/json' });

@@ -6,3 +6,5 @@ sim-timetable.json
 timetable.html
 
 .vercel
+.scrape-profile/
+scripts/scrape.config.json
