@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Timetable Viewer — SIM Campus Timetable</title>
+<link rel="stylesheet" href="/assets/styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📅</text></svg>" />
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Campus Timetable</h1>
+  <p class="meta" id="source">Load a <code class="inline">sim-timetable.json</code> file produced by the scraper.</p>
+
+  <!-- ---------- import ---------- -->
+  <section id="importPanel">
+    <div class="card">
+      <div class="drop" id="drop">
+        <strong>Drop sim-timetable.json here</strong><br />
+        <span class="note">or <button class="btn" id="pickBtn" type="button" style="margin:6px 4px">choose a file</button>
+        <button class="btn" id="pasteBtn" type="button" style="margin:6px 4px">paste from clipboard</button></span>
+        <input type="file" id="file" accept="application/json,.json" hidden />
+      </div>
+      <p class="note" style="margin:12px 0 6px">Or paste the JSON directly:</p>
+      <textarea class="paste" id="pasteArea" placeholder='{ "version": 1, "rows": [ ... ] }'></textarea>
+      <div class="row" style="margin-top:10px">
+        <button class="btn primary" id="loadPasteBtn" type="button">Load pasted JSON</button>
+        <button class="btn" id="sampleBtn" type="button">Try sample data</button>
+        <a class="btn" href="/">← How to get the JSON</a>
+        <span class="err" id="importError"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- timetable ---------- -->
+  <section id="app" hidden>
+    <div class="row" style="margin-bottom:14px">
+      <button class="btn" id="changeBtn" type="button">Load different data</button>
+      <button class="btn" id="exportBtn" type="button">Export standalone HTML</button>
+      <span class="note" id="exportStatus"></span>
+    </div>
+    <div id="timetable"></div>
+  </section>
+
+  <footer>Everything runs in your browser — the JSON is kept in this tab's local storage and never uploaded.</footer>
+
+</div>
+
+<script src="/assets/timetable.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var STORAGE_KEY = 'sim-timetable-payload';
+
+  var importPanel = document.getElementById('importPanel');
+  var app = document.getElementById('app');
+  var sourceEl = document.getElementById('source');
+  var errEl = document.getElementById('importError');
+  var drop = document.getElementById('drop');
+  var fileInput = document.getElementById('file');
+  var pasteArea = document.getElementById('pasteArea');
+  var exportStatus = document.getElementById('exportStatus');
+
+  var controller = null;
+  var payload = null;
+
+  // ---------- parsing an incoming payload ----------
+
+  /* Accepts the scraper's {version, rows, ...} envelope, or a bare array of rows. */
+  function coerce(raw) {
+    var parsed = typeof raw === 'string' ? JSON.parse(raw) : raw;
+    if (Array.isArray(parsed)) parsed = { rows: parsed };
+    if (!parsed || !Array.isArray(parsed.rows)) {
+      throw new Error('Expected an object with a "rows" array, or an array of rows.');
+    }
+    if (!parsed.rows.length) throw new Error('That file has no rows in it.');
+    return parsed;
+  }
+
+  function describe(p) {
+    var bits = [p.rows.length + ' events'];
+    if (p.scraped_at) {
+      var d = new Date(p.scraped_at);
+      bits.push('scraped ' + (isNaN(d) ? p.scraped_at : d.toLocaleString()));
+    }
+    if (p.incomplete) bits.push('⚠ the scrape may have missed some pages — re-run it if numbers look low');
+    return bits.join(' · ');
+  }
+
+  function show(p, persist) {
+    payload = p;
+    if (persist) {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); } catch (e) { /* quota / private mode */ }
+    }
+    sourceEl.textContent = describe(p);
+    importPanel.hidden = true;
+    app.hidden = false;
+    errEl.textContent = '';
+    controller = SIMTimetable.mount(document.getElementById('timetable'), p.rows, { mode: 'available' });
+  }
+
+  function load(raw) {
+    try {
+      show(coerce(raw), true);
+    } catch (err) {
+      errEl.textContent = 'Could not read that: ' + err.message;
+    }
+  }
+
+  // ---------- import wiring ----------
+
+  document.getElementById('pickBtn').addEventListener('click', function () { fileInput.click(); });
+  fileInput.addEventListener('change', function () {
+    var f = fileInput.files && fileInput.files[0];
+    if (f) f.text().then(load);
+  });
+
+  document.getElementById('pasteBtn').addEventListener('click', function () {
+    if (!navigator.clipboard || !navigator.clipboard.readText) {
+      errEl.textContent = 'This browser will not let a page read the clipboard — paste into the box below instead.';
+      return;
+    }
+    navigator.clipboard.readText().then(load, function () {
+      errEl.textContent = 'Clipboard read was blocked — paste into the box below instead.';
+    });
+  });
+
+  document.getElementById('loadPasteBtn').addEventListener('click', function () {
+    var text = pasteArea.value.trim();
+    if (!text) { errEl.textContent = 'Nothing pasted yet.'; return; }
+    load(text);
+  });
+
+  document.getElementById('sampleBtn').addEventListener('click', function () {
+    fetch('/sample/sim-timetable.sample.json')
+      .then(function (r) { return r.text(); })
+      .then(load)
+      .catch(function (err) { errEl.textContent = 'Could not load the sample: ' + err.message; });
+  });
+
+  ['dragenter', 'dragover'].forEach(function (evt) {
+    drop.addEventListener(evt, function (e) { e.preventDefault(); drop.classList.add('over'); });
+  });
+  ['dragleave', 'drop'].forEach(function (evt) {
+    drop.addEventListener(evt, function (e) { e.preventDefault(); drop.classList.remove('over'); });
+  });
+  drop.addEventListener('drop', function (e) {
+    var f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+    if (f) f.text().then(load);
+    else if (e.dataTransfer) load(e.dataTransfer.getData('text'));
+  });
+
+  document.getElementById('changeBtn').addEventListener('click', function () {
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) { /* ignore */ }
+    payload = null;
+    controller = null;
+    app.hidden = true;
+    importPanel.hidden = false;
+    pasteArea.value = '';
+    exportStatus.textContent = '';
+    sourceEl.textContent = 'Load a sim-timetable.json file produced by the scraper.';
+  });
+
+  // ---------- standalone export ----------
+
+  /* Builds a single self-contained .html — same CSS and same renderer, inlined,
+   * so it keeps working offline and after this site goes away. */
+  document.getElementById('exportBtn').addEventListener('click', function () {
+    if (!payload) return;
+    exportStatus.textContent = 'Building…';
+    Promise.all([
+      fetch('/assets/styles.css').then(function (r) { return r.text(); }),
+      fetch('/assets/timetable.js').then(function (r) { return r.text(); })
+    ]).then(function (parts) {
+      var css = parts[0];
+      var js = parts[1];
+      var state = controller ? controller.getState() : {};
+      var mode = controller ? controller.getMode() : 'available';
+      var data = JSON.stringify(payload.rows).replace(/</g, '\\u003c');
+      var meta = SIMTimetable.escapeHtml(describe(payload));
+
+      var html = '<!DOCTYPE html>\n<html lang="en">\n<head>\n' +
+        '<meta charset="utf-8" />\n' +
+        '<meta name="viewport" content="width=device-width, initial-scale=1" />\n' +
+        '<title>Campus Timetable</title>\n' +
+        '<style>\n' + css + '\n</style>\n</head>\n<body>\n' +
+        '<div class="wrap">\n<h1>Campus Timetable</h1>\n' +
+        '<p class="meta">' + meta + '</p>\n' +
+        '<div id="timetable"></div>\n</div>\n' +
+        '<script>\n' + js + '\n<\/script>\n' +
+        '<script>\nSIMTimetable.mount(document.getElementById("timetable"), ' + data + ', ' +
+        JSON.stringify({ mode: mode, initial: state }) + ');\n<\/script>\n' +
+        '</body>\n</html>\n';
+
+      var blob = new Blob([html], { type: 'text/html' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'timetable.html';
+      a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 5000);
+      exportStatus.textContent = 'Downloaded timetable.html';
+    }).catch(function (err) {
+      exportStatus.textContent = 'Export failed: ' + err.message;
+    });
+  });
+
+  // ---------- restore last session ----------
+
+  try {
+    var saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) show(coerce(saved), false);
+  } catch (e) {
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e2) { /* ignore */ }
+  }
+})();
+</script>
+</body>
+</html>

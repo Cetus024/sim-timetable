@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SIM Campus Timetable</title>
+<meta name="description" content="Scrape the SIM campus scheduling page and find free rooms." />
+<link rel="stylesheet" href="/assets/styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📅</text></svg>" />
+</head>
+<body>
+<div class="wrap">
+
+  <h1>SIM Campus Timetable</h1>
+  <p class="meta">Scrape the campus scheduling page, then browse it properly — filter by block, floor and room, or flip to availability mode to find rooms that are actually free.</p>
+
+  <div class="card">
+    <h2 style="margin-top:0">How it works</h2>
+    <ol class="steps">
+      <li>Open the SIM scheduling page and log in as usual.</li>
+      <li>Run the scraper there — paste it into the DevTools console (<code class="inline">F12</code>), or use the bookmarklet below.</li>
+      <li>It walks every page of the table and gives you <code class="inline">sim-timetable.json</code> (downloaded, and copied to your clipboard).</li>
+      <li>Open the <a href="/viewer">viewer</a> and drop that JSON in.</li>
+    </ol>
+    <p class="note">The scraper has to run in your browser because the schedule sits behind your login. Nothing is uploaded anywhere — this site is static, and the viewer parses the JSON locally in your browser.</p>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">Get the scraper</h2>
+    <div class="row" style="margin-bottom:12px">
+      <button class="btn primary" id="copyBtn" type="button">Copy scraper to clipboard</button>
+      <a class="btn" href="/scraper/scrape.js" download="scrape.js">Download scrape.js</a>
+      <a class="btn" id="bookmarklet" href="#" title="Drag me to your bookmarks bar">↗ Scrape SIM Timetable (drag to bookmarks bar)</a>
+      <span class="note" id="copyStatus"></span>
+    </div>
+    <pre class="snippet" id="snippet">Loading scraper source…</pre>
+    <p class="note">The bookmarklet is the same code, inlined — drag it to your bookmarks bar, then click it while you are on the scheduling page.</p>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">Already have the JSON?</h2>
+    <p style="margin-bottom:12px">Go straight to the timetable.</p>
+    <a class="btn primary" href="/viewer">Open the viewer →</a>
+  </div>
+
+  <footer>
+    Static site — no backend, no accounts, no data leaves your browser.
+    <a href="https://github.com/">Source</a> · Built for finding an empty room before a 4pm class.
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var snippetEl = document.getElementById('snippet');
+  var copyBtn = document.getElementById('copyBtn');
+  var statusEl = document.getElementById('copyStatus');
+  var bookmarkletEl = document.getElementById('bookmarklet');
+  var source = null;
+
+  function setStatus(msg, isError) {
+    statusEl.textContent = msg;
+    statusEl.className = isError ? 'err' : 'note';
+  }
+
+  fetch('/scraper/scrape.js')
+    .then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.text();
+    })
+    .then(function (text) {
+      source = text;
+      snippetEl.textContent = text;
+      // Bookmarklets are exempt from the page's CSP in current browsers, and inlining
+      // the whole thing means it needs no network access at click time.
+      bookmarkletEl.href = 'javascript:' + encodeURIComponent(source);
+    })
+    .catch(function (err) {
+      snippetEl.textContent = 'Could not load the scraper source (' + err.message + ').';
+      setStatus('Scraper source unavailable.', true);
+    });
+
+  copyBtn.addEventListener('click', function () {
+    if (!source) { setStatus('Still loading…', true); return; }
+    navigator.clipboard.writeText(source).then(function () {
+      setStatus('Copied — paste it into the DevTools console on the scheduling page.');
+    }, function () {
+      // Clipboard API needs a secure context; fall back to selecting the text.
+      var range = document.createRange();
+      range.selectNodeContents(snippetEl);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      setStatus('Clipboard blocked — the code is selected, press Ctrl+C.', true);
+    });
+  });
+
+  bookmarkletEl.addEventListener('click', function (e) {
+    e.preventDefault();
+    setStatus('Drag this button to your bookmarks bar instead of clicking it here.');
+  });
+})();
+</script>
+</body>
+</html>
