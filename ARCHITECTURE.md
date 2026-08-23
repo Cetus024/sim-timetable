@@ -11,7 +11,7 @@ For implementation depth — data contracts, algorithms, failure modes — see
 ## The one-sentence version
 
 A GitHub Action reads SIM's own campus API once a day and commits the result to this repo; the
-static viewer fetches that file and renders it as a per-room busy/free timeline.
+static viewer fetches that file and renders it as a per-room open/busy/gap timeline.
 
 ## System diagram
 
@@ -86,10 +86,11 @@ The page renders 54 paginated pages of seven rows. Reading the API instead is no
 | Auto-advance race | must be defended against | not applicable |
 | Times | `"8:00 AM"` strings, nbsp-separated | exact `2026-08-24 08:00:00` |
 | Room capacity | absent | in each room's description |
-| **Rooms with no bookings** | **invisible** | **listed — 170 of 326** |
+| Rooms with no bookings | invisible | listed — 170 of 326, though unbooked is not open |
+| **Free Access windows** | present but buried | **explicit — 38 rooms today** |
 
 That last row is the important one. The table can only show rooms that are busy, so the question
-"which rooms are free all day?" was structurally unanswerable from it.
+"which rooms are open to students?" was hard to answer from it.
 
 ## Components
 
@@ -128,12 +129,13 @@ campus API   buildings[] → rooms[] → activities[]
      │  scrape.js: blockOf / floorOf / parseStamp
      ▼
 payload      { version: 2, rooms[], rows[], schedule_dates[], scraped_at }
-     │  rooms[] carries every room + its activity count (0 = free all day)
-     │  rows[]  carries every booking, times as minutes-since-midnight
+     │  rooms[] carries every room + its activity count (0 = nothing booked,
+     │           which is NOT the same as open to students)
+     │  rows[]  carries every booking; a "Free Access" event means students may use it
      ▼
 viewer       fetch feed → coerce() → SIMTimetable.mount(rows, {rooms})
      ▼
-             filter → { table view | availability timeline + free-all-day card }
+             filter → { table view | OPEN/BUSY/GAP timeline + open-to-students card }
 ```
 
 `start_min` / `end_min` drive every comparison; the `"4:00 PM"` strings are display only.

@@ -136,6 +136,41 @@ Three decisions worth flagging:
   gap appears (the `n.start_min > b.end_min` guard). Overlapping bookings are a source-data
   anomaly; showing both is more honest than silently coalescing them.
 
+### 4.1a What "free" is allowed to mean
+
+The most important semantic in this project. SIM marks rooms students may use with an explicit
+booking named **"Free Access"** (or "SST Free Access") - 38 rooms carry one on a typical day.
+That is the *only* positive signal that a room is open.
+
+A room with **nothing booked** is not open. It is unallocated, and usually locked: of the 170
+unbooked rooms, 25 are labs, and the rest are largely tutor rooms, foyers, courtyards and staff
+lounges. An earlier version listed all 170 under "Free all day", which asserted something the
+data never says. A reader asked whether it just meant "locked all day", and they were right.
+
+So the timeline has three segment kinds, not two:
+
+| kind | meaning | shown as |
+| --- | --- | --- |
+| `open` | an explicit Free Access booking | **OPEN**, green |
+| `busy` | any other booking | **BUSY**, red |
+| `gap` | nothing booked | **GAP**, muted, labelled "may still be locked" |
+
+The availability view leads with the Free Access rooms and their windows. The unbooked rooms are
+reported as a count with an explanation, never as a list of places to go. The "Open after/before"
+filters match `open` segments only - the question is "when can I get in", not "when is nothing
+scheduled".
+
+### 4.1b Progress reporting
+
+A load used to be a blank panel. `scraper/scrape.js` now streams the API response and posts
+`sim-timetable:progress` messages to the viewer - bytes received while downloading, then
+per-building counts while transforming ("2 of 4 buildings, 180 rooms, 210 bookings so far").
+The viewer renders these in a toast (`assets/toast.js`) and in the waiting panel.
+
+Two honesty notes: the response is gzipped, so Content-Length is the compressed size while the
+streamed chunks are decompressed - bytes received are reported, never a fabricated percentage.
+And "pages" are not reported at all, because there is no longer any pagination to count.
+
 ### 4.2 Filtering
 
 All filters compose, evaluated per row, then availability filters apply per room afterwards:

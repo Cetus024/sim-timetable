@@ -40,7 +40,7 @@ nothing to sign up for and nothing personal involved.
 
 | # | Goal | How it's met |
 | --- | --- | --- |
-| G1 | Turn "what's booked" into "what's free" | Availability view — each room as a BUSY/FREE timeline |
+| G1 | Turn "what's booked" into "where may I actually sit" | Availability view — OPEN / BUSY / GAP per room, led by Free Access rooms |
 | G2 | Make block / floor / room filterable | Parsed out of room codes at scrape time into real fields |
 | G3 | Complete coverage, including rooms with nothing booked | Read the campus API rather than the paginated table |
 | G4 | Require nothing of the reader | Daily CI refresh; the site is already current when opened |
@@ -98,9 +98,9 @@ bookmarklet has to run *on* the scheduling page.
 
 ## 6. User stories
 
-> **US1** — As a student between classes, I want to see which rooms are free after 4pm, so I can
-> pick one without reading the whole schedule.
-> *Availability view + "Free after" filter.*
+> **US1** — As a student between classes, I want to see which rooms I can actually get into
+> after 4pm, so I can pick one without reading the whole schedule.
+> *Availability view + "Open after" filter, matching Free Access windows.*
 
 > **US2** — As a student, I want to exclude labs and the sports hall, because I can't just walk
 > into those.
@@ -115,8 +115,8 @@ bookmarklet has to run *on* the scheduling page.
 
 > **US5** — As someone looking for a quiet room, I want to see the rooms with nothing booked at
 > all, not just the gaps in busy ones.
-> *The API's full room inventory; rooms with zero activities render as one compact "free all day"
-> card — 170 of 326 on a typical day.*
+> *The API's full room inventory. Note the correction in §6.2: rooms with zero activities are
+> NOT presented as available, because unbooked usually means locked.*
 
 > **US8** — As someone reading at 3pm, I want to know what is busy *now*, not what was upcoming
 > when the data was fetched at midnight.
@@ -152,7 +152,8 @@ bookmarklet has to run *on* the scheduling page.
   re-derives missing fields from raw scraped columns.
 - **FR10** Rejects malformed input with a specific, readable message — never a blank screen.
 - **FR11** Table view: every event, sorted by end time, with block/floor/room as columns.
-- **FR12** Availability view: per room, an alternating BUSY/FREE timeline (algorithm in §6.2).
+- **FR12** Availability view: per room, an OPEN / BUSY / GAP timeline (semantics in §6.2), with
+  the Free Access rooms listed first and unbooked rooms reported only as a count.
 - **FR13** Filters: block, floor, room-contains, exclude-contains, ends-at, free-after, free-before.
   All filters compose, and all are live (no apply button).
 - **FR14** Persists the loaded payload to `localStorage`; restores it on reload.
@@ -177,17 +178,27 @@ Requirement: the scraper must never claim coverage it cannot demonstrate. It mus
 its unique row count against the site's own `"8-14 of 112"` total, or (b) mark the payload
 `incomplete` and have the viewer say so.
 
-## 6.2 Free/busy semantics (elaborating FR12)
+## 6.2 What "free" is allowed to mean
 
-Given one room's bookings sorted by start time:
+**The correction that matters most in this project.** A reader looked at a list of 170 rooms
+headed "Free all day" and asked whether that just meant they are locked all day. Largely, yes.
 
-- A booking whose event is exactly `Free Access` is itself a **FREE** segment.
-- Any **gap** between the end of one booking and the start of the next is **FREE**.
-- Everything after the last booking is **FREE and open-ended** — rendered as
-  *"→ end of visible schedule"*, never as a concrete end time, because the schedule only shows so
-  far ahead and inventing an end time would be a lie.
+SIM marks rooms students may use with an explicit booking named **"Free Access"** (or
+"SST Free Access"). That is the only positive signal of availability, and 38 rooms carry one on a
+typical day. A room with *nothing* booked is unallocated, not open: of the 170 unbooked rooms,
+25 are labs, and most of the rest are tutor rooms, foyers, courtyards and staff lounges.
 
-"Free after X" matches rooms having a free segment that *starts* at or after X.
+So, per room, sorted by start time:
+
+- a **Free Access** booking is an **OPEN** segment — you may use the room;
+- any other booking is **BUSY**;
+- a hole between bookings is a **GAP** — nothing is booked, but nothing says it is unlocked
+  either, so it is shown muted and labelled as such;
+- everything after the last booking is a GAP, open-ended, since the schedule covers only the day.
+
+The availability view leads with the OPEN rooms and their windows. Unbooked rooms are reported as
+a count with a one-line explanation, never as a list of destinations. "Open after X" matches rooms
+whose Free Access window *starts* at or after X.
 
 ## 8. Success criteria
 

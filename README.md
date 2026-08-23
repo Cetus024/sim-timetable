@@ -1,7 +1,7 @@
 # SIM Campus Timetable
 
 The SIM campus schedule, made useful — filter by block, floor and room, or flip to
-**availability** mode to see each room as a busy/free timeline and find somewhere to sit.
+**availability** mode to see which rooms SIM has actually opened to students today.
 
 | | |
 | --- | --- |
@@ -31,11 +31,16 @@ offline and outlives this site.
 
 - **Table** — every booking, sorted by end time, with block/floor/room broken out. Status is
   computed from your clock, so it says what is busy *now*.
-- **Availability** — each room as an alternating BUSY / FREE timeline. Gaps between bookings are
-  FREE; anything after the last booking is FREE and open-ended, since the schedule only covers
-  the day. "Free after" / "Free before" narrow to rooms with a free slot starting in that window.
-- **Free all day** — the rooms with nothing booked in them at all, in one compact card grouped by
-  block. Typically over half the campus, and something the official page cannot show you.
+- **Availability** — each room as a timeline of OPEN (Free Access), BUSY (booked) and GAP
+  (nothing booked, may still be locked) segments. "Open after" / "Open before" narrow to rooms
+  whose Free Access window starts in that range.
+- **Open to students** — the rooms SIM has explicitly marked **Free Access** today, with their
+  windows. This is the actionable list: roughly 38 rooms.
+
+Note what is *not* claimed. A room with nothing booked is **not** listed as available: unbooked
+means unallocated, and most such rooms (25 labs, plus tutor rooms and foyers) are simply locked.
+They appear only as a count, with an explanation. Gaps between bookings show as **GAP**, not
+FREE, for the same reason.
 
 ## Where the data comes from
 
@@ -47,8 +52,8 @@ GET https://scheduling.sim.edu.sg/rad/rest/campus?id=SIM
 ```
 
 Reading that directly beats scraping the rendered table on every axis — one request instead of
-54 pages, exact timestamps instead of parsed strings, room capacities, and crucially the rooms
-with **no** bookings, which the table never lists.
+54 pages, exact timestamps instead of parsed strings, room capacities, and the full room
+inventory rather than only the rooms that happen to be busy.
 
 No login is involved; the schedule is public. Two quirks shape everything else:
 
@@ -100,8 +105,9 @@ so staleness is visible rather than silent.
 }
 ```
 
-`activities: 0` in `rooms` is what marks a room free all day. The viewer also accepts a bare
-array of rows, or older payloads without `rooms`.
+`activities: 0` marks a room with nothing booked — which is *not* the same as open; see Views
+above. Rooms open to students are identified by rows whose `event` matches `Free Access`. The
+viewer also accepts a bare array of rows, or older payloads without `rooms`.
 
 ## Layout
 
