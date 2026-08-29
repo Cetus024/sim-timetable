@@ -2,12 +2,12 @@
   "version": 2,
   "source": "https://scheduling.sim.edu.sg/rad/rest/campus?id=SIM",
   "campus": "SIM Campus",
-  "scraped_at": "2026-08-29T00:29:06.120Z",
+  "scraped_at": "2026-08-29T19:18:51.962Z",
   "schedule_dates": [
-    "2026-08-29"
+    "2026-08-30"
   ],
   "incomplete": false,
-  "site_total": 153,
+  "site_total": 54,
   "rooms": [
     {
       "room": "TR.1",
@@ -303,7 +303,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.A.2.17A",
@@ -319,7 +319,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.A.2.20",
@@ -327,7 +327,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 5
+      "activities": 0
     },
     {
       "room": "LT.A.3.02A",
@@ -343,7 +343,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.A.3.08",
@@ -399,7 +399,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 2
+      "activities": 0
     },
     {
       "room": "LT.A.3.17A",
@@ -407,7 +407,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 2
+      "activities": 0
     },
     {
       "room": "LT.A.3.17B",
@@ -415,7 +415,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.A.3.20",
@@ -455,7 +455,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.A.4.08",
@@ -471,7 +471,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.A.4.09C",
@@ -575,7 +575,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.A.3.11",
@@ -591,7 +591,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.A.3.12",
@@ -607,7 +607,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.A.3.15",
@@ -615,7 +615,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "TR.7",
@@ -663,7 +663,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 2
+      "activities": 0
     },
     {
       "room": "SR.A.4.07B",
@@ -1047,7 +1047,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 2,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.B.2.05",
@@ -1055,7 +1055,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 2,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.B.2.06",
@@ -1063,7 +1063,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 2,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.B.2.16",
@@ -1071,7 +1071,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 2,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.B.2.17",
@@ -1151,7 +1151,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 4,
-      "activities": 2
+      "activities": 0
     },
     {
       "room": "LT.B.4.04",
@@ -1159,7 +1159,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 4,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.B.4.05",
@@ -1255,7 +1255,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.B.5.07/B.5.08",
@@ -1295,7 +1295,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.B.5.05",
@@ -1415,7 +1415,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 4,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.B.5.07",
@@ -1703,7 +1703,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.3.09",
@@ -1711,7 +1711,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.3.10",
@@ -1719,7 +1719,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.3.11",
@@ -1735,7 +1735,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.3.13",
@@ -1751,7 +1751,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 4
+      "activities": 1
     },
     {
       "room": "LAB.C.1.06",
@@ -1799,7 +1799,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LAB.C.3.07",
@@ -1807,7 +1807,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 3
+      "activities": 1
     },
     {
       "room": "LAB.C.4.03",
@@ -1983,7 +1983,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 3
+      "activities": 1
     },
     {
       "room": "SR.C.3.16",
@@ -1991,7 +1991,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.C.4.02",
@@ -2007,7 +2007,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.4.09",
@@ -2023,7 +2023,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.4.11",
@@ -2031,7 +2031,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.4.12",
@@ -2039,7 +2039,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.4.13",
@@ -2047,7 +2047,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.4.15",
@@ -2055,7 +2055,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 4
+      "activities": 1
     },
     {
       "room": "SR.C.4.16",
@@ -2079,7 +2079,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.5.08",
@@ -2087,7 +2087,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.5.09",
@@ -2095,7 +2095,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 3
+      "activities": 1
     },
     {
       "room": "SR.C.5.10",
@@ -2103,7 +2103,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 4
+      "activities": 1
     },
     {
       "room": "SR.C.5.11",
@@ -2111,7 +2111,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.5.12",
@@ -2119,7 +2119,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.5.14",
@@ -2127,7 +2127,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.5.15",
@@ -2135,7 +2135,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.6.05",
@@ -2143,7 +2143,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.6.06",
@@ -2151,7 +2151,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.6.07",
@@ -2159,7 +2159,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.6.08",
@@ -2167,7 +2167,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.6.09",
@@ -2175,7 +2175,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.6.10",
@@ -2191,7 +2191,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.6.12",
@@ -2199,7 +2199,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.7.07",
@@ -2215,7 +2215,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 7,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.C.7.09",
@@ -2223,7 +2223,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 7,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.C.7.10",
@@ -2239,7 +2239,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 7,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.C.7.15",
@@ -2247,7 +2247,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 7,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.C.8.04",
@@ -2271,7 +2271,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 8,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.C.8.11",
@@ -2279,7 +2279,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 8,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LAB.C.3.06",
@@ -2287,7 +2287,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 3
+      "activities": 1
     },
     {
       "room": "LAB.C.4.04",
@@ -2295,7 +2295,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 4
+      "activities": 1
     },
     {
       "room": "LAB.C.4.05",
@@ -2303,7 +2303,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 4
+      "activities": 1
     },
     {
       "room": "LAB.C.4.06",
@@ -2311,7 +2311,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 3
+      "activities": 1
     },
     {
       "room": "SR.C.5.01",
@@ -2327,7 +2327,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.7.11",
@@ -2335,7 +2335,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 7,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.C.7.12",
@@ -2343,7 +2343,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 7,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.C.8.07",
@@ -2351,7 +2351,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 8,
-      "activities": 2
+      "activities": 0
     },
     {
       "room": "SR.C.8.08",
@@ -2359,7 +2359,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 8,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "HQStaffLounge.C",
@@ -2375,7 +2375,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 8,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.C.5.13",
@@ -2383,7 +2383,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.4.14",
@@ -2391,7 +2391,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.7.13",
@@ -2399,7 +2399,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 7,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LAB.C.4.07",
@@ -2455,7 +2455,7 @@
       "building": "SIM Campus Block D",
       "block": "D",
       "floor": 1,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "MPSH.A/B",
@@ -2495,7 +2495,7 @@
       "building": "SIM Campus Block D",
       "block": "D",
       "floor": null,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "TennisCourt1",
@@ -2503,7 +2503,7 @@
       "building": "SIM Campus Block D",
       "block": "D",
       "floor": null,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.D.1.02/5",
@@ -2620,1447 +2620,95 @@
   ],
   "rows": [
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "A",
-      "floor": 2,
-      "room": "LT.A.2.16",
-      "event": "AERO2490 - LP01 : Airline Operations - RMIT",
-      "status": "UPCOMING",
-      "description": "Airline Operations - RMIT",
-      "room_description": "A.2.16 (112pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "A",
-      "floor": 2,
-      "room": "LT.A.2.17B",
-      "event": "SMM- - L03 : Marketing Fundamentals - SIM",
-      "status": "UPCOMING",
-      "description": "Marketing Fundamentals - SIM",
-      "room_description": "A.2.17B (80pax)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "A",
-      "floor": 2,
-      "room": "LT.A.2.20",
-      "event": "BAFI1005 - LF05 : Fin Markets & Institutions - RMIT",
-      "status": "UPCOMING",
-      "description": "Fin Markets & Institutions - RMIT",
-      "room_description": "A.2.20 (192pax)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "A",
-      "floor": 2,
-      "room": "LT.A.2.20",
-      "event": "BAFI1005 - LP04 : Fin Markets & Institutions - RMIT",
-      "status": "UPCOMING",
-      "description": "Fin Markets & Institutions - RMIT",
-      "room_description": "A.2.20 (192pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "A",
-      "floor": 2,
-      "room": "LT.A.2.20",
-      "event": "BUSM4559 - LF02 : Work in Global Society - RMIT",
-      "status": "UPCOMING",
-      "description": "Work in Global Society - RMIT",
-      "room_description": "A.2.20 (192pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "A",
-      "floor": 2,
-      "room": "LT.A.2.20",
-      "event": "ECON1045 - LF01 : Macroeconomics for Dec Making - RMIT",
-      "status": "UPCOMING",
-      "description": "Macroeconomics for Dec Making - RMIT",
-      "room_description": "A.2.20 (192pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "A",
-      "floor": 2,
-      "room": "LT.A.2.20",
-      "event": "ECON1045 - LP04 : Macroeconomics for Dec Making - RMIT",
-      "status": "UPCOMING",
-      "description": "Macroeconomics for Dec Making - RMIT",
-      "room_description": "A.2.20 (192pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.05C",
-      "event": "BUSM2653 - LF01 : People Analytics - RMIT",
-      "status": "UPCOMING",
-      "description": "People Analytics - RMIT",
-      "room_description": "A.3.05C (192pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.16",
-      "event": "BUSM2792 - LF04 : Managing Dynamics of Global Op - RMIT",
-      "status": "UPCOMING",
-      "description": "Managing Dynamics of Global Op - RMIT",
-      "room_description": "A.3.16 (112pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.16",
-      "event": "BUSM2792 - LP03 : Managing Dynamics of Global Op - RMIT",
-      "status": "UPCOMING",
-      "description": "Managing Dynamics of Global Op - RMIT",
-      "room_description": "A.3.16 (112pax)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.17A",
-      "event": "OMGT2246 - LP02 : Global Trade Operations - RMIT",
-      "status": "UPCOMING",
-      "description": "Global Trade Operations - RMIT",
-      "room_description": "A.3.17A (80pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.17A",
-      "event": "PABF- - L02 : Principles of Accounting & Biz - SIM",
-      "status": "UPCOMING",
-      "description": "Principles of Accounting & Biz - SIM",
-      "room_description": "A.3.17A (80pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.17B",
-      "event": "ITSC001 - L01 : Intro to Info Tech 1 - SIM",
-      "status": "UPCOMING",
-      "description": "Intro to Info Tech 1 - SIM",
-      "room_description": "A.3.17B (80pax)"
-    },
-    {
-      "start": "10:00 AM",
-      "end": "5:00 PM",
-      "start_min": 600,
-      "end_min": 1020,
-      "block": "A",
-      "floor": 4,
-      "room": "LT.A.4.07A",
-      "event": "SIM Investment Club AGM",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "A.4.07A (80pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "A",
-      "floor": 4,
-      "room": "LT.A.4.09B",
-      "event": "ITSC003 - L01 : Mathematics and Statistics - SIM",
-      "status": "UPCOMING",
-      "description": "Mathematics and Statistics - SIM",
-      "room_description": "A.4.09B (80pax)"
-    },
-    {
       "start": "8:00 AM",
-      "end": "10:00 PM",
+      "end": "12:00 PM",
       "start_min": 480,
-      "end_min": 1320,
+      "end_min": 720,
       "block": "A",
       "floor": 2,
       "room": "SR.A.2.11",
       "event": "ISN Camp 2026",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "A.2.11 (48pax)"
     },
     {
-      "start": "8:30 AM",
-      "end": "10:30 PM",
-      "start_min": 510,
-      "end_min": 1350,
+      "start": "8:00 AM",
+      "end": "12:00 PM",
+      "start_min": 480,
+      "end_min": 720,
       "block": "A",
       "floor": 2,
       "room": "SR.A.2.12",
       "event": "ISN Camp 2026",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "A.2.12 (48pax)"
     },
     {
-      "start": "8:30 AM",
-      "end": "12:30 PM",
-      "start_min": 510,
-      "end_min": 750,
-      "block": "A",
-      "floor": 2,
-      "room": "SR.A.2.14",
-      "event": "ECE597 - T01 : The Early Childhood Research Seminars",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "A.2.14 (48pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "A",
-      "floor": 3,
-      "room": "SR.A.3.14",
-      "event": "EDU533 - T01 : Designing and Facilitating Computer Supported Collaborative Learning",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "A.3.14 (48pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "2:30 PM",
-      "start_min": 720,
-      "end_min": 870,
-      "block": "A",
-      "floor": 3,
-      "room": "SR.A.3.17C",
-      "event": "AFM090 - LP01 : Issues in Investment Mgmt - UoL",
-      "status": "UPCOMING",
-      "description": "Issues in Investment Mgmt - UoL",
-      "room_description": "A.3.17C (48pax-CRS)"
-    },
-    {
-      "start": "9:00 AM",
-      "end": "1:00 PM",
-      "start_min": 540,
-      "end_min": 780,
-      "block": "A",
-      "floor": 3,
-      "room": "SR.A.3.15",
-      "event": "GSS505 - T01 : Media Influence and Societal Impact",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "A.3.15 (48pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "A",
-      "floor": 4,
-      "room": "SR.A.4.17C",
-      "event": "ECC503 - 01 : Curriculum and Instructional Research in Early Childhood Education (???????????)",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "A.4.17C (48pax-CRS)"
-    },
-    {
-      "start": "2:00 PM",
-      "end": "6:00 PM",
-      "start_min": 840,
-      "end_min": 1080,
-      "block": "A",
-      "floor": 4,
-      "room": "SR.A.4.17C",
-      "event": "GSS511 - 01 : Crisis and Social Media Reputation",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "A.4.17C (48pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "B",
-      "floor": 2,
-      "room": "LT.B.2.04",
-      "event": "BUSM2583 - LF01 : Business Graduate Folio - RMIT",
-      "status": "UPCOMING",
-      "description": "Business Graduate Folio - RMIT",
-      "room_description": "B.2.04 (130pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "B",
-      "floor": 2,
-      "room": "LT.B.2.05",
-      "event": "ECON1578 - LF01 : Behavioural Economics - RMIT",
-      "status": "UPCOMING",
-      "description": "Behavioural Economics - RMIT",
-      "room_description": "B.2.05 (130pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "B",
-      "floor": 2,
-      "room": "LT.B.2.06",
-      "event": "BUSM1227 - LF04 : Global Business - RMIT",
-      "status": "UPCOMING",
-      "description": "Global Business - RMIT",
-      "room_description": "B.2.06 (188pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "B",
-      "floor": 2,
-      "room": "LT.B.2.16",
-      "event": "BPM209 - T01 : Cost Management for C&S Works",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "B.2.16 (134pax-CRS)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "B",
-      "floor": 4,
-      "room": "LT.B.4.03",
-      "event": "BAFI3272 - LF01 : Money and Debt Markets - RMIT",
-      "status": "UPCOMING",
-      "description": "Money and Debt Markets - RMIT",
-      "room_description": "B.4.03 (188pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "B",
-      "floor": 4,
-      "room": "LT.B.4.03",
-      "event": "ECON1614 - LF01 : Big Data, Machine Learn & Soc - RMIT",
-      "status": "UPCOMING",
-      "description": "Big Data, Machine Learn & Soc - RMIT",
-      "room_description": "B.4.03 (188pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "B",
-      "floor": 4,
-      "room": "LT.B.4.04",
-      "event": "ACCT2346 - LF01 : Acct Data Analytics and Visual - RMIT",
-      "status": "UPCOMING",
-      "description": "Acct Data Analytics and Visual - RMIT",
-      "room_description": "B.4.04 (130pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "12:00 PM",
-      "start_min": 510,
-      "end_min": 720,
-      "block": "B",
-      "floor": 5,
-      "room": "SR.B.5.09/B.5.10",
-      "event": "ISN Camp 2026",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "B.5.09/B.5.10 (Combined-116pax)"
-    },
-    {
-      "start": "8:00 AM",
-      "end": "6:30 PM",
-      "start_min": 480,
-      "end_min": 1110,
-      "block": "B",
-      "floor": 5,
-      "room": "LT.B.5.04",
-      "event": "SIG Lesson 1",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "B.5.04 (130pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "B",
-      "floor": 4,
-      "room": "SR.B.4.10",
-      "event": "PLC511 - T01 : Foundations of Professional Life Coaching: Theory, Ethics, and Practice",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "B.4.10 (60pax-CRS)"
-    },
-    {
-      "start": "8:00 AM",
-      "end": "6:00 PM",
-      "start_min": 480,
-      "end_min": 1080,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.08",
-      "event": "Singapore Design Week 2026",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.08 (60pax-CRS)"
-    },
-    {
-      "start": "6:00 PM",
+      "start": "9:30 AM",
       "end": "10:00 PM",
-      "start_min": 1080,
+      "start_min": 570,
       "end_min": 1320,
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.08",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.08 (60pax-CRS)"
     },
     {
       "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.09",
-      "event": "SWK501 - T01 : Human Lifespan and Social Ecology",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.09 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
       "end": "10:00 PM",
-      "start_min": 1050,
+      "start_min": 510,
       "end_min": 1320,
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.09",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.09 (60pax-CRS)"
     },
     {
       "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.10",
-      "event": "SWK575 - T01 : Social Work Practice in Crises & Humanitarian Aid",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.10 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
       "end": "10:00 PM",
-      "start_min": 1050,
+      "start_min": 510,
       "end_min": 1320,
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.10",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.10 (60pax-CRS)"
     },
     {
       "start": "8:30 AM",
-      "end": "5:30 PM",
+      "end": "10:00 PM",
       "start_min": 510,
-      "end_min": 1050,
+      "end_min": 1320,
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.11",
-      "event": "SWK511 - T01 : Contemporary Social Work Issues and Practice",
-      "status": "UPCOMING",
+      "event": "Free Access",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.11 (60pax-CRS)"
     },
     {
       "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.12",
-      "event": "SWK561 - T01 : Mental Health and Illness",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.12 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
       "end": "10:00 PM",
-      "start_min": 1050,
+      "start_min": 510,
       "end_min": 1320,
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.12",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.12 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.13",
-      "event": "COU502 - T01 : Advanced Systemic Family Therapy",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.13 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1050,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.13",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.13 (60pax-CRS)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.14",
-      "event": "HRM331 - T02 : Talent Management",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.14 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "3:30 PM",
-      "start_min": 510,
-      "end_min": 930,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.14",
-      "event": "HCM551 - 01 : Human Capital Management in the New Normal",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.14 (60pax-CRS)"
-    },
-    {
-      "start": "8:00 AM",
-      "end": "8:30 AM",
-      "start_min": 480,
-      "end_min": 510,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.14",
-      "event": "Early access to room for HCm551 T01",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.14 (60pax-CRS)"
-    },
-    {
-      "start": "6:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1110,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.14",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.14 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "10:00 PM",
-      "start_min": 510,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 4,
-      "room": "LAB.C.4.01",
-      "event": "SST Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.01 (23pax) Human Factors & Safety Lab"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 3,
-      "room": "LAB.C.3.03",
-      "event": "BME109 - S02 : Introduction to Chemistry and Biochemistry",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.03 Biomedical Engineering Lab 1"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 3,
-      "room": "LAB.C.3.03",
-      "event": "BME109 - S01 : Introduction to Chemistry and Biochemistry",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.03 Biomedical Engineering Lab 1"
-    },
-    {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 3,
-      "room": "LAB.C.3.03",
-      "event": "BME109 - S03 : Introduction to Chemistry and Biochemistry",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.03 Biomedical Engineering Lab 1"
-    },
-    {
-      "start": "3:00 PM",
-      "end": "10:30 PM",
-      "start_min": 900,
-      "end_min": 1350,
-      "block": "C",
-      "floor": 3,
-      "room": "LAB.C.3.04",
-      "event": "SST Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.04 (60pax) Multimedia Lab 2"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "C",
-      "floor": 3,
-      "room": "LAB.C.3.05",
-      "event": "MTD301 - T02 : Audio and Video Production Techniques",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.05 (60pax) Multimedia Lab 1"
-    },
-    {
-      "start": "8:00 AM",
-      "end": "9:00 AM",
-      "start_min": 480,
-      "end_min": 540,
-      "block": "C",
-      "floor": 3,
-      "room": "LAB.C.3.07",
-      "event": "SST Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.07 (SAP Lab-30pax)"
-    },
-    {
-      "start": "2:00 PM",
-      "end": "10:00 PM",
-      "start_min": 840,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 3,
-      "room": "LAB.C.3.07",
-      "event": "SST Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.07 (SAP Lab-30pax)"
-    },
-    {
-      "start": "9:00 AM",
-      "end": "2:00 PM",
-      "start_min": 540,
-      "end_min": 840,
-      "block": "C",
-      "floor": 3,
-      "room": "LAB.C.3.07",
-      "event": "OPGO Assist Training",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.07 (SAP Lab-30pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "3:30 PM",
-      "start_min": 510,
-      "end_min": 930,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.15",
-      "event": "HCM543 - 01 : Negotiation, Mediation, and Conflict Resolution",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.15 (60pax-CRS)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "4:30 PM",
-      "start_min": 930,
-      "end_min": 990,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.15",
-      "event": "HCM543 Class Discussion",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.15 (60pax-CRS)"
-    },
-    {
-      "start": "4:30 PM",
-      "end": "10:00 PM",
-      "start_min": 990,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.15",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.15 (60pax-CRS)"
-    },
-    {
-      "start": "10:00 AM",
-      "end": "1:00 PM",
-      "start_min": 600,
-      "end_min": 780,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.16",
-      "event": "ECE - Observation Workshop",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.16 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.08",
-      "event": "NPM506 - T01 : Volunteer Management",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.08 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1050,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.08",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.08 (60pax-CRS)"
-    },
-    {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.09",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.09 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.10",
-      "event": "HDS501 - T01 : Qualitative Research Methods and Analysis",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.10 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1050,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.10",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.10 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.11",
-      "event": "COU519 - T01 : Person of the Therapist",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.11 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1050,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.11",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.11 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.12",
-      "event": "COU519 - T02 : Person of the Therapist",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.12 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1050,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.12",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.12 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.13",
-      "event": "COU519 - T03 : Person of the Therapist",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.13 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1050,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.13",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.13 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.15",
-      "event": "BPM115 - T01 : Materials Technology",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.15 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.15",
-      "event": "MTH207 - T01 : Linear Algebra",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.15 (60pax-CRS)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.15",
-      "event": "SWK102 - T02 : Human Growth and Lifespan Development",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.15 (60pax-CRS)"
-    },
-    {
-      "start": "6:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1110,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.15",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.15 (60pax-CRS)"
-    },
-    {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.16",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.16 (60pax-CRS)"
-    },
-    {
-      "start": "9:00 AM",
-      "end": "6:00 PM",
-      "start_min": 540,
-      "end_min": 1080,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.07",
-      "event": "TAX501 - T01 : Taxation � Legal Framework and Policy",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.07 (60pax-CRS)"
-    },
-    {
-      "start": "6:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1080,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.07",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.07 (60pax-CRS)"
-    },
-    {
-      "start": "9:00 AM",
-      "end": "6:00 PM",
-      "start_min": 540,
-      "end_min": 1080,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.08",
-      "event": "TAX525 - T01 : Transfer Pricing",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.08 (60pax-CRS)"
-    },
-    {
-      "start": "6:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1080,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.08",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.08 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.09",
-      "event": "BSE223 - T01 : Risk Management in Outdoor Education",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.09 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.09",
-      "event": "BPM503 - T01 : Project Risk Management in Construction Projects",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.09 (60pax-CRS)"
-    },
-    {
-      "start": "3:00 PM",
-      "end": "10:00 PM",
-      "start_min": 900,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.09",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.09 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.10",
-      "event": "SST102 - T00 : Human Factors and Systems Design",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.10 (60pax-CRS)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.10",
-      "event": "EAS307 - T01 : Avionics Systems Design",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.10 (60pax-CRS)"
-    },
-    {
-      "start": "11:30 AM",
-      "end": "3:30 PM",
-      "start_min": 690,
-      "end_min": 930,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.10",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.10 (60pax-CRS)"
-    },
-    {
-      "start": "6:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1110,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.10",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.10 (60pax-CRS)"
-    },
-    {
-      "start": "8:00 AM",
-      "end": "6:00 PM",
-      "start_min": 480,
-      "end_min": 1080,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.11",
-      "event": "MPSY Selection Interviews",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.11 (60pax-CRS)"
-    },
-    {
-      "start": "6:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1080,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.11",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.11 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.12",
-      "event": "OST166 - T01 : Understanding Leadership through Place-Based Education",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.12 (60pax-CRS)"
-    },
-    {
-      "start": "11:30 AM",
-      "end": "10:00 PM",
-      "start_min": 690,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.12",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.12 (60pax-CRS)"
-    },
-    {
-      "start": "9:00 AM",
-      "end": "2:00 PM",
-      "start_min": 540,
-      "end_min": 840,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.14",
-      "event": "Building Emotional Resilience as a Neurodivergent Student (29 Aug & 5 Sep)",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.14 (60pax-CRS)"
-    },
-    {
-      "start": "2:00 PM",
-      "end": "10:00 PM",
-      "start_min": 840,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.14",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.14 (60pax-CRS)"
-    },
-    {
-      "start": "8:00 AM",
-      "end": "6:00 PM",
-      "start_min": 480,
-      "end_min": 1080,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.15",
-      "event": "MPSY Selection Interviews",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.15 (60pax-CRS)"
-    },
-    {
-      "start": "6:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1080,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.15",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.15 (60pax-CRS)"
-    },
-    {
-      "start": "9:00 AM",
-      "end": "6:30 PM",
-      "start_min": 540,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.05",
-      "event": "LAW202 - T01 : Critical Thinking, Legal Writing and Legal Interpretation",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.05 (60pax-CRS)"
-    },
-    {
-      "start": "6:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1110,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.05",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.05 (60pax-CRS)"
-    },
-    {
-      "start": "9:00 AM",
-      "end": "6:30 PM",
-      "start_min": 540,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.06",
-      "event": "LAW202 - T02 : Critical Thinking, Legal Writing and Legal Interpretation",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.06 (60pax-CRS)"
-    },
-    {
-      "start": "6:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1110,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.06",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.06 (60pax-CRS)"
-    },
-    {
-      "start": "9:00 AM",
-      "end": "6:30 PM",
-      "start_min": 540,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.07",
-      "event": "LAW202 - T03 : Critical Thinking, Legal Writing and Legal Interpretation",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.07 (60pax-CRS)"
-    },
-    {
-      "start": "6:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1110,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.07",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.07 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.08",
-      "event": "SWK517 - 01 : Advanced Integrated Practice for Social Work",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.08 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1050,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.08",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.08 (60pax-CRS)"
-    },
-    {
-      "start": "9:00 AM",
-      "end": "12:00 PM",
-      "start_min": 540,
-      "end_min": 720,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.09",
-      "event": "LAW403 - T01 : Mediation Advocacy",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.09 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "10:00 PM",
-      "start_min": 720,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.09",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.09 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "10:00 PM",
-      "start_min": 720,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.10",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.10 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.11",
-      "event": "SWK501 - T05 : Human Lifespan and Social Ecology",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.11 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1050,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.11",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.11 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.12",
-      "event": "COU573 - 01 : Cognitive Behavioural Therapy",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.12 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1050,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.12",
-      "event": "Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.12 (60pax-CRS)"
     },
     {
       "start": "8:30 AM",
@@ -4068,168 +2716,51 @@
       "start_min": 510,
       "end_min": 750,
       "block": "C",
-      "floor": 7,
-      "room": "SR.C.7.08",
-      "event": "ECE510 - T02 : Recent Shifts in Research on Child Development and Early Childhood Curriculum (Copy)",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.7.08 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 7,
-      "room": "SR.C.7.09",
-      "event": "FMT321 - T01 : Fire Safety and Engineering",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.7.09 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "6:00 PM",
-      "start_min": 720,
-      "end_min": 1080,
-      "block": "C",
-      "floor": 7,
-      "room": "SR.C.7.14",
-      "event": "BUS100 - T04 : Business Skills and Management",
-      "status": "UPCOMING",
-      "description": "Compulsory attendance is required for this course.",
-      "room_description": "C.7.14 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "6:00 PM",
-      "start_min": 720,
-      "end_min": 1080,
-      "block": "C",
-      "floor": 7,
-      "room": "SR.C.7.15",
-      "event": "BUS100 - T05 : Business Skills and Management",
-      "status": "UPCOMING",
-      "description": "Compulsory attendance is required for this course.",
-      "room_description": "C.7.15 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 8,
-      "room": "SR.C.8.10",
-      "event": "SWK501 - 03 : Human Lifespan and Social Ecology",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.8.10 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 8,
-      "room": "SR.C.8.11",
-      "event": "SWK505 - 01 : Social Administration and Planning",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.8.11 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
       "floor": 3,
-      "room": "LAB.C.3.06",
-      "event": "ENG105 - T01 : Design of Logic Systems",
-      "status": "UPCOMING",
+      "room": "SR.C.3.13",
+      "event": "COU502 - T01 : Advanced Systemic Family Therapy",
+      "status": "PAST",
       "description": "",
-      "room_description": "C.3.06 (60pax) Multimedia Electronics Lab"
+      "room_description": "C.3.13 (60pax-CRS)"
     },
     {
-      "start": "8:30 AM",
-      "end": "12:00 PM",
-      "start_min": 510,
-      "end_min": 720,
-      "block": "C",
-      "floor": 3,
-      "room": "LAB.C.3.06",
-      "event": "SST Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.3.06 (60pax) Multimedia Electronics Lab"
-    },
-    {
-      "start": "3:00 PM",
+      "start": "12:30 PM",
       "end": "10:00 PM",
-      "start_min": 900,
+      "start_min": 750,
       "end_min": 1320,
       "block": "C",
       "floor": 3,
-      "room": "LAB.C.3.06",
-      "event": "SST Free Access",
-      "status": "UPCOMING",
+      "room": "SR.C.3.13",
+      "event": "Free Access",
+      "status": "CURRENT",
       "description": "",
-      "room_description": "C.3.06 (60pax) Multimedia Electronics Lab"
+      "room_description": "C.3.13 (60pax-CRS)"
     },
     {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
       "block": "C",
-      "floor": 4,
-      "room": "LAB.C.4.04",
-      "event": "ENG311 - T01 : Digital Signal Processing",
-      "status": "UPCOMING",
+      "floor": 3,
+      "room": "SR.C.3.14",
+      "event": "Free Access",
+      "status": "CURRENT",
       "description": "",
-      "room_description": "C.4.04 (60pax-CRS) General Purpose ICT Lab"
+      "room_description": "C.3.14 (60pax-CRS)"
     },
     {
-      "start": "3:30 PM",
+      "start": "8:30 AM",
       "end": "6:30 PM",
-      "start_min": 930,
+      "start_min": 510,
       "end_min": 1110,
       "block": "C",
       "floor": 4,
-      "room": "LAB.C.4.04",
-      "event": "ENG311 - T02 : Digital Signal Processing",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.04 (60pax-CRS) General Purpose ICT Lab"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "12:00 PM",
-      "start_min": 510,
-      "end_min": 720,
-      "block": "C",
-      "floor": 4,
-      "room": "LAB.C.4.04",
+      "room": "LAB.C.4.01",
       "event": "SST Free Access",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
-      "room_description": "C.4.04 (60pax-CRS) General Purpose ICT Lab"
-    },
-    {
-      "start": "6:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1110,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 4,
-      "room": "LAB.C.4.04",
-      "event": "SST Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.04 (60pax-CRS) General Purpose ICT Lab"
+      "room_description": "C.4.01 (23pax) Human Factors & Safety Lab"
     },
     {
       "start": "12:00 PM",
@@ -4237,12 +2768,12 @@
       "start_min": 720,
       "end_min": 900,
       "block": "C",
-      "floor": 4,
-      "room": "LAB.C.4.05",
-      "event": "ENG101 - T02 : Analogue Electronics Design",
-      "status": "UPCOMING",
+      "floor": 3,
+      "room": "LAB.C.3.03",
+      "event": "BME109 - S05 : Introduction to Chemistry and Biochemistry",
+      "status": "PAST",
       "description": "",
-      "room_description": "C.4.05 (57pax) General Electronics Lab 2"
+      "room_description": "C.3.03 Biomedical Engineering Lab 1"
     },
     {
       "start": "8:30 AM",
@@ -4250,12 +2781,12 @@
       "start_min": 510,
       "end_min": 690,
       "block": "C",
-      "floor": 4,
-      "room": "LAB.C.4.05",
-      "event": "ENG101 - T01 : Analogue Electronics Design",
-      "status": "UPCOMING",
+      "floor": 3,
+      "room": "LAB.C.3.03",
+      "event": "BME109 - S04 : Introduction to Chemistry and Biochemistry",
+      "status": "PAST",
       "description": "",
-      "room_description": "C.4.05 (57pax) General Electronics Lab 2"
+      "room_description": "C.3.03 Biomedical Engineering Lab 1"
     },
     {
       "start": "3:30 PM",
@@ -4263,62 +2794,413 @@
       "start_min": 930,
       "end_min": 1110,
       "block": "C",
-      "floor": 4,
-      "room": "LAB.C.4.05",
-      "event": "ENG101 - T03 : Analogue Electronics Design",
-      "status": "UPCOMING",
+      "floor": 3,
+      "room": "LAB.C.3.03",
+      "event": "BME109 - S06 : Introduction to Chemistry and Biochemistry",
+      "status": "PAST",
       "description": "",
-      "room_description": "C.4.05 (57pax) General Electronics Lab 2"
-    },
-    {
-      "start": "6:30 PM",
-      "end": "10:00 PM",
-      "start_min": 1110,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 4,
-      "room": "LAB.C.4.05",
-      "event": "SST Free Access",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.05 (57pax) General Electronics Lab 2"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 4,
-      "room": "LAB.C.4.06",
-      "event": "ENG301 - T01 : Microprocessor Programming",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.06 (60pax) General Electronics Lab 1"
+      "room_description": "C.3.03 Biomedical Engineering Lab 1"
     },
     {
       "start": "8:30 AM",
-      "end": "12:00 PM",
+      "end": "6:30 PM",
       "start_min": 510,
-      "end_min": 720,
+      "end_min": 1110,
       "block": "C",
-      "floor": 4,
-      "room": "LAB.C.4.06",
+      "floor": 3,
+      "room": "LAB.C.3.04",
       "event": "SST Free Access",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
-      "room_description": "C.4.06 (60pax) General Electronics Lab 1"
+      "room_description": "C.3.04 (60pax) Multimedia Lab 2"
     },
     {
-      "start": "3:00 PM",
+      "start": "8:30 AM",
+      "end": "6:30 PM",
+      "start_min": 510,
+      "end_min": 1110,
+      "block": "C",
+      "floor": 3,
+      "room": "LAB.C.3.07",
+      "event": "SST Free Access",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.3.07 (SAP Lab-30pax)"
+    },
+    {
+      "start": "8:30 AM",
       "end": "10:00 PM",
-      "start_min": 900,
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 3,
+      "room": "SR.C.3.15",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.3.15 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
       "end_min": 1320,
       "block": "C",
       "floor": 4,
+      "room": "SR.C.4.08",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.4.08 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.09",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.4.09 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.10",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.4.10 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.11",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.4.11 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.12",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.4.12 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.13",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.4.13 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.15",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.4.15 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.16",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.4.16 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 5,
+      "room": "SR.C.5.07",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.5.07 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 5,
+      "room": "SR.C.5.08",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.5.08 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 5,
+      "room": "SR.C.5.09",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.5.09 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 5,
+      "room": "SR.C.5.10",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.5.10 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 5,
+      "room": "SR.C.5.11",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.5.11 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 5,
+      "room": "SR.C.5.12",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.5.12 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 5,
+      "room": "SR.C.5.14",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.5.14 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 5,
+      "room": "SR.C.5.15",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.5.15 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 6,
+      "room": "SR.C.6.05",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.6.05 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 6,
+      "room": "SR.C.6.06",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.6.06 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 6,
+      "room": "SR.C.6.07",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.6.07 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 6,
+      "room": "SR.C.6.08",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.6.08 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 6,
+      "room": "SR.C.6.09",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.6.09 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 6,
+      "room": "SR.C.6.10",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.6.10 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 6,
+      "room": "SR.C.6.11",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.6.11 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 6,
+      "room": "SR.C.6.12",
+      "event": "Free Access",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.6.12 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "6:30 PM",
+      "start_min": 510,
+      "end_min": 1110,
+      "block": "C",
+      "floor": 3,
+      "room": "LAB.C.3.06",
+      "event": "SST Free Access",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.3.06 (60pax) Multimedia Electronics Lab"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "6:30 PM",
+      "start_min": 510,
+      "end_min": 1110,
+      "block": "C",
+      "floor": 4,
+      "room": "LAB.C.4.04",
+      "event": "SST Free Access",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.4.04 (60pax-CRS) General Purpose ICT Lab"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "6:30 PM",
+      "start_min": 510,
+      "end_min": 1110,
+      "block": "C",
+      "floor": 4,
+      "room": "LAB.C.4.05",
+      "event": "SST Free Access",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.4.05 (57pax) General Electronics Lab 2"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "6:30 PM",
+      "start_min": 510,
+      "end_min": 1110,
+      "block": "C",
+      "floor": 4,
       "room": "LAB.C.4.06",
       "event": "SST Free Access",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "C.4.06 (60pax) General Electronics Lab 1"
     },
@@ -4331,178 +3213,48 @@
       "floor": 5,
       "room": "SR.C.5.01",
       "event": "BRAIN Lab Data Collection",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.5.01 (60pax-CRS) Interpretation Lab 1"
     },
     {
       "start": "8:30 AM",
-      "end": "3:00 PM",
-      "start_min": 510,
-      "end_min": 900,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.13",
-      "event": "MTD301 Additional Room",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.6.13 (60pax-CRS)"
-    },
-    {
-      "start": "3:00 PM",
       "end": "10:00 PM",
-      "start_min": 900,
+      "start_min": 510,
       "end_min": 1320,
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.13",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.6.13 (60pax-CRS)"
     },
     {
-      "start": "12:00 PM",
-      "end": "6:00 PM",
-      "start_min": 720,
-      "end_min": 1080,
-      "block": "C",
-      "floor": 7,
-      "room": "SR.C.7.11",
-      "event": "BUS100 - T01 : Business Skills and Management",
-      "status": "UPCOMING",
-      "description": "Compulsory attendance is required for this course.",
-      "room_description": "C.7.11 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "6:00 PM",
-      "start_min": 720,
-      "end_min": 1080,
-      "block": "C",
-      "floor": 7,
-      "room": "SR.C.7.12",
-      "event": "BUS100 - T02 : Business Skills and Management",
-      "status": "UPCOMING",
-      "description": "Compulsory attendance is required for this course.",
-      "room_description": "C.7.12 (60pax-CRS)"
-    },
-    {
       "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "C",
-      "floor": 8,
-      "room": "SR.C.8.07",
-      "event": "ECO206 - T01 : Data Analysis for Economics and Business",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.8.07 (60pax)"
-    },
-    {
-      "start": "1:30 PM",
-      "end": "4:30 PM",
-      "start_min": 810,
-      "end_min": 990,
-      "block": "C",
-      "floor": 8,
-      "room": "SR.C.8.07",
-      "event": "SDW112: Generative AI in Tertiary Education Learning: Effective Prompt Writing",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.8.07 (60pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "C",
-      "floor": 8,
-      "room": "SR.C.8.08",
-      "event": "BUS105 - T14 : Statistics",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.8.08 (60pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 8,
-      "room": "SR.C.8.09",
-      "event": "SWK501 - 02 : Human Lifespan and Social Ecology",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.8.09 (60pax)"
-    },
-    {
-      "start": "9:00 AM",
-      "end": "2:00 PM",
-      "start_min": 540,
-      "end_min": 840,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.13",
-      "event": "Deputy Workshop for MSF OPG 29 Aug 2026",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.5.13 (60pax-CRS)"
-    },
-    {
-      "start": "3:00 PM",
       "end": "10:00 PM",
-      "start_min": 900,
+      "start_min": 510,
       "end_min": 1320,
       "block": "C",
       "floor": 5,
       "room": "SR.C.5.13",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.5.13 (60pax-CRS)"
     },
     {
       "start": "8:30 AM",
-      "end": "5:30 PM",
-      "start_min": 510,
-      "end_min": 1050,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.14",
-      "event": "GER514 - T01 : Financial Planning and Retirement Management",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "C.4.14 (60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
       "end": "10:00 PM",
-      "start_min": 1050,
+      "start_min": 510,
       "end_min": 1320,
       "block": "C",
       "floor": 4,
       "room": "SR.C.4.14",
       "event": "Free Access",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.14 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "6:00 PM",
-      "start_min": 720,
-      "end_min": 1080,
-      "block": "C",
-      "floor": 7,
-      "room": "SR.C.7.13",
-      "event": "BUS100 - T03 : Business Skills and Management",
-      "status": "UPCOMING",
-      "description": "Compulsory attendance is required for this course.",
-      "room_description": "C.7.13 (60pax)"
     },
     {
       "start": "8:00 AM",
@@ -4513,100 +3265,61 @@
       "floor": null,
       "room": "ArtsTheatre",
       "event": "M&E - Minor renovation (add lightings)",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "D.1.01 (Performing Arts Theatre)"
     },
     {
       "start": "8:00 AM",
-      "end": "9:00 AM",
+      "end": "10:00 PM",
       "start_min": 480,
-      "end_min": 540,
-      "block": "D",
-      "floor": 1,
-      "room": "SR.D.1.02TOD.1.05",
-      "event": "CS formal 2026",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "D.1.02/3/4/5 (Combined-238pax)"
-    },
-    {
-      "start": "9:30 AM",
-      "end": "7:30 PM",
-      "start_min": 570,
-      "end_min": 1170,
+      "end_min": 1320,
       "block": "D",
       "floor": 1,
       "room": "SR.D.1.02TOD.1.05",
       "event": "Minor Works",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "D.1.02/3/4/5 (Combined-238pax)"
     },
     {
+      "start": "10:00 AM",
+      "end": "2:00 PM",
+      "start_min": 600,
+      "end_min": 840,
+      "block": "D",
+      "floor": null,
+      "room": "MPSH.A/B",
+      "event": "SIM Volleyball Training",
+      "status": "PAST",
+      "description": "",
+      "room_description": "D.2.02 (Multipurpose Sports Hall)"
+    },
+    {
       "start": "2:00 PM",
-      "end": "6:00 PM",
+      "end": "4:00 PM",
       "start_min": 840,
-      "end_min": 1080,
+      "end_min": 960,
       "block": "D",
       "floor": null,
       "room": "MPSH.A/B",
       "event": "SIM Floorball Training",
-      "status": "UPCOMING",
+      "status": "PAST",
       "description": "",
       "room_description": "D.2.02 (Multipurpose Sports Hall)"
     },
     {
-      "start": "9:00 AM",
-      "end": "12:00 PM",
-      "start_min": 540,
-      "end_min": 720,
-      "block": "D",
-      "floor": null,
-      "room": "MPSH.A/B",
-      "event": "SIM Handball Training",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "D.2.02 (Multipurpose Sports Hall)"
-    },
-    {
-      "start": "6:00 PM",
-      "end": "9:00 PM",
-      "start_min": 1080,
-      "end_min": 1260,
+      "start": "4:00 PM",
+      "end": "8:00 PM",
+      "start_min": 960,
+      "end_min": 1200,
       "block": "D",
       "floor": null,
       "room": "MPSH.A/B",
       "event": "SIM Basketball Training",
-      "status": "UPCOMING",
+      "status": "CURRENT",
       "description": "",
       "room_description": "D.2.02 (Multipurpose Sports Hall)"
-    },
-    {
-      "start": "8:00 AM",
-      "end": "6:30 PM",
-      "start_min": 480,
-      "end_min": 1110,
-      "block": "D",
-      "floor": null,
-      "room": "TennisCourt2",
-      "event": "FSA Tennis Trainings August 2026",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "D.4.01 (Tennis Court 2)"
-    },
-    {
-      "start": "8:00 AM",
-      "end": "6:30 PM",
-      "start_min": 480,
-      "end_min": 1110,
-      "block": "D",
-      "floor": null,
-      "room": "TennisCourt1",
-      "event": "FSA Tennis Trainings August 2026",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "D.4.01 (Tennis Court 1)"
     }
   ],
   "auto": true
