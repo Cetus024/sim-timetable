@@ -10,10 +10,15 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📅</text></svg>" />
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to the timetable</a>
 <div class="wrap">
 
-  <h1>Campus Timetable</h1>
-  <p class="meta" id="source">Loading today's schedule…</p>
+  <header class="page-header">
+    <h1>Campus Timetable</h1>
+    <p class="meta" id="source" role="status" aria-live="polite">Loading today's schedule…</p>
+  </header>
+
+  <main id="main" tabindex="-1">
 
   <!-- ---------- waiting for a bookmarklet handoff ---------- -->
   <section id="waitingPanel" hidden>
@@ -35,36 +40,41 @@
   </section>
 
   <!-- ---------- import ---------- -->
-  <section id="importPanel">
+  <section id="importPanel" aria-labelledby="importHeading">
     <div class="card">
+      <h2 id="importHeading" style="margin-top:0">Load a schedule</h2>
       <div class="drop" id="drop">
         <strong>Drop sim-timetable.json here</strong><br />
         <span class="note">or <button class="btn" id="pickBtn" type="button" style="margin:6px 4px">choose a file</button>
         <button class="btn" id="pasteBtn" type="button" style="margin:6px 4px">paste from clipboard</button></span>
         <input type="file" id="file" accept="application/json,.json" hidden />
       </div>
-      <p class="note" style="margin:12px 0 6px">Or paste the JSON directly:</p>
+      <p style="margin:14px 0 6px">
+        <label class="note" for="pasteArea">Or paste the JSON directly:</label>
+      </p>
       <textarea class="paste" id="pasteArea" placeholder='{ "version": 1, "rows": [ ... ] }'></textarea>
       <div class="row" style="margin-top:10px">
         <button class="btn primary" id="loadPasteBtn" type="button">Load pasted JSON</button>
         <button class="btn" id="sampleBtn" type="button">Try sample data</button>
         <a class="btn" href="/">← How to get the JSON</a>
-        <span class="err" id="importError"></span>
       </div>
+      <p class="err" id="importError" role="alert"></p>
     </div>
   </section>
 
   <!-- ---------- timetable ---------- -->
-  <section id="app" hidden>
+  <section id="app" aria-label="Today's timetable" hidden>
     <div class="row" style="margin-bottom:14px">
       <button class="btn" id="changeBtn" type="button">Load different data</button>
       <button class="btn" id="exportBtn" type="button">Export standalone HTML</button>
-      <span class="note" id="exportStatus"></span>
+      <span class="note" id="exportStatus" role="status" aria-live="polite"></span>
     </div>
     <div id="timetable"></div>
   </section>
 
-  <footer>Everything runs in your browser — the JSON is kept in this tab's local storage and never uploaded.</footer>
+  </main>
+
+  <footer>Everything runs in your browser — the schedule is kept in this tab's local storage and never uploaded.</footer>
 
 </div>
 

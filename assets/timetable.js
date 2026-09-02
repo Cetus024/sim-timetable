@@ -139,27 +139,102 @@
 
   // ---------- UI ----------
 
+  /* Every control is labelled with an explicit for/id pair rather than a
+   * wrapping <label>. A label that wraps a <select> pulls the option text into
+   * the accessible name, so "Block" was being announced as "Block All A B C D".
+   * The two time filters carry visible hints rather than title= tooltips,
+   * which keyboard and touch users never see. */
   var TOOLBAR_HTML = [
-    '<div class="toolbar">',
-    '  <label>Block<select data-f="block"><option value="">All</option></select></label>',
-    '  <label>Floor<select data-f="floor"><option value="">All</option></select></label>',
-    '  <label>Room contains<input data-f="room" type="text" placeholder="e.g. LT.B.5" /></label>',
-    '  <label>Exclude contains<input data-f="exclude" type="text" placeholder="e.g. LAB, MPSH" /></label>',
-    '  <label>Ends at<select data-f="endtime"><option value="">Any</option></select></label>',
+    '<details class="filters" data-el="filterShell">',
+    '<summary class="filters-summary">Filters</summary>',
+    '<div class="toolbar" role="group" aria-label="Filter the schedule">',
+    '  <p class="field"><label for="stt-block">Block</label>',
+    '    <select id="stt-block" data-f="block"><option value="">All</option></select></p>',
+    '  <p class="field"><label for="stt-floor">Floor</label>',
+    '    <select id="stt-floor" data-f="floor"><option value="">All</option></select></p>',
+    '  <p class="field"><label for="stt-room">Room contains</label>',
+    '    <input id="stt-room" data-f="room" type="text" placeholder="e.g. LT.B.5" /></p>',
+    '  <p class="field"><label for="stt-exclude">Exclude contains</label>',
+    '    <input id="stt-exclude" data-f="exclude" type="text" placeholder="e.g. LAB, MPSH" /></p>',
+    '  <p class="field"><label for="stt-endtime">Ends at</label>',
+    '    <select id="stt-endtime" data-f="endtime"><option value="">Any</option></select></p>',
     '  <div class="time-filters" data-el="timeFilters">',
-    '    <label title="Finds rooms whose Free Access window starts at or after this time">Open after<input data-f="after" type="text" placeholder="e.g. 4:00 PM" /></label>',
-    '    <label title="Finds rooms whose Free Access window starts before this time">Open before<input data-f="before" type="text" placeholder="e.g. 10:00 PM" /></label>',
+    '    <p class="field"><label for="stt-after">Open after</label>',
+    '      <input id="stt-after" data-f="after" type="text" placeholder="e.g. 4:00 PM"',
+    '        aria-describedby="stt-after-hint" />',
+    '      <span class="field-hint" id="stt-after-hint">Opens at or after this time</span></p>',
+    '    <p class="field"><label for="stt-before">Open before</label>',
+    '      <input id="stt-before" data-f="before" type="text" placeholder="e.g. 10:00 PM"',
+    '        aria-describedby="stt-before-hint" />',
+    '      <span class="field-hint" id="stt-before-hint">Opens before this time</span></p>',
     '  </div>',
     '  <div class="spacer"></div>',
     '  <button class="btn" data-el="resetBtn" type="button">Reset filters</button>',
-    '  <div class="mode-toggle">',
-    '    <button data-el="tableBtn" type="button">Table</button>',
-    '    <button data-el="availBtn" type="button">Availability</button>',
+    '  <div class="seg-toggle" role="group" aria-label="View">',
+    '    <button data-el="tableBtn" type="button" aria-pressed="false">Table</button>',
+    '    <button data-el="availBtn" type="button" aria-pressed="true">Availability</button>',
     '  </div>',
     '</div>',
-    '<div class="meta" data-el="meta"></div>',
+    '</details>',
+    '<div class="results-head"><p class="count" data-el="meta"></p></div>',
+    // Announced on a debounce so typing in a filter does not spam a screen
+    // reader with a result count on every keystroke.
+    '<p class="visually-hidden" data-el="announce" role="status" aria-live="polite"></p>',
     '<div data-el="results"></div>'
   ].join('\n');
+
+  function nowMinutes() {
+    var d = new Date();
+    return d.getHours() * 60 + d.getMinutes();
+  }
+
+  function fmtMinutes(m) {
+    var h = Math.floor(m / 60), mm = m % 60;
+    var ap = h >= 12 ? 'PM' : 'AM';
+    var h12 = h % 12; if (h12 === 0) h12 = 12;
+    return h12 + (mm ? ':' + (mm < 10 ? '0' + mm : mm) : '') + ' ' + ap;
+  }
+
+  /* The window the day bar spans: the real extent of the day's bookings,
+   * rounded out to whole hours, never narrower than a normal teaching day. */
+  function dayRange(rows) {
+    var lo = 8 * 60, hi = 22 * 60;
+    rows.forEach(function (r) {
+      if (typeof r.start_min === 'number') lo = Math.min(lo, r.start_min);
+      if (typeof r.end_min === 'number') hi = Math.max(hi, r.end_min);
+    });
+    lo = Math.floor(lo / 60) * 60;
+    hi = Math.ceil(hi / 60) * 60;
+    if (hi - lo < 120) hi = lo + 120;
+    return { lo: lo, hi: hi };
+  }
+
+  /* A proportional strip of the day. Decorative by design: it is aria-hidden,
+   * and everything it draws is also written out underneath, because a coloured
+   * bar cannot be read aloud and colour must never be the only carrier. */
+  function dayBarHtml(timeline, range) {
+    var span = range.hi - range.lo || 1;
+    var pct = function (m) { return ((m - range.lo) / span) * 100; };
+
+    var segs = timeline.map(function (sg) {
+      if (sg.type === 'gap') return '';
+      var from = Math.max(range.lo, sg.start_min);
+      var to = Math.min(range.hi, sg.end_min === null ? range.hi : sg.end_min);
+      if (!(to > from)) return '';
+      return '<span class="daybar-seg is-' + sg.type + '" style="left:' +
+        pct(from).toFixed(2) + '%;width:' + (pct(to) - pct(from)).toFixed(2) + '%"></span>';
+    }).join('');
+
+    var now = nowMinutes();
+    var marker = (now > range.lo && now < range.hi)
+      ? '<span class="daybar-now" style="left:' + pct(now).toFixed(2) + '%"></span>'
+      : '';
+
+    var mid = range.lo + Math.round((span / 2) / 60) * 60;
+    return '<div class="daybar" aria-hidden="true">' + segs + marker + '</div>' +
+      '<div class="daybar-scale" aria-hidden="true"><span>' + fmtMinutes(range.lo) +
+      '</span><span>' + fmtMinutes(mid) + '</span><span>' + fmtMinutes(range.hi) + '</span></div>';
+  }
 
   function mount(root, rows, opts) {
     opts = opts || {};
@@ -205,12 +280,44 @@
       }
     });
 
+    /* One scale for every bar on the page. Per-room ranges would make two bars
+     * of different lengths mean the same thing, which is worse than no bar. */
+    var range = dayRange(data);
+
+    /* Above 620px the filter panel is always open and its summary is hidden by
+     * CSS, so nothing is hidden behind a click on a desktop. Below that it
+     * starts closed, so the results are the first thing on screen. */
+    var wide = window.matchMedia('(min-width: 621px)');
+    function syncFilterShell() {
+      // Collapse only when we positively know the viewport is narrow. A zero or
+      // unknown width (hidden tab, print, an embedding context) should show the
+      // filters rather than hide them behind a control nobody asked for.
+      var narrow = window.innerWidth > 0 && !wide.matches;
+      el.filterShell.open = !narrow;
+    }
+    syncFilterShell();
+    if (wide.addEventListener) wide.addEventListener('change', syncFilterShell);
+    else if (wide.addListener) wide.addListener(syncFilterShell);   // older Safari
+
+    /* Visible count updates immediately; the screen-reader announcement waits
+     * for typing to stop, so filtering does not narrate every keystroke. */
+    var announceTimer = null;
+    function setCount(text) {
+      el.meta.textContent = text;
+      if (announceTimer) clearTimeout(announceTimer);
+      announceTimer = setTimeout(function () {
+        el.announce.textContent = text;
+      }, 600);
+    }
+
     var mode = opts.mode === 'table' ? 'table' : 'available';
 
     function setMode(m) {
       mode = m;
-      el.tableBtn.classList.toggle('active', m === 'table');
-      el.availBtn.classList.toggle('active', m === 'available');
+      // aria-pressed, not a class: the active view has to be announced, not
+      // just coloured in.
+      el.tableBtn.setAttribute('aria-pressed', String(m === 'table'));
+      el.availBtn.setAttribute('aria-pressed', String(m === 'available'));
       el.timeFilters.classList.toggle('show', m === 'available');
       render();
     }
@@ -270,25 +377,33 @@
 
     function renderTable(rows) {
       rows = rows.slice().sort(function (a, b) { return (a.end_min || 0) - (b.end_min || 0); });
-      el.meta.textContent = rows.length + ' event(s)';
+      setCount(rows.length + (rows.length === 1 ? ' booking' : ' bookings'));
       var body = rows.map(function (r) {
         var floorText = (r.floor === null || typeof r.floor === 'undefined') ? '?' : r.floor;
+        var st = liveStatus(r);
         return '<tr>' +
-          '<td>' + esc(r.start || '?') + '</td>' +
-          '<td>' + esc(r.end || '?') + '</td>' +
+          '<td class="num">' + esc(r.start || '?') + '</td>' +
+          '<td class="num">' + esc(r.end || '?') + '</td>' +
           '<td>' + esc(r.block || '?') + '</td>' +
           '<td>' + esc(floorText) + '</td>' +
-          '<td>' + esc(r.room || '?') + '</td>' +
+          '<th scope="row">' + esc(r.room || '?') + '</th>' +
           '<td>' + esc(r.event) + '</td>' +
-          '<td class="status-' + esc(liveStatus(r)) + '">' + esc(liveStatus(r)) + '</td>' +
+          '<td class="status-' + esc(st) + '">' + esc(st) + '</td>' +
           '</tr>';
       }).join('');
+      // The scroll container is focusable and labelled, so a keyboard user can
+      // actually reach and scroll a table that is wider than the screen.
       el.results.innerHTML =
-        '<div class="table-scroll"><table>' +
-        '<thead><tr><th>Start</th><th>End</th><th>Block</th><th>Floor</th>' +
-        '<th>Room</th><th>Event</th><th>Status</th></tr></thead>' +
-        '<tbody>' + (body || '<tr><td colspan="7">No matching events found.</td></tr>') + '</tbody>' +
-        '</table></div>';
+        '<div class="table-scroll" tabindex="0" role="region" aria-label="All bookings, scrollable">' +
+        '<table>' +
+        '<caption class="visually-hidden">Every booking matching the current filters, ' +
+        'earliest finishing first.</caption>' +
+        '<thead><tr>' +
+        '<th scope="col">Start</th><th scope="col">End</th><th scope="col">Block</th>' +
+        '<th scope="col">Floor</th><th scope="col">Room</th><th scope="col">Event</th>' +
+        '<th scope="col">Status</th></tr></thead>' +
+        '<tbody>' + (body || '<tr><td colspan="7">No bookings match these filters.</td></tr>') +
+        '</tbody></table></div>';
     }
 
     function renderAvailability(rows) {
@@ -317,27 +432,51 @@
 
         var segHtml = timeline.map(function (seg) {
           if (seg.type === 'busy') {
-            return '<div class="segment"><span class="tag busy">BUSY</span>' +
-              '<span class="seg-time">' + esc(seg.start) + ' - ' + esc(seg.end) + '</span>' +
-              '<span class="seg-label">' + esc(seg.event) + '</span></div>';
+            return '<li class="segment"><span class="tag busy">BUSY</span>' +
+              '<span class="seg-time">' + esc(seg.start) + ' – ' + esc(seg.end) + '</span>' +
+              '<span class="seg-label">' + esc(seg.event) + '</span></li>';
           }
           if (seg.type === 'open') {
-            return '<div class="segment"><span class="tag free">OPEN</span>' +
-              '<span class="seg-time">' + esc(seg.start) + ' - ' + esc(seg.end) + '</span>' +
-              '<span class="seg-label">' + esc(seg.event) + '</span></div>';
+            return '<li class="segment"><span class="tag free">OPEN</span>' +
+              '<span class="seg-time">' + esc(seg.start) + ' – ' + esc(seg.end) + '</span>' +
+              '<span class="seg-label">' + esc(seg.event) + '</span></li>';
           }
           var until = seg.open_ended ? 'end of day' : esc(seg.end);
-          return '<div class="segment"><span class="tag gap">GAP</span>' +
-            '<span class="seg-time">' + esc(seg.start) + ' &rarr; ' + until + '</span>' +
-            '<span class="seg-label muted">nothing booked - may still be locked</span></div>';
+          return '<li class="segment"><span class="tag gap">GAP</span>' +
+            '<span class="seg-time">' + esc(seg.start) + ' → ' + until + '</span>' +
+            '<span class="seg-label muted">nothing booked – may still be locked</span></li>';
         }).join('');
 
         var floorText = (info.floor === null || typeof info.floor === 'undefined') ? '?' : info.floor;
-        var desc = info.room_description ? ', ' + info.room_description : '';
+        var desc = info.room_description ? ' · ' + info.room_description : '';
+        var openSegs = timeline.filter(function (sg) { return sg.type === 'open'; });
+        var busyCount = timeline.filter(function (sg) { return sg.type === 'busy'; }).length;
+
+        // The summary has to stand on its own: it is what a screen reader
+        // announces, and what everyone reads before deciding to expand.
+        var summary = openSegs.length
+          ? 'Open ' + openSegs.map(function (sg) {
+              return esc(sg.start) + ' – ' + esc(sg.end);
+            }).join(', ') + ' · ' + busyCount + ' other booking' + (busyCount === 1 ? '' : 's')
+          : busyCount + ' booking' + (busyCount === 1 ? '' : 's') + ' · no Free Access window';
+
+        // Only the positive case gets a badge. 131 of 155 cards would otherwise
+        // carry a "not marked open" pill, which is noise that buries the 24
+        // that matter — and the summary line already says it in words.
+        var flag = openSegs.length ? '<span class="room-flag">OPEN TODAY</span>' : '';
+
         cards.push(
-          '<div class="room-card"><div class="room-title">' + esc(room) +
-          ' <span class="room-sub">Block ' + esc(info.block || '?') +
-          ', Floor ' + esc(floorText) + esc(desc) + '</span></div>' + segHtml + '</div>'
+          '<li class="room-card">' +
+          '<div class="room-head">' +
+          '<h3 class="room-name">' + esc(room) + '</h3>' +
+          '<span class="room-sub">Block ' + esc(info.block || '?') +
+          ' · Floor ' + esc(floorText) + esc(desc) + '</span>' +
+          flag +
+          '</div>' +
+          dayBarHtml(timeline, range) +
+          '<details class="seg-details"><summary>' + summary + '</summary>' +
+          '<ul class="segments">' + segHtml + '</ul></details>' +
+          '</li>'
         );
       });
 
@@ -360,39 +499,66 @@
         openRooms.push({ room: room, info: groups[room][0], windows: windows });
       });
 
+      // Rooms open right now sort to the front — at 3pm the useful question is
+      // "where can I go now", not "what opens at 8am".
+      var now = nowMinutes();
+      openRooms.forEach(function (o) {
+        o.openNow = o.windows.some(function (sg) {
+          return sg.start_min <= now && now < sg.end_min;
+        });
+      });
+      openRooms.sort(function (a, b) {
+        if (a.openNow !== b.openNow) return a.openNow ? -1 : 1;
+        return a.room < b.room ? -1 : a.room > b.room ? 1 : 0;
+      });
+
+      var openNowCount = openRooms.filter(function (o) { return o.openNow; }).length;
+
       var openHtml = '';
       if (openRooms.length) {
         openHtml =
-          '<div class="room-card summary-card"><div class="room-title">Open to students ' +
-          '<span class="room-sub">' + openRooms.length +
-          ' room(s) with a Free Access window today</span></div>' +
+          '<section class="hero" aria-labelledby="stt-open-h">' +
+          '<div class="hero-head"><h2 id="stt-open-h">Open to students</h2></div>' +
+          '<p class="hero-sub">' + openRooms.length + ' room' +
+          (openRooms.length === 1 ? '' : 's') + ' with a Free Access window today' +
+          (openNowCount ? ' · <strong>' + openNowCount + ' open right now</strong>' : '') +
+          '</p>' +
+          '<ul class="open-grid">' +
           openRooms.map(function (o) {
             var times = o.windows.map(function (sg) {
-              return esc(sg.start) + ' - ' + esc(sg.end);
+              return esc(sg.start) + ' – ' + esc(sg.end);
             }).join(', ');
-            return '<div class="segment"><span class="tag free">OPEN</span>' +
-              '<span class="seg-time">' + esc(o.room) + '</span>' +
-              '<span class="seg-label">' + times +
-              (o.info.room_description ? ' &middot; ' + esc(o.info.room_description) : '') +
-              '</span></div>';
+            return '<li class="open-item' + (o.openNow ? ' is-now' : '') + '">' +
+              '<p class="open-room">' + esc(o.room) +
+              (o.openNow ? '<span class="now-badge">OPEN NOW</span>' : '') + '</p>' +
+              '<p class="open-when">' + times + '</p>' +
+              (o.info.room_description
+                ? '<p class="open-desc">' + esc(o.info.room_description) + '</p>' : '') +
+              '</li>';
           }).join('') +
-          '</div>';
+          '</ul></section>';
       }
 
       var unbooked = freeAllDayRooms();
       var unbookedNote = unbooked.length
-        ? '<p class="empty">' + unbooked.length + ' more room(s) have nothing booked today, but ' +
-          'nothing marks them as open - mostly labs, tutor rooms and foyers, which are usually ' +
-          'locked. They are not listed as available.</p>'
+        ? '<p class="footnote"><strong>' + unbooked.length + ' more rooms</strong> have nothing ' +
+          'booked today, but nothing marks them as open — mostly labs, tutor rooms and foyers, ' +
+          'which are usually locked. They are not listed as available.</p>'
         : '';
 
-      el.meta.textContent =
-        openRooms.length + ' room(s) open to students · ' +
-        cards.length + ' with bookings' +
-        (unbooked.length ? ' · ' + unbooked.length + ' unbooked (status unknown)' : '');
+      var cardsHtml = cards.length
+        ? '<h2 class="visually-hidden">Rooms with bookings</h2>' +
+          '<ul class="room-list">' + cards.join('') + '</ul>'
+        : '';
 
-      el.results.innerHTML = (openHtml + cards.join('') + unbookedNote) ||
-        '<p class="empty">No matching rooms found.</p>';
+      setCount(
+        openRooms.length + ' open to students · ' +
+        cards.length + ' with bookings' +
+        (unbooked.length ? ' · ' + unbooked.length + ' unbooked (status unknown)' : '')
+      );
+
+      el.results.innerHTML = (openHtml + cardsHtml + unbookedNote) ||
+        '<p class="empty">No rooms match these filters. Try clearing one of them.</p>';
     }
 
     function render() {

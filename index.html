@@ -11,10 +11,15 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📅</text></svg>" />
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to the main content</a>
 <div class="wrap">
 
+  <header class="page-header">
   <h1>SIM Campus Timetable</h1>
   <p class="meta">The campus schedule, but useful — filter by block, floor and room, or flip to availability mode to find rooms that are actually free. Updated automatically every day just after midnight.</p>
+  </header>
+
+  <main id="main" tabindex="-1">
 
   <div class="card">
     <h2 style="margin-top:0">You probably don't need to do anything</h2>
@@ -37,8 +42,8 @@
     <div class="row" style="margin-bottom:12px">
       <button class="btn primary" id="copyBtn" type="button">Copy scraper to clipboard</button>
       <a class="btn" href="/scraper/scrape.js" download="scrape.js">Download scrape.js</a>
-      <a class="btn" id="bookmarklet" href="#" title="Drag me to your bookmarks bar">↗ Scrape SIM Timetable (drag to bookmarks bar)</a>
-      <span class="note" id="copyStatus"></span>
+      <a class="btn" id="bookmarklet" href="#">↗ Scrape SIM Timetable (drag to bookmarks bar)</a>
+      <span class="note" id="copyStatus" role="status" aria-live="polite"></span>
     </div>
     <pre class="snippet" id="snippet">Loading scraper source…</pre>
     <p class="note">The bookmarklet is the same code, inlined — drag it to your bookmarks bar, then click it while you are on the scheduling page. It must run there: the campus API only answers same-origin requests.</p>
@@ -49,6 +54,8 @@
     <p style="margin-bottom:12px">Today's schedule is already loaded.</p>
     <a class="btn primary" href="/viewer">Open the viewer →</a>
   </div>
+
+  </main>
 
   <footer>
     Static site — no backend, no accounts, no data leaves your browser.

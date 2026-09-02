@@ -124,6 +124,9 @@ export async function withBrowser(fn, { port = 9455, args = [] } = {}) {
       return res.result.value;
     },
     close: (targetId) => cdp.send('Target.closeTarget', { targetId }),
+    // Raw protocol access, for the things evaluate() cannot do: viewport
+    // emulation, prefers-color-scheme overrides, screenshots.
+    send: (method, params, sessionId) => cdp.send(method, params, sessionId),
   };
 
   try {
