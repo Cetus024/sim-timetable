@@ -29,18 +29,51 @@ offline and outlives this site.
 
 ## Views
 
+- **Open to students** — the list you actually came for: rooms SIM has explicitly marked
+  **Free Access** today, with their windows, and anything open *right now* sorted to the front.
+  The count moves with the timetable — 24 to 42 rooms on the eight days before this was written.
+- **Availability** — every room with bookings, each with a proportional bar of the day and a
+  timeline of OPEN (Free Access), BUSY (booked) and GAP (nothing booked, may still be locked)
+  segments. All bars share one scale, so two rooms are directly comparable. "Open after" /
+  "Open before" narrow to rooms whose Free Access window starts in that range.
 - **Table** — every booking, sorted by end time, with block/floor/room broken out. Status is
   computed from your clock, so it says what is busy *now*.
-- **Availability** — each room as a timeline of OPEN (Free Access), BUSY (booked) and GAP
-  (nothing booked, may still be locked) segments. "Open after" / "Open before" narrow to rooms
-  whose Free Access window starts in that range.
-- **Open to students** — the rooms SIM has explicitly marked **Free Access** today, with their
-  windows. This is the actionable list: roughly 38 rooms.
 
 Note what is *not* claimed. A room with nothing booked is **not** listed as available: unbooked
-means unallocated, and most such rooms (25 labs, plus tutor rooms and foyers) are simply locked.
-They appear only as a count, with an explanation. Gaps between bookings show as **GAP**, not
-FREE, for the same reason.
+means unallocated, and most such rooms (a few dozen labs, plus tutor rooms, foyers and staff
+lounges) are simply locked. They appear only as a count, with an explanation. Gaps between
+bookings show as **GAP**, not FREE, for the same reason.
+
+## Accessibility
+
+Built against WCAG 2.2 AA. No full conformance audit has been done — but the following are
+verified rather than asserted, and re-checkable:
+
+- **Contrast is verified by a script, not by eye.** `scripts/check-contrast.mjs` parses the colour
+  tokens back out of `assets/styles.css` and asserts 42 foreground/background pairs across both
+  the light and dark themes. It exits non-zero on a regression, so a colour edit that makes text
+  unreadable fails immediately rather than months later. (1.4.3, 1.4.11)
+- **Nothing means anything by colour alone.** OPEN / BUSY / GAP are words as well as colours, and
+  the day bar is `aria-hidden` with every segment it draws also written out beneath it — a bar
+  cannot be read aloud. (1.4.1)
+- **Keyboard first.** A skip link, a visible focus ring on everything, landmarks, and a heading
+  per room so a screen reader can jump between rooms instead of arrowing through hundreds of rows.
+  (2.4.1, 2.4.7)
+- **Every control has a real label**, checked in the DOM rather than trusted. (1.3.1, 4.1.2)
+- **Announcements are restrained.** The result count is announced on a debounce, so typing in a
+  filter does not narrate a count on every keystroke. (4.1.3)
+- **Reflows at 320px** with no horizontal scrolling, on both pages. (1.4.10)
+- Honours `prefers-reduced-motion`, `prefers-contrast` and forced-colours mode.
+
+```bash
+node scripts/check-contrast.mjs
+```
+
+Two conventions worth knowing before editing the CSS. `--line` (decorative card edges) and
+`--line-strong` (anything that identifies a control) are deliberately separate, because only the
+latter owes 3:1 under WCAG 1.4.11. And form labels are explicit `for`/`id` pairs — a `<label>`
+wrapping a `<select>` pulls the option text into the accessible name, which had "Block" being
+announced as "Block All A B C D".
 
 ## Where the data comes from
 
@@ -52,8 +85,8 @@ GET https://scheduling.sim.edu.sg/rad/rest/campus?id=SIM
 ```
 
 Reading that directly beats scraping the rendered table on every axis — one request instead of
-54 pages, exact timestamps instead of parsed strings, room capacities, and the full room
-inventory rather than only the rooms that happen to be busy.
+fifty-odd paginated pages, exact timestamps instead of parsed strings, room capacities, and the
+full room inventory rather than only the rooms that happen to be busy.
 
 No login is involved; the schedule is public. Two quirks shape everything else:
 
@@ -67,7 +100,7 @@ No login is involved; the schedule is public. Two quirks shape everything else:
 ### Daily refresh
 
 [`.github/workflows/daily-schedule.yml`](.github/workflows/daily-schedule.yml) runs at 00:05 SGT
-(`05 16 * * *` UTC), reads the API in headless Chrome, and commits `data/latest.json`. The viewer
+(`5 16 * * *` UTC), reads the API in headless Chrome, and commits `data/latest.json`. The viewer
 fetches that from `raw.githubusercontent.com` on load and uses it when it is fresher than what
 you already have.
 
@@ -115,15 +148,20 @@ viewer also accepts a bare array of rows, or older payloads without `rooms`.
 index.html                  landing page — the bookmarklet, and what this is
 viewer.html                 loads the feed, imports, persists, exports
 assets/timetable.js         parsing + rendering, shared by the viewer and the export
-assets/styles.css           shared styles (light + dark)
+assets/styles.css           shared styles (light + dark, and the contrast tokens)
+assets/toast.js             the progress/status toasts
 scraper/scrape.js           the ONLY read-and-transform: bookmarklet and CI both run this
 scripts/fetch-schedule.mjs  evaluates scrape.js headless; writes data/latest.json
 scripts/lib/cdp.mjs         dependency-free Chrome DevTools Protocol client
 scripts/serve.mjs           local static server mirroring vercel.json's clean URLs
+scripts/check-contrast.mjs  asserts the palette still clears WCAG AA
 scripts/test-handoff.mjs    end-to-end test of the bookmarklet handoff
 sample/                     sample data, so the site demos without a live fetch
 data/latest.json            published daily; read by the viewer
 .github/workflows/          the daily job
+ARCHITECTURE.md             diagram, components, the constraints that shape it
+docs/PRD.md                 problem, scope, user stories
+docs/TECHNICAL-DESIGN.md    contracts, algorithms, failure modes
 ```
 
 ## Developing
@@ -143,15 +181,21 @@ Fetch the schedule locally (needs Chrome or Edge; override with `BROWSER_PATH`):
 node scripts/fetch-schedule.mjs
 ```
 
-The one path worth an automated test is the cross-tab handoff, since it needs a real popup and a
-real user gesture:
+Two checks are worth running before you push.
 
 ```bash
-node scripts/test-handoff.mjs
+node scripts/check-contrast.mjs    # every colour pair, both themes
+node scripts/test-handoff.mjs      # the cross-tab bookmarklet handoff
 ```
 
-It drives headless Edge over CDP and checks both that the viewer accepts a payload from the tab
-that opened it, and that it ignores one from anything else.
+The handoff is the one path that genuinely needs an automated test, because it needs a real popup
+and a real user gesture. It drives headless Edge over CDP and checks both that the viewer accepts
+a payload from the tab that opened it, and that it ignores one from anything else.
+
+> Verifying UI changes on Windows: the in-editor browser preview returns blank screenshots while
+> its pane is hidden, and reports `innerWidth: 0`, which quietly breaks any layout or `matchMedia`
+> assertion made through it. Drive `scripts/lib/cdp.mjs` directly instead — it gives you real
+> viewport emulation, `prefers-color-scheme` overrides and `Page.captureScreenshot`.
 
 ## Deploying
 
