@@ -39,8 +39,18 @@
     </div>
   </section>
 
+  <!-- ---------- first load, before the feed answers ---------- -->
+  <section id="loadingPanel" hidden>
+    <div class="card">
+      <p class="loading-line"><span class="toast-spinner" aria-hidden="true"></span>
+        Fetching today's schedule…</p>
+      <p class="note" style="margin:0">It is published every morning just after midnight, so
+        there is usually nothing for you to do.</p>
+    </div>
+  </section>
+
   <!-- ---------- import ---------- -->
-  <section id="importPanel" aria-labelledby="importHeading">
+  <section id="importPanel" aria-labelledby="importHeading" hidden>
     <div class="card">
       <h2 id="importHeading" style="margin-top:0">Load a schedule</h2>
       <div class="drop" id="drop">
@@ -95,6 +105,7 @@
   var importPanel = document.getElementById('importPanel');
   var waitingPanel = document.getElementById('waitingPanel');
   var app = document.getElementById('app');
+  var loadingPanel = document.getElementById('loadingPanel');
   var sourceEl = document.getElementById('source');
   var errEl = document.getElementById('importError');
   var drop = document.getElementById('drop');
@@ -175,6 +186,7 @@
     awaiting = false;
     waitingPanel.hidden = true;
     importPanel.hidden = true;
+    loadingPanel.hidden = true;
     app.hidden = false;
     errEl.textContent = '';
     controller = SIMTimetable.mount(document.getElementById('timetable'), p.rows, {
@@ -371,6 +383,14 @@
       try { localStorage.removeItem(STORAGE_KEY); } catch (e2) { /* ignore */ }
     }
 
+    /* A first-time reader has nothing stored, and the feed takes a moment. Show
+     * that it is coming rather than the whole import form — the form reads as
+     * "this failed, do it yourself", which is the opposite of what is true. */
+    if (!payload) {
+      loadingPanel.hidden = false;
+      importPanel.hidden = true;
+    }
+
     // Then quietly check the nightly feed and upgrade if it is fresher.
     // Failure here is normal (offline, nothing published yet) and stays silent —
     // it must never take away data the user already has.
@@ -417,6 +437,13 @@
       .catch(function (err) {
         // Normal when offline or nothing published yet. Never remove data the
         // reader already has; just say the refresh did not happen.
+        if (!payload) {
+          loadingPanel.hidden = true;
+          importPanel.hidden = false;
+          errEl.textContent =
+            "Could not reach today's published schedule (" + (err.message || err) +
+            "). You can load one yourself below.";
+        }
         Toast.show({
           id: 'feed',
           title: payload ? 'Could not check for a newer schedule' : 'No schedule available yet',

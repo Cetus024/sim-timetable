@@ -601,6 +601,14 @@ details[open].seg-details > summary { margin-bottom: 4px; }
   font-variant-numeric: tabular-nums;
 }
 
+.loading-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
 /* ---------- landing / import ---------- */
 
 code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
