@@ -60,6 +60,39 @@
     });
   }
 
+  /* Pulls a course code and section out of a booking title.
+   *
+   *   "MTH131 - L01 : Mathematical Anly for Mgt - UB"
+   *     -> { code: "MTH131", section: "L01", title: "Mathematical Anly for Mgt - UB" }
+   *
+   * Split on the FIRST " : ", then take the section from the LAST " - " on the
+   * left. Doing it that way survives codes that themselves contain a hyphen
+   * ("SMM- - L01 : ...") and titles that contain one ("... - RMIT"), both of
+   * which a single regex gets wrong.
+   *
+   * Returns null for everything that is not a taught class — Free Access, club
+   * bookings, briefings, rehearsals. About 25% of a day's rows, and they must
+   * not be invented into classes. */
+  function parseClass(event) {
+    var s = String(event || '').trim();
+    if (!s) return null;
+
+    var colon = s.indexOf(' : ');
+    if (colon === -1) return null;
+
+    var left = s.slice(0, colon).trim();
+    var title = s.slice(colon + 3).trim();
+
+    var dash = left.lastIndexOf(' - ');
+    if (dash === -1) return null;
+
+    var code = left.slice(0, dash).trim();
+    var section = left.slice(dash + 3).trim();
+    if (!code || !section) return null;
+
+    return { code: code, section: section, title: title };
+  }
+
   // ---------- helpers ----------
 
   function esc(s) {
@@ -186,6 +219,26 @@
   function nowMinutes() {
     var d = new Date();
     return d.getHours() * 60 + d.getMinutes();
+  }
+
+  /* The standalone export is opened from file://, where "/room?code=..." would
+   * 404. So the detail links exist only when we are actually being served —
+   * the export renders the same text, just not linked. */
+  var CAN_LINK = typeof location !== 'undefined' &&
+    (location.protocol === 'http:' || location.protocol === 'https:');
+
+  function roomLink(room) {
+    var label = esc(room || '?');
+    if (!CAN_LINK || !room) return label;
+    return '<a href="/room?code=' + encodeURIComponent(room) + '">' + label + '</a>';
+  }
+
+  function eventLink(event) {
+    var label = esc(event);
+    if (!CAN_LINK) return label;
+    var c = parseClass(event);
+    if (!c) return label;
+    return '<a href="/class?code=' + encodeURIComponent(c.code) + '">' + label + '</a>';
   }
 
   function fmtMinutes(m) {
@@ -386,8 +439,8 @@
           '<td class="num">' + esc(r.end || '?') + '</td>' +
           '<td>' + esc(r.block || '?') + '</td>' +
           '<td>' + esc(floorText) + '</td>' +
-          '<th scope="row">' + esc(r.room || '?') + '</th>' +
-          '<td>' + esc(r.event) + '</td>' +
+          '<th scope="row">' + roomLink(r.room) + '</th>' +
+          '<td>' + eventLink(r.event) + '</td>' +
           '<td class="status-' + esc(st) + '">' + esc(st) + '</td>' +
           '</tr>';
       }).join('');
@@ -434,12 +487,12 @@
           if (seg.type === 'busy') {
             return '<li class="segment"><span class="tag busy">BUSY</span>' +
               '<span class="seg-time">' + esc(seg.start) + ' – ' + esc(seg.end) + '</span>' +
-              '<span class="seg-label">' + esc(seg.event) + '</span></li>';
+              '<span class="seg-label">' + eventLink(seg.event) + '</span></li>';
           }
           if (seg.type === 'open') {
             return '<li class="segment"><span class="tag free">OPEN</span>' +
               '<span class="seg-time">' + esc(seg.start) + ' – ' + esc(seg.end) + '</span>' +
-              '<span class="seg-label">' + esc(seg.event) + '</span></li>';
+              '<span class="seg-label">' + eventLink(seg.event) + '</span></li>';
           }
           var until = seg.open_ended ? 'end of day' : esc(seg.end);
           return '<li class="segment"><span class="tag gap">GAP</span>' +
@@ -468,7 +521,7 @@
         cards.push(
           '<li class="room-card">' +
           '<div class="room-head">' +
-          '<h3 class="room-name">' + esc(room) + '</h3>' +
+          '<h3 class="room-name">' + roomLink(room) + '</h3>' +
           '<span class="room-sub">Block ' + esc(info.block || '?') +
           ' · Floor ' + esc(floorText) + esc(desc) + '</span>' +
           flag +
@@ -529,7 +582,7 @@
               return esc(sg.start) + ' – ' + esc(sg.end);
             }).join(', ');
             return '<li class="open-item' + (o.openNow ? ' is-now' : '') + '">' +
-              '<p class="open-room">' + esc(o.room) +
+              '<p class="open-room">' + roomLink(o.room) +
               (o.openNow ? '<span class="now-badge">OPEN NOW</span>' : '') + '</p>' +
               '<p class="open-when">' + times + '</p>' +
               (o.info.room_description
@@ -586,8 +639,14 @@
     parseTimeRange: parseTimeRange,
     parseBlock: parseBlock,
     parseFloor: parseFloor,
+    parseClass: parseClass,
     normalize: normalize,
     buildTimeline: buildTimeline,
+    isFreeAccess: isFreeAccess,
+    liveStatus: liveStatus,
+    fmtMinutes: fmtMinutes,
+    dayRange: dayRange,
+    dayBarHtml: dayBarHtml,
     escapeHtml: esc,
     mount: mount
   };

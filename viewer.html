@@ -89,6 +89,7 @@
 </div>
 
 <script src="/assets/toast.js"></script>
+<script src="/assets/feed.js"></script>
 <script src="/assets/timetable.js"></script>
 <script>
 (function () {
@@ -100,7 +101,9 @@
   // Read straight from the repo (raw.githubusercontent.com allows cross-origin
   // reads) so a new schedule appears without redeploying the site. The campus
   // API itself is same-origin only, which is why this page cannot just call it.
-  var FEED_URL = 'https://raw.githubusercontent.com/Cetus024/sim-timetable/main/data/latest.json';
+  // The URL itself lives in assets/feed.js, so the viewer and the detail pages
+  // cannot drift onto different files.
+  var FEED_URL = SIMFeed.URL;
 
   var importPanel = document.getElementById('importPanel');
   var waitingPanel = document.getElementById('waitingPanel');

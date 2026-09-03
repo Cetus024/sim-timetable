@@ -609,6 +609,34 @@ details[open].seg-details > summary { margin-bottom: 4px; }
   margin: 0 0 6px;
 }
 
+/* ---------- detail pages (one room, one class) ---------- */
+
+.crumb { font-size: 0.85rem; color: var(--ink-soft); margin: 0 0 8px; }
+
+/* The one-line answer, before any detail: can I get in right now? */
+.state {
+  display: inline-block;
+  font-weight: 650;
+  font-size: 0.95rem;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  margin: 0 0 16px;
+}
+
+.state.is-open { background: var(--open-bg); color: var(--open-ink); border-color: var(--open-mark); }
+.state.is-busy { background: var(--busy-bg); color: var(--busy-ink); border-color: var(--busy-mark); }
+.state.is-gap  { background: var(--gap-bg);  color: var(--gap-ink);  border-color: var(--line-strong); }
+
+.detail h2, #detailBody h2 { font-size: 1rem; margin: 26px 0 10px; }
+#detailBody .segments { margin-bottom: 4px; }
+
+/* Room and class names in a list are links; keep them obviously so. */
+#detailBody a, .room-name a, .seg-label a { color: inherit; text-decoration: underline; }
+#detailBody a:hover, .room-name a:hover, .seg-label a:hover { text-decoration-thickness: 2px; }
+
+.open-room a { text-decoration: underline; }
+
 /* ---------- landing / import ---------- */
 
 code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
