@@ -10,7 +10,8 @@ The SIM campus schedule, made useful — filter by block, floor and room, or fli
 | **Repo** | https://github.com/Cetus024/sim-timetable |
 | **Vercel project** | https://vercel.com/cetus024s-projects/sim-timetable |
 
-**Docs:** [PRD](docs/PRD.md) (problem, scope, user stories) ·
+**Docs:** [Handover](docs/HANDOVER.md) (start here in a new session) ·
+[PRD](docs/PRD.md) (problem, scope, user stories) ·
 [Architecture](ARCHITECTURE.md) (diagram, components, constraints) ·
 [Technical design](docs/TECHNICAL-DESIGN.md) (contracts, algorithms, failure modes)
 
@@ -38,6 +39,11 @@ offline and outlives this site.
   "Open before" narrow to rooms whose Free Access window starts in that range.
 - **Table** — every booking, sorted by end time, with block/floor/room broken out. Status is
   computed from your clock, so it says what is busy *now*.
+- **One room** (`/room?code=…`) — a single classroom's whole day: whether you can get in right
+  now, its Free Access windows, what is booked, and every gap. Room names across the site link
+  here; `/room` on its own is a searchable index.
+- **One class** (`/class?code=…`) — every session a class has today, which room each is in, and
+  the free time between them. Class names link here; `/class` is a searchable index.
 
 Note what is *not* claimed. A room with nothing booked is **not** listed as available: unbooked
 means unallocated, and most such rooms (a few dozen labs, plus tutor rooms, foyers and staff
@@ -147,7 +153,11 @@ viewer also accepts a bare array of rows, or older payloads without `rooms`.
 ```
 index.html                  landing page — the bookmarklet, and what this is
 viewer.html                 loads the feed, imports, persists, exports
+room.html                   /room  — one classroom, or a searchable index
+class.html                  /class — one class, or a searchable index
 assets/timetable.js         parsing + rendering, shared by the viewer and the export
+assets/detail.js            renders both detail pages; one implementation, two modes
+assets/feed.js              the feed URL and loader, shared by every page
 assets/styles.css           shared styles (light + dark, and the contrast tokens)
 assets/toast.js             the progress/status toasts
 scraper/scrape.js           the ONLY read-and-transform: bookmarklet and CI both run this
@@ -162,6 +172,7 @@ data/latest.json            published daily; read by the viewer
 ARCHITECTURE.md             diagram, components, the constraints that shape it
 docs/PRD.md                 problem, scope, user stories
 docs/TECHNICAL-DESIGN.md    contracts, algorithms, failure modes
+docs/HANDOVER.md            how to pick this up cold in a new session
 ```
 
 ## Developing
