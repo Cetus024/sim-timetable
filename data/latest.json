@@ -2,12 +2,12 @@
   "version": 2,
   "source": "https://scheduling.sim.edu.sg/rad/rest/campus?id=SIM",
   "campus": "SIM Campus",
-  "scraped_at": "2026-09-07T19:43:57.125Z",
+  "scraped_at": "2026-09-08T19:20:50.987Z",
   "schedule_dates": [
-    "2026-09-08"
+    "2026-09-09"
   ],
   "incomplete": false,
-  "site_total": 293,
+  "site_total": 332,
   "rooms": [
     {
       "room": "TR.1",
@@ -15,7 +15,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": null,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "TR.2",
@@ -23,7 +23,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": null,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "TR.3",
@@ -31,7 +31,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": null,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "TR.4",
@@ -71,7 +71,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 1,
-      "activities": 4
+      "activities": 2
     },
     {
       "room": "LT.A.1.09A",
@@ -79,7 +79,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 1,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "LT.A.1.09B",
@@ -87,7 +87,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 1,
-      "activities": 2
+      "activities": 0
     },
     {
       "room": "LT.A.1.10",
@@ -103,7 +103,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 1,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "LT.A.1.17",
@@ -111,7 +111,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 1,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "LT.A.1.20",
@@ -119,7 +119,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 1,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "LAB.A.5.08A",
@@ -135,7 +135,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 5,
-      "activities": 0
+      "activities": 2
     },
     {
       "room": "LAB.A.5.08B",
@@ -191,7 +191,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 5,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "LAB.A.5.17D",
@@ -223,7 +223,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 1
+      "activities": 10
     },
     {
       "room": "SR.A.3.11/A.3.12",
@@ -271,7 +271,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "LT.A.2.09B",
@@ -279,7 +279,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 2
+      "activities": 4
     },
     {
       "room": "LT.A.2.09C",
@@ -287,7 +287,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "LT.A.2.10",
@@ -295,7 +295,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.A.2.16",
@@ -311,7 +311,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 3
+      "activities": 1
     },
     {
       "room": "LT.A.2.17B",
@@ -319,7 +319,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 1
+      "activities": 3
     },
     {
       "room": "LT.A.2.20",
@@ -327,7 +327,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 1
+      "activities": 3
     },
     {
       "room": "LT.A.3.02A",
@@ -335,7 +335,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 2
+      "activities": 0
     },
     {
       "room": "LT.A.3.05C",
@@ -351,7 +351,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 3
+      "activities": 1
     },
     {
       "room": "LAB.A.5.12",
@@ -383,7 +383,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 6
+      "activities": 0
     },
     {
       "room": "LT.A.3.10",
@@ -391,7 +391,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "LT.A.3.16",
@@ -407,7 +407,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 3
+      "activities": 1
     },
     {
       "room": "LT.A.3.17B",
@@ -415,7 +415,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 3
+      "activities": 4
     },
     {
       "room": "LT.A.3.20",
@@ -431,7 +431,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "LT.A.4.04",
@@ -439,7 +439,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "LT.A.4.05",
@@ -447,7 +447,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "LT.A.4.07A",
@@ -455,7 +455,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "LT.A.4.08",
@@ -463,7 +463,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "LT.A.4.09B",
@@ -471,7 +471,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 1
+      "activities": 4
     },
     {
       "room": "LT.A.4.09C",
@@ -479,7 +479,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "LT.A.4.10",
@@ -487,7 +487,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 0
+      "activities": 2
     },
     {
       "room": "LT.A.4.16",
@@ -495,7 +495,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 4
+      "activities": 0
     },
     {
       "room": "LT.A.4.17A",
@@ -543,7 +543,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 3
+      "activities": 5
     },
     {
       "room": "SR.A.2.15",
@@ -559,7 +559,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "SR.A.2.17C",
@@ -567,7 +567,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.A.2.14",
@@ -575,7 +575,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 0
+      "activities": 2
     },
     {
       "room": "SR.A.3.11",
@@ -583,7 +583,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 0
+      "activities": 2
     },
     {
       "room": "SR.A.3.14",
@@ -591,7 +591,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 3
+      "activities": 4
     },
     {
       "room": "SR.A.3.12",
@@ -599,7 +599,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 0
+      "activities": 2
     },
     {
       "room": "SR.A.3.17C",
@@ -607,7 +607,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 2
+      "activities": 4
     },
     {
       "room": "SR.A.3.15",
@@ -615,7 +615,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 3,
-      "activities": 0
+      "activities": 3
     },
     {
       "room": "TR.7",
@@ -647,7 +647,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 5
+      "activities": 0
     },
     {
       "room": "SR.A.4.18",
@@ -655,7 +655,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "SR.A.4.17C",
@@ -671,7 +671,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "A.5.01B_RS",
@@ -831,7 +831,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": null,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.A.2.09A",
@@ -839,7 +839,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 2,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "TheAtrium",
@@ -999,7 +999,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 2,
-      "activities": 1
+      "activities": 5
     },
     {
       "room": "LAB.B.3.13A",
@@ -1039,7 +1039,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 2,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "LT.B.2.04",
@@ -1047,7 +1047,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 2,
-      "activities": 3
+      "activities": 2
     },
     {
       "room": "LT.B.2.05",
@@ -1071,7 +1071,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 2,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "LT.B.2.17",
@@ -1079,7 +1079,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 2,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "LT.B.3.01",
@@ -1087,7 +1087,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 3,
-      "activities": 3
+      "activities": 1
     },
     {
       "room": "LT.B.3.03",
@@ -1095,7 +1095,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 3,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "SR.B.3.11/B.3.12",
@@ -1111,7 +1111,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 3,
-      "activities": 4
+      "activities": 1
     },
     {
       "room": "LT.B.3.05",
@@ -1127,7 +1127,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 3,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "LT.B.3.17",
@@ -1143,7 +1143,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 4,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "LT.B.4.03",
@@ -1151,7 +1151,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 4,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "LT.B.4.04",
@@ -1167,7 +1167,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 4,
-      "activities": 2
+      "activities": 4
     },
     {
       "room": "LT.B.4.06",
@@ -1215,7 +1215,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": null,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.B.4.09/B.4.10",
@@ -1287,7 +1287,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "LT.B.5.04",
@@ -1295,7 +1295,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "LT.B.5.05",
@@ -1303,7 +1303,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 3
+      "activities": 2
     },
     {
       "room": "LT.B.5.06",
@@ -1311,7 +1311,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 3
+      "activities": 2
     },
     {
       "room": "LT.B.5.16",
@@ -1319,7 +1319,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 1
+      "activities": 3
     },
     {
       "room": "SR.B.2.07",
@@ -1391,7 +1391,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 4,
-      "activities": 7
+      "activities": 5
     },
     {
       "room": "SR.B.4.07",
@@ -1399,7 +1399,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 4,
-      "activities": 4
+      "activities": 5
     },
     {
       "room": "SR.B.4.08",
@@ -1407,7 +1407,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 4,
-      "activities": 4
+      "activities": 6
     },
     {
       "room": "SR.B.4.10",
@@ -1415,7 +1415,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 4,
-      "activities": 0
+      "activities": 5
     },
     {
       "room": "SR.B.5.07",
@@ -1423,7 +1423,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "SR.B.4.13",
@@ -1431,7 +1431,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 4,
-      "activities": 3
+      "activities": 5
     },
     {
       "room": "SR.B.4.12",
@@ -1439,7 +1439,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 4,
-      "activities": 0
+      "activities": 4
     },
     {
       "room": "SR.B.5.10",
@@ -1447,7 +1447,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 3
+      "activities": 6
     },
     {
       "room": "SR.B.5.13",
@@ -1455,7 +1455,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 1
+      "activities": 6
     },
     {
       "room": "SR.B.5.09",
@@ -1463,7 +1463,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 2
+      "activities": 5
     },
     {
       "room": "SR.B.5.08",
@@ -1471,7 +1471,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 0
+      "activities": 3
     },
     {
       "room": "SR.B.5.12",
@@ -1479,7 +1479,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": 5,
-      "activities": 3
+      "activities": 4
     },
     {
       "room": "MPH.A1",
@@ -1543,7 +1543,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": null,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "B.Others.2",
@@ -1615,7 +1615,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": null,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SHub.S",
@@ -1623,7 +1623,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": null,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.B.2.11",
@@ -1703,7 +1703,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 1
+      "activities": 3
     },
     {
       "room": "SR.C.3.09",
@@ -1719,7 +1719,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 3
+      "activities": 2
     },
     {
       "room": "SR.C.3.11",
@@ -1735,7 +1735,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 2
+      "activities": 3
     },
     {
       "room": "SR.C.3.13",
@@ -1743,7 +1743,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.3.14",
@@ -1751,7 +1751,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "LAB.C.1.06",
@@ -1791,7 +1791,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "LAB.C.3.05",
@@ -1799,7 +1799,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "LAB.C.3.07",
@@ -1831,7 +1831,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 2
+      "activities": 0
     },
     {
       "room": "SR.C.4.10/C.4.11",
@@ -1839,7 +1839,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 2
+      "activities": 0
     },
     {
       "room": "SR.C.4.12/C.4.13",
@@ -1887,7 +1887,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 1
+      "activities": 0
     },
     {
       "room": "SR.C.6.05/C.6.06",
@@ -1983,7 +1983,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 3,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.3.16",
@@ -1999,7 +1999,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 0
+      "activities": 2
     },
     {
       "room": "SR.C.4.08",
@@ -2007,7 +2007,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 1
+      "activities": 3
     },
     {
       "room": "SR.C.4.09",
@@ -2015,7 +2015,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 0
+      "activities": 2
     },
     {
       "room": "SR.C.4.10",
@@ -2031,7 +2031,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "SR.C.4.12",
@@ -2047,7 +2047,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.4.15",
@@ -2079,7 +2079,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 4
+      "activities": 2
     },
     {
       "room": "SR.C.5.08",
@@ -2087,7 +2087,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 3
+      "activities": 1
     },
     {
       "room": "SR.C.5.09",
@@ -2095,7 +2095,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.5.10",
@@ -2111,7 +2111,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 5,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.5.12",
@@ -2143,7 +2143,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 3
+      "activities": 1
     },
     {
       "room": "SR.C.6.06",
@@ -2159,7 +2159,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 3
+      "activities": 4
     },
     {
       "room": "SR.C.6.08",
@@ -2175,7 +2175,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 2
+      "activities": 3
     },
     {
       "room": "SR.C.6.10",
@@ -2183,7 +2183,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 3
+      "activities": 2
     },
     {
       "room": "SR.C.6.11",
@@ -2191,7 +2191,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 4
+      "activities": 2
     },
     {
       "room": "SR.C.6.12",
@@ -2199,7 +2199,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 6,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.7.07",
@@ -2215,7 +2215,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 7,
-      "activities": 2
+      "activities": 3
     },
     {
       "room": "SR.C.7.09",
@@ -2223,7 +2223,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 7,
-      "activities": 3
+      "activities": 4
     },
     {
       "room": "SR.C.7.10",
@@ -2231,7 +2231,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 7,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "SR.C.7.14",
@@ -2247,7 +2247,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 7,
-      "activities": 4
+      "activities": 3
     },
     {
       "room": "SR.C.8.04",
@@ -2271,7 +2271,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 8,
-      "activities": 3
+      "activities": 2
     },
     {
       "room": "SR.C.8.11",
@@ -2351,7 +2351,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 8,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.C.8.08",
@@ -2359,7 +2359,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 8,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "HQStaffLounge.C",
@@ -2391,7 +2391,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 4,
-      "activities": 3
+      "activities": 2
     },
     {
       "room": "SR.C.7.13",
@@ -2399,7 +2399,7 @@
       "building": "Block C",
       "block": "C",
       "floor": 7,
-      "activities": 4
+      "activities": 3
     },
     {
       "room": "LAB.C.4.07",
@@ -2455,7 +2455,7 @@
       "building": "SIM Campus Block D",
       "block": "D",
       "floor": 1,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "MPSH.A/B",
@@ -2463,7 +2463,7 @@
       "building": "SIM Campus Block D",
       "block": "D",
       "floor": null,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "MPSH.A",
@@ -2487,7 +2487,7 @@
       "building": "SIM Campus Block D",
       "block": "D",
       "floor": null,
-      "activities": 1
+      "activities": 2
     },
     {
       "room": "TennisCourt2",
@@ -2495,7 +2495,7 @@
       "building": "SIM Campus Block D",
       "block": "D",
       "floor": null,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "TennisCourt1",
@@ -2503,7 +2503,7 @@
       "building": "SIM Campus Block D",
       "block": "D",
       "floor": null,
-      "activities": 2
+      "activities": 1
     },
     {
       "room": "SR.D.1.02/5",
@@ -2620,69 +2620,43 @@
   ],
   "rows": [
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
       "block": "A",
-      "floor": 1,
-      "room": "LT.A.1.08",
-      "event": "AERO2489 - LP01 : Air Cargo Mgmt & Ops - RMIT",
-      "status": "CURRENT",
-      "description": "Air Cargo Mgmt & Ops - RMIT",
-      "room_description": "A.1.08 (112pax)"
-    },
-    {
-      "start": "7:30 AM",
-      "end": "1:30 PM",
-      "start_min": 450,
-      "end_min": 810,
-      "block": "A",
-      "floor": 1,
-      "room": "LT.A.1.08",
-      "event": "GB00102 - PL1101 - UOL",
+      "floor": null,
+      "room": "TR.1",
+      "event": "Online room for back to back classes UBC399",
       "status": "PAST",
       "description": "",
-      "room_description": "A.1.08 (112pax)"
+      "room_description": "Tutor Room 1"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "11:30 AM",
+      "start_min": 510,
+      "end_min": 690,
+      "block": "A",
+      "floor": null,
+      "room": "TR.2",
+      "event": "Online room for back to back classes UBC399",
+      "status": "PAST",
+      "description": "",
+      "room_description": "Tutor Room 2"
     },
     {
       "start": "3:30 PM",
-      "end": "5:00 PM",
-      "start_min": 930,
-      "end_min": 1020,
-      "block": "A",
-      "floor": 1,
-      "room": "LT.A.1.08",
-      "event": "COM101 - L01 : Principles of Communication - UB",
-      "status": "PAST",
-      "description": "Principles of Communication - UB",
-      "room_description": "A.1.08 (112pax)"
-    },
-    {
-      "start": "5:00 PM",
       "end": "6:30 PM",
-      "start_min": 1020,
+      "start_min": 930,
       "end_min": 1110,
       "block": "A",
-      "floor": 1,
-      "room": "LT.A.1.08",
-      "event": "COM101 - C01 : Principles of Communication - UB",
-      "status": "PAST",
-      "description": "Principles of Communication - UB",
-      "room_description": "A.1.08 (112pax)"
-    },
-    {
-      "start": "7:30 AM",
-      "end": "1:30 PM",
-      "start_min": 450,
-      "end_min": 810,
-      "block": "A",
-      "floor": 1,
-      "room": "LT.A.1.09A",
-      "event": "GB00102 - PL1101 - UOL",
+      "floor": null,
+      "room": "TR.3",
+      "event": "Online room for back-to-back classes UBC399 - CHERYL CHARMAIN ARNOLD",
       "status": "PAST",
       "description": "",
-      "room_description": "A.1.09A (376pax)"
+      "room_description": "Tutor Room 3"
     },
     {
       "start": "12:00 PM",
@@ -2691,24 +2665,115 @@
       "end_min": 900,
       "block": "A",
       "floor": 1,
-      "room": "LT.A.1.09B",
-      "event": "MT105A - L01A : Mathematics 1 - UoL",
+      "room": "LT.A.1.08",
+      "event": "COMM3001 - LF01 : Digi Audiences and Analytics - RMIT",
       "status": "PAST",
-      "description": "Mathematics 1 - UoL",
-      "room_description": "A.1.09B (299pax)"
+      "description": "Digi Audiences and Analytics - RMIT",
+      "room_description": "A.1.08 (112pax)"
     },
     {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
       "block": "A",
       "floor": 1,
-      "room": "LT.A.1.09B",
-      "event": "MT1186 - L02 : Mathematical Methods - UoL",
+      "room": "LT.A.1.08",
+      "event": "COMM3001 - LF02 : Digi Audiences and Analytics - RMIT",
       "status": "PAST",
-      "description": "Mathematical Methods - UoL",
-      "room_description": "A.1.09B (299pax)"
+      "description": "Digi Audiences and Analytics - RMIT",
+      "room_description": "A.1.08 (112pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
+      "block": "A",
+      "floor": 1,
+      "room": "LT.A.1.09A",
+      "event": "BUSM1227 - LF01 : Global Business - RMIT",
+      "status": "PAST",
+      "description": "Global Business - RMIT",
+      "room_description": "A.1.09A (376pax)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
+      "block": "A",
+      "floor": 1,
+      "room": "LT.A.1.09A",
+      "event": "ECON1595 - LF01 : Bus Challenges in Digital Econ - RMIT",
+      "status": "PAST",
+      "description": "Bus Challenges in Digital Econ - RMIT",
+      "room_description": "A.1.09A (376pax)"
+    },
+    {
+      "start": "6:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1080,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 1,
+      "room": "LT.A.1.16",
+      "event": "SIM IAS-MUN Committee Session 1.2",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "A.1.16 (112pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "6:30 PM",
+      "start_min": 720,
+      "end_min": 1110,
+      "block": "A",
+      "floor": 1,
+      "room": "LT.A.1.17",
+      "event": "EC1002W - W01 : Introduction to Economics - UoL",
+      "status": "PAST",
+      "description": "Introduction to Economics - UoL",
+      "room_description": "A.1.17 (498pax) Auditorium"
+    },
+    {
+      "start": "6:00 PM",
+      "end": "9:30 PM",
+      "start_min": 1080,
+      "end_min": 1290,
+      "block": "A",
+      "floor": 1,
+      "room": "LT.A.1.20",
+      "event": "SIM RMIT IW Meeting - September",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "A.1.20 (112pax)"
+    },
+    {
+      "start": "5:30 PM",
+      "end": "6:30 PM",
+      "start_min": 1050,
+      "end_min": 1110,
+      "block": "A",
+      "floor": 5,
+      "room": "LAB.A.5.08A/A.5.08B",
+      "event": "GEO381 - C01 : Cartography - UB",
+      "status": "PAST",
+      "description": "Cartography - UB",
+      "room_description": "A.5.08A/A.5.08B (Combined Lab-48pax)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "5:30 PM",
+      "start_min": 930,
+      "end_min": 1050,
+      "block": "A",
+      "floor": 5,
+      "room": "LAB.A.5.08A/A.5.08B",
+      "event": "GEO381 - L01 : Cartography - UB",
+      "status": "PAST",
+      "description": "Cartography - UB",
+      "room_description": "A.5.08A/A.5.08B (Combined Lab-48pax)"
     },
     {
       "start": "7:00 PM",
@@ -2718,36 +2783,166 @@
       "block": "A",
       "floor": 5,
       "room": "LAB.A.5.17C/A.5.17D",
-      "event": "BUIL1257 - LP02 : Integrate Building Info. Model - RMIT",
+      "event": "BUIL1309 - LP02 : Research Methods for the Built - RMIT",
       "status": "CURRENT",
-      "description": "Integrate Building Info. Model - RMIT",
+      "description": "Research Methods for the Built - RMIT",
       "room_description": "A.5.17C/A.5.17D (Combined Lab-60pax)"
     },
     {
       "start": "3:30 PM",
-      "end": "5:30 PM",
-      "start_min": 930,
-      "end_min": 1050,
-      "block": "A",
-      "floor": 5,
-      "room": "LAB.A.5.20A/A.5.20B",
-      "event": "MGQ201 - L01 : Intro to Stats for Analytics - UB",
-      "status": "PAST",
-      "description": "Intro to Stats for Analytics - UB",
-      "room_description": "A.5.20A/A.5.20B (Combined Lab-60pax-CRS)"
-    },
-    {
-      "start": "5:30 PM",
       "end": "6:30 PM",
-      "start_min": 1050,
+      "start_min": 930,
       "end_min": 1110,
       "block": "A",
       "floor": 5,
-      "room": "LAB.A.5.20A/A.5.20B",
-      "event": "MGQ201 - C01 : Intro to Stats for Analytics - UB",
+      "room": "LAB.A.5.17C/A.5.17D",
+      "event": "BUIL1257 Hands-On Session",
       "status": "PAST",
-      "description": "Intro to Stats for Analytics - UB",
+      "description": "",
+      "room_description": "A.5.17C/A.5.17D (Combined Lab-60pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "2:00 PM",
+      "start_min": 720,
+      "end_min": 840,
+      "block": "A",
+      "floor": 5,
+      "room": "LAB.A.5.20A/A.5.20B",
+      "event": "MGS351 - L01 : Intro to Mgt Information - UB",
+      "status": "PAST",
+      "description": "Intro to Mgt Information - UB",
       "room_description": "A.5.20A/A.5.20B (Combined Lab-60pax-CRS)"
+    },
+    {
+      "start": "2:00 PM",
+      "end": "3:00 PM",
+      "start_min": 840,
+      "end_min": 900,
+      "block": "A",
+      "floor": 5,
+      "room": "LAB.A.5.20A/A.5.20B",
+      "event": "MGS351 - C01 : Intro to Mgt Information - UB",
+      "status": "PAST",
+      "description": "Intro to Mgt Information - UB",
+      "room_description": "A.5.20A/A.5.20B (Combined Lab-60pax-CRS)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.01A/A.3.01B",
+      "event": "SE2000 - L06 : Social Entrepreneurship Projec - SIM",
+      "status": "CURRENT",
+      "description": "Social Entrepreneurship Projec - SIM",
+      "room_description": "A.3.01A/A.3.01B (Combined-102pax)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.01A/A.3.01B",
+      "event": "SE2000 - L01 : Social Entrepreneurship Projec - SIM",
+      "status": "CURRENT",
+      "description": "Social Entrepreneurship Projec - SIM",
+      "room_description": "A.3.01A/A.3.01B (Combined-102pax)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.01A/A.3.01B",
+      "event": "SE2000 - L08 : Social Entrepreneurship Projec - SIM",
+      "status": "CURRENT",
+      "description": "Social Entrepreneurship Projec - SIM",
+      "room_description": "A.3.01A/A.3.01B (Combined-102pax)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.01A/A.3.01B",
+      "event": "SE2000 - L02 : Social Entrepreneurship Projec - SIM",
+      "status": "CURRENT",
+      "description": "Social Entrepreneurship Projec - SIM",
+      "room_description": "A.3.01A/A.3.01B (Combined-102pax)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.01A/A.3.01B",
+      "event": "SE2000 - L04 : Social Entrepreneurship Projec - SIM",
+      "status": "CURRENT",
+      "description": "Social Entrepreneurship Projec - SIM",
+      "room_description": "A.3.01A/A.3.01B (Combined-102pax)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.01A/A.3.01B",
+      "event": "SE2000 - L03 : Social Entrepreneurship Projec - SIM",
+      "status": "CURRENT",
+      "description": "Social Entrepreneurship Projec - SIM",
+      "room_description": "A.3.01A/A.3.01B (Combined-102pax)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.01A/A.3.01B",
+      "event": "SE2000 - L09 : Social Entrepreneurship Projec - SIM",
+      "status": "CURRENT",
+      "description": "Social Entrepreneurship Projec - SIM",
+      "room_description": "A.3.01A/A.3.01B (Combined-102pax)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.01A/A.3.01B",
+      "event": "SE2000 - L07 : Social Entrepreneurship Projec - SIM",
+      "status": "CURRENT",
+      "description": "Social Entrepreneurship Projec - SIM",
+      "room_description": "A.3.01A/A.3.01B (Combined-102pax)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.01A/A.3.01B",
+      "event": "SE2000 - L05 : Social Entrepreneurship Projec - SIM",
+      "status": "CURRENT",
+      "description": "Social Entrepreneurship Projec - SIM",
+      "room_description": "A.3.01A/A.3.01B (Combined-102pax)"
     },
     {
       "start": "2:30 PM",
@@ -2757,20 +2952,20 @@
       "block": "A",
       "floor": 3,
       "room": "SR.A.3.01A/A.3.01B",
-      "event": "SG001_CERT_2628_RST - ITSC003 : Exam Session",
+      "event": "SG001_CERT_2628_RST - ITSC004 : Exam Session",
       "status": "PAST",
       "description": "",
       "room_description": "A.3.01A/A.3.01B (Combined-102pax)"
     },
     {
-      "start": "10:00 AM",
-      "end": "3:00 PM",
-      "start_min": 600,
-      "end_min": 900,
+      "start": "8:00 AM",
+      "end": "7:00 PM",
+      "start_min": 480,
+      "end_min": 1140,
       "block": "A",
       "floor": 4,
       "room": "SR.A.4.01A/A.4.01B",
-      "event": "SIMply ONE-derful 2026 - Appreciation Lunch and After Action Review (AAR)",
+      "event": "SIM UOL Freshmen Orientation September 2026",
       "status": "PAST",
       "description": "",
       "room_description": "A.4.01A/A.4.01B (Combined-102pax)"
@@ -2783,10 +2978,49 @@
       "block": "A",
       "floor": 2,
       "room": "LT.A.2.08",
-      "event": "BUSM1208 - LF02 : Managing Change - RMIT",
+      "event": "ACCT1068 - LF01 : Cost Analysis & Orgn Dec - RMIT",
       "status": "PAST",
-      "description": "Managing Change - RMIT",
+      "description": "Cost Analysis & Orgn Dec - RMIT",
       "room_description": "A.2.08 (192pax)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "11:30 AM",
+      "start_min": 510,
+      "end_min": 690,
+      "block": "A",
+      "floor": 2,
+      "room": "LT.A.2.08",
+      "event": "BUSM2563 - LF09 : Understanding the Bus Envir - RMIT",
+      "status": "PAST",
+      "description": "Understanding the Bus Envir - RMIT",
+      "room_description": "A.2.08 (192pax)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 AM",
+      "start_min": 510,
+      "end_min": 600,
+      "block": "A",
+      "floor": 2,
+      "room": "LT.A.2.09B",
+      "event": "LIN207 - L01 : Language, Society and the Indv - UB",
+      "status": "PAST",
+      "description": "Language, Society and the Indv - UB",
+      "room_description": "A.2.09B (80pax)"
+    },
+    {
+      "start": "10:00 AM",
+      "end": "11:30 AM",
+      "start_min": 600,
+      "end_min": 690,
+      "block": "A",
+      "floor": 2,
+      "room": "LT.A.2.09B",
+      "event": "LIN207 - C01 : Language, Society and the Indv - UB",
+      "status": "PAST",
+      "description": "Language, Society and the Indv - UB",
+      "room_description": "A.2.09B (80pax)"
     },
     {
       "start": "5:00 PM",
@@ -2796,9 +3030,9 @@
       "block": "A",
       "floor": 2,
       "room": "LT.A.2.09B",
-      "event": "COM474 - C01 : Special Topics - UB",
+      "event": "PSY450 - C01 : Research Method Psychology - UB",
       "status": "PAST",
-      "description": "Special Topics - UB",
+      "description": "Research Method Psychology - UB",
       "room_description": "A.2.09B (80pax)"
     },
     {
@@ -2809,61 +3043,61 @@
       "block": "A",
       "floor": 2,
       "room": "LT.A.2.09B",
-      "event": "COM474 - L01 : Special Topics - UB",
+      "event": "PSY450 - L01 : Research Method Psychology - UB",
       "status": "PAST",
-      "description": "Special Topics - UB",
+      "description": "Research Method Psychology - UB",
       "room_description": "A.2.09B (80pax)"
     },
     {
-      "start": "8:30 AM",
+      "start": "10:00 AM",
       "end": "11:30 AM",
-      "start_min": 510,
+      "start_min": 600,
       "end_min": 690,
       "block": "A",
       "floor": 2,
       "room": "LT.A.2.09C",
-      "event": "PABF- - L01 : Principles of Accounting & Biz - SIM",
+      "event": "PSY427 - C01 : Adult Devlm & Aging - UB",
       "status": "PAST",
-      "description": "Principles of Accounting & Biz - SIM",
+      "description": "Adult Devlm & Aging - UB",
       "room_description": "A.2.09C (80pax)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
+      "start": "8:30 AM",
+      "end": "10:00 AM",
+      "start_min": 510,
+      "end_min": 600,
       "block": "A",
       "floor": 2,
-      "room": "LT.A.2.10",
-      "event": "BUSM2792 - LF01 : Managing Dynamics of Global Op - RMIT",
+      "room": "LT.A.2.09C",
+      "event": "PSY427 - L01 : Adult Devlm & Aging - UB",
       "status": "PAST",
-      "description": "Managing Dynamics of Global Op - RMIT",
-      "room_description": "A.2.10( 106pax)"
+      "description": "Adult Devlm & Aging - UB",
+      "room_description": "A.2.09C (80pax)"
     },
     {
-      "start": "1:30 PM",
-      "end": "3:00 PM",
-      "start_min": 810,
-      "end_min": 900,
+      "start": "8:30 AM",
+      "end": "10:00 AM",
+      "start_min": 510,
+      "end_min": 600,
       "block": "A",
       "floor": 2,
       "room": "LT.A.2.16",
-      "event": "APY312 - C01 : Culture and Reproduction - UB",
+      "event": "MGG150 - L01 : Business & Society - UB",
       "status": "PAST",
-      "description": "Culture and Reproduction - UB",
+      "description": "Business & Society - UB",
       "room_description": "A.2.16 (112pax)"
     },
     {
-      "start": "12:00 PM",
-      "end": "1:30 PM",
-      "start_min": 720,
-      "end_min": 810,
+      "start": "10:00 AM",
+      "end": "11:30 AM",
+      "start_min": 600,
+      "end_min": 690,
       "block": "A",
       "floor": 2,
       "room": "LT.A.2.16",
-      "event": "APY312 - L01 : Culture and Reproduction - UB",
+      "event": "MGG150 - C01 : Business & Society - UB",
       "status": "PAST",
-      "description": "Culture and Reproduction - UB",
+      "description": "Business & Society - UB",
       "room_description": "A.2.16 (112pax)"
     },
     {
@@ -2874,35 +3108,9 @@
       "block": "A",
       "floor": 2,
       "room": "LT.A.2.17A",
-      "event": "SSEL- - L04 : Study Skills for Eff. Learning - SIM",
+      "event": "SMM- - L01 : Marketing Fundamentals - SIM",
       "status": "PAST",
-      "description": "Study Skills for Eff. Learning - SIM",
-      "room_description": "A.2.17A (80pax)"
-    },
-    {
-      "start": "5:30 PM",
-      "end": "6:30 PM",
-      "start_min": 1050,
-      "end_min": 1110,
-      "block": "A",
-      "floor": 2,
-      "room": "LT.A.2.17A",
-      "event": "MTH113 - C01 : Precalculus without Trigonomet - UB",
-      "status": "PAST",
-      "description": "Precalculus without Trigonomet - UB",
-      "room_description": "A.2.17A (80pax)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "5:30 PM",
-      "start_min": 930,
-      "end_min": 1050,
-      "block": "A",
-      "floor": 2,
-      "room": "LT.A.2.17A",
-      "event": "MTH113 - L01 : Precalculus without Trigonomet - UB",
-      "status": "PAST",
-      "description": "Precalculus without Trigonomet - UB",
+      "description": "Marketing Fundamentals - SIM",
       "room_description": "A.2.17A (80pax)"
     },
     {
@@ -2913,10 +3121,62 @@
       "block": "A",
       "floor": 2,
       "room": "LT.A.2.17B",
-      "event": "ECO- - L03 : Elements of Economics - SIM",
+      "event": "IOM- - L02 : Introduction to Management - SIM",
       "status": "PAST",
-      "description": "Elements of Economics - SIM",
+      "description": "Introduction to Management - SIM",
       "room_description": "A.2.17B (80pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "1:30 PM",
+      "start_min": 720,
+      "end_min": 810,
+      "block": "A",
+      "floor": 2,
+      "room": "LT.A.2.17B",
+      "event": "MGO364 - L01 : Fundamentals of Project Mgmt - UB",
+      "status": "PAST",
+      "description": "Fundamentals of Project Mgmt - UB",
+      "room_description": "A.2.17B (80pax)"
+    },
+    {
+      "start": "1:30 PM",
+      "end": "3:00 PM",
+      "start_min": 810,
+      "end_min": 900,
+      "block": "A",
+      "floor": 2,
+      "room": "LT.A.2.17B",
+      "event": "MGO364 - C01 : Fundamentals of Project Mgmt - UB",
+      "status": "PAST",
+      "description": "Fundamentals of Project Mgmt - UB",
+      "room_description": "A.2.17B (80pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
+      "block": "A",
+      "floor": 2,
+      "room": "LT.A.2.20",
+      "event": "BUSM2563 - LF04 : Understanding the Bus Envir - RMIT",
+      "status": "PAST",
+      "description": "Understanding the Bus Envir - RMIT",
+      "room_description": "A.2.20 (192pax)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "11:30 AM",
+      "start_min": 510,
+      "end_min": 690,
+      "block": "A",
+      "floor": 2,
+      "room": "LT.A.2.20",
+      "event": "BUSM3200 - LF02 : Strategy - RMIT",
+      "status": "PAST",
+      "description": "Strategy - RMIT",
+      "room_description": "A.2.20 (192pax)"
     },
     {
       "start": "3:30 PM",
@@ -2926,90 +3186,38 @@
       "block": "A",
       "floor": 2,
       "room": "LT.A.2.20",
-      "event": "BUSM1227 - LF02 : Global Business - RMIT",
+      "event": "BUSM4697 - LF02 : Cross Cultural Management - RMIT",
       "status": "PAST",
-      "description": "Global Business - RMIT",
+      "description": "Cross Cultural Management - RMIT",
       "room_description": "A.2.20 (192pax)"
     },
     {
+      "start": "8:30 AM",
+      "end": "11:30 AM",
+      "start_min": 510,
+      "end_min": 690,
+      "block": "A",
+      "floor": 3,
+      "room": "LT.A.3.05C",
+      "event": "ACCT1080 - LF01 : Critical Acct Perspectives - RMIT",
+      "status": "PAST",
+      "description": "Critical Acct Perspectives - RMIT",
+      "room_description": "A.3.05C (192pax)"
+    },
+    {
       "start": "3:30 PM",
       "end": "6:30 PM",
       "start_min": 930,
       "end_min": 1110,
       "block": "A",
       "floor": 3,
-      "room": "LT.A.3.02A",
-      "event": "MKTG1199 - LF01 : Marketing Principles - RMIT",
+      "room": "LT.A.3.05C",
+      "event": "MKTG1199 - LF03 : Marketing Principles - RMIT",
       "status": "PAST",
       "description": "Marketing Principles - RMIT",
-      "room_description": "A.3.02A (192pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.02A",
-      "event": "ISYS3481 - LF02 : Intro to Business Analytics - RMIT",
-      "status": "PAST",
-      "description": "Intro to Business Analytics - RMIT",
-      "room_description": "A.3.02A (192pax)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.05C",
-      "event": "BUSM2578 - LF08 : Integrated Perspec on Bus Prob - RMIT",
-      "status": "PAST",
-      "description": "Integrated Perspec on Bus Prob - RMIT",
       "room_description": "A.3.05C (192pax)"
     },
     {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.05C",
-      "event": "MKTG1281 - LF02 : Applied Brand Management - RMIT",
-      "status": "PAST",
-      "description": "Applied Brand Management - RMIT",
-      "room_description": "A.3.05C (192pax)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.08",
-      "event": "BUSM3201 - LF01 : Human Resource Management - RMIT",
-      "status": "PAST",
-      "description": "Human Resource Management - RMIT",
-      "room_description": "A.3.08 (192pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.08",
-      "event": "BUSM2578 - LF07 : Integrated Perspec on Bus Prob - RMIT",
-      "status": "PAST",
-      "description": "Integrated Perspec on Bus Prob - RMIT",
-      "room_description": "A.3.08 (192pax)"
-    },
-    {
       "start": "8:30 AM",
       "end": "11:30 AM",
       "start_min": 510,
@@ -3017,49 +3225,10 @@
       "block": "A",
       "floor": 3,
       "room": "LT.A.3.08",
-      "event": "MKTG1266 - LF03 : Marketing Communication - RMIT",
+      "event": "ECON1574 - LF01 : Frontiers of the Digital Econ - RMIT",
       "status": "PAST",
-      "description": "Marketing Communication - RMIT",
+      "description": "Frontiers of the Digital Econ - RMIT",
       "room_description": "A.3.08 (192pax)"
-    },
-    {
-      "start": "10:00 AM",
-      "end": "11:30 AM",
-      "start_min": 600,
-      "end_min": 690,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.09B",
-      "event": "APY106 - C01 : Intro to Cultural Anthropology - UB",
-      "status": "PAST",
-      "description": "Intro to Cultural Anthropology - UB",
-      "room_description": "A.3.09B (80pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "10:00 AM",
-      "start_min": 510,
-      "end_min": 600,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.09B",
-      "event": "APY106 - L01 : Intro to Cultural Anthropology - UB",
-      "status": "PAST",
-      "description": "Intro to Cultural Anthropology - UB",
-      "room_description": "A.3.09B (80pax)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "5:00 PM",
-      "start_min": 930,
-      "end_min": 1020,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.09C",
-      "event": "HIS293 - L01 : The Second World War - UB",
-      "status": "PAST",
-      "description": "The Second World War - UB",
-      "room_description": "A.3.09C (80pax)"
     },
     {
       "start": "10:30 AM",
@@ -3068,11 +3237,11 @@
       "end_min": 690,
       "block": "A",
       "floor": 3,
-      "room": "LT.A.3.09C",
-      "event": "PSY207 - C01 : Psychological Statistics - UB",
+      "room": "LT.A.3.09B",
+      "event": "MGO403 - C01 : Fundm of Strategic Mgt - UB",
       "status": "PAST",
-      "description": "Psychological Statistics - UB",
-      "room_description": "A.3.09C (80pax)"
+      "description": "Fundm of Strategic Mgt - UB",
+      "room_description": "A.3.09B (80pax)"
     },
     {
       "start": "8:30 AM",
@@ -3081,11 +3250,76 @@
       "end_min": 630,
       "block": "A",
       "floor": 3,
-      "room": "LT.A.3.09C",
-      "event": "PSY207 - L01 : Psychological Statistics - UB",
+      "room": "LT.A.3.09B",
+      "event": "MGO403 - L01 : Fundm of Strategic Mgt - UB",
       "status": "PAST",
-      "description": "Psychological Statistics - UB",
-      "room_description": "A.3.09C (80pax)"
+      "description": "Fundm of Strategic Mgt - UB",
+      "room_description": "A.3.09B (80pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
+      "block": "A",
+      "floor": 3,
+      "room": "LT.A.3.10",
+      "event": "LAW2636 - LF01 : Leg Con of AI, Big Data & Bloc - RMIT",
+      "status": "PAST",
+      "description": "Leg Con of AI, Big Data & Bloc - RMIT",
+      "room_description": "A.3.10 (106pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
+      "block": "A",
+      "floor": 3,
+      "room": "LT.A.3.17A",
+      "event": "BUIL1259 - LF01 : Construction Technology 2 - RMIT",
+      "status": "PAST",
+      "description": "Construction Technology 2 - RMIT",
+      "room_description": "A.3.17A (80pax)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 3,
+      "room": "LT.A.3.17B",
+      "event": "BUSM4697 - LP03 : Cross Cultural Management - RMIT",
+      "status": "CURRENT",
+      "description": "Cross Cultural Management - RMIT",
+      "room_description": "A.3.17B (80pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
+      "block": "A",
+      "floor": 3,
+      "room": "LT.A.3.17B",
+      "event": "IS - 090926 : IS",
+      "status": "PAST",
+      "description": "Independent Study",
+      "room_description": "A.3.17B (80pax)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "5:00 PM",
+      "start_min": 930,
+      "end_min": 1020,
+      "block": "A",
+      "floor": 3,
+      "room": "LT.A.3.17B",
+      "event": "SOC293 - L01 : Social Research Methods - UB",
+      "status": "PAST",
+      "description": "Social Research Methods - UB",
+      "room_description": "A.3.17B (80pax)"
     },
     {
       "start": "5:00 PM",
@@ -3094,140 +3328,36 @@
       "end_min": 1110,
       "block": "A",
       "floor": 3,
-      "room": "LT.A.3.09C",
-      "event": "HIS293 - C01 : The Second World War - UB",
+      "room": "LT.A.3.17B",
+      "event": "SOC293 - C01 : Social Research Methods - UB",
       "status": "PAST",
-      "description": "The Second World War - UB",
-      "room_description": "A.3.09C (80pax)"
-    },
-    {
-      "start": "1:30 PM",
-      "end": "3:00 PM",
-      "start_min": 810,
-      "end_min": 900,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.09C",
-      "event": "PSY452 - C01 : Psychology of Prejudice - UB",
-      "status": "PAST",
-      "description": "Psychology of Prejudice - UB",
-      "room_description": "A.3.09C (80pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "1:30 PM",
-      "start_min": 720,
-      "end_min": 810,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.09C",
-      "event": "PSY452 - L01 : Psychology of Prejudice - UB",
-      "status": "PAST",
-      "description": "Psychology of Prejudice - UB",
-      "room_description": "A.3.09C (80pax)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.17A",
-      "event": "BUIL1253 - LF01 : Construction Contract Law - RMIT",
-      "status": "PAST",
-      "description": "Construction Contract Law - RMIT",
-      "room_description": "A.3.17A (80pax)"
-    },
-    {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.17A",
-      "event": "OMGT2246 - LP02 : Global Trade Operations - RMIT",
-      "status": "CURRENT",
-      "description": "Global Trade Operations - RMIT",
-      "room_description": "A.3.17A (80pax)"
+      "description": "Social Research Methods - UB",
+      "room_description": "A.3.17B (80pax)"
     },
     {
       "start": "12:00 PM",
       "end": "3:00 PM",
       "start_min": 720,
       "end_min": 900,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.17A",
-      "event": "IS - 080926 : IS",
-      "status": "PAST",
-      "description": "Independent Study",
-      "room_description": "A.3.17A (80pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.17B",
-      "event": "BUIL1263 - LF01 : Construction Capstone Project - RMIT",
-      "status": "PAST",
-      "description": "Construction Capstone Project - RMIT",
-      "room_description": "A.3.17B (80pax)"
-    },
-    {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.17B",
-      "event": "BUSM2563 - LP10 : Understanding the Bus Envir - RMIT",
-      "status": "CURRENT",
-      "description": "Understanding the Bus Envir - RMIT",
-      "room_description": "A.3.17B (80pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "A",
-      "floor": 3,
-      "room": "LT.A.3.17B",
-      "event": "SSEL- - L02 : Study Skills for Eff. Learning - SIM",
-      "status": "PAST",
-      "description": "Study Skills for Eff. Learning - SIM",
-      "room_description": "A.3.17B (80pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
       "block": "A",
       "floor": 3,
       "room": "LT.A.3.20",
-      "event": "BUSM2573 - LF03 : Business in Society - RMIT",
+      "event": "BUSM4559 - LF01 : Work in Global Society - RMIT",
       "status": "PAST",
-      "description": "Business in Society - RMIT",
+      "description": "Work in Global Society - RMIT",
       "room_description": "A.3.20 (192pax)"
     },
     {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
+      "start": "8:30 AM",
+      "end": "11:30 AM",
+      "start_min": 510,
+      "end_min": 690,
       "block": "A",
       "floor": 3,
       "room": "LT.A.3.20",
-      "event": "BUSM3200 - LF01 : Strategy - RMIT",
+      "event": "MKTG1266 - LF02 : Marketing Communication - RMIT",
       "status": "PAST",
-      "description": "Strategy - RMIT",
+      "description": "Marketing Communication - RMIT",
       "room_description": "A.3.20 (192pax)"
     },
     {
@@ -3238,49 +3368,75 @@
       "block": "A",
       "floor": 3,
       "room": "LT.A.3.20",
-      "event": "ECON1064 - LF02 : Fcst'ing & Quantitative Anlys - RMIT",
+      "event": "OMGT2221 - LF01 : Intro to Logistics & SCM - RMIT",
       "status": "PAST",
-      "description": "Fcst'ing & Quantitative Anlys - RMIT",
+      "description": "Intro to Logistics & SCM - RMIT",
       "room_description": "A.3.20 (192pax)"
     },
     {
-      "start": "12:00 PM",
+      "start": "3:30 PM",
+      "end": "5:00 PM",
+      "start_min": 930,
+      "end_min": 1020,
+      "block": "A",
+      "floor": 4,
+      "room": "LT.A.4.02A",
+      "event": "PSY101 - L01 : Introductory Psychology - UB",
+      "status": "PAST",
+      "description": "Introductory Psychology - UB",
+      "room_description": "A.4.02A (192pax)"
+    },
+    {
+      "start": "5:00 PM",
       "end": "6:30 PM",
-      "start_min": 720,
+      "start_min": 1020,
       "end_min": 1110,
       "block": "A",
       "floor": 4,
       "room": "LT.A.4.02A",
-      "event": "0736156 - L01 : International HRM - UoB",
+      "event": "PSY101 - C01 : Introductory Psychology - UB",
       "status": "PAST",
-      "description": "International HRM - UoB",
+      "description": "Introductory Psychology - UB",
       "room_description": "A.4.02A (192pax)"
     },
     {
-      "start": "1:00 PM",
-      "end": "4:30 PM",
-      "start_min": 780,
-      "end_min": 990,
+      "start": "12:00 PM",
+      "end": "2:00 PM",
+      "start_min": 720,
+      "end_min": 840,
       "block": "A",
       "floor": 4,
       "room": "LT.A.4.04",
-      "event": "Campus Tour - SMA Pelita Utama Batam",
+      "event": "MTH113 - L02 : Precalculus without Trigonomet - UB",
       "status": "PAST",
-      "description": "",
+      "description": "Precalculus without Trigonomet - UB",
       "room_description": "A.4.04 (80pax)"
     },
     {
-      "start": "12:00 PM",
+      "start": "2:00 PM",
       "end": "3:00 PM",
-      "start_min": 720,
+      "start_min": 840,
       "end_min": 900,
       "block": "A",
       "floor": 4,
-      "room": "LT.A.4.07A",
-      "event": "From Data to Decisions: Power BI for Future Professionals (Sep 2026)",
+      "room": "LT.A.4.04",
+      "event": "MTH113 - C02 : Precalculus without Trigonomet - UB",
       "status": "PAST",
+      "description": "Precalculus without Trigonomet - UB",
+      "room_description": "A.4.04 (80pax)"
+    },
+    {
+      "start": "6:00 PM",
+      "end": "9:30 PM",
+      "start_min": 1080,
+      "end_min": 1290,
+      "block": "A",
+      "floor": 4,
+      "room": "LT.A.4.05",
+      "event": "SIM RMIT IW Meeting - September",
+      "status": "CURRENT",
       "description": "",
-      "room_description": "A.4.07A (80pax)"
+      "room_description": "A.4.05 (192pax)"
     },
     {
       "start": "5:00 PM",
@@ -3303,35 +3459,35 @@
       "block": "A",
       "floor": 4,
       "room": "LT.A.4.08",
-      "event": "BAFI1045 - LF01 : Equity Invt & Portfolio Mgmt - RMIT",
+      "event": "ECON1610 - LF01 : Econs & Quant Analysis - RMIT",
       "status": "PAST",
-      "description": "Equity Invt & Portfolio Mgmt - RMIT",
+      "description": "Econs & Quant Analysis - RMIT",
       "room_description": "A.4.08 (192pax)"
     },
     {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "A",
-      "floor": 4,
-      "room": "LT.A.4.08",
-      "event": "AC1025 - L02 : Principles of Accounting - UoL",
-      "status": "PAST",
-      "description": "Principles of Accounting - UoL",
-      "room_description": "A.4.08 (192pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
+      "start": "8:30 AM",
+      "end": "10:00 AM",
+      "start_min": 510,
+      "end_min": 600,
       "block": "A",
       "floor": 4,
       "room": "LT.A.4.09B",
-      "event": "PSYC250 - L3 : Quantitative Methods in Psy-UoW",
+      "event": "COM337 - L01 : Communication Theory - UB",
       "status": "PAST",
-      "description": "Quantitative Methods in Psy-UoW",
+      "description": "Communication Theory - UB",
+      "room_description": "A.4.09B (80pax)"
+    },
+    {
+      "start": "10:00 AM",
+      "end": "11:30 AM",
+      "start_min": 600,
+      "end_min": 690,
+      "block": "A",
+      "floor": 4,
+      "room": "LT.A.4.09B",
+      "event": "COM337 - C01 : Communication Theory - UB",
+      "status": "PAST",
+      "description": "Communication Theory - UB",
       "room_description": "A.4.09B (80pax)"
     },
     {
@@ -3341,11 +3497,11 @@
       "end_min": 810,
       "block": "A",
       "floor": 4,
-      "room": "LT.A.4.16",
-      "event": "AHI101 - L01 : Survey of Art Hist Egypt - UB",
+      "room": "LT.A.4.09B",
+      "event": "SOC322 - L02 : Medical Sociology - UB",
       "status": "PAST",
-      "description": "Survey of Art Hist Egypt - UB",
-      "room_description": "A.4.16 (112pax)"
+      "description": "Medical Sociology - UB",
+      "room_description": "A.4.09B (80pax)"
     },
     {
       "start": "1:30 PM",
@@ -3354,37 +3510,50 @@
       "end_min": 900,
       "block": "A",
       "floor": 4,
-      "room": "LT.A.4.16",
-      "event": "AHI101 - C01 : Survey of Art Hist Egypt - UB",
+      "room": "LT.A.4.09B",
+      "event": "SOC322 - C02 : Medical Sociology - UB",
       "status": "PAST",
-      "description": "Survey of Art Hist Egypt - UB",
-      "room_description": "A.4.16 (112pax)"
+      "description": "Medical Sociology - UB",
+      "room_description": "A.4.09B (80pax)"
     },
     {
-      "start": "8:30 AM",
-      "end": "10:00 AM",
-      "start_min": 510,
-      "end_min": 600,
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
       "block": "A",
       "floor": 4,
-      "room": "LT.A.4.16",
-      "event": "PSY324 - L01 : Clinical Psychology - UB",
-      "status": "PAST",
-      "description": "Clinical Psychology - UB",
-      "room_description": "A.4.16 (112pax)"
+      "room": "LT.A.4.09C",
+      "event": "BUSM2578 - LP10 : Integrated Perspec on Bus Prob - RMIT",
+      "status": "CURRENT",
+      "description": "Integrated Perspec on Bus Prob - RMIT",
+      "room_description": "A.4.09C (80pax)"
     },
     {
-      "start": "10:00 AM",
-      "end": "11:30 AM",
-      "start_min": 600,
-      "end_min": 690,
+      "start": "12:00 PM",
+      "end": "1:30 PM",
+      "start_min": 720,
+      "end_min": 810,
       "block": "A",
       "floor": 4,
-      "room": "LT.A.4.16",
-      "event": "PSY324 - C01 : Clinical Psychology - UB",
+      "room": "LT.A.4.10",
+      "event": "LIN315 - L01 : Language in Its Social Setting - UB",
       "status": "PAST",
-      "description": "Clinical Psychology - UB",
-      "room_description": "A.4.16 (112pax)"
+      "description": "Language in Its Social Setting - UB",
+      "room_description": "A.4.10 (106pax)"
+    },
+    {
+      "start": "1:30 PM",
+      "end": "3:00 PM",
+      "start_min": 810,
+      "end_min": 900,
+      "block": "A",
+      "floor": 4,
+      "room": "LT.A.4.10",
+      "event": "LIN315 - C01 : Language in Its Social Setting - UB",
+      "status": "PAST",
+      "description": "Language in Its Social Setting - UB",
+      "room_description": "A.4.10 (106pax)"
     },
     {
       "start": "3:30 PM",
@@ -3394,9 +3563,9 @@
       "block": "A",
       "floor": 4,
       "room": "LT.A.4.17A",
-      "event": "PSYC231 - L3 : Personality-UoW",
+      "event": "SOC104 - L4 : Investigating Social Problems - UoW",
       "status": "PAST",
-      "description": "Personality-UoW",
+      "description": "Investigating Social Problems - UoW",
       "room_description": "A.4.17A (60pax) Havard Room"
     },
     {
@@ -3407,9 +3576,9 @@
       "block": "A",
       "floor": 4,
       "room": "LT.A.4.17A",
-      "event": "PSYC121 - L1 : Foundations in Psychology A - UoW",
+      "event": "BCM110 - L1 : Intro to Comm.& Media Studies-UoW",
       "status": "PAST",
-      "description": "Foundations in Psychology A - UoW",
+      "description": "Intro to Comm.& Media Studies-UoW",
       "room_description": "A.4.17A (60pax) Havard Room"
     },
     {
@@ -3433,64 +3602,90 @@
       "block": "A",
       "floor": 4,
       "room": "LT.A.4.19",
-      "event": "BUIL1253 - LP02 : Construction Contract Law - RMIT",
+      "event": "BUSM4551 - LP03 : Innovation Management - RMIT",
       "status": "CURRENT",
-      "description": "Construction Contract Law - RMIT",
+      "description": "Innovation Management - RMIT",
       "room_description": "A.4.19 (80pax)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
       "block": "A",
       "floor": 2,
       "room": "SR.A.2.11",
-      "event": "PSYC361 - T5B : Child Development - UoW",
+      "event": "PSYC361 - T5A : Child Development - UoW",
       "status": "PAST",
       "description": "Child Development - UoW",
       "room_description": "A.2.11 (48pax)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
+      "start": "8:30 AM",
+      "end": "10:00 AM",
+      "start_min": 510,
+      "end_min": 600,
       "block": "A",
       "floor": 2,
       "room": "SR.A.2.12",
-      "event": "MKTUSUC - S22 : Understanding Consumers - STIR",
+      "event": "ENG353 - L01 : Technical Communication - UB",
       "status": "PAST",
-      "description": "Understanding Consumers - STIR",
+      "description": "Technical Communication - UB",
       "room_description": "A.2.12 (48pax)"
     },
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
+      "start": "10:00 AM",
+      "end": "11:30 AM",
+      "start_min": 600,
+      "end_min": 690,
       "block": "A",
       "floor": 2,
       "room": "SR.A.2.12",
-      "event": "SIM Debate Club: Debate Training",
+      "event": "ENG353 - C01 : Technical Communication - UB",
+      "status": "PAST",
+      "description": "Technical Communication - UB",
+      "room_description": "A.2.12 (48pax)"
+    },
+    {
+      "start": "1:30 PM",
+      "end": "3:00 PM",
+      "start_min": 810,
+      "end_min": 900,
+      "block": "A",
+      "floor": 2,
+      "room": "SR.A.2.12",
+      "event": "ENG353 - C02 : Technical Communication - UB",
+      "status": "PAST",
+      "description": "Technical Communication - UB",
+      "room_description": "A.2.12 (48pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "1:30 PM",
+      "start_min": 720,
+      "end_min": 810,
+      "block": "A",
+      "floor": 2,
+      "room": "SR.A.2.12",
+      "event": "ENG353 - L02 : Technical Communication - UB",
+      "status": "PAST",
+      "description": "Technical Communication - UB",
+      "room_description": "A.2.12 (48pax)"
+    },
+    {
+      "start": "6:00 PM",
+      "end": "9:00 PM",
+      "start_min": 1080,
+      "end_min": 1260,
+      "block": "A",
+      "floor": 2,
+      "room": "SR.A.2.12",
+      "event": "UOSSC Monthly Meeting",
       "status": "CURRENT",
       "description": "",
       "room_description": "A.2.12 (48pax)"
     },
     {
-      "start": "10:00 AM",
-      "end": "12:00 PM",
-      "start_min": 600,
-      "end_min": 720,
-      "block": "A",
-      "floor": 2,
-      "room": "SR.A.2.12",
-      "event": "RMIT Deferred Assessments (ACCT1059, ACCT2346, OMGT2221, OMGT2246)",
-      "status": "PAST",
-      "description": "",
-      "room_description": "A.2.12 (48pax)"
-    },
-    {
       "start": "12:00 PM",
       "end": "3:00 PM",
       "start_min": 720,
@@ -3498,9 +3693,9 @@
       "block": "A",
       "floor": 2,
       "room": "SR.A.2.15",
-      "event": "SIMU9AJ - D21 : Advertising - STIR",
+      "event": "MKTUSUC - M21 : Understanding Consumers - STIR",
       "status": "PAST",
-      "description": "Advertising - STIR",
+      "description": "Understanding Consumers - STIR",
       "room_description": "A.2.15 (48pax)"
     },
     {
@@ -3511,22 +3706,35 @@
       "block": "A",
       "floor": 2,
       "room": "SR.A.2.15",
-      "event": "SIMU9AJ - D22 : Advertising - STIR",
+      "event": "MKTUSUC - M22 : Understanding Consumers - STIR",
       "status": "PAST",
-      "description": "Advertising - STIR",
+      "description": "Understanding Consumers - STIR",
       "room_description": "A.2.15 (48pax)"
     },
     {
-      "start": "12:00 PM",
+      "start": "2:00 PM",
       "end": "3:00 PM",
-      "start_min": 720,
+      "start_min": 840,
       "end_min": 900,
       "block": "A",
       "floor": 3,
       "room": "SR.A.3.09A",
-      "event": "PSYC358 - T5A : Topics in Applied Psychology - UoW",
+      "event": "KOR101 - C01 : First-Year 1st Semester Korean - UB",
       "status": "PAST",
-      "description": "Topics in Applied Psychology - UoW",
+      "description": "First-Year 1st Semester Korean - UB",
+      "room_description": "A.3.09A (48pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "2:00 PM",
+      "start_min": 720,
+      "end_min": 840,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.09A",
+      "event": "KOR101 - L01 : First-Year 1st Semester Korean - UB",
+      "status": "PAST",
+      "description": "First-Year 1st Semester Korean - UB",
       "room_description": "A.3.09A (48pax)"
     },
     {
@@ -3537,127 +3745,62 @@
       "block": "A",
       "floor": 2,
       "room": "SR.A.2.17C",
-      "event": "GRAP3081 - T02 : Experience Design Research - RMIT",
+      "event": "SIMU9AJ - D23 : Advertising - STIR",
       "status": "PAST",
-      "description": "Experience Design Research - RMIT",
+      "description": "Advertising - STIR",
       "room_description": "A.2.17C (48pax)"
     },
     {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
+      "start": "8:30 AM",
+      "end": "11:30 AM",
+      "start_min": 510,
+      "end_min": 690,
       "block": "A",
       "floor": 2,
-      "room": "SR.A.2.17C",
-      "event": "GRAP3081 - T01 : Experience Design Research - RMIT",
+      "room": "SR.A.2.14",
+      "event": "ACCT1029 - LF02 : Strategic Acct & Leadership - RMIT",
       "status": "PAST",
-      "description": "Experience Design Research - RMIT",
-      "room_description": "A.2.17C (48pax)"
-    },
-    {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "A",
-      "floor": 3,
-      "room": "SR.A.3.14",
-      "event": "EDU535 - T01 : Designing Learning Environments with Emerging Technology",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "A.3.14 (48pax)"
+      "description": "Strategic Acct & Leadership - RMIT",
+      "room_description": "A.2.14 (48pax-CRS)"
     },
     {
       "start": "3:30 PM",
-      "end": "5:00 PM",
-      "start_min": 930,
-      "end_min": 1020,
-      "block": "A",
-      "floor": 3,
-      "room": "SR.A.3.14",
-      "event": "GEO460 - L01 : Geography of Development - UB",
-      "status": "PAST",
-      "description": "Geography of Development - UB",
-      "room_description": "A.3.14 (48pax)"
-    },
-    {
-      "start": "5:00 PM",
       "end": "6:30 PM",
-      "start_min": 1020,
+      "start_min": 930,
       "end_min": 1110,
       "block": "A",
-      "floor": 3,
-      "room": "SR.A.3.14",
-      "event": "GEO460 - C01 : Geography of Development - UB",
+      "floor": 2,
+      "room": "SR.A.2.14",
+      "event": "PSYC361 - T5C : Child Development - UoW",
       "status": "PAST",
-      "description": "Geography of Development - UB",
-      "room_description": "A.3.14 (48pax)"
+      "description": "Child Development - UoW",
+      "room_description": "A.2.14 (48pax-CRS)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "2:00 PM",
+      "start_min": 720,
+      "end_min": 840,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.11",
+      "event": "FP0001 - T05 : Maths and Stats-UoL",
+      "status": "PAST",
+      "description": "Maths and Stats-UoL",
+      "room_description": "A.3.11 (48pax)"
     },
     {
       "start": "2:30 PM",
-      "end": "4:30 PM",
+      "end": "5:30 PM",
       "start_min": 870,
-      "end_min": 990,
+      "end_min": 1050,
       "block": "A",
       "floor": 3,
-      "room": "SR.A.3.17C",
-      "event": "FP0008 - T09 : Acc and Fin-UoL",
+      "room": "SR.A.3.11",
+      "event": "SIM Cybersecurity Club Onboarding",
       "status": "PAST",
-      "description": "Acc and Fin-UoL",
-      "room_description": "A.3.17C (48pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "2:00 PM",
-      "start_min": 720,
-      "end_min": 840,
-      "block": "A",
-      "floor": 3,
-      "room": "SR.A.3.17C",
-      "event": "FP0008 - T05 : Acc and Fin-UoL",
-      "status": "PAST",
-      "description": "Acc and Fin-UoL",
-      "room_description": "A.3.17C (48pax-CRS)"
-    },
-    {
-      "start": "10:00 AM",
-      "end": "8:00 PM",
-      "start_min": 600,
-      "end_min": 1200,
-      "block": "A",
-      "floor": 4,
-      "room": "SR.A.4.03",
-      "event": "SIM MCMS Study & Prayer Space (Ilm & Ibadah) - September",
-      "status": "CURRENT",
       "description": "",
-      "room_description": "A.4.03 (48pax)"
-    },
-    {
-      "start": "5:30 PM",
-      "end": "9:30 PM",
-      "start_min": 1050,
-      "end_min": 1290,
-      "block": "A",
-      "floor": 4,
-      "room": "SR.A.4.06",
-      "event": "SIM RMITSC Mid-Sem IC Engagement",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "A.4.06 (48pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "2:00 PM",
-      "start_min": 720,
-      "end_min": 840,
-      "block": "A",
-      "floor": 4,
-      "room": "SR.A.4.09A",
-      "event": "FP0001 - L09 : Maths and Stats-UoL",
-      "status": "PAST",
-      "description": "Maths and Stats-UoL",
-      "room_description": "A.4.09A (48pax-CRS)"
+      "room_description": "A.3.11 (48pax)"
     },
     {
       "start": "9:00 AM",
@@ -3665,12 +3808,168 @@
       "start_min": 540,
       "end_min": 660,
       "block": "A",
-      "floor": 4,
-      "room": "SR.A.4.09A",
-      "event": "FP0001 - L05 : Maths and Stats-UoL",
+      "floor": 3,
+      "room": "SR.A.3.14",
+      "event": "FP0002 - L05 : Econs-UoL",
+      "status": "PAST",
+      "description": "Econs-UoL",
+      "room_description": "A.3.14 (48pax)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.14",
+      "event": "PSY514 - T01 : Organisational Development and Change",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "A.3.14 (48pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "1:30 PM",
+      "start_min": 720,
+      "end_min": 810,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.14",
+      "event": "FR112 - L01 : Elementary French II - UB",
+      "status": "PAST",
+      "description": "Elementary French II - UB",
+      "room_description": "A.3.14 (48pax)"
+    },
+    {
+      "start": "1:30 PM",
+      "end": "3:00 PM",
+      "start_min": 810,
+      "end_min": 900,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.14",
+      "event": "FR112 - C01 : Elementary French II - UB",
+      "status": "PAST",
+      "description": "Elementary French II - UB",
+      "room_description": "A.3.14 (48pax)"
+    },
+    {
+      "start": "2:00 PM",
+      "end": "3:00 PM",
+      "start_min": 840,
+      "end_min": 900,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.12",
+      "event": "JPN101 - C01 : First-Year 1st Sem Japanese - UB",
+      "status": "PAST",
+      "description": "First-Year 1st Sem Japanese - UB",
+      "room_description": "A.3.12 (48pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "2:00 PM",
+      "start_min": 720,
+      "end_min": 840,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.12",
+      "event": "JPN101 - L01 : First-Year 1st Sem Japanese - UB",
+      "status": "PAST",
+      "description": "First-Year 1st Sem Japanese - UB",
+      "room_description": "A.3.12 (48pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "2:00 PM",
+      "start_min": 720,
+      "end_min": 840,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.17C",
+      "event": "FP0002 - L09 : Econs-UoL",
+      "status": "PAST",
+      "description": "Econs-UoL",
+      "room_description": "A.3.17C (48pax-CRS)"
+    },
+    {
+      "start": "9:00 AM",
+      "end": "11:00 AM",
+      "start_min": 540,
+      "end_min": 660,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.17C",
+      "event": "FP0001 - T09 : Maths and Stats-UoL",
       "status": "PAST",
       "description": "Maths and Stats-UoL",
-      "room_description": "A.4.09A (48pax-CRS)"
+      "room_description": "A.3.17C (48pax-CRS)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "5:00 PM",
+      "start_min": 930,
+      "end_min": 1020,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.17C",
+      "event": "JPN112 - L01 : First-Year Japanese 2nd Semest - UB",
+      "status": "PAST",
+      "description": "First-Year Japanese 2nd Semest - UB",
+      "room_description": "A.3.17C (48pax-CRS)"
+    },
+    {
+      "start": "5:00 PM",
+      "end": "6:30 PM",
+      "start_min": 1020,
+      "end_min": 1110,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.17C",
+      "event": "JPN112 - C01 : First-Year Japanese 2nd Semest - UB",
+      "status": "PAST",
+      "description": "First-Year Japanese 2nd Semest - UB",
+      "room_description": "A.3.17C (48pax-CRS)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.15",
+      "event": "PSY522 - T01 : Working with the Courts and Special Offender Populations",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "A.3.15 (48pax)"
+    },
+    {
+      "start": "5:00 PM",
+      "end": "6:30 PM",
+      "start_min": 1020,
+      "end_min": 1110,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.15",
+      "event": "KOR112 - C01 : First-Year Korean Second Semes - UB",
+      "status": "PAST",
+      "description": "First-Year Korean Second Semes - UB",
+      "room_description": "A.3.15 (48pax)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "5:00 PM",
+      "start_min": 930,
+      "end_min": 1020,
+      "block": "A",
+      "floor": 3,
+      "room": "SR.A.3.15",
+      "event": "KOR112 - L01 : First-Year Korean Second Semes - UB",
+      "status": "PAST",
+      "description": "First-Year Korean Second Semes - UB",
+      "room_description": "A.3.15 (48pax)"
     },
     {
       "start": "7:00 PM",
@@ -3679,37 +3978,24 @@
       "end_min": 1320,
       "block": "A",
       "floor": 4,
-      "room": "SR.A.4.09A",
-      "event": "BUS104 - T03 : Organisational Behaviour in the Technology Era",
+      "room": "SR.A.4.03",
+      "event": "SIM Students' Christian Fellowship (SCF) : Theme Session (1)",
       "status": "CURRENT",
       "description": "",
-      "room_description": "A.4.09A (48pax-CRS)"
+      "room_description": "A.4.03 (48pax)"
     },
     {
-      "start": "5:00 PM",
-      "end": "6:30 PM",
-      "start_min": 1020,
-      "end_min": 1110,
+      "start": "7:00 PM",
+      "end": "9:30 PM",
+      "start_min": 1140,
+      "end_min": 1290,
       "block": "A",
       "floor": 4,
-      "room": "SR.A.4.09A",
-      "event": "MGM301 - C01 : Principles of Marketing - UB",
-      "status": "PAST",
-      "description": "Principles of Marketing - UB",
-      "room_description": "A.4.09A (48pax-CRS)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "5:00 PM",
-      "start_min": 930,
-      "end_min": 1020,
-      "block": "A",
-      "floor": 4,
-      "room": "SR.A.4.09A",
-      "event": "MGM301 - L01 : Principles of Marketing - UB",
-      "status": "PAST",
-      "description": "Principles of Marketing - UB",
-      "room_description": "A.4.09A (48pax-CRS)"
+      "room": "SR.A.4.06",
+      "event": "OCIP Sabah Team Meetings",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "A.4.06 (48pax)"
     },
     {
       "start": "1:30 PM",
@@ -3718,11 +4004,11 @@
       "end_min": 1110,
       "block": "A",
       "floor": 4,
-      "room": "SR.A.4.17C",
-      "event": "MUF0061 - LF01 : Economics Unit 1 - MCol",
+      "room": "SR.A.4.18",
+      "event": "MUF0022 - LF01 : Accounting Unit 2 - MCol",
       "status": "PAST",
-      "description": "Economics Unit 1 - MCol",
-      "room_description": "A.4.17C (48pax-CRS)"
+      "description": "Accounting Unit 2 - MCol",
+      "room_description": "A.4.18 (48pax)"
     },
     {
       "start": "8:30 AM",
@@ -3732,9 +4018,22 @@
       "block": "A",
       "floor": 4,
       "room": "SR.A.4.17C",
-      "event": "MUF0051 - LF01 : ICT Unit 1 - MCol",
+      "event": "MUF0142 - LF01 : Fundamental Mathematics Unit 2 - MCol",
       "status": "PAST",
-      "description": "ICT Unit 1 - MCol",
+      "description": "Fundamental Mathematics Unit 2 - MCol",
+      "room_description": "A.4.17C (48pax-CRS)"
+    },
+    {
+      "start": "1:30 PM",
+      "end": "6:30 PM",
+      "start_min": 810,
+      "end_min": 1110,
+      "block": "A",
+      "floor": 4,
+      "room": "SR.A.4.17C",
+      "event": "MUF0021 - LF01 : Accounting Unit 1 - MCol",
+      "status": "PAST",
+      "description": "Accounting Unit 1 - MCol",
       "room_description": "A.4.17C (48pax-CRS)"
     },
     {
@@ -3745,10 +4044,23 @@
       "block": "A",
       "floor": 4,
       "room": "SR.A.4.17C",
-      "event": "MAV558 - T01 : Prescriptive Analytics for Decision Making 决策分析与优化",
+      "event": "EDU531 - T01 : Learners, Culture, and Context",
       "status": "CURRENT",
       "description": "",
       "room_description": "A.4.17C (48pax-CRS)"
+    },
+    {
+      "start": "6:30 PM",
+      "end": "9:30 PM",
+      "start_min": 1110,
+      "end_min": 1290,
+      "block": "A",
+      "floor": 4,
+      "room": "SR.A.4.07B",
+      "event": "SIM Catholic Society Sessions - September",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "A.4.07B (48pax)"
     },
     {
       "start": "12:00 PM",
@@ -3765,42 +4077,16 @@
     },
     {
       "start": "8:00 AM",
-      "end": "10:00 PM",
+      "end": "7:00 PM",
       "start_min": 480,
-      "end_min": 1320,
+      "end_min": 1140,
       "block": "A",
       "floor": null,
       "room": "BambooCourtyard",
-      "event": "UOLSRC",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "Bamboo Courtyard"
-    },
-    {
-      "start": "8:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1200,
-      "end_min": 1320,
-      "block": "A",
-      "floor": null,
-      "room": "ThePlazaArea",
-      "event": "SIM Silat Training - Sept",
-      "status": "UPCOMING",
-      "description": "",
-      "room_description": "The Plaza Area"
-    },
-    {
-      "start": "9:00 AM",
-      "end": "6:00 PM",
-      "start_min": 540,
-      "end_min": 1080,
-      "block": "A",
-      "floor": 2,
-      "room": "SR.A.2.09A",
-      "event": "For SIM-RMIT BGD GRAP3081",
+      "event": "SIM UOL Freshmen Orientation September 2026",
       "status": "PAST",
       "description": "",
-      "room_description": "A.2.09A (48pax)"
+      "room_description": "Bamboo Courtyard"
     },
     {
       "start": "8:00 AM",
@@ -3814,6 +4100,58 @@
       "status": "CURRENT",
       "description": "",
       "room_description": "B.2.07/B.2.08 (Combined-60pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "1:30 PM",
+      "start_min": 720,
+      "end_min": 810,
+      "block": "B",
+      "floor": 2,
+      "room": "SR.B.2.09/B.2.10",
+      "event": "HIS141 - L01 : World History to 1500 - UB",
+      "status": "PAST",
+      "description": "World History to 1500 - UB",
+      "room_description": "B.2.09/B.2.10 (Combined-60pax)"
+    },
+    {
+      "start": "1:30 PM",
+      "end": "3:00 PM",
+      "start_min": 810,
+      "end_min": 900,
+      "block": "B",
+      "floor": 2,
+      "room": "SR.B.2.09/B.2.10",
+      "event": "HIS141 - C01 : World History to 1500 - UB",
+      "status": "PAST",
+      "description": "World History to 1500 - UB",
+      "room_description": "B.2.09/B.2.10 (Combined-60pax)"
+    },
+    {
+      "start": "10:00 AM",
+      "end": "11:30 AM",
+      "start_min": 600,
+      "end_min": 690,
+      "block": "B",
+      "floor": 2,
+      "room": "SR.B.2.09/B.2.10",
+      "event": "SOC322 - C01 : Medical Sociology - UB",
+      "status": "PAST",
+      "description": "Medical Sociology - UB",
+      "room_description": "B.2.09/B.2.10 (Combined-60pax)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 AM",
+      "start_min": 510,
+      "end_min": 600,
+      "block": "B",
+      "floor": 2,
+      "room": "SR.B.2.09/B.2.10",
+      "event": "SOC322 - L01 : Medical Sociology - UB",
+      "status": "PAST",
+      "description": "Medical Sociology - UB",
+      "room_description": "B.2.09/B.2.10 (Combined-60pax)"
     },
     {
       "start": "7:00 PM",
@@ -3836,23 +4174,36 @@
       "block": "B",
       "floor": 2,
       "room": "LT.B.2.01",
-      "event": "ACCT2062 - LF01 : Financial Acctg & Analysis - RMIT",
+      "event": "OMGT2246 - LF01 : Global Trade Operations - RMIT",
       "status": "PAST",
-      "description": "Financial Acctg & Analysis - RMIT",
+      "description": "Global Trade Operations - RMIT",
       "room_description": "B.2.01 (134pax-VC)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
       "block": "B",
       "floor": 2,
       "room": "LT.B.2.01",
-      "event": "MKTG1535 - LF01 : AI in Marketing - RMIT",
+      "event": "OMGT2223 - LF01 : Supply Chain Analytics - RMIT",
       "status": "PAST",
-      "description": "AI in Marketing - RMIT",
+      "description": "Supply Chain Analytics - RMIT",
       "room_description": "B.2.01 (134pax-VC)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "6:30 PM",
+      "start_min": 720,
+      "end_min": 1110,
+      "block": "B",
+      "floor": 2,
+      "room": "LT.B.2.03",
+      "event": "0736156 - L01 : International HRM - UoB",
+      "status": "PAST",
+      "description": "International HRM - UoB",
+      "room_description": "B.2.03 (188pax)"
     },
     {
       "start": "3:30 PM",
@@ -3862,22 +4213,9 @@
       "block": "B",
       "floor": 2,
       "room": "LT.B.2.04",
-      "event": "BAFI3277 - LF02 : Applied Fin-A Case Study Appr - RMIT",
+      "event": "BUSM2583 - LF03 : Business Graduate Folio - RMIT",
       "status": "PAST",
-      "description": "Applied Fin-A Case Study Appr - RMIT",
-      "room_description": "B.2.04 (130pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "B",
-      "floor": 2,
-      "room": "LT.B.2.04",
-      "event": "ECON1272 - LF01 : Basic Econometrics - RMIT",
-      "status": "PAST",
-      "description": "Basic Econometrics - RMIT",
+      "description": "Business Graduate Folio - RMIT",
       "room_description": "B.2.04 (130pax)"
     },
     {
@@ -3888,36 +4226,10 @@
       "block": "B",
       "floor": 2,
       "room": "LT.B.2.04",
-      "event": "MKTG1427 - LF01 : Digital Marketing - RMIT",
+      "event": "MT1186 - L01 : Mathematical Methods - UoL",
       "status": "PAST",
-      "description": "Digital Marketing - RMIT",
+      "description": "Mathematical Methods - UoL",
       "room_description": "B.2.04 (130pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "B",
-      "floor": 2,
-      "room": "LT.B.2.05",
-      "event": "COMM2993 - LF01 : Locating Knowledges - RMIT",
-      "status": "PAST",
-      "description": "Locating Knowledges - RMIT",
-      "room_description": "B.2.05 (130pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "B",
-      "floor": 2,
-      "room": "LT.B.2.05",
-      "event": "COMM3001 - LF02 : Digi Audiences and Analytics - RMIT",
-      "status": "PAST",
-      "description": "Digi Audiences and Analytics - RMIT",
-      "room_description": "B.2.05 (130pax)"
     },
     {
       "start": "5:00 PM",
@@ -3927,9 +4239,35 @@
       "block": "B",
       "floor": 2,
       "room": "LT.B.2.05",
-      "event": "APY168 - C01 : Myth & Religion in the Ancient - UB",
+      "event": "PSY331 - C01 : Social Psychology - UB",
       "status": "PAST",
-      "description": "Myth & Religion in the Ancient - UB",
+      "description": "Social Psychology - UB",
+      "room_description": "B.2.05 (130pax)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 AM",
+      "start_min": 510,
+      "end_min": 600,
+      "block": "B",
+      "floor": 2,
+      "room": "LT.B.2.05",
+      "event": "PSY350 - L01 : Scientific Inquiry in Psy - UB",
+      "status": "PAST",
+      "description": "Scientific Inquiry in Psy - UB",
+      "room_description": "B.2.05 (130pax)"
+    },
+    {
+      "start": "10:00 AM",
+      "end": "11:30 AM",
+      "start_min": 600,
+      "end_min": 690,
+      "block": "B",
+      "floor": 2,
+      "room": "LT.B.2.05",
+      "event": "PSY350 - C01 : Scientific Inquiry in Psy - UB",
+      "status": "PAST",
+      "description": "Scientific Inquiry in Psy - UB",
       "room_description": "B.2.05 (130pax)"
     },
     {
@@ -3940,23 +4278,10 @@
       "block": "B",
       "floor": 2,
       "room": "LT.B.2.05",
-      "event": "APY168 - L01 : Myth & Religion in the Ancient - UB",
+      "event": "PSY331 - L01 : Social Psychology - UB",
       "status": "PAST",
-      "description": "Myth & Religion in the Ancient - UB",
+      "description": "Social Psychology - UB",
       "room_description": "B.2.05 (130pax)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "B",
-      "floor": 2,
-      "room": "LT.B.2.06",
-      "event": "ACCT1059 - LF01 : Auditing - RMIT",
-      "status": "PAST",
-      "description": "Auditing - RMIT",
-      "room_description": "B.2.06 (188pax)"
     },
     {
       "start": "12:00 PM",
@@ -3966,9 +4291,22 @@
       "block": "B",
       "floor": 2,
       "room": "LT.B.2.06",
-      "event": "ACCT1063 - LF01 : Managerial Advisory Finance - RMIT",
+      "event": "BAFI1005 - LF03 : Fin Markets & Institutions - RMIT",
       "status": "PAST",
-      "description": "Managerial Advisory Finance - RMIT",
+      "description": "Fin Markets & Institutions - RMIT",
+      "room_description": "B.2.06 (188pax)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
+      "block": "B",
+      "floor": 2,
+      "room": "LT.B.2.06",
+      "event": "ACCT2351 - LF01 : Mgmt Accting and Perform Eval - RMIT",
+      "status": "PAST",
+      "description": "Mgmt Accting and Perform Eval - RMIT",
       "room_description": "B.2.06 (188pax)"
     },
     {
@@ -3979,9 +4317,9 @@
       "block": "B",
       "floor": 2,
       "room": "LT.B.2.06",
-      "event": "BAFI1012 - LF02 : Corporate Finance - RMIT",
+      "event": "MKTG1315 - LF02 : Introduction to Advertising - RMIT",
       "status": "PAST",
-      "description": "Corporate Finance - RMIT",
+      "description": "Introduction to Advertising - RMIT",
       "room_description": "B.2.06 (188pax)"
     },
     {
@@ -3992,10 +4330,36 @@
       "block": "B",
       "floor": 2,
       "room": "LT.B.2.16",
-      "event": "NCO201 - T04 : Learn to Learn, Learn for Life",
+      "event": "NCO201 - T07 : Learn to Learn, Learn for Life",
       "status": "CURRENT",
       "description": "",
       "room_description": "B.2.16 (134pax-CRS)"
+    },
+    {
+      "start": "1:00 PM",
+      "end": "4:00 PM",
+      "start_min": 780,
+      "end_min": 960,
+      "block": "B",
+      "floor": 2,
+      "room": "LT.B.2.16",
+      "event": "UB Bound Information Sessions",
+      "status": "PAST",
+      "description": "",
+      "room_description": "B.2.16 (134pax-CRS)"
+    },
+    {
+      "start": "6:00 PM",
+      "end": "9:30 PM",
+      "start_min": 1080,
+      "end_min": 1290,
+      "block": "B",
+      "floor": 2,
+      "room": "LT.B.2.17",
+      "event": "SIM RMIT IW Meeting - September",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "B.2.17 (296pax-VC)"
     },
     {
       "start": "7:00 PM",
@@ -4005,88 +4369,49 @@
       "block": "B",
       "floor": 3,
       "room": "LT.B.3.01",
-      "event": "NCO201 - T05 : Learn to Learn, Learn for Life",
+      "event": "NCO201 - T08 : Learn to Learn, Learn for Life",
       "status": "CURRENT",
       "description": "",
       "room_description": "B.3.01 (134pax-CRS)"
     },
     {
-      "start": "12:00 PM",
-      "end": "1:30 PM",
-      "start_min": 720,
-      "end_min": 810,
-      "block": "B",
-      "floor": 3,
-      "room": "LT.B.3.01",
-      "event": "SOC101 - L01 : Intro to Sociology - UB",
-      "status": "PAST",
-      "description": "Intro to Sociology - UB",
-      "room_description": "B.3.01 (134pax-CRS)"
-    },
-    {
-      "start": "1:30 PM",
-      "end": "3:00 PM",
-      "start_min": 810,
-      "end_min": 900,
-      "block": "B",
-      "floor": 3,
-      "room": "LT.B.3.01",
-      "event": "SOC101 - C01 : Intro to Sociology - UB",
-      "status": "PAST",
-      "description": "Intro to Sociology - UB",
-      "room_description": "B.3.01 (134pax-CRS)"
-    },
-    {
-      "start": "2:00 PM",
-      "end": "3:00 PM",
-      "start_min": 840,
-      "end_min": 900,
-      "block": "B",
-      "floor": 3,
-      "room": "LT.B.3.04",
-      "event": "ECO182 - C01 : Intro to Microeconomics - UB",
-      "status": "PAST",
-      "description": "Intro to Microeconomics - UB",
-      "room_description": "B.3.04 (130pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "2:00 PM",
-      "start_min": 720,
-      "end_min": 840,
-      "block": "B",
-      "floor": 3,
-      "room": "LT.B.3.04",
-      "event": "ECO182 - L01 : Intro to Microeconomics - UB",
-      "status": "PAST",
-      "description": "Intro to Microeconomics - UB",
-      "room_description": "B.3.04 (130pax)"
-    },
-    {
-      "start": "10:00 AM",
+      "start": "8:30 AM",
       "end": "11:30 AM",
-      "start_min": 600,
+      "start_min": 510,
+      "end_min": 690,
+      "block": "B",
+      "floor": 3,
+      "room": "LT.B.3.03",
+      "event": "MKTG1519 - LF01 : Marketing Analytics - RMIT",
+      "status": "PAST",
+      "description": "Marketing Analytics - RMIT",
+      "room_description": "B.3.03 (188pax)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "11:30 AM",
+      "start_min": 510,
       "end_min": 690,
       "block": "B",
       "floor": 3,
       "room": "LT.B.3.04",
-      "event": "PSY101 - C02 : Introductory Psychology - UB",
+      "event": "SSEL- - L03 : Study Skills for Eff. Learning - SIM",
       "status": "PAST",
-      "description": "Introductory Psychology - UB",
+      "description": "Study Skills for Eff. Learning - SIM",
       "room_description": "B.3.04 (130pax)"
     },
     {
-      "start": "8:30 AM",
-      "end": "10:00 AM",
-      "start_min": 510,
-      "end_min": 600,
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
       "block": "B",
       "floor": 3,
-      "room": "LT.B.3.04",
-      "event": "PSY101 - L02 : Introductory Psychology - UB",
-      "status": "PAST",
-      "description": "Introductory Psychology - UB",
-      "room_description": "B.3.04 (130pax)"
+      "room": "LT.B.3.16",
+      "event": "NCO201 - T09 : Learn to Learn, Learn for Life",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "B.3.16 (134pax-CRS)"
     },
     {
       "start": "12:00 PM",
@@ -4096,49 +4421,23 @@
       "block": "B",
       "floor": 3,
       "room": "LT.B.3.17",
-      "event": "MKTG1052 - LF02 : Buyer Behaviour - RMIT",
+      "event": "BUSM3201 - LF02 : Human Resource Management - RMIT",
       "status": "PAST",
-      "description": "Buyer Behaviour - RMIT",
+      "description": "Human Resource Management - RMIT",
       "room_description": "B.3.17 (296pax-CRS)"
     },
     {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
       "block": "B",
       "floor": 3,
       "room": "LT.B.3.17",
-      "event": "MKTG1281 - LF01 : Applied Brand Management - RMIT",
-      "status": "PAST",
-      "description": "Applied Brand Management - RMIT",
+      "event": "ENG335 - L01 : Machine Learning",
+      "status": "CURRENT",
+      "description": "",
       "room_description": "B.3.17 (296pax-CRS)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "B",
-      "floor": 4,
-      "room": "LT.B.4.01",
-      "event": "COMM2993 - LF02 : Locating Knowledges - RMIT",
-      "status": "PAST",
-      "description": "Locating Knowledges - RMIT",
-      "room_description": "B.4.01 (134pax)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "B",
-      "floor": 4,
-      "room": "LT.B.4.03",
-      "event": "ACCT2119 - LF02 : Accounting, Behaviour & Orgs - RMIT",
-      "status": "PAST",
-      "description": "Accounting, Behaviour & Orgs - RMIT",
-      "room_description": "B.4.03 (188pax)"
     },
     {
       "start": "12:00 PM",
@@ -4148,22 +4447,22 @@
       "block": "B",
       "floor": 4,
       "room": "LT.B.4.03",
-      "event": "BAFI1012 - LF03 : Corporate Finance - RMIT",
+      "event": "ACCT1054 - LF02 : Financial Acct & Reporting - RMIT",
       "status": "PAST",
-      "description": "Corporate Finance - RMIT",
+      "description": "Financial Acct & Reporting - RMIT",
       "room_description": "B.4.03 (188pax)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
       "block": "B",
       "floor": 4,
       "room": "LT.B.4.04",
-      "event": "BUSM2583 - LF07 : Business Graduate Folio - RMIT",
+      "event": "ECON1272 - LF02 : Basic Econometrics - RMIT",
       "status": "PAST",
-      "description": "Business Graduate Folio - RMIT",
+      "description": "Basic Econometrics - RMIT",
       "room_description": "B.4.04 (130pax)"
     },
     {
@@ -4174,9 +4473,9 @@
       "block": "B",
       "floor": 4,
       "room": "LT.B.4.04",
-      "event": "MKTG1047 - LF03 : Market Research - RMIT",
+      "event": "OMGT2224 - LF01 : Warehouse & Distribu Channels - RMIT",
       "status": "PAST",
-      "description": "Market Research - RMIT",
+      "description": "Warehouse & Distribu Channels - RMIT",
       "room_description": "B.4.04 (130pax)"
     },
     {
@@ -4187,9 +4486,22 @@
       "block": "B",
       "floor": 4,
       "room": "LT.B.4.05",
-      "event": "BUSM2583 - LF02 : Business Graduate Folio - RMIT",
+      "event": "BUSM4547 - LF01 : Organisational Experience - RMIT",
       "status": "PAST",
-      "description": "Business Graduate Folio - RMIT",
+      "description": "Organisational Experience - RMIT",
+      "room_description": "B.4.05 (130pax-CRS)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
+      "block": "B",
+      "floor": 4,
+      "room": "LT.B.4.05",
+      "event": "MKTG1275 - LF01 : Strategic Marketing - RMIT",
+      "status": "PAST",
+      "description": "Strategic Marketing - RMIT",
       "room_description": "B.4.05 (130pax-CRS)"
     },
     {
@@ -4200,9 +4512,22 @@
       "block": "B",
       "floor": 4,
       "room": "LT.B.4.05",
-      "event": "NCO201 - T06 : Learn to Learn, Learn for Life",
+      "event": "HFS351 - T01 : Safety Management and Audit",
       "status": "CURRENT",
       "description": "",
+      "room_description": "B.4.05 (130pax-CRS)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
+      "block": "B",
+      "floor": 4,
+      "room": "LT.B.4.05",
+      "event": "INTE2693 - LF01 : Intro to Cybersecurity Gov - RMIT",
+      "status": "PAST",
+      "description": "Intro to Cybersecurity Gov - RMIT",
       "room_description": "B.4.05 (130pax-CRS)"
     },
     {
@@ -4239,29 +4564,16 @@
       "block": "B",
       "floor": null,
       "room": "MPH.B1/B2",
-      "event": "For Special Arrangement students (ITS C003 Common Retest, IOM Common Retest)",
+      "event": "For Special Arrangement students (ITS C004 Common Retest, SMM Common Retest)",
       "status": "PAST",
       "description": "",
       "room_description": "MPH B1/B2 (96pax)"
     },
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "B",
-      "floor": null,
-      "room": "MPH.A1/A2",
-      "event": "SIM Fencing Training",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "MPH A1/A2 (280pax)"
-    },
-    {
       "start": "8:00 AM",
-      "end": "6:00 PM",
+      "end": "7:00 PM",
       "start_min": 480,
-      "end_min": 1080,
+      "end_min": 1140,
       "block": "B",
       "floor": null,
       "room": "MPH.A1/A2",
@@ -4278,23 +4590,23 @@
       "block": "B",
       "floor": 5,
       "room": "LT.B.5.03",
-      "event": "FIN306 - T02 : Financial Markets",
+      "event": "HFSY215 - T01 : Behavioural Based Safety",
       "status": "CURRENT",
       "description": "",
       "room_description": "B.5.03 (188pax-CRS)"
     },
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
       "block": "B",
       "floor": 5,
-      "room": "LT.B.5.03",
-      "event": "FIN306 - T01 : Financial Markets",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "B.5.03 (188pax-CRS)"
+      "room": "LT.B.5.04",
+      "event": "MT105A - L03A : Mathematics 1 - UoL",
+      "status": "PAST",
+      "description": "Mathematics 1 - UoL",
+      "room_description": "B.5.04 (130pax-CRS)"
     },
     {
       "start": "7:00 PM",
@@ -4304,16 +4616,16 @@
       "block": "B",
       "floor": 5,
       "room": "LT.B.5.04",
-      "event": "ENG301 - L01 : Microprocessor Programming",
+      "event": "NCO201 - T11 : Learn to Learn, Learn for Life",
       "status": "CURRENT",
       "description": "",
       "room_description": "B.5.04 (130pax-CRS)"
     },
     {
       "start": "6:00 PM",
-      "end": "9:00 PM",
+      "end": "8:00 PM",
       "start_min": 1080,
-      "end_min": 1260,
+      "end_min": 1200,
       "block": "B",
       "floor": 5,
       "room": "LT.B.5.05",
@@ -4323,30 +4635,30 @@
       "room_description": "B.5.05 (130pax)"
     },
     {
-      "start": "8:30 AM",
-      "end": "10:00 AM",
-      "start_min": 510,
-      "end_min": 600,
+      "start": "8:00 PM",
+      "end": "9:00 PM",
+      "start_min": 1200,
+      "end_min": 1260,
       "block": "B",
       "floor": 5,
       "room": "LT.B.5.05",
-      "event": "MGF301 - L01 : Corporation Finance - UB",
-      "status": "PAST",
-      "description": "Corporation Finance - UB",
+      "event": "SNGP3003 - C01 : Clinical and Patient Education - USyd",
+      "status": "UPCOMING",
+      "description": "Clinical and Patient Education - USyd",
       "room_description": "B.5.05 (130pax)"
     },
     {
-      "start": "10:00 AM",
+      "start": "8:30 AM",
       "end": "11:30 AM",
-      "start_min": 600,
+      "start_min": 510,
       "end_min": 690,
       "block": "B",
       "floor": 5,
-      "room": "LT.B.5.05",
-      "event": "MGF301 - C01 : Corporation Finance - UB",
+      "room": "LT.B.5.06",
+      "event": "BUSM2563 - LF05 : Understanding the Bus Envir - RMIT",
       "status": "PAST",
-      "description": "Corporation Finance - UB",
-      "room_description": "B.5.05 (130pax)"
+      "description": "Understanding the Bus Envir - RMIT",
+      "room_description": "B.5.06 (188pax)"
     },
     {
       "start": "3:30 PM",
@@ -4356,9 +4668,9 @@
       "block": "B",
       "floor": 5,
       "room": "LT.B.5.06",
-      "event": "ACCT2347 - LF01 : Sust Rep,Acct &Social Resp Ent - RMIT",
+      "event": "BUSM2568 - LF01 : Business Decision Making - RMIT",
       "status": "PAST",
-      "description": "Sust Rep,Acct &Social Resp Ent - RMIT",
+      "description": "Business Decision Making - RMIT",
       "room_description": "B.5.06 (188pax)"
     },
     {
@@ -4368,24 +4680,11 @@
       "end_min": 900,
       "block": "B",
       "floor": 5,
-      "room": "LT.B.5.06",
-      "event": "BAFI3272 - LF02 : Money and Debt Markets - RMIT",
+      "room": "LT.B.5.16",
+      "event": "MKTG1427 - LF02 : Digital Marketing - RMIT",
       "status": "PAST",
-      "description": "Money and Debt Markets - RMIT",
-      "room_description": "B.5.06 (188pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "B",
-      "floor": 5,
-      "room": "LT.B.5.06",
-      "event": "BUSM4551 - LF01 : Innovation Management - RMIT",
-      "status": "PAST",
-      "description": "Innovation Management - RMIT",
-      "room_description": "B.5.06 (188pax)"
+      "description": "Digital Marketing - RMIT",
+      "room_description": "B.5.16 (134pax-CRS)"
     },
     {
       "start": "7:00 PM",
@@ -4395,20 +4694,33 @@
       "block": "B",
       "floor": 5,
       "room": "LT.B.5.16",
-      "event": "FMT317 - T01 : SMART and Emerging Technologies for Facilities Management",
+      "event": "ENG311 - L01 : Digital Signal Processing",
       "status": "CURRENT",
       "description": "",
       "room_description": "B.5.16 (134pax-CRS)"
     },
     {
-      "start": "6:00 PM",
+      "start": "10:00 PM",
+      "end": "10:30 PM",
+      "start_min": 1320,
+      "end_min": 1350,
+      "block": "B",
+      "floor": 5,
+      "room": "LT.B.5.16",
+      "event": "ENG311 L01 Class Test",
+      "status": "UPCOMING",
+      "description": "",
+      "room_description": "B.5.16 (134pax-CRS)"
+    },
+    {
+      "start": "6:30 PM",
       "end": "10:00 PM",
-      "start_min": 1080,
+      "start_min": 1110,
       "end_min": 1320,
       "block": "B",
       "floor": null,
       "room": "Foyer.C",
-      "event": "MCSIMTOWN 2026 - Band & Dance Performance Practices",
+      "event": "SIM Table Tennis Training - September",
       "status": "CURRENT",
       "description": "",
       "room_description": "MPH Foyer C"
@@ -4421,35 +4733,35 @@
       "block": "B",
       "floor": 4,
       "room": "SR.B.4.09",
-      "event": "PSY512 - T01 : Life Career Development, Leadership and Coaching",
+      "event": "FMT506 - T01 : Managing SMART and Autonomous Buildings",
       "status": "CURRENT",
       "description": "",
       "room_description": "B.4.09 (60pax-CRS)"
     },
     {
-      "start": "10:00 AM",
-      "end": "11:30 AM",
-      "start_min": 600,
-      "end_min": 690,
+      "start": "1:30 PM",
+      "end": "3:00 PM",
+      "start_min": 810,
+      "end_min": 900,
       "block": "B",
       "floor": 4,
       "room": "SR.B.4.09",
-      "event": "COM240 - C01 : Introd to Mass Communication - UB",
+      "event": "ECO380 - C01 : Econ Stats & Data Analysis - UB",
       "status": "PAST",
-      "description": "Introd to Mass Communication - UB",
+      "description": "Econ Stats & Data Analysis - UB",
       "room_description": "B.4.09 (60pax-CRS)"
     },
     {
-      "start": "3:30 PM",
-      "end": "5:00 PM",
-      "start_min": 930,
-      "end_min": 1020,
+      "start": "12:00 PM",
+      "end": "1:30 PM",
+      "start_min": 720,
+      "end_min": 810,
       "block": "B",
       "floor": 4,
       "room": "SR.B.4.09",
-      "event": "ECO434 - L01 : International Finance - UB",
+      "event": "ECO380 - L01 : Econ Stats & Data Analysis - UB",
       "status": "PAST",
-      "description": "International Finance - UB",
+      "description": "Econ Stats & Data Analysis - UB",
       "room_description": "B.4.09 (60pax-CRS)"
     },
     {
@@ -4460,35 +4772,22 @@
       "block": "B",
       "floor": 4,
       "room": "SR.B.4.09",
-      "event": "ECO434 - C01 : International Finance - UB",
+      "event": "FR111 - C01 : Elementary French I - UB",
       "status": "PAST",
-      "description": "International Finance - UB",
+      "description": "Elementary French I - UB",
       "room_description": "B.4.09 (60pax-CRS)"
     },
     {
-      "start": "8:30 AM",
-      "end": "10:00 AM",
-      "start_min": 510,
-      "end_min": 600,
+      "start": "3:30 PM",
+      "end": "5:00 PM",
+      "start_min": 930,
+      "end_min": 1020,
       "block": "B",
       "floor": 4,
       "room": "SR.B.4.09",
-      "event": "COM240 - L01 : Introd to Mass Communication - UB",
+      "event": "FR111 - L01 : Elementary French I - UB",
       "status": "PAST",
-      "description": "Introd to Mass Communication - UB",
-      "room_description": "B.4.09 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "1:30 PM",
-      "start_min": 720,
-      "end_min": 810,
-      "block": "B",
-      "floor": 4,
-      "room": "SR.B.4.09",
-      "event": "SOC349 - L01 : Classical Sociological Theory - UB",
-      "status": "PAST",
-      "description": "Classical Sociological Theory - UB",
+      "description": "Elementary French I - UB",
       "room_description": "B.4.09 (60pax-CRS)"
     },
     {
@@ -4498,102 +4797,11 @@
       "end_min": 900,
       "block": "B",
       "floor": 4,
-      "room": "SR.B.4.09",
-      "event": "SOC349 - C01 : Classical Sociological Theory - UB",
-      "status": "PAST",
-      "description": "Classical Sociological Theory - UB",
-      "room_description": "B.4.09 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "1:30 PM",
-      "start_min": 720,
-      "end_min": 810,
-      "block": "B",
-      "floor": 4,
       "room": "SR.B.4.07",
-      "event": "MGO403 - L02 : Fundm of Strategic Mgt - UB",
+      "event": "MGG303 - C03 : Comm Literacy for Business - UB",
       "status": "PAST",
-      "description": "Fundm of Strategic Mgt - UB",
+      "description": "Comm Literacy for Business - UB",
       "room_description": "B.4.07 (60pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "10:30 AM",
-      "start_min": 510,
-      "end_min": 630,
-      "block": "B",
-      "floor": 4,
-      "room": "SR.B.4.07",
-      "event": "ENG105 - L10 : Writing and Rhetoric - UB",
-      "status": "PAST",
-      "description": "Writing and Rhetoric - UB",
-      "room_description": "B.4.07 (60pax)"
-    },
-    {
-      "start": "10:30 AM",
-      "end": "11:30 AM",
-      "start_min": 630,
-      "end_min": 690,
-      "block": "B",
-      "floor": 4,
-      "room": "SR.B.4.07",
-      "event": "ENG105 - C10 : Writing and Rhetoric - UB",
-      "status": "PAST",
-      "description": "Writing and Rhetoric - UB",
-      "room_description": "B.4.07 (60pax)"
-    },
-    {
-      "start": "1:30 PM",
-      "end": "3:00 PM",
-      "start_min": 810,
-      "end_min": 900,
-      "block": "B",
-      "floor": 4,
-      "room": "SR.B.4.07",
-      "event": "MGO403 - C02 : Fundm of Strategic Mgt - UB",
-      "status": "PAST",
-      "description": "Fundm of Strategic Mgt - UB",
-      "room_description": "B.4.07 (60pax)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "1:30 PM",
-      "start_min": 720,
-      "end_min": 810,
-      "block": "B",
-      "floor": 4,
-      "room": "SR.B.4.08",
-      "event": "COM225 - L01 : Interpersonal Communication - UB",
-      "status": "PAST",
-      "description": "Interpersonal Communication - UB",
-      "room_description": "B.4.08 (60pax)"
-    },
-    {
-      "start": "1:30 PM",
-      "end": "3:00 PM",
-      "start_min": 810,
-      "end_min": 900,
-      "block": "B",
-      "floor": 4,
-      "room": "SR.B.4.08",
-      "event": "COM225 - C01 : Interpersonal Communication - UB",
-      "status": "PAST",
-      "description": "Interpersonal Communication - UB",
-      "room_description": "B.4.08 (60pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "10:00 AM",
-      "start_min": 510,
-      "end_min": 600,
-      "block": "B",
-      "floor": 4,
-      "room": "SR.B.4.08",
-      "event": "MGG199 - L02 : UB Seminar - UB",
-      "status": "PAST",
-      "description": "UB Seminar - UB",
-      "room_description": "B.4.08 (60pax)"
     },
     {
       "start": "10:00 AM",
@@ -4602,8 +4810,112 @@
       "end_min": 690,
       "block": "B",
       "floor": 4,
+      "room": "SR.B.4.07",
+      "event": "MGG303 - C01 : Comm Literacy for Business - UB",
+      "status": "PAST",
+      "description": "Comm Literacy for Business - UB",
+      "room_description": "B.4.07 (60pax)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 AM",
+      "start_min": 510,
+      "end_min": 600,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.07",
+      "event": "MGG303 - L01 : Comm Literacy for Business - UB",
+      "status": "PAST",
+      "description": "Comm Literacy for Business - UB",
+      "room_description": "B.4.07 (60pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "1:30 PM",
+      "start_min": 720,
+      "end_min": 810,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.07",
+      "event": "MGG303 - L03 : Comm Literacy for Business - UB",
+      "status": "PAST",
+      "description": "Comm Literacy for Business - UB",
+      "room_description": "B.4.07 (60pax)"
+    },
+    {
+      "start": "6:00 PM",
+      "end": "9:30 PM",
+      "start_min": 1080,
+      "end_min": 1290,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.07",
+      "event": "SIM RMIT IW Meeting - September",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "B.4.07 (60pax)"
+    },
+    {
+      "start": "1:30 PM",
+      "end": "3:00 PM",
+      "start_min": 810,
+      "end_min": 900,
+      "block": "B",
+      "floor": 4,
       "room": "SR.B.4.08",
-      "event": "MGG199 - C02 : UB Seminar - UB",
+      "event": "PSY199 - C02 : UB Seminar - UB",
+      "status": "PAST",
+      "description": "UB Seminar - UB",
+      "room_description": "B.4.08 (60pax)"
+    },
+    {
+      "start": "5:30 PM",
+      "end": "6:30 PM",
+      "start_min": 1050,
+      "end_min": 1110,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.08",
+      "event": "ENG105 - C03 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.4.08 (60pax)"
+    },
+    {
+      "start": "10:30 AM",
+      "end": "11:30 AM",
+      "start_min": 630,
+      "end_min": 690,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.08",
+      "event": "ENG105 - C06 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.4.08 (60pax)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:30 AM",
+      "start_min": 510,
+      "end_min": 630,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.08",
+      "event": "ENG105 - L06 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.4.08 (60pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "1:30 PM",
+      "start_min": 720,
+      "end_min": 810,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.08",
+      "event": "PSY199 - L02 : UB Seminar - UB",
       "status": "PAST",
       "description": "UB Seminar - UB",
       "room_description": "B.4.08 (60pax)"
@@ -4614,10 +4926,101 @@
       "start_min": 930,
       "end_min": 1050,
       "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.08",
+      "event": "ENG105 - L03 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.4.08 (60pax)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.10",
+      "event": "MKT368 - T01 : Digital Marketing",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "B.4.10 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 AM",
+      "start_min": 510,
+      "end_min": 600,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.10",
+      "event": "PSY199 - L03 : UB Seminar - UB",
+      "status": "PAST",
+      "description": "UB Seminar - UB",
+      "room_description": "B.4.10 (60pax-CRS)"
+    },
+    {
+      "start": "2:00 PM",
+      "end": "3:00 PM",
+      "start_min": 840,
+      "end_min": 900,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.10",
+      "event": "ENG105 - C08 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.4.10 (60pax-CRS)"
+    },
+    {
+      "start": "10:00 AM",
+      "end": "11:30 AM",
+      "start_min": 600,
+      "end_min": 690,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.10",
+      "event": "PSY199 - C03 : UB Seminar - UB",
+      "status": "PAST",
+      "description": "UB Seminar - UB",
+      "room_description": "B.4.10 (60pax-CRS)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "2:00 PM",
+      "start_min": 720,
+      "end_min": 840,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.10",
+      "event": "ENG105 - L08 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.4.10 (60pax-CRS)"
+    },
+    {
+      "start": "10:00 AM",
+      "end": "2:30 PM",
+      "start_min": 600,
+      "end_min": 870,
+      "block": "B",
       "floor": 5,
       "room": "SR.B.5.07",
-      "event": "AI trial for associates via Teams",
+      "event": "Advance Care Planning (ACP) Talk by Fei Yue",
       "status": "PAST",
+      "description": "",
+      "room_description": "B.5.07 (60pax)"
+    },
+    {
+      "start": "6:00 PM",
+      "end": "9:30 PM",
+      "start_min": 1080,
+      "end_min": 1290,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.07",
+      "event": "SIM RMIT IW Meeting - September",
+      "status": "CURRENT",
       "description": "",
       "room_description": "B.5.07 (60pax)"
     },
@@ -4629,9 +5032,22 @@
       "block": "B",
       "floor": 4,
       "room": "SR.B.4.13",
-      "event": "HIS141 - C02 : World History to 1500 - UB",
+      "event": "SSC198 - C06 : UB Seminar - UB",
       "status": "PAST",
-      "description": "World History to 1500 - UB",
+      "description": "UB Seminar - UB",
+      "room_description": "B.4.13 (60pax)"
+    },
+    {
+      "start": "10:00 AM",
+      "end": "11:30 AM",
+      "start_min": 600,
+      "end_min": 690,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.13",
+      "event": "MGA202 - C01 : Intro to Management Accounting - UB",
+      "status": "PAST",
+      "description": "Intro to Management Accounting - UB",
       "room_description": "B.4.13 (60pax)"
     },
     {
@@ -4642,74 +5058,191 @@
       "block": "B",
       "floor": 4,
       "room": "SR.B.4.13",
-      "event": "HIS141 - L02 : World History to 1500 - UB",
+      "event": "SSC198 - L06 : UB Seminar - UB",
       "status": "PAST",
-      "description": "World History to 1500 - UB",
+      "description": "UB Seminar - UB",
       "room_description": "B.4.13 (60pax)"
     },
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
+      "start": "8:30 AM",
+      "end": "10:00 AM",
+      "start_min": 510,
+      "end_min": 600,
       "block": "B",
       "floor": 4,
       "room": "SR.B.4.13",
-      "event": "DreamWerkz September (Tuesday Addon)",
+      "event": "MGA202 - L01 : Intro to Management Accounting - UB",
+      "status": "PAST",
+      "description": "Intro to Management Accounting - UB",
+      "room_description": "B.4.13 (60pax)"
+    },
+    {
+      "start": "6:00 PM",
+      "end": "9:30 PM",
+      "start_min": 1080,
+      "end_min": 1290,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.13",
+      "event": "SIM RMIT IW Meeting - September",
       "status": "CURRENT",
       "description": "",
       "room_description": "B.4.13 (60pax)"
     },
     {
-      "start": "10:30 AM",
+      "start": "12:00 PM",
+      "end": "2:00 PM",
+      "start_min": 720,
+      "end_min": 840,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.12",
+      "event": "ENG105 - L05 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.4.12 (60pax)"
+    },
+    {
+      "start": "2:00 PM",
+      "end": "3:00 PM",
+      "start_min": 840,
+      "end_min": 900,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.12",
+      "event": "ENG105 - C05 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.4.12 (60pax)"
+    },
+    {
+      "start": "5:00 PM",
+      "end": "6:30 PM",
+      "start_min": 1020,
+      "end_min": 1110,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.12",
+      "event": "GEO100 - C01 : World Regions and Issues - UB",
+      "status": "PAST",
+      "description": "World Regions and Issues - UB",
+      "room_description": "B.4.12 (60pax)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "5:00 PM",
+      "start_min": 930,
+      "end_min": 1020,
+      "block": "B",
+      "floor": 4,
+      "room": "SR.B.4.12",
+      "event": "GEO100 - L01 : World Regions and Issues - UB",
+      "status": "PAST",
+      "description": "World Regions and Issues - UB",
+      "room_description": "B.4.12 (60pax)"
+    },
+    {
+      "start": "1:30 PM",
+      "end": "3:00 PM",
+      "start_min": 810,
+      "end_min": 900,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.10",
+      "event": "COM447 - C01 : Communication Graphics - UB",
+      "status": "PAST",
+      "description": "Communication Graphics - UB",
+      "room_description": "B.5.10 (60pax)"
+    },
+    {
+      "start": "10:00 AM",
       "end": "11:30 AM",
-      "start_min": 630,
+      "start_min": 600,
       "end_min": 690,
       "block": "B",
       "floor": 5,
       "room": "SR.B.5.10",
-      "event": "GEO211 - C01 : Univariate Stats in Geography - UB",
+      "event": "COM441 - C01 : Public Relations - UB",
       "status": "PAST",
-      "description": "Univariate Stats in Geography - UB",
+      "description": "Public Relations - UB",
+      "room_description": "B.5.10 (60pax)"
+    },
+    {
+      "start": "5:00 PM",
+      "end": "6:30 PM",
+      "start_min": 1020,
+      "end_min": 1110,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.10",
+      "event": "AS347 - C01 : The Fantastic World Jap Anime - UB",
+      "status": "PAST",
+      "description": "The Fantastic World Jap Anime - UB",
+      "room_description": "B.5.10 (60pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "1:30 PM",
+      "start_min": 720,
+      "end_min": 810,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.10",
+      "event": "COM447 - L01 : Communication Graphics - UB",
+      "status": "PAST",
+      "description": "Communication Graphics - UB",
       "room_description": "B.5.10 (60pax)"
     },
     {
       "start": "8:30 AM",
-      "end": "10:30 AM",
+      "end": "10:00 AM",
       "start_min": 510,
-      "end_min": 630,
+      "end_min": 600,
       "block": "B",
       "floor": 5,
       "room": "SR.B.5.10",
-      "event": "GEO211 - L01 : Univariate Stats in Geography - UB",
+      "event": "COM441 - L01 : Public Relations - UB",
       "status": "PAST",
-      "description": "Univariate Stats in Geography - UB",
+      "description": "Public Relations - UB",
       "room_description": "B.5.10 (60pax)"
     },
     {
-      "start": "4:30 PM",
-      "end": "8:30 PM",
-      "start_min": 990,
-      "end_min": 1230,
+      "start": "3:30 PM",
+      "end": "5:00 PM",
+      "start_min": 930,
+      "end_min": 1020,
       "block": "B",
       "floor": 5,
       "room": "SR.B.5.10",
-      "event": "SIM Investment Club IR Department Meeting",
-      "status": "CURRENT",
-      "description": "",
+      "event": "AS347 - L01 : The Fantastic World Jap Anime - UB",
+      "status": "PAST",
+      "description": "The Fantastic World Jap Anime - UB",
       "room_description": "B.5.10 (60pax)"
     },
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
+      "start": "10:00 AM",
+      "end": "11:30 AM",
+      "start_min": 600,
+      "end_min": 690,
       "block": "B",
       "floor": 5,
       "room": "SR.B.5.13",
-      "event": "SIM Guitar and Strings Ensemble - (September)",
-      "status": "CURRENT",
-      "description": "",
+      "event": "AS345 - C01 : Cont Kor Pop Cultre & Kor wave - UB",
+      "status": "PAST",
+      "description": "Cont Kor Pop Cultre & Kor wave - UB",
+      "room_description": "B.5.13 (60pax)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 AM",
+      "start_min": 510,
+      "end_min": 600,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.13",
+      "event": "AS345 - L01 : Cont Kor Pop Cultre & Kor wave - UB",
+      "status": "PAST",
+      "description": "Cont Kor Pop Cultre & Kor wave - UB",
       "room_description": "B.5.13 (60pax)"
     },
     {
@@ -4719,11 +5252,11 @@
       "end_min": 1020,
       "block": "B",
       "floor": 5,
-      "room": "SR.B.5.09",
-      "event": "SOC334 - L02 : Sociology of Popular Culture - UB",
+      "room": "SR.B.5.13",
+      "event": "MGG303 - L02 : Comm Literacy for Business - UB",
       "status": "PAST",
-      "description": "Sociology of Popular Culture - UB",
-      "room_description": "B.5.09 (60pax)"
+      "description": "Comm Literacy for Business - UB",
+      "room_description": "B.5.13 (60pax)"
     },
     {
       "start": "5:00 PM",
@@ -4732,8 +5265,60 @@
       "end_min": 1110,
       "block": "B",
       "floor": 5,
+      "room": "SR.B.5.13",
+      "event": "MGG303 - C02 : Comm Literacy for Business - UB",
+      "status": "PAST",
+      "description": "Comm Literacy for Business - UB",
+      "room_description": "B.5.13 (60pax)"
+    },
+    {
+      "start": "2:00 PM",
+      "end": "3:00 PM",
+      "start_min": 840,
+      "end_min": 900,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.13",
+      "event": "ENG105 - C11 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.5.13 (60pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "2:00 PM",
+      "start_min": 720,
+      "end_min": 840,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.13",
+      "event": "ENG105 - L11 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.5.13 (60pax)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
+      "block": "B",
+      "floor": 5,
       "room": "SR.B.5.09",
-      "event": "SOC334 - C02 : Sociology of Popular Culture - UB",
+      "event": "ACCT1085 - LF01 : Prof Values,Ethics & Attitudes - RMIT",
+      "status": "PAST",
+      "description": "Prof Values,Ethics & Attitudes - RMIT",
+      "room_description": "B.5.09 (60pax)"
+    },
+    {
+      "start": "10:00 AM",
+      "end": "11:30 AM",
+      "start_min": 600,
+      "end_min": 690,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.09",
+      "event": "SOC334 - C01 : Sociology of Popular Culture - UB",
       "status": "PAST",
       "description": "Sociology of Popular Culture - UB",
       "room_description": "B.5.09 (60pax)"
@@ -4745,11 +5330,11 @@
       "end_min": 900,
       "block": "B",
       "floor": 5,
-      "room": "SR.B.5.12",
-      "event": "GEO333 - C01 : International Trade - UB",
+      "room": "SR.B.5.09",
+      "event": "GEO106 - C01 : Global Climate Change - UB",
       "status": "PAST",
-      "description": "International Trade - UB",
-      "room_description": "B.5.12 (60pax)"
+      "description": "Global Climate Change - UB",
+      "room_description": "B.5.09 (60pax)"
     },
     {
       "start": "12:00 PM",
@@ -4758,23 +5343,114 @@
       "end_min": 810,
       "block": "B",
       "floor": 5,
-      "room": "SR.B.5.12",
-      "event": "GEO333 - L01 : International Trade - UB",
+      "room": "SR.B.5.09",
+      "event": "GEO106 - L01 : Global Climate Change - UB",
       "status": "PAST",
-      "description": "International Trade - UB",
-      "room_description": "B.5.12 (60pax)"
+      "description": "Global Climate Change - UB",
+      "room_description": "B.5.09 (60pax)"
     },
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
+      "start": "8:30 AM",
+      "end": "10:00 AM",
+      "start_min": 510,
+      "end_min": 600,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.09",
+      "event": "SOC334 - L01 : Sociology of Popular Culture - UB",
+      "status": "PAST",
+      "description": "Sociology of Popular Culture - UB",
+      "room_description": "B.5.09 (60pax)"
+    },
+    {
+      "start": "1:30 PM",
+      "end": "3:00 PM",
+      "start_min": 810,
+      "end_min": 900,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.08",
+      "event": "COM217 - C01 : Communication in Orgns - UB",
+      "status": "PAST",
+      "description": "Communication in Orgns - UB",
+      "room_description": "B.5.08 (60pax)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "1:30 PM",
+      "start_min": 720,
+      "end_min": 810,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.08",
+      "event": "COM217 - L01 : Communication in Orgns - UB",
+      "status": "PAST",
+      "description": "Communication in Orgns - UB",
+      "room_description": "B.5.08 (60pax)"
+    },
+    {
+      "start": "6:00 PM",
+      "end": "9:00 PM",
+      "start_min": 1080,
+      "end_min": 1260,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.08",
+      "event": "UOWSC Meeting Events September 2026",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "B.5.08 (60pax)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:30 AM",
+      "start_min": 510,
+      "end_min": 630,
       "block": "B",
       "floor": 5,
       "room": "SR.B.5.12",
-      "event": "SIM Guitar and Strings Ensemble - (September)",
-      "status": "CURRENT",
-      "description": "",
+      "event": "ENG105 - L04 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.5.12 (60pax)"
+    },
+    {
+      "start": "10:30 AM",
+      "end": "11:30 AM",
+      "start_min": 630,
+      "end_min": 690,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.12",
+      "event": "ENG105 - C04 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.5.12 (60pax)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "5:30 PM",
+      "start_min": 930,
+      "end_min": 1050,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.12",
+      "event": "ENG105 - L07 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
+      "room_description": "B.5.12 (60pax)"
+    },
+    {
+      "start": "5:30 PM",
+      "end": "6:30 PM",
+      "start_min": 1050,
+      "end_min": 1110,
+      "block": "B",
+      "floor": 5,
+      "room": "SR.B.5.12",
+      "event": "ENG105 - C07 : Writing and Rhetoric - UB",
+      "status": "PAST",
+      "description": "Writing and Rhetoric - UB",
       "room_description": "B.5.12 (60pax)"
     },
     {
@@ -4785,60 +5461,21 @@
       "block": "B",
       "floor": 3,
       "room": "LT.B.3.06",
-      "event": "SIM Esprimere Karaoke 8th September",
+      "event": "Frequency 808 Band Rehearsals",
       "status": "CURRENT",
       "description": "",
       "room_description": "B.3.06 (188pax)"
     },
     {
-      "start": "11:30 AM",
-      "end": "1:30 PM",
-      "start_min": 690,
-      "end_min": 810,
-      "block": "B",
-      "floor": null,
-      "room": "B.Others.1",
-      "event": "IT-Onsite Student Clinic",
-      "status": "PAST",
-      "description": "",
-      "room_description": "Blk B Other Venues 1"
-    },
-    {
-      "start": "11:00 AM",
-      "end": "5:00 PM",
-      "start_min": 660,
-      "end_min": 1020,
-      "block": "B",
-      "floor": null,
-      "room": "SHub.A",
-      "event": "Windsurfing Recruitment",
-      "status": "PAST",
-      "description": "",
-      "room_description": "Student Hub Area A"
-    },
-    {
-      "start": "8:00 AM",
-      "end": "6:00 PM",
-      "start_min": 480,
-      "end_min": 1080,
-      "block": "B",
-      "floor": null,
-      "room": "SHub.S",
-      "event": "SIMDB Recruitment",
-      "status": "PAST",
-      "description": "",
-      "room_description": "Student Hub Stage Area"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.08",
-      "event": "SWK100 - TG02 : Development of Social Work and Social Services in Singapore",
-      "status": "PAST",
+      "event": "BAE103 - T01 : Creative Drawing",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.08 (60pax-CRS)"
     },
@@ -4849,21 +5486,47 @@
       "end_min": 690,
       "block": "C",
       "floor": 3,
-      "room": "SR.C.3.09",
-      "event": "HRM333 - TG02 : Performance Management",
+      "room": "SR.C.3.08",
+      "event": "SWK102 - TG03 : Human Growth and Lifespan Development",
       "status": "PAST",
+      "description": "",
+      "room_description": "C.3.08 (60pax-CRS)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "5:00 PM",
+      "start_min": 930,
+      "end_min": 1020,
+      "block": "C",
+      "floor": 3,
+      "room": "SR.C.3.08",
+      "event": "BAE103 T01 set up",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.3.08 (60pax-CRS)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 3,
+      "room": "SR.C.3.09",
+      "event": "BSE219 - T01 : Introduction to Human Movement",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.09 (60pax-CRS)"
     },
     {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.09",
-      "event": "HRM203 - TG02 : Human Behaviour in Organisations",
+      "event": "PSY391 - T02 : Applied Research Methods and Statistics",
       "status": "PAST",
       "description": "",
       "room_description": "C.3.09 (60pax-CRS)"
@@ -4876,20 +5539,7 @@
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.10",
-      "event": "CHS201 - TG01 : 20th Century Chinese Literature (1) (20?????? (1))",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.3.10 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.10",
-      "event": "HRM331 - TG02 : Talent Management",
+      "event": "PSY391 - T01 : Applied Research Methods and Statistics",
       "status": "PAST",
       "description": "",
       "room_description": "C.3.10 (60pax-CRS)"
@@ -4902,7 +5552,7 @@
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.10",
-      "event": "ECC209 - T01 : Aesthetics and the Arts for Children (?????????)",
+      "event": "SWK391 - T01 : Social Work Practice and Skills Lab III: Community Engagement and Development",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.3.10 (60pax-CRS)"
@@ -4915,25 +5565,12 @@
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.11",
-      "event": "HRM233 - T01 : Training and Development",
+      "event": "SWK391 - T02 : Social Work Practice and Skills Lab III: Community Engagement and Development",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.3.11 (60pax-CRS)"
     },
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.12",
-      "event": "HRM233 - T02 : Training and Development",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "C.3.12 (60pax-CRS)"
-    },
-    {
       "start": "3:30 PM",
       "end": "6:30 PM",
       "start_min": 930,
@@ -4941,7 +5578,20 @@
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.12",
-      "event": "PSY107 - T03 : Introduction to Psychology 1",
+      "event": "CHS203 - TG01 : Classical Chinese Literature (1) (?????? (1))",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.3.12 (60pax-CRS)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
+      "block": "C",
+      "floor": 3,
+      "room": "SR.C.3.12",
+      "event": "SST101 - TG02 : Principles of Project Management",
       "status": "PAST",
       "description": "",
       "room_description": "C.3.12 (60pax-CRS)"
@@ -4953,24 +5603,37 @@
       "end_min": 1320,
       "block": "C",
       "floor": 3,
+      "room": "SR.C.3.12",
+      "event": "HRM203 - T01 : Human Behaviour in Organisations",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.3.12 (60pax-CRS)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 3,
       "room": "SR.C.3.13",
-      "event": "HRM318 - T01 : Human Capital Measurement",
+      "event": "HRM203 - T02 : Human Behaviour in Organisations",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.3.13 (60pax-CRS)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
       "block": "C",
       "floor": 3,
-      "room": "SR.C.3.13",
-      "event": "MIP511 - T01 : IP Intelligence and Analysis 知识产权情报分析",
+      "room": "SR.C.3.14",
+      "event": "NCO112 - TG02 : Peak Performance",
       "status": "PAST",
       "description": "",
-      "room_description": "C.3.13 (60pax-CRS)"
+      "room_description": "C.3.14 (60pax-CRS)"
     },
     {
       "start": "7:00 PM",
@@ -4980,7 +5643,7 @@
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.14",
-      "event": "HRM331 - T02 : Talent Management",
+      "event": "SPE101 - T01 : Introduction to Special Educational Needs",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.3.14 (60pax-CRS)"
@@ -5000,14 +5663,14 @@
     },
     {
       "start": "3:30 PM",
-      "end": "7:00 PM",
+      "end": "10:00 PM",
       "start_min": 930,
-      "end_min": 1140,
+      "end_min": 1320,
       "block": "C",
       "floor": 3,
       "room": "LAB.C.3.04",
       "event": "SST Free Access",
-      "status": "PAST",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.3.04 (60pax) Multimedia Lab 2"
     },
@@ -5018,11 +5681,11 @@
       "end_min": 1320,
       "block": "C",
       "floor": 3,
-      "room": "LAB.C.3.04",
-      "event": "MTH109 T04 Virtual Class",
+      "room": "LAB.C.3.05",
+      "event": "MTD307 - T01 : Computer Music Composition Techniques",
       "status": "CURRENT",
       "description": "",
-      "room_description": "C.3.04 (60pax) Multimedia Lab 2"
+      "room_description": "C.3.05 (60pax) Multimedia Lab 1"
     },
     {
       "start": "3:30 PM",
@@ -5038,84 +5701,6 @@
       "room_description": "C.3.07 (SAP Lab-30pax)"
     },
     {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.08/C.4.09",
-      "event": "ICT133 - TG01 : Structured Programming",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.4.08/C.4.09 (Combined-116pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.08/C.4.09",
-      "event": "ICT133 - TG02 : Structured Programming",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.4.08/C.4.09 (Combined-116pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.10/C.4.11",
-      "event": "ICT318 - TG01 : Network Security",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.4.10/C.4.11 (Combined-116pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.10/C.4.11",
-      "event": "ICT318 - TG02 : Network Security",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.4.10/C.4.11 (Combined-116pax-CRS)"
-    },
-    {
-      "start": "2:00 PM",
-      "end": "5:00 PM",
-      "start_min": 840,
-      "end_min": 1020,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.14/C.5.15",
-      "event": "Korea University Information Session",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.5.14/C.5.15 (Combined-116pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "C",
-      "floor": 3,
-      "room": "SR.C.3.15",
-      "event": "NCO112 - TG01 : Peak Performance",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.3.15 (60pax-CRS)"
-    },
-    {
       "start": "7:00 PM",
       "end": "10:00 PM",
       "start_min": 1140,
@@ -5123,7 +5708,7 @@
       "block": "C",
       "floor": 3,
       "room": "SR.C.3.15",
-      "event": "HRM335 - T01 : Leadership Development",
+      "event": "HRM331 - T01 : Talent Management",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.3.15 (60pax-CRS)"
@@ -5133,11 +5718,37 @@
       "end": "10:00 PM",
       "start_min": 1140,
       "end_min": 1320,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.02",
+      "event": "COU299 - T01 : Laboratory on Basic Skills in Counselling",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.4.02 (32pax) HDSS Training Lab"
+    },
+    {
+      "start": "8:00 AM",
+      "end": "5:00 PM",
+      "start_min": 480,
+      "end_min": 1020,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.02",
+      "event": "COU Test Run of Lab",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.4.02 (32pax) HDSS Training Lab"
+    },
+    {
+      "start": "9:30 AM",
+      "end": "12:30 PM",
+      "start_min": 570,
+      "end_min": 750,
       "block": "C",
       "floor": 4,
       "room": "SR.C.4.08",
-      "event": "HRM318 - 02 : Human Capital Measurement",
-      "status": "CURRENT",
+      "event": "PSY535 - T01 : Clinical Neuropsychology",
+      "status": "PAST",
       "description": "",
       "room_description": "C.4.08 (60pax-CRS)"
     },
@@ -5148,8 +5759,60 @@
       "end_min": 1320,
       "block": "C",
       "floor": 4,
+      "room": "SR.C.4.08",
+      "event": "PSY265 - T02 : Health Psychology",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.4.08 (60pax-CRS)"
+    },
+    {
+      "start": "12:30 PM",
+      "end": "7:00 PM",
+      "start_min": 750,
+      "end_min": 1140,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.08",
+      "event": "Free Access",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.4.08 (60pax-CRS)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.09",
+      "event": "FMT321 - T01 : Fire Safety and Engineering",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.4.09 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "7:00 PM",
+      "start_min": 510,
+      "end_min": 1140,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.09",
+      "event": "Free Access",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.4.09 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "10:00 PM",
+      "start_min": 510,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 4,
       "room": "SR.C.4.10",
-      "event": "MTH109 - T01 : Calculus",
+      "event": "Free Access",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.4.10 (60pax-CRS)"
@@ -5162,8 +5825,21 @@
       "block": "C",
       "floor": 4,
       "room": "SR.C.4.11",
-      "event": "MTH109 - T02 : Calculus",
+      "event": "ICT114 - T02 : Computer Architecture",
       "status": "CURRENT",
+      "description": "",
+      "room_description": "C.4.11 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "7:00 PM",
+      "start_min": 510,
+      "end_min": 1140,
+      "block": "C",
+      "floor": 4,
+      "room": "SR.C.4.11",
+      "event": "Free Access",
+      "status": "PAST",
       "description": "",
       "room_description": "C.4.11 (60pax-CRS)"
     },
@@ -5175,7 +5851,7 @@
       "block": "C",
       "floor": 4,
       "room": "SR.C.4.12",
-      "event": "ICT233 - T01 : Data Programming",
+      "event": "SWK292 - T01 : Social Work Practice and Skills Lab II: Working with Small Groups",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.4.12 (60pax-CRS)"
@@ -5194,28 +5870,15 @@
       "room_description": "C.4.12 (60pax-CRS)"
     },
     {
-      "start": "7:00 PM",
+      "start": "8:30 AM",
       "end": "10:00 PM",
-      "start_min": 1140,
+      "start_min": 510,
       "end_min": 1320,
       "block": "C",
       "floor": 4,
       "room": "SR.C.4.13",
-      "event": "BME109 - T01 : Introduction to Chemistry and Biochemistry",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "C.4.13 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "7:00 PM",
-      "start_min": 510,
-      "end_min": 1140,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.13",
       "event": "Free Access",
-      "status": "PAST",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.4.13 (60pax-CRS)"
     },
@@ -5227,7 +5890,7 @@
       "block": "C",
       "floor": 4,
       "room": "SR.C.4.15",
-      "event": "ANL303 - T03 : Fundamentals of Data Mining",
+      "event": "MTH207 - T01 : Linear Algebra",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.4.15 (60pax-CRS)"
@@ -5253,7 +5916,7 @@
       "block": "C",
       "floor": 4,
       "room": "SR.C.4.16",
-      "event": "FMT504 - T01 : Asset Management for FM",
+      "event": "BUS105 - T11 : Statistics",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.4.16 (60pax-CRS)"
@@ -5270,6 +5933,32 @@
       "status": "PAST",
       "description": "",
       "room_description": "C.4.16 (60pax-CRS)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 5,
+      "room": "SR.C.5.07",
+      "event": "PSY391 - T03 : Applied Research Methods and Statistics",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.5.07 (60pax-CRS)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
+      "block": "C",
+      "floor": 5,
+      "room": "SR.C.5.07",
+      "event": "PSY391 - TG03 : Applied Research Methods and Statistics",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.5.07 (60pax-CRS)"
     },
     {
       "start": "12:00 PM",
@@ -5278,73 +5967,8 @@
       "end_min": 900,
       "block": "C",
       "floor": 5,
-      "room": "SR.C.5.07",
-      "event": "CHS103 - TG01 : Modern Chinese (????)",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.5.07 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.07",
-      "event": "BUS105 - TG03 : Statistics",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.5.07 (60pax-CRS)"
-    },
-    {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.07",
-      "event": "IPM501 - T01 : Foundation IP Law",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "C.5.07 (60pax-CRS)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.07",
-      "event": "PSY107 - T01 : Introduction to Psychology 1",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.5.07 (60pax-CRS)"
-    },
-    {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 5,
       "room": "SR.C.5.08",
-      "event": "PSS103 - T01 : Crime, Justice and Punishment",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "C.5.08 (60pax-CRS)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.08",
-      "event": "PSY107 - T02 : Introduction to Psychology 1",
+      "event": "PSS304 - TG01 : Psychological Perspective to Public Safety",
       "status": "PAST",
       "description": "",
       "room_description": "C.5.08 (60pax-CRS)"
@@ -5356,35 +5980,9 @@
       "end_min": 690,
       "block": "C",
       "floor": 5,
-      "room": "SR.C.5.08",
-      "event": "ANL312 - 01 : Text Mining and Applied Project Formulation",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.5.08 (60pax-CRS)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 5,
       "room": "SR.C.5.09",
-      "event": "PSY107 - TG03 : Introduction to Psychology 1",
+      "event": "MSM511 - T01 : Financial Analysis and Management ???????",
       "status": "PAST",
-      "description": "",
-      "room_description": "C.5.09 (60pax-CRS)"
-    },
-    {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.09",
-      "event": "PSY107 - T06 : Introduction to Psychology 1",
-      "status": "CURRENT",
       "description": "",
       "room_description": "C.5.09 (60pax-CRS)"
     },
@@ -5396,7 +5994,7 @@
       "block": "C",
       "floor": 5,
       "room": "SR.C.5.10",
-      "event": "PSY107 - T05 : Introduction to Psychology 1",
+      "event": "PSY391 - T04 : Applied Research Methods and Statistics",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.5.10 (60pax-CRS)"
@@ -5415,19 +6013,6 @@
       "room_description": "C.5.10 (60pax-CRS)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 5,
-      "room": "SR.C.5.11",
-      "event": "FIN322 - TG02 : Financial Data Science",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.5.11 (60pax-CRS)"
-    },
-    {
       "start": "7:00 PM",
       "end": "10:00 PM",
       "start_min": 1140,
@@ -5435,7 +6020,7 @@
       "block": "C",
       "floor": 5,
       "room": "SR.C.5.11",
-      "event": "PSS304 - 01 : Psychological Perspective to Public Safety",
+      "event": "ANL201 - T02 : Data Visualisation for Business",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.5.11 (60pax-CRS)"
@@ -5448,20 +6033,20 @@
       "block": "C",
       "floor": 5,
       "room": "SR.C.5.12",
-      "event": "PSY107 - T04 : Introduction to Psychology 1",
+      "event": "PSY391 - T05 : Applied Research Methods and Statistics",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.5.12 (60pax-CRS)"
     },
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
+      "start": "6:30 PM",
+      "end": "9:30 PM",
+      "start_min": 1110,
+      "end_min": 1290,
       "block": "C",
       "floor": 5,
       "room": "SR.C.5.14",
-      "event": "CRM317 - T01 : Policing, Crime and Society",
+      "event": "PSY536 - T01 : Health Psychology in Singapore",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.5.14 (60pax-CRS)"
@@ -5474,25 +6059,12 @@
       "block": "C",
       "floor": 5,
       "room": "SR.C.5.15",
-      "event": "OST165 - T01 : Introduction to Sustainability Leadership",
+      "event": "PSY391 - T06 : Applied Research Methods and Statistics",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.5.15 (60pax-CRS)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.05",
-      "event": "NCO201 - TG02 : Learn to Learn, Learn for Life",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.6.05 (60pax-CRS)"
-    },
-    {
       "start": "7:00 PM",
       "end": "9:30 PM",
       "start_min": 1140,
@@ -5500,36 +6072,10 @@
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.05",
-      "event": "LAW309 - T02 : Criminal Law, Procedure and Evidence - 1",
+      "event": "LAW317 - T01 : Law of Property",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.6.05 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.05",
-      "event": "SST101 - TG01 : Principles of Project Management",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.6.05 (60pax-CRS)"
-    },
-    {
-      "start": "7:00 PM",
-      "end": "9:30 PM",
-      "start_min": 1140,
-      "end_min": 1290,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.06",
-      "event": "LAW309 - T03 : Criminal Law, Procedure and Evidence - 1",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "C.6.06 (60pax-CRS)"
     },
     {
       "start": "3:30 PM",
@@ -5539,34 +6085,34 @@
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.06",
-      "event": "PSY107 - TG01 : Introduction to Psychology 1",
+      "event": "PSY391 - TG01 : Applied Research Methods and Statistics",
       "status": "PAST",
       "description": "",
       "room_description": "C.6.06 (60pax-CRS)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
       "block": "C",
       "floor": 6,
-      "room": "SR.C.6.07",
-      "event": "SCM201 - TG02 : Demand Planning and Inventory Management",
-      "status": "PAST",
+      "room": "SR.C.6.06",
+      "event": "LAW301 - T02 : Legal Methods and the Singapore Legal System (Copy)",
+      "status": "CURRENT",
       "description": "",
-      "room_description": "C.6.07 (60pax-CRS)"
+      "room_description": "C.6.06 (60pax-CRS)"
     },
     {
-      "start": "7:00 PM",
-      "end": "9:30 PM",
-      "start_min": 1140,
-      "end_min": 1290,
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.07",
-      "event": "LAW327 - T02 : Family Law and the Family Justice Courts - 2",
-      "status": "CURRENT",
+      "event": "ACC214 - TG02 : Introduction to Taxation",
+      "status": "PAST",
       "description": "",
       "room_description": "C.6.07 (60pax-CRS)"
     },
@@ -5578,33 +6124,59 @@
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.07",
-      "event": "NCO205 - TG03 : User-Centred Design: Human Factors and Design Thinking",
+      "event": "ACC214 - TG01 : Introduction to Taxation",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.6.07 (60pax-CRS)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
+      "block": "C",
+      "floor": 6,
+      "room": "SR.C.6.07",
+      "event": "PSY391 - TG02 : Applied Research Methods and Statistics",
       "status": "PAST",
       "description": "",
       "room_description": "C.6.07 (60pax-CRS)"
     },
     {
       "start": "7:00 PM",
-      "end": "9:30 PM",
+      "end": "10:00 PM",
       "start_min": 1140,
-      "end_min": 1290,
+      "end_min": 1320,
+      "block": "C",
+      "floor": 6,
+      "room": "SR.C.6.07",
+      "event": "LAW301 - T03 : Legal Methods and the Singapore Legal System (Copy)",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "C.6.07 (60pax-CRS)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.08",
-      "event": "LAW327 - T03 : Family Law and the Family Justice Courts - 2",
+      "event": "NIE201 - T03 : Interdisciplinary Processes for a Better World",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.6.08 (60pax-CRS)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.08",
-      "event": "PSY107 - TG02 : Introduction to Psychology 1",
+      "event": "NCO205 - TG07 : User-Centred Design: Human Factors and Design Thinking",
       "status": "PAST",
       "description": "",
       "room_description": "C.6.08 (60pax-CRS)"
@@ -5617,7 +6189,7 @@
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.08",
-      "event": "NCO205 - TG04 : User-Centred Design: Human Factors and Design Thinking",
+      "event": "NCO205 - TG05 : User-Centred Design: Human Factors and Design Thinking",
       "status": "PAST",
       "description": "",
       "room_description": "C.6.08 (60pax-CRS)"
@@ -5630,7 +6202,20 @@
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.09",
-      "event": "NCO201 - TG01 : Learn to Learn, Learn for Life",
+      "event": "NCO205 - TG06 : User-Centred Design: Human Factors and Design Thinking",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.6.09 (60pax-CRS)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
+      "block": "C",
+      "floor": 6,
+      "room": "SR.C.6.09",
+      "event": "NCO205 - TG08 : User-Centred Design: Human Factors and Design Thinking",
       "status": "PAST",
       "description": "",
       "room_description": "C.6.09 (60pax-CRS)"
@@ -5643,20 +6228,20 @@
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.09",
-      "event": "GSP215 - T01 : Applied Interpersonal Communication and Conflict Management",
+      "event": "LAW329 - T01 : Principles of Chinese Civil Law",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.6.09 (60pax-CRS)"
     },
     {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.10",
-      "event": "FIN322 - TG01 : Financial Data Science",
+      "event": "PSS103 - TG03 : Crime, Justice and Punishment",
       "status": "PAST",
       "description": "",
       "room_description": "C.6.10 (60pax-CRS)"
@@ -5669,47 +6254,21 @@
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.10",
-      "event": "LAW301 - T01 : Legal Methods and the Singapore Legal System",
+      "event": "BUS105 - T10 : Statistics",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.6.10 (60pax-CRS)"
     },
     {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.10",
-      "event": "BUS104 - TG01 : Organisational Behaviour in the Technology Era",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.6.10 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
+      "start": "7:00 PM",
+      "end": "9:30 PM",
+      "start_min": 1140,
+      "end_min": 1290,
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.11",
-      "event": "MKT202 - TG02 : Marketing Management",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.6.11 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.11",
-      "event": "NCO103 - TG10 : Listen and Be Heard: Effective Communication through Storytelling",
-      "status": "PAST",
+      "event": "LAW311 - T01 : Criminal Law, Procedure and Evidence - 2",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.6.11 (60pax-CRS)"
     },
@@ -5721,46 +6280,20 @@
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.11",
-      "event": "PSS103 - TG01 : Crime, Justice and Punishment",
+      "event": "PSS103 - TG02 : Crime, Justice and Punishment",
       "status": "PAST",
       "description": "",
       "room_description": "C.6.11 (60pax-CRS)"
     },
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.11",
-      "event": "PSS304 - T02 : Psychological Perspective to Public Safety",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "C.6.11 (60pax-CRS)"
-    },
-    {
-      "start": "10:00 AM",
-      "end": "12:00 PM",
-      "start_min": 600,
-      "end_min": 720,
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.12",
-      "event": "PSY599 MPSY ORG",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.6.12 (60pax-CRS)"
-    },
-    {
-      "start": "3:00 PM",
-      "end": "5:00 PM",
-      "start_min": 900,
-      "end_min": 1020,
-      "block": "C",
-      "floor": 6,
-      "room": "SR.C.6.12",
-      "event": "PSY599 MPSY FOR",
+      "event": "HBC201 Online Session",
       "status": "PAST",
       "description": "",
       "room_description": "C.6.12 (60pax-CRS)"
@@ -5773,7 +6306,7 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.07",
-      "event": "ANL501 - T01 : Data Visualisation and Storytelling",
+      "event": "PSS103 - T02 : Crime, Justice and Punishment",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.7.07 (60pax-CRS)"
@@ -5786,21 +6319,21 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.08",
-      "event": "NIE201 - TG02 : Interdisciplinary Processes for a Better World",
+      "event": "ANL303 - TG01 : Fundamentals of Data Mining",
       "status": "PAST",
       "description": "",
       "room_description": "C.7.08 (60pax-CRS)"
     },
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.08",
-      "event": "OST362 - T01 : Influential and Facilitative Leadership for Advocacy",
-      "status": "CURRENT",
+      "event": "NCO201 - TG04 : Learn to Learn, Learn for Life",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.08 (60pax-CRS)"
     },
@@ -5811,11 +6344,11 @@
       "end_min": 900,
       "block": "C",
       "floor": 7,
-      "room": "SR.C.7.09",
-      "event": "BUS105 - TG04 : Statistics",
+      "room": "SR.C.7.08",
+      "event": "NCO201 - TG03 : Learn to Learn, Learn for Life",
       "status": "PAST",
       "description": "",
-      "room_description": "C.7.09 (60pax-CRS)"
+      "room_description": "C.7.08 (60pax-CRS)"
     },
     {
       "start": "3:30 PM",
@@ -5825,7 +6358,20 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.09",
-      "event": "NIE201 - TG03 : Interdisciplinary Processes for a Better World",
+      "event": "ANL252 - TG02 : Python for Data Analytics",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.7.09 (60pax-CRS)"
+    },
+    {
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
+      "block": "C",
+      "floor": 7,
+      "room": "SR.C.7.09",
+      "event": "MKT351 - TG03 : Consumer Behaviour",
       "status": "PAST",
       "description": "",
       "room_description": "C.7.09 (60pax-CRS)"
@@ -5838,8 +6384,21 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.09",
-      "event": "FTH511 - T01 : Ethics, Governance, and Compliance in the Digital Age ???????????????",
+      "event": "BUS105 - T09 : Statistics",
       "status": "CURRENT",
+      "description": "",
+      "room_description": "C.7.09 (60pax-CRS)"
+    },
+    {
+      "start": "8:30 AM",
+      "end": "11:30 AM",
+      "start_min": 510,
+      "end_min": 690,
+      "block": "C",
+      "floor": 7,
+      "room": "SR.C.7.09",
+      "event": "MKT351 - TG02 : Consumer Behaviour",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.09 (60pax-CRS)"
     },
@@ -5850,22 +6409,22 @@
       "end_min": 1320,
       "block": "C",
       "floor": 7,
-      "room": "SR.C.7.14",
-      "event": "BUS104 - T02 : Organisational Behaviour in the Technology Era",
+      "room": "SR.C.7.10",
+      "event": "PSS103 - T03 : Crime, Justice and Punishment",
       "status": "CURRENT",
       "description": "",
-      "room_description": "C.7.14 (60pax-CRS)"
+      "room_description": "C.7.10 (60pax-CRS)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
+      "end_min": 1320,
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.14",
-      "event": "BUS105 - TG06 : Statistics",
-      "status": "PAST",
+      "event": "MKT202 - T02 : Marketing Management",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.7.14 (60pax-CRS)"
     },
@@ -5877,7 +6436,7 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.14",
-      "event": "BUS105 - TG05 : Statistics",
+      "event": "NCO101 - TG03 : Living with Community",
       "status": "PAST",
       "description": "",
       "room_description": "C.7.14 (60pax-CRS)"
@@ -5890,7 +6449,20 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.14",
-      "event": "BUS105 - T99 : Statistics (Copy)",
+      "event": "NCO101 - TG01 : Living with Community",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.7.14 (60pax-CRS)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
+      "block": "C",
+      "floor": 7,
+      "room": "SR.C.7.14",
+      "event": "BUS100 - TG04 : Business Skills and Management",
       "status": "PAST",
       "description": "",
       "room_description": "C.7.14 (60pax-CRS)"
@@ -5903,7 +6475,7 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.15",
-      "event": "BUS308 - TG01 : Sustainability, Ethics and Law",
+      "event": "BUS100 - TG03 : Business Skills and Management",
       "status": "PAST",
       "description": "",
       "room_description": "C.7.15 (60pax-CRS)"
@@ -5916,7 +6488,7 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.15",
-      "event": "BUS205 - TG01 : Company and Tort Law",
+      "event": "NCO101 - TG04 : Living with Community",
       "status": "PAST",
       "description": "",
       "room_description": "C.7.15 (60pax-CRS)"
@@ -5929,7 +6501,7 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.15",
-      "event": "BUS105 - TG02 : Statistics",
+      "event": "NCO101 - TG02 : Living with Community",
       "status": "PAST",
       "description": "",
       "room_description": "C.7.15 (60pax-CRS)"
@@ -5940,23 +6512,10 @@
       "start_min": 1140,
       "end_min": 1320,
       "block": "C",
-      "floor": 7,
-      "room": "SR.C.7.15",
-      "event": "PSI202 - T01 : Correctional Counselling and Guidance",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "C.7.15 (60pax-CRS)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "C",
       "floor": 8,
       "room": "SR.C.8.10",
-      "event": "MKT202 - TG04 : Marketing Management",
-      "status": "PAST",
+      "event": "NCO201 - T10 : Learn to Learn, Learn for Life",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.8.10 (60pax-CRS)"
     },
@@ -5968,7 +6527,7 @@
       "block": "C",
       "floor": 8,
       "room": "SR.C.8.10",
-      "event": "MKT202 - TG01 : Marketing Management",
+      "event": "NCO102 - TG05 : Effective Writing",
       "status": "PAST",
       "description": "",
       "room_description": "C.8.10 (60pax-CRS)"
@@ -5978,36 +6537,23 @@
       "end": "10:00 PM",
       "start_min": 1140,
       "end_min": 1320,
-      "block": "C",
-      "floor": 8,
-      "room": "SR.C.8.10",
-      "event": "MSM501 - T02 : Contemporary Topics in Business and Social Development of Singapore ??????????????",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "C.8.10 (60pax-CRS)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
       "block": "C",
       "floor": 8,
       "room": "SR.C.8.11",
-      "event": "MKT202 - TG03 : Marketing Management",
-      "status": "PAST",
+      "event": "EAS203 - T01 : Fundamentals of Corrosion and Fracture Mechanics",
+      "status": "CURRENT",
       "description": "",
       "room_description": "C.8.11 (60pax-CRS)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
+      "start": "8:30 AM",
+      "end": "3:00 PM",
+      "start_min": 510,
+      "end_min": 900,
       "block": "C",
       "floor": 8,
       "room": "SR.C.8.11",
-      "event": "MKT202 - TG05 : Marketing Management",
+      "event": "PRE Navigator Workshop (9 Sep 2026)",
       "status": "PAST",
       "description": "",
       "room_description": "C.8.11 (60pax-CRS)"
@@ -6072,7 +6618,7 @@
       "block": "C",
       "floor": 5,
       "room": "SR.C.5.01",
-      "event": "CTI111 - T01 : Contrastive Language Studies: English and Chinese",
+      "event": "CTI204 - T01 : Media/Multimedia Translation",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.5.01 (60pax-CRS) Interpretation Lab 1"
@@ -6091,30 +6637,17 @@
       "room_description": "C.5.01 (60pax-CRS) Interpretation Lab 1"
     },
     {
-      "start": "9:00 AM",
-      "end": "12:00 PM",
-      "start_min": 540,
-      "end_min": 720,
+      "start": "1:00 PM",
+      "end": "7:00 PM",
+      "start_min": 780,
+      "end_min": 1140,
       "block": "C",
       "floor": 6,
       "room": "SR.C.6.13",
-      "event": "RS Student Portal UAT",
+      "event": "Asset-Based Community Development Executive Training",
       "status": "PAST",
       "description": "",
       "room_description": "C.6.13 (60pax-CRS)"
-    },
-    {
-      "start": "12:00 PM",
-      "end": "3:00 PM",
-      "start_min": 720,
-      "end_min": 900,
-      "block": "C",
-      "floor": 7,
-      "room": "SR.C.7.11",
-      "event": "ACC309 - TG02 : International Taxation and Tax Planning",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.7.11 (60pax-CRS)"
     },
     {
       "start": "7:00 PM",
@@ -6124,8 +6657,34 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.11",
-      "event": "BUS104 - T01 : Organisational Behaviour in the Technology Era",
+      "event": "ANL201 - T01 : Data Visualisation for Business",
       "status": "CURRENT",
+      "description": "",
+      "room_description": "C.7.11 (60pax-CRS)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
+      "block": "C",
+      "floor": 7,
+      "room": "SR.C.7.11",
+      "event": "ECO203 - 01 : International Economics",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.7.11 (60pax-CRS)"
+    },
+    {
+      "start": "10:30 AM",
+      "end": "12:30 PM",
+      "start_min": 630,
+      "end_min": 750,
+      "block": "C",
+      "floor": 7,
+      "room": "SR.C.7.11",
+      "event": "SHBS Lightning Research Showcase",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.11 (60pax-CRS)"
     },
@@ -6136,22 +6695,9 @@
       "end_min": 690,
       "block": "C",
       "floor": 7,
-      "room": "SR.C.7.11",
-      "event": "ACC311 - TG02 : Strategic Management Accounting",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.7.11 (60pax-CRS)"
-    },
-    {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
-      "block": "C",
-      "floor": 7,
       "room": "SR.C.7.12",
-      "event": "PSY521 - T01 : Working with Special Offender Populations",
-      "status": "CURRENT",
+      "event": "MKT351 - TG01 : Consumer Behaviour",
+      "status": "PAST",
       "description": "",
       "room_description": "C.7.12 (60pax-CRS)"
     },
@@ -6163,59 +6709,33 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.12",
-      "event": "FIN324 - TG01 : Sustainable Investing",
+      "event": "MKT351 - TG04 : Consumer Behaviour",
       "status": "PAST",
       "description": "",
       "room_description": "C.7.12 (60pax-CRS)"
     },
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
+      "start": "8:30 AM",
+      "end": "11:30 AM",
+      "start_min": 510,
+      "end_min": 690,
       "block": "C",
       "floor": 8,
       "room": "SR.C.8.07",
-      "event": "ANL303 - T01 : Fundamentals of Data Mining",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "C.8.07 (60pax)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 8,
-      "room": "SR.C.8.07",
-      "event": "MKT202 - TG06 : Marketing Management",
+      "event": "NCO102 - TG04 : Effective Writing",
       "status": "PAST",
       "description": "",
       "room_description": "C.8.07 (60pax)"
     },
     {
-      "start": "7:00 PM",
-      "end": "10:00 PM",
-      "start_min": 1140,
-      "end_min": 1320,
+      "start": "12:00 PM",
+      "end": "3:00 PM",
+      "start_min": 720,
+      "end_min": 900,
       "block": "C",
       "floor": 8,
       "room": "SR.C.8.08",
-      "event": "HRM358 - T02 : Diversity and Inclusion in the Workplace",
-      "status": "CURRENT",
-      "description": "",
-      "room_description": "C.8.08 (60pax)"
-    },
-    {
-      "start": "10:00 AM",
-      "end": "12:00 PM",
-      "start_min": 600,
-      "end_min": 720,
-      "block": "C",
-      "floor": 8,
-      "room": "SR.C.8.08",
-      "event": "MSM598 Briefing Session",
+      "event": "AVM341 - T03 : Aviation Management",
       "status": "PAST",
       "description": "",
       "room_description": "C.8.08 (60pax)"
@@ -6228,7 +6748,7 @@
       "block": "C",
       "floor": 8,
       "room": "SR.C.8.09",
-      "event": "FIN552 - T01 : Introduction to Financial Data Science",
+      "event": "MAV553 - T01 : Applied Statistical Methods and Causal Analysis 应用统计方法与因果分析",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.8.09 (60pax)"
@@ -6241,23 +6761,10 @@
       "block": "C",
       "floor": 5,
       "room": "SR.C.5.13",
-      "event": "FMT320 - T01 : Building Regulations and Compliance",
+      "event": "PSY265 - T01 : Health Psychology",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.5.13 (60pax-CRS)"
-    },
-    {
-      "start": "9:30 AM",
-      "end": "2:00 PM",
-      "start_min": 570,
-      "end_min": 840,
-      "block": "C",
-      "floor": 4,
-      "room": "SR.C.4.14",
-      "event": "CITS department meeting",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.4.14 (60pax-CRS)"
     },
     {
       "start": "7:00 PM",
@@ -6267,15 +6774,15 @@
       "block": "C",
       "floor": 4,
       "room": "SR.C.4.14",
-      "event": "BME109 - T02 : Introduction to Chemistry and Biochemistry",
+      "event": "SWK292 - T02 : Social Work Practice and Skills Lab II: Working with Small Groups",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.4.14 (60pax-CRS)"
     },
     {
-      "start": "2:00 PM",
+      "start": "8:30 AM",
       "end": "7:00 PM",
-      "start_min": 840,
+      "start_min": 510,
       "end_min": 1140,
       "block": "C",
       "floor": 4,
@@ -6286,6 +6793,19 @@
       "room_description": "C.4.14 (60pax-CRS)"
     },
     {
+      "start": "3:30 PM",
+      "end": "6:30 PM",
+      "start_min": 930,
+      "end_min": 1110,
+      "block": "C",
+      "floor": 7,
+      "room": "SR.C.7.13",
+      "event": "BUS105 - TG14 : Statistics",
+      "status": "PAST",
+      "description": "",
+      "room_description": "C.7.13 (60pax)"
+    },
+    {
       "start": "7:00 PM",
       "end": "10:00 PM",
       "start_min": 1140,
@@ -6293,7 +6813,7 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.13",
-      "event": "ANL303 - T02 : Fundamentals of Data Mining",
+      "event": "MKT202 - T01 : Marketing Management",
       "status": "CURRENT",
       "description": "",
       "room_description": "C.7.13 (60pax)"
@@ -6306,49 +6826,49 @@
       "block": "C",
       "floor": 7,
       "room": "SR.C.7.13",
-      "event": "ACC306 - TG01 : Advanced Assurance and Attestation",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.7.13 (60pax)"
-    },
-    {
-      "start": "8:30 AM",
-      "end": "11:30 AM",
-      "start_min": 510,
-      "end_min": 690,
-      "block": "C",
-      "floor": 7,
-      "room": "SR.C.7.13",
-      "event": "ANL252 - TG01 : Python for Data Analytics",
-      "status": "PAST",
-      "description": "",
-      "room_description": "C.7.13 (60pax)"
-    },
-    {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "C",
-      "floor": 7,
-      "room": "SR.C.7.13",
-      "event": "BUS105 - TG07 : Statistics",
+      "event": "NIE201 - TG04 : Interdisciplinary Processes for a Better World",
       "status": "PAST",
       "description": "",
       "room_description": "C.7.13 (60pax)"
     },
     {
       "start": "8:00 AM",
-      "end": "10:00 PM",
+      "end": "7:00 PM",
       "start_min": 480,
+      "end_min": 1140,
+      "block": "D",
+      "floor": 1,
+      "room": "SR.D.1.02TOD.1.05",
+      "event": "SIM UOL Freshmen Orientation September 2026",
+      "status": "PAST",
+      "description": "",
+      "room_description": "D.1.02/3/4/5 (Combined-238pax)"
+    },
+    {
+      "start": "7:00 PM",
+      "end": "10:00 PM",
+      "start_min": 1140,
       "end_min": 1320,
       "block": "D",
       "floor": 1,
       "room": "SR.D.1.02TOD.1.05",
-      "event": "UOLSRC",
+      "event": "SIM UOL Freshmen Orientation September 2026",
       "status": "CURRENT",
       "description": "",
       "room_description": "D.1.02/3/4/5 (Combined-238pax)"
+    },
+    {
+      "start": "9:00 AM",
+      "end": "5:00 PM",
+      "start_min": 540,
+      "end_min": 1020,
+      "block": "D",
+      "floor": null,
+      "room": "MPSH.A/B",
+      "event": "SIM UOL Freshmen Orientation September 2026",
+      "status": "PAST",
+      "description": "",
+      "room_description": "D.2.02 (Multipurpose Sports Hall)"
     },
     {
       "start": "6:00 PM",
@@ -6358,10 +6878,23 @@
       "block": "D",
       "floor": null,
       "room": "MPSH.A/B",
-      "event": "SIM Tchoukball Training",
+      "event": "SUNIG 2026 Volleyball",
       "status": "CURRENT",
       "description": "",
       "room_description": "D.2.02 (Multipurpose Sports Hall)"
+    },
+    {
+      "start": "3:30 PM",
+      "end": "5:00 PM",
+      "start_min": 930,
+      "end_min": 1020,
+      "block": "D",
+      "floor": null,
+      "room": "DanceStudio",
+      "event": "REC173 - L01 : Aerobic Dance - UB",
+      "status": "PAST",
+      "description": "Aerobic Dance - UB",
+      "room_description": "D.1.06 (Dance Studio)"
     },
     {
       "start": "7:00 PM",
@@ -6371,59 +6904,33 @@
       "block": "D",
       "floor": null,
       "room": "DanceStudio",
-      "event": "SA CSR Dry run",
+      "event": "SIM Dreamwerkz Practice (Sept) - addon",
       "status": "CURRENT",
       "description": "",
       "room_description": "D.1.06 (Dance Studio)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "D",
-      "floor": null,
-      "room": "TennisCourt2",
-      "event": "FSA Tennis Trainings September 2026 (weekdays)",
-      "status": "PAST",
-      "description": "",
-      "room_description": "D.4.01 (Tennis Court 2)"
-    },
-    {
-      "start": "7:00 PM",
+      "start": "6:00 PM",
       "end": "10:00 PM",
-      "start_min": 1140,
+      "start_min": 1080,
       "end_min": 1320,
       "block": "D",
       "floor": null,
       "room": "TennisCourt2",
-      "event": "SUSS Tennis booking Spetember",
+      "event": "SIM Tennis Training - Sept",
       "status": "CURRENT",
       "description": "",
       "room_description": "D.4.01 (Tennis Court 2)"
     },
     {
-      "start": "3:30 PM",
-      "end": "6:30 PM",
-      "start_min": 930,
-      "end_min": 1110,
-      "block": "D",
-      "floor": null,
-      "room": "TennisCourt1",
-      "event": "FSA Tennis Trainings September 2026 (weekdays)",
-      "status": "PAST",
-      "description": "",
-      "room_description": "D.4.01 (Tennis Court 1)"
-    },
-    {
-      "start": "7:00 PM",
+      "start": "6:00 PM",
       "end": "10:00 PM",
-      "start_min": 1140,
+      "start_min": 1080,
       "end_min": 1320,
       "block": "D",
       "floor": null,
       "room": "TennisCourt1",
-      "event": "SUSS Tennis booking Spetember",
+      "event": "SIM Tennis Training - Sept",
       "status": "CURRENT",
       "description": "",
       "room_description": "D.4.01 (Tennis Court 1)"
