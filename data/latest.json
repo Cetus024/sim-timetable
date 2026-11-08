@@ -2,12 +2,12 @@
   "version": 2,
   "source": "https://scheduling.sim.edu.sg/rad/rest/campus?id=SIM",
   "campus": "SIM Campus",
-  "scraped_at": "2026-11-07T20:01:17.110Z",
+  "scraped_at": "2026-11-08T20:18:07.009Z",
   "schedule_dates": [
-    "2026-11-08"
+    "2026-11-09"
   ],
   "incomplete": false,
-  "site_total": 2,
+  "site_total": 5,
   "rooms": [
     {
       "room": "TR.1",
@@ -391,7 +391,7 @@
       "building": "SIM Campus Block A",
       "block": "A",
       "floor": 4,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "SR.A.2.15",
@@ -1119,7 +1119,7 @@
       "building": "SIM Campus Block B",
       "block": "B",
       "floor": null,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "SR.B.3.11",
@@ -2455,7 +2455,7 @@
       "building": "SIM Campus Block D",
       "block": "D",
       "floor": 1,
-      "activities": 0
+      "activities": 1
     },
     {
       "room": "MPSH.A/B",
@@ -2619,6 +2619,45 @@
     }
   ],
   "rows": [
+    {
+      "start": "8:30 AM",
+      "end": "6:30 PM",
+      "start_min": 510,
+      "end_min": 1110,
+      "block": "A",
+      "floor": 4,
+      "room": "LT.A.4.17B",
+      "event": "Student Revision Room",
+      "status": "PAST",
+      "description": "",
+      "room_description": "A.4.17B (60pax) Havard Room"
+    },
+    {
+      "start": "8:00 AM",
+      "end": "10:00 PM",
+      "start_min": 480,
+      "end_min": 1320,
+      "block": "B",
+      "floor": null,
+      "room": "MPH.A1/A2",
+      "event": "Fireside",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "MPH A1/A2 (280pax)"
+    },
+    {
+      "start": "8:00 AM",
+      "end": "10:00 PM",
+      "start_min": 480,
+      "end_min": 1320,
+      "block": "D",
+      "floor": 1,
+      "room": "SR.D.1.02TOD.1.05",
+      "event": "Fireside",
+      "status": "CURRENT",
+      "description": "",
+      "room_description": "D.1.02/3/4/5 (Combined-238pax)"
+    },
     {
       "start": "8:30 AM",
       "end": "6:30 PM",
